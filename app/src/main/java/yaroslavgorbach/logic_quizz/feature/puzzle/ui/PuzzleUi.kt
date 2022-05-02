@@ -1,10 +1,14 @@
 package yaroslavgorbach.logic_quizz.feature.puzzle.ui
 
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import yaroslavgorbach.logic_quizz.feature.puzzle.model.PuzzleAction
 import yaroslavgorbach.logic_quizz.feature.puzzle.model.PuzzleViewState
@@ -46,19 +50,38 @@ internal fun PuzzleUi(
 
     state.message?.let { message ->
         when (message.message) {
-
             else -> {
             }
         }
     }
 
+    Box(modifier = Modifier.fillMaxSize()) {
+        state.puzzle?.let { puzzle ->
+            Column(modifier = Modifier.align(Alignment.Center)) {
+                repeat(puzzle.numberOfRows) { rowNumber ->
+                    Spacer(modifier = Modifier.size(2.dp))
 
+                    Row {
+                        puzzle.tables.forEach { table ->
+                            if (table.indexInPuzzleVertical == rowNumber) {
+                                TableUi(
+                                    table = table,
+                                    modifier = Modifier.size(90.dp)
+                                )
+                                Spacer(modifier = Modifier.size(2.dp))
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @ExperimentalFoundationApi
 @ExperimentalMaterialApi
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-fun RecordingsPreview() {
+fun PuzzlePreview() {
     PuzzleUi {}
 }

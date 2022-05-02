@@ -6,19 +6,31 @@ data class Table(
     val size: Int = width * height,
     val titleHorizontal: TableTitle,
     val titleVertical: TableTitle,
+    val indexInPuzzleHorizontal: Int,
+    val indexInPuzzleVertical: Int,
+    val verticalTitleVisible: Boolean = indexInPuzzleVertical == 0,
+    val horizontalTitleVisible: Boolean = indexInPuzzleHorizontal == 0
 ) {
     companion object {
-        val Test = Table(4, 4, titleHorizontal = TableTitle.Test, titleVertical = TableTitle.Test)
+        val Test = Table(
+            4,
+            4,
+            titleHorizontal = TableTitle.Test,
+            titleVertical = TableTitle.Test,
+            indexInPuzzleHorizontal = 0,
+            indexInPuzzleVertical = 0,
+        )
     }
 
     val cells: MutableList<Cell> = ArrayList()
 
     init {
-        repeat(size){
+        repeat(size) {
             cells.add(Cell())
         }
     }
-    class Cell(val state: State = State.EMPTY) {
+
+    data class Cell(val state: State = State.EMPTY) {
         enum class State {
             EMPTY, CORRECT, INCORRECT
         }
