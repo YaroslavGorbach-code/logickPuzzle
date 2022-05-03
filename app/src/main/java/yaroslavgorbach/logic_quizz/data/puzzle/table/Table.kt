@@ -9,7 +9,8 @@ data class Table(
     val indexInPuzzleHorizontal: Int,
     val indexInPuzzleVertical: Int,
     val verticalTitleVisible: Boolean = indexInPuzzleVertical == 0,
-    val horizontalTitleVisible: Boolean = indexInPuzzleHorizontal == 0
+    val horizontalTitleVisible: Boolean = indexInPuzzleHorizontal == 0,
+    var cells: MutableList<Cell> = List(size) { Cell() }.toMutableList()
 ) {
     companion object {
         val Test = Table(
@@ -22,24 +23,17 @@ data class Table(
         )
     }
 
-    val cells: MutableList<Cell> = ArrayList()
-
-    init {
-        repeat(size) {
-            cells.add(Cell())
-        }
-    }
 
     data class Cell(val state: State = State.EMPTY) {
         enum class State {
             EMPTY, CORRECT, INCORRECT
         }
 
-        fun reduceState(state: State): State {
-            when (state) {
-                State.EMPTY -> TODO()
-                State.CORRECT -> TODO()
-                State.INCORRECT -> TODO()
+        fun reduceState(): State {
+            return when (state) {
+                State.EMPTY -> State.INCORRECT
+                State.CORRECT -> State.EMPTY
+                State.INCORRECT -> State.CORRECT
             }
         }
     }

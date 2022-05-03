@@ -8,6 +8,7 @@ import dagger.hilt.components.SingletonComponent
 import yaroslavgorbach.logic_quizz.data.puzzle.PuzzleRepo
 import yaroslavgorbach.logic_quizz.data.puzzle.PuzzleRepoImp
 import yaroslavgorbach.logic_quizz.data.puzzle.factory.PuzzleFactory
+import yaroslavgorbach.logic_quizz.data.puzzle.factory.PuzzleTitlesFactory
 import javax.inject.Singleton
 
 @Module
@@ -15,14 +16,20 @@ import javax.inject.Singleton
 object DataPuzzleModule {
 
     @Provides
-    fun providePuzzleFactory(app: Application): PuzzleFactory {
-        return PuzzleFactory(app)
+    fun providePuzzleTitlesFactory(app: Application): PuzzleTitlesFactory {
+        return PuzzleTitlesFactory(app)
+    }
+
+
+    @Provides
+    fun providePuzzleFactory(fac: PuzzleTitlesFactory): PuzzleFactory {
+        return PuzzleFactory(fac)
     }
 
     @Singleton
     @Provides
-    fun providePuzzleRepo(questions: PuzzleFactory): PuzzleRepo {
-        return PuzzleRepoImp(questions)
+    fun providePuzzleRepo(factory: PuzzleFactory): PuzzleRepo {
+        return PuzzleRepoImp(factory)
     }
 
 }

@@ -1,45 +1,38 @@
 package yaroslavgorbach.logic_quizz.data.puzzle.factory
 
-import android.content.Context
-import yaroslavgorbach.logic_quizz.R
 import yaroslavgorbach.logic_quizz.data.puzzle.Puzzle
 import yaroslavgorbach.logic_quizz.data.puzzle.PuzzleName
+import yaroslavgorbach.logic_quizz.data.puzzle.table.Table
 import yaroslavgorbach.logic_quizz.data.puzzle.table.TableTitle
 
-class PuzzleFactory(val context: Context) {
+class PuzzleFactory(private val puzzleTitleFactory: PuzzleTitlesFactory) {
 
-    fun create(puzzleName: PuzzleName): Puzzle {
-        when (puzzleName) {
-            PuzzleName.SNACK_TIME -> {
-                return Puzzle(
-                    titles = listOf(
-                        TableTitle(
-                            name = context.getString(R.string.snack_time_items_1_name),
-                            items = context.resources.getStringArray(R.array.snack_time_items_1).toList(),
-                            orderNumber = 1,
-                            orientation = TableTitle.Orientation.VERTICAL
-                        ),
-                        TableTitle(
-                            name = context.getString(R.string.snack_time_items_2_name),
-                            items = context.resources.getStringArray(R.array.snack_time_items_2).toList(),
-                            orderNumber = 2,
-                            orientation = TableTitle.Orientation.VERTICAL
-                        ),
-                        TableTitle(
-                            name = context.getString(R.string.snack_time_items_3_name),
-                            items = context.resources.getStringArray(R.array.snack_time_items_3).toList(),
-                            orderNumber = 1,
-                            orientation = TableTitle.Orientation.HORIZONTAL
-                        ),
-                        TableTitle(
-                            name = context.getString(R.string.snack_time_items_2_name),
-                            items = context.resources.getStringArray(R.array.snack_time_items_2).toList(),
-                            orderNumber = 2,
-                            orientation = TableTitle.Orientation.HORIZONTAL
-                        )
+    fun create(name: PuzzleName): Puzzle {
+        val titles = puzzleTitleFactory.create(name)
+
+        val horizontalTitles: MutableList<TableTitle> =
+            titles.filter { it.orientation == TableTitle.Orientation.HORIZONTAL }.toMutableList()
+
+        val verticalTitles: List<TableTitle> =
+            titles.filter { it.orientation == TableTitle.Orientation.VERTICAL }
+
+        val tables: MutableList<Table> = ArrayList()
+
+        verticalTitles.forEachIndexed { indexVertical, verticalTitle ->
+            horizontalTitles.forEachIndexed { indexHorizontal, horizontalTitle ->
+                tables.add(
+                    Table(
+                        width = horizontalTitle.items.size,
+                        height = verticalTitle.items.size,
+                        titleHorizontal = horizontalTitle,
+                        titleVertical = verticalTitle,
+                        indexInPuzzleVertical = indexVertical,
+                        indexInPuzzleHorizontal = indexHorizontal,
                     )
                 )
             }
+            horizontalTitles.removeLast()
         }
+        return Puzzle(titles, tables)
     }
 }

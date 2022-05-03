@@ -3,6 +3,7 @@ package yaroslavgorbach.logic_quizz.data.puzzle
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOf
 import yaroslavgorbach.logic_quizz.data.puzzle.factory.PuzzleFactory
+import yaroslavgorbach.logic_quizz.data.puzzle.factory.PuzzleTitlesFactory
 import javax.inject.Inject
 import javax.inject.Singleton
 

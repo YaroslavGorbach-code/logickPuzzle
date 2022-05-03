@@ -12,14 +12,12 @@ private val DarkColorPalette = darkColors(
     primary = Blue200,
     primaryVariant = Blue700,
     secondary = Pink200,
-    onPrimary = LightDark
 )
 
 private val LightColorPalette = lightColors(
     primary = Blue400,
     primaryVariant = Blue700,
     secondary = Pink200,
-    onPrimary = LightGray
     /* Other default colors to override
     background = Color.White,
     surface = Color.White,
@@ -28,6 +26,7 @@ private val LightColorPalette = lightColors(
     onBackground = Color.Black,
     */
 )
+
 
 @Composable
 fun LogicPuzzleTheme(isDarkTheme: Boolean = isSystemInDarkTheme(), content: @Composable() () -> Unit) {

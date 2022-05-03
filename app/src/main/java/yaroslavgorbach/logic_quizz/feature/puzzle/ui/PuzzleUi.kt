@@ -1,8 +1,10 @@
 package yaroslavgorbach.logic_quizz.feature.puzzle.ui
 
+import android.util.Log
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.ExperimentalMaterialApi
+import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
@@ -55,20 +57,26 @@ internal fun PuzzleUi(
         }
     }
 
-    Box(modifier = Modifier.fillMaxSize()) {
-        state.puzzle?.let { puzzle ->
-            Column(modifier = Modifier.align(Alignment.Center)) {
-                repeat(puzzle.numberOfRows) { rowNumber ->
-                    Spacer(modifier = Modifier.size(2.dp))
+    Surface(modifier = Modifier.fillMaxSize()) {
+        Box(modifier = Modifier.fillMaxSize()) {
+            state.puzzle?.let { puzzle ->
+                Log.i("dsdads", puzzle.titles.toString())
+                Column(modifier = Modifier.align(Alignment.Center)) {
+                    repeat(puzzle.numberOfRows) { rowNumber ->
+                        Spacer(modifier = Modifier.size(1.dp))
 
-                    Row {
-                        puzzle.tables.forEach { table ->
-                            if (table.indexInPuzzleVertical == rowNumber) {
-                                TableUi(
-                                    table = table,
-                                    modifier = Modifier.size(90.dp)
-                                )
-                                Spacer(modifier = Modifier.size(2.dp))
+                        Row {
+                            puzzle.tables.forEach { table ->
+                                if (table.indexInPuzzleVertical == rowNumber) {
+                                    TableUi(
+                                        table = table,
+                                        modifier = Modifier.size(90.dp)
+                                    ) { table, cell ->
+                                        actioner(PuzzleAction.OnCell(table, cell))
+                                    }
+
+                                    Spacer(modifier = Modifier.size(1.dp))
+                                }
                             }
                         }
                     }

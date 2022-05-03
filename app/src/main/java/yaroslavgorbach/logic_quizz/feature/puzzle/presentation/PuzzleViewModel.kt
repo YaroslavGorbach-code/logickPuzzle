@@ -1,5 +1,6 @@
 package yaroslavgorbach.logic_quizz.feature.puzzle.presentation
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -10,6 +11,7 @@ import kotlinx.coroutines.launch
 import yaroslavgorbach.logic_quizz.data.puzzle.Puzzle
 import yaroslavgorbach.logic_quizz.data.puzzle.PuzzleName
 import yaroslavgorbach.logic_quizz.data.puzzle.PuzzleRepo
+import yaroslavgorbach.logic_quizz.data.puzzle.table.Table
 import yaroslavgorbach.logic_quizz.feature.puzzle.model.PuzzleAction
 import yaroslavgorbach.logic_quizz.feature.puzzle.model.PuzzleUiMessage
 import yaroslavgorbach.logic_quizz.feature.puzzle.model.PuzzleViewState
@@ -31,6 +33,7 @@ class PuzzleViewModel @Inject constructor(
         puzzle,
         uiMessageManager.message,
     ) { puzzle, message ->
+        Log.i("dsdads", "currentPuzzle.tables.toString()")
         PuzzleViewState(puzzle = puzzle, message = message)
     }.stateIn(
         scope = viewModelScope,
@@ -46,10 +49,44 @@ class PuzzleViewModel @Inject constructor(
         viewModelScope.launch {
             pendingActions.collect { action ->
                 when (action) {
+                    is PuzzleAction.OnCell -> {
 
-                    else -> {
+                        val puz = state.value.puzzle?.tables?.toMutableList()?.apply {
+                            val index = indexOf(action.table)
+                            val table = action.table.copy(
+                                cells = action.table.cells.map {
+                                    if (it === action.cell){
+                                        it.copy(state = it.reduceState())
+                                    }else{
+                                        it
+                                    }
+                                }.toMutableList()
+                            )
+                            set(index, table)
+                        }
+
+                        puzzle.emit(state.value.puzzle?.copy(emptyList(), puz!!))
 
                     }
+//                        puzzle.update { puzzle ->
+//                            puzzle?.tables = puzzle?.tables?.apply {
+//                                val indexTable = indexOf(action.table)
+//
+//                                val newCells = action.table.cells.apply {
+//                                    val indexCell = indexOf(action.cell)
+//
+//                                    set(
+//                                        indexCell,
+//                                        action.cell.copy(state = action.cell.reduceState())
+//                                    )
+//                                }
+//
+//                                val newTable = action.table
+//                                newTable.cells = newCells
+//                                set(indexTable, newTable)
+//                            }!!
+//                            puzzle
+//                        }
                 }
             }
         }
