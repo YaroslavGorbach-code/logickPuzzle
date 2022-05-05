@@ -1,5 +1,6 @@
 package yaroslavgorbach.logic_quizz.feature.puzzle.presentation
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -57,6 +58,7 @@ class PuzzleViewModel @Inject constructor(
                             val table = action.table.copy(
                                 cells = action.table.cells
                                     .map { cell ->
+                                        Log.i("dscds", cell.toString())
                                         if (cell === action.cell && cell.filledAutomatically.not()) {
                                             return@map cell.copy(state = cell.reduceState())
                                         }
@@ -71,6 +73,7 @@ class PuzzleViewModel @Inject constructor(
                                                 cell.filledAutomatically
                                                 && action.cell.reduceState() == Table.Cell.State.EMPTY
                                             ) {
+                                                Log.i("sdscvsdcv", cell.toString())
                                                 return@map cell.copy(
                                                     state = Table.Cell.State.EMPTY,
                                                     filledAutomatically = false
@@ -104,17 +107,17 @@ class PuzzleViewModel @Inject constructor(
 
             if (cell.state != Table.Cell.State.CORRECT) {
                 if (cell.titleVertical in verticalCheckTitles || cell.titleHorizontal in horizontalCheckTitles) {
-                    if (cell.state == Table.Cell.State.EMPTY || cell.state == Table.Cell.State.INCORRECT) {
-                        cell.copy(state = Table.Cell.State.INCORRECT, filledAutomatically = true)
-                    } else {
-                        cell
+                    if (cell.state == Table.Cell.State.EMPTY || cell.state == Table.Cell.State.INCORRECT ) {
+                        if (cell.filledAutomatically.not() && cell.state != Table.Cell.State.INCORRECT || cell.filledAutomatically && cell.state == Table.Cell.State.INCORRECT){
+                            return@map cell.copy(
+                                state = Table.Cell.State.INCORRECT,
+                                filledAutomatically = true
+                            )
+                        }
                     }
-                } else {
-                    cell
                 }
-            } else {
-                cell
             }
+            cell
 
         }.toMutableList()
     }
