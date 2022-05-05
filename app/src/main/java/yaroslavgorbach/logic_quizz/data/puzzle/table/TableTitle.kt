@@ -8,7 +8,7 @@ data class TableTitle(
     val isMain: Boolean = orderNumber in 1..2
 ){
     companion object{
-        val Test = TableTitle("", emptyList(), 0, Orientation.HORIZONTAL)
+        val Test = TableTitle("", listOf("1", "2"), 0, Orientation.HORIZONTAL)
     }
 
     enum class Orientation{

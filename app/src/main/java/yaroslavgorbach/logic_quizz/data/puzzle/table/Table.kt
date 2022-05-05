@@ -10,21 +10,31 @@ data class Table(
     val indexInPuzzleVertical: Int,
     val verticalTitleVisible: Boolean = indexInPuzzleVertical == 0,
     val horizontalTitleVisible: Boolean = indexInPuzzleHorizontal == 0,
-    var cells: MutableList<Cell> = List(size) { Cell() }.toMutableList()
-) {
-    companion object {
-        val Test = Table(
-            4,
-            4,
-            titleHorizontal = TableTitle.Test,
-            titleVertical = TableTitle.Test,
-            indexInPuzzleHorizontal = 0,
-            indexInPuzzleVertical = 0,
+    var cells: MutableList<Cell> = List(size) {
+        var indexHorizontal: Int = it
+        var indexVertical: Int = 0
+
+        while (indexHorizontal >= titleHorizontal.items.size) {
+            indexHorizontal -= titleHorizontal.items.size
+            indexVertical += 1
+        }
+
+        Cell(
+            index = it,
+            titleHorizontal = titleHorizontal.items[indexHorizontal],
+            titleVertical = titleVertical.items[indexVertical]
         )
-    }
 
-
-    data class Cell(val state: State = State.EMPTY) {
+    }.toMutableList()
+) {
+    data class Cell(
+        val index: Int,
+        val titleHorizontal: String,
+        val titleVertical: String,
+        val state: State = State.EMPTY,
+        val filledAutomatically: Boolean = false,
+        val filledAutomaticallyByIndex: Int = 0,
+    ) {
         enum class State {
             EMPTY, CORRECT, INCORRECT
         }

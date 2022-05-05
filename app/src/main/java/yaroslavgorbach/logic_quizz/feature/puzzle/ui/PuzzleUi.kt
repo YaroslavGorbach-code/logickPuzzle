@@ -60,7 +60,6 @@ internal fun PuzzleUi(
     Surface(modifier = Modifier.fillMaxSize()) {
         Box(modifier = Modifier.fillMaxSize()) {
             state.puzzle?.let { puzzle ->
-                Log.i("dsdads", puzzle.titles.toString())
                 Column(modifier = Modifier.align(Alignment.Center)) {
                     repeat(puzzle.numberOfRows) { rowNumber ->
                         Spacer(modifier = Modifier.size(1.dp))
@@ -72,7 +71,9 @@ internal fun PuzzleUi(
                                         table = table,
                                         modifier = Modifier.size(90.dp)
                                     ) { table, cell ->
-                                        actioner(PuzzleAction.OnCell(table, cell))
+                                        if(cell.filledAutomatically.not()){
+                                            actioner(PuzzleAction.OnCell(table, cell))
+                                        }
                                     }
 
                                     Spacer(modifier = Modifier.size(1.dp))

@@ -1,6 +1,5 @@
 package yaroslavgorbach.logic_quizz.feature.puzzle.presentation
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -33,8 +32,9 @@ class PuzzleViewModel @Inject constructor(
         puzzle,
         uiMessageManager.message,
     ) { puzzle, message ->
-        Log.i("dsdads", "currentPuzzle.tables.toString()")
-        PuzzleViewState(puzzle = puzzle, message = message)
+        PuzzleViewState(puzzle = puzzle?.copy(tables = puzzle.tables.map { table ->
+            table.copy(cells = table.cells.markIncorrectCells(table))
+        }), message = message)
     }.stateIn(
         scope = viewModelScope,
         started = WhileSubscribed(5000),
@@ -53,43 +53,70 @@ class PuzzleViewModel @Inject constructor(
 
                         val puz = state.value.puzzle?.tables?.toMutableList()?.apply {
                             val index = indexOf(action.table)
+
                             val table = action.table.copy(
-                                cells = action.table.cells.map {
-                                    if (it === action.cell){
-                                        it.copy(state = it.reduceState())
-                                    }else{
-                                        it
-                                    }
-                                }.toMutableList()
+                                cells = action.table.cells
+                                    .map { cell ->
+                                        if (cell === action.cell && cell.filledAutomatically.not()) {
+                                            return@map cell.copy(state = cell.reduceState())
+                                        }
+                                        cell
+                                    }.map { cell ->
+                                        if (
+                                            cell.titleHorizontal == action.cell.titleHorizontal
+                                            || cell.titleVertical == action.cell.titleVertical
+                                            && cell.index != action.cell.index
+                                        ) {
+                                            if (
+                                                cell.filledAutomatically
+                                                && action.cell.reduceState() == Table.Cell.State.EMPTY
+                                            ) {
+                                                return@map cell.copy(
+                                                    state = Table.Cell.State.EMPTY,
+                                                    filledAutomatically = false
+                                                )
+                                            }
+                                        }
+                                        cell
+                                    }.toMutableList()
                             )
                             set(index, table)
                         }
-
-                        puzzle.emit(state.value.puzzle?.copy(emptyList(), puz!!))
-
+                        puzzle.emit(state.value.puzzle?.copy(tables = puz!!))
                     }
-//                        puzzle.update { puzzle ->
-//                            puzzle?.tables = puzzle?.tables?.apply {
-//                                val indexTable = indexOf(action.table)
-//
-//                                val newCells = action.table.cells.apply {
-//                                    val indexCell = indexOf(action.cell)
-//
-//                                    set(
-//                                        indexCell,
-//                                        action.cell.copy(state = action.cell.reduceState())
-//                                    )
-//                                }
-//
-//                                val newTable = action.table
-//                                newTable.cells = newCells
-//                                set(indexTable, newTable)
-//                            }!!
-//                            puzzle
-//                        }
                 }
             }
         }
+    }
+
+    private fun List<Table.Cell>.markIncorrectCells(table: Table): MutableList<Table.Cell> {
+        return map { cell ->
+            val horizontalCheckTitles =
+                table.cells.filter { it.state == Table.Cell.State.CORRECT }.map {
+                    it.titleHorizontal
+                }
+
+            val verticalCheckTitles =
+                table.cells.filter { it.state == Table.Cell.State.CORRECT }.map {
+                    it.titleVertical
+                }
+
+
+            if (cell.state != Table.Cell.State.CORRECT) {
+                if (cell.titleVertical in verticalCheckTitles || cell.titleHorizontal in horizontalCheckTitles) {
+                    if (cell.state == Table.Cell.State.EMPTY || cell.state == Table.Cell.State.INCORRECT) {
+                        cell.copy(state = Table.Cell.State.INCORRECT, filledAutomatically = true)
+                    } else {
+                        cell
+                    }
+                } else {
+                    cell
+                }
+            } else {
+                cell
+            }
+
+        }.toMutableList()
     }
 
     private suspend fun loadPuzzle() {
