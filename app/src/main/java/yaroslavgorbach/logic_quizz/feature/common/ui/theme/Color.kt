@@ -19,9 +19,9 @@ fun getTableCellColor(isDarkTheme: Boolean = isSystemInDarkTheme()): Color {
 }
 
 @Composable
-fun getTableCellBorderColor(isDarkTheme: Boolean = isSystemInDarkTheme()): Color {
+fun getHintedTitleColor(isDarkTheme: Boolean = isSystemInDarkTheme()): Color {
     return if (isDarkTheme) {
-        Color(0xFF131313)
+        Color(0xFF222222)
     } else {
         Color(0xFFD6D6D6)
 

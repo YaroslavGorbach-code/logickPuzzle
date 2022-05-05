@@ -1,6 +1,5 @@
 package yaroslavgorbach.logic_quizz.feature.puzzle.presentation
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -27,15 +26,18 @@ class PuzzleViewModel @Inject constructor(
 
     private var puzzle: MutableStateFlow<Puzzle?> = MutableStateFlow(null)
 
+    private var hintedTitles: MutableStateFlow<Pair<String, String>?> = MutableStateFlow(null)
+
     private val uiMessageManager: UiMessageManager<PuzzleUiMessage> = UiMessageManager()
 
     val state: StateFlow<PuzzleViewState> = combine(
         puzzle,
+        hintedTitles,
         uiMessageManager.message,
-    ) { puzzle, message ->
+    ) { puzzle, hintedTitles, message ->
         PuzzleViewState(puzzle = puzzle?.copy(tables = puzzle.tables.map { table ->
             table.copy(cells = table.cells.markIncorrectCells(table))
-        }), message = message)
+        }), message = message, hintedTitles = hintedTitles)
     }.stateIn(
         scope = viewModelScope,
         started = WhileSubscribed(5000),
@@ -51,44 +53,53 @@ class PuzzleViewModel @Inject constructor(
             pendingActions.collect { action ->
                 when (action) {
                     is PuzzleAction.OnCell -> {
-
-                        val puz = state.value.puzzle?.tables?.toMutableList()?.apply {
-                            val index = indexOf(action.table)
-
-                            val table = action.table.copy(
-                                cells = action.table.cells
-                                    .map { cell ->
-                                        Log.i("dscds", cell.toString())
-                                        if (cell === action.cell && cell.filledAutomatically.not()) {
-                                            return@map cell.copy(state = cell.reduceState())
-                                        }
-                                        cell
-                                    }.map { cell ->
-                                        if (
-                                            cell.titleHorizontal == action.cell.titleHorizontal
-                                            || cell.titleVertical == action.cell.titleVertical
-                                            && cell.index != action.cell.index
-                                        ) {
-                                            if (
-                                                cell.filledAutomatically
-                                                && action.cell.reduceState() == Table.Cell.State.EMPTY
-                                            ) {
-                                                Log.i("sdscvsdcv", cell.toString())
-                                                return@map cell.copy(
-                                                    state = Table.Cell.State.EMPTY,
-                                                    filledAutomatically = false
-                                                )
-                                            }
-                                        }
-                                        cell
-                                    }.toMutableList()
-                            )
-                            set(index, table)
-                        }
-                        puzzle.emit(state.value.puzzle?.copy(tables = puz!!))
+                        handleTitleHint(action)
+                        handleCellClick(action)
                     }
                 }
             }
+        }
+    }
+
+    private suspend fun handleCellClick(action: PuzzleAction.OnCell) {
+
+        val puz = state.value.puzzle?.tables?.toMutableList()?.apply {
+            val table = action.table.copy(
+                cells = action.table.cells
+                    .map { cell ->
+                        if (cell === action.cell && cell.filledAutomatically.not()) {
+                            return@map cell.copy(state = cell.reduceState())
+                        }
+                        cell
+                    }.map { cell ->
+                        if (
+                            cell.titleHorizontal == action.cell.titleHorizontal
+                            || cell.titleVertical == action.cell.titleVertical
+                            && cell.index != action.cell.index
+                        ) {
+                            if (
+                                cell.filledAutomatically
+                                && action.cell.reduceState() == Table.Cell.State.EMPTY
+                            ) {
+                                return@map cell.copy(
+                                    state = Table.Cell.State.EMPTY,
+                                    filledAutomatically = false
+                                )
+                            }
+                        }
+                        cell
+                    }.toMutableList()
+            )
+            set(indexOf(action.table), table)
+        }
+        puzzle.emit(state.value.puzzle?.copy(tables = puz!!))
+    }
+
+    private suspend fun handleTitleHint(action: PuzzleAction.OnCell) {
+        if (action.cell.reduceState() != Table.Cell.State.EMPTY) {
+            hintedTitles.emit(action.cell.titleHorizontal to action.cell.titleVertical)
+        } else {
+            hintedTitles.emit(null)
         }
     }
 

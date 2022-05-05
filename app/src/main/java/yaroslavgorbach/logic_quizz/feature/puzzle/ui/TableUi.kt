@@ -24,6 +24,7 @@ import androidx.compose.ui.layout.layout
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import yaroslavgorbach.logic_quizz.data.puzzle.table.Table
+import yaroslavgorbach.logic_quizz.feature.common.ui.theme.getHintedTitleColor
 import yaroslavgorbach.logic_quizz.feature.common.ui.theme.getTableCellColor
 
 @ExperimentalFoundationApi
@@ -31,6 +32,7 @@ import yaroslavgorbach.logic_quizz.feature.common.ui.theme.getTableCellColor
 fun TableUi(
     modifier: Modifier = Modifier,
     table: Table,
+    hintedTitles: Pair<String, String>?,
     onCell: (table: Table, cell: Table.Cell) -> Unit
 ) {
 
@@ -45,7 +47,7 @@ fun TableUi(
                             .height(30.dp)
                             .rotate(-90f)
                             .padding(1.dp)
-                            .background(color = getTableCellColor())
+                            .background(color = if (hintedTitles?.first == table.titleHorizontal.items[index]) getHintedTitleColor() else getTableCellColor())
                     ) {
                         Text(
                             text = table.titleHorizontal.items[index],
@@ -66,7 +68,7 @@ fun TableUi(
                                 .height(30.dp)
                                 .width(100.dp)
                                 .padding(1.dp)
-                                .background(color = getTableCellColor())
+                                .background(color = if (hintedTitles?.second == table.titleVertical.items[index]) getHintedTitleColor() else getTableCellColor())
                         ) {
                             Text(
                                 text = table.titleVertical.items[index],

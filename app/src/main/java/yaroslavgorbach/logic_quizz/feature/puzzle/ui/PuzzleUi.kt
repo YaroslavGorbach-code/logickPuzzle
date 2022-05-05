@@ -69,7 +69,8 @@ internal fun PuzzleUi(
                                 if (table.indexInPuzzleVertical == rowNumber) {
                                     TableUi(
                                         table = table,
-                                        modifier = Modifier.size(90.dp)
+                                        modifier = Modifier.size(90.dp),
+                                        hintedTitles = state.hintedTitles
                                     ) { table, cell ->
                                         if(cell.filledAutomatically.not()){
                                             actioner(PuzzleAction.OnCell(table, cell))
