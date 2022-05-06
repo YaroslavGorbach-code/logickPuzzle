@@ -1,5 +1,6 @@
 package yaroslavgorbach.logic_quizz.feature.puzzles.ui
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Icon
 import androidx.compose.material.MaterialTheme
@@ -10,30 +11,38 @@ import androidx.compose.material.icons.filled.NavigateNext
 import androidx.compose.material.icons.filled.Psychology
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment.Companion.CenterVertically
-import androidx.compose.ui.Alignment.Companion.End
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import yaroslavgorbach.logic_quizz.data.puzzles.model.DifficultLevel
 import yaroslavgorbach.logic_quizz.data.puzzles.model.PuzzleItem
 import yaroslavgorbach.logic_quizz.feature.common.ui.theme.LightBlue
-import yaroslavgorbach.logic_quizz.feature.common.ui.theme.getOnBackgroundColor
+import yaroslavgorbach.logic_quizz.feature.common.ui.theme.getOnBackgroundHinted
 
 @Composable
-fun PuzzleItemUi(item: PuzzleItem) {
+fun PuzzleItemUi(item: PuzzleItem, onPuzzle: () -> Unit) {
 
     Column(
         modifier = Modifier
             .fillMaxWidth()
             .height(110.dp)
+            .clickable {
+                onPuzzle()
+            }
     ) {
-        Column(modifier = Modifier
-            .weight(0.4f)
-            .padding(start = 8.dp)) {
+        Column(
+            modifier = Modifier
+                .weight(0.4f)
+                .padding(start = 8.dp)
+        ) {
 
             Row {
                 Text(
-                    modifier = Modifier.weight(1f).padding(top = 16.dp),
+                    modifier = Modifier
+                        .weight(1f)
+                        .padding(top = 16.dp),
                     text = stringResource(id = item.name.resId),
                     style = MaterialTheme.typography.caption
                 )
@@ -44,7 +53,7 @@ fun PuzzleItemUi(item: PuzzleItem) {
                         Icon(
                             Icons.Default.Psychology,
                             contentDescription = "",
-                            tint = if (difficultLevel == item.difficultLevel) LightBlue else getOnBackgroundColor(),
+                            tint = if (difficultLevel == item.difficultLevel) LightBlue else getOnBackgroundHinted(),
                             modifier = Modifier.size(20.dp)
                         )
                     }
@@ -57,7 +66,13 @@ fun PuzzleItemUi(item: PuzzleItem) {
         ) {
 
             Text(
-                text = stringResource(id = item.name.resId), modifier = Modifier.weight(1f).padding(8.dp),
+                text = item.description,
+                maxLines = 2,
+                fontSize = 14.sp,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier
+                    .weight(1f)
+                    .padding(start = 8.dp, top = 4.dp),
             )
 
             if (item.isAvailable) {

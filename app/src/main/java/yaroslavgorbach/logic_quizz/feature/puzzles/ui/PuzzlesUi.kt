@@ -17,6 +17,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import yaroslavgorbach.logic_quizz.R
+import yaroslavgorbach.logic_quizz.data.common.model.PuzzleName
 import yaroslavgorbach.logic_quizz.feature.common.ui.theme.getOnBackgroundColor
 import yaroslavgorbach.logic_quizz.feature.puzzles.model.PuzzlesAction
 import yaroslavgorbach.logic_quizz.feature.puzzles.model.PuzzlesViewState
@@ -25,8 +26,8 @@ import yaroslavgorbach.logic_quizz.feature.puzzles.presentation.PuzzlesViewModel
 @ExperimentalFoundationApi
 @ExperimentalMaterialApi
 @Composable
-fun PuzzlesUi(onBack: () -> Unit) {
-    PuzzlesUi(viewModel = hiltViewModel(), onBack = onBack)
+fun PuzzlesUi(navigateToPuzzle: (name: PuzzleName) -> Unit) {
+    PuzzlesUi(viewModel = hiltViewModel(), navigateToPuzzle = navigateToPuzzle)
 }
 
 @ExperimentalFoundationApi
@@ -34,14 +35,14 @@ fun PuzzlesUi(onBack: () -> Unit) {
 @Composable
 internal fun PuzzlesUi(
     viewModel: PuzzlesViewModel,
-    onBack: () -> Unit
+    navigateToPuzzle: (name: PuzzleName) -> Unit,
 ) {
     val viewState = viewModel.state.collectAsState()
 
     PuzzlesUi(
         state = viewState.value,
         actioner = viewModel::submitAction,
-        onBack = onBack,
+        navigateToPuzzle = navigateToPuzzle,
         clearMessage = viewModel::clearMessage
     )
 }
@@ -52,7 +53,7 @@ internal fun PuzzlesUi(
 internal fun PuzzlesUi(
     state: PuzzlesViewState,
     actioner: (PuzzlesAction) -> Unit,
-    onBack: () -> Unit,
+    navigateToPuzzle: (name: PuzzleName) -> Unit,
     clearMessage: (id: Long) -> Unit
 ) {
 
@@ -86,7 +87,9 @@ internal fun PuzzlesUi(
                             .height(2.dp)
                             .background(color = getOnBackgroundColor())
                     )
-                    PuzzleItemUi(item = item)
+                    PuzzleItemUi(item = item) {
+                        navigateToPuzzle(item.name)
+                    }
                     Spacer(
                         modifier = Modifier
                             .fillMaxWidth()
