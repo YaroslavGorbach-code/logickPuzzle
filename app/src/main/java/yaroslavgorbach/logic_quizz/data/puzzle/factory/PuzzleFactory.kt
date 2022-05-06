@@ -1,9 +1,9 @@
 package yaroslavgorbach.logic_quizz.data.puzzle.factory
 
-import yaroslavgorbach.logic_quizz.data.puzzle.Puzzle
-import yaroslavgorbach.logic_quizz.data.puzzle.PuzzleName
-import yaroslavgorbach.logic_quizz.data.puzzle.table.Table
-import yaroslavgorbach.logic_quizz.data.puzzle.table.TableTitle
+import yaroslavgorbach.logic_quizz.data.puzzle.model.Puzzle
+import yaroslavgorbach.logic_quizz.data.common.model.PuzzleName
+import yaroslavgorbach.logic_quizz.data.puzzle.model.table.Table
+import yaroslavgorbach.logic_quizz.data.puzzle.model.table.TableTitle
 
 class PuzzleFactory(private val puzzleTitleFactory: PuzzleTitlesFactory) {
 

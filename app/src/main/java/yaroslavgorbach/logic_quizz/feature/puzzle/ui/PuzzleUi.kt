@@ -1,6 +1,5 @@
 package yaroslavgorbach.logic_quizz.feature.puzzle.ui
 
-import android.util.Log
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.ExperimentalMaterialApi
@@ -20,7 +19,10 @@ import yaroslavgorbach.logic_quizz.feature.puzzle.presentation.PuzzleViewModel
 @ExperimentalMaterialApi
 @Composable
 fun PuzzleUi(onBack: () -> Unit) {
-    PuzzleUi(viewModel = hiltViewModel(), onBack = onBack)
+   PuzzleUi(
+        viewModel = hiltViewModel(),
+        onBack = onBack
+    )
 }
 
 @ExperimentalFoundationApi
@@ -72,7 +74,7 @@ internal fun PuzzleUi(
                                         modifier = Modifier.size(90.dp),
                                         hintedTitles = state.hintedTitles
                                     ) { table, cell ->
-                                        if(cell.filledAutomatically.not()){
+                                        if (cell.filledAutomatically.not()) {
                                             actioner(PuzzleAction.OnCell(table, cell))
                                         }
                                     }

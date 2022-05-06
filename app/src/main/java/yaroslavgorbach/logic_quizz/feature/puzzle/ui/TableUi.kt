@@ -23,9 +23,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.layout
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import yaroslavgorbach.logic_quizz.data.puzzle.table.Table
-import yaroslavgorbach.logic_quizz.feature.common.ui.theme.getHintedTitleColor
-import yaroslavgorbach.logic_quizz.feature.common.ui.theme.getTableCellColor
+import yaroslavgorbach.logic_quizz.data.puzzle.model.table.Table
+import yaroslavgorbach.logic_quizz.feature.common.ui.theme.getOnBackgroundHinted
+import yaroslavgorbach.logic_quizz.feature.common.ui.theme.getOnBackgroundColor
 
 @ExperimentalFoundationApi
 @Composable
@@ -47,7 +47,7 @@ fun TableUi(
                             .height(30.dp)
                             .rotate(-90f)
                             .padding(1.dp)
-                            .background(color = if (hintedTitles?.first == table.titleHorizontal.items[index]) getHintedTitleColor() else getTableCellColor())
+                            .background(color = if (hintedTitles?.first == table.titleHorizontal.items[index]) getOnBackgroundHinted() else getOnBackgroundColor())
                     ) {
                         Text(
                             text = table.titleHorizontal.items[index],
@@ -68,7 +68,7 @@ fun TableUi(
                                 .height(30.dp)
                                 .width(100.dp)
                                 .padding(1.dp)
-                                .background(color = if (hintedTitles?.second == table.titleVertical.items[index]) getHintedTitleColor() else getTableCellColor())
+                                .background(color = if (hintedTitles?.second == table.titleVertical.items[index]) getOnBackgroundHinted() else getOnBackgroundColor())
                         ) {
                             Text(
                                 text = table.titleVertical.items[index],
@@ -90,7 +90,7 @@ fun TableUi(
                             modifier = Modifier
                                 .size(30.dp)
                                 .padding(1.dp)
-                                .background(color = getTableCellColor())
+                                .background(color = getOnBackgroundColor())
                                 .clickable { onCell(table, cell) }
                         ) {
                             when (cell.state) {

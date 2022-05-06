@@ -1,7 +1,7 @@
-package yaroslavgorbach.logic_quizz.data.puzzle
+package yaroslavgorbach.logic_quizz.data.puzzle.model
 
-import yaroslavgorbach.logic_quizz.data.puzzle.table.Table
-import yaroslavgorbach.logic_quizz.data.puzzle.table.TableTitle
+import yaroslavgorbach.logic_quizz.data.puzzle.model.table.Table
+import yaroslavgorbach.logic_quizz.data.puzzle.model.table.TableTitle
 
 data class Puzzle(val titles: List<TableTitle>, val tables: List<Table>) {
     val numberOfRows: Int

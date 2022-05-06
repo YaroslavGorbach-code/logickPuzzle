@@ -1,4 +1,4 @@
-package yaroslavgorbach.logic_quizz.data.puzzle
+package yaroslavgorbach.logic_quizz.data.common.model
 
 import yaroslavgorbach.logic_quizz.R
 

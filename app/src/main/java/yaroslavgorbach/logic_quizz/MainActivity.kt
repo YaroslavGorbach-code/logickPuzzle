@@ -9,7 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import dagger.hilt.android.AndroidEntryPoint
 import yaroslavgorbach.logic_quizz.feature.common.ui.theme.LogicPuzzleTheme
-import yaroslavgorbach.logic_quizz.feature.puzzle.ui.PuzzleUi
+import yaroslavgorbach.logic_quizz.feature.puzzles.ui.PuzzlesUi
 
 @AndroidEntryPoint
 @ExperimentalMaterialApi
@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             LogicPuzzleTheme {
 
-                PuzzleUi {
+                PuzzlesUi {
 
                 }
             }

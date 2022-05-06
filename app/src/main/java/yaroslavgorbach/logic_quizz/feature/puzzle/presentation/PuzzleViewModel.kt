@@ -7,13 +7,15 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.flow.SharingStarted.Companion.WhileSubscribed
 import kotlinx.coroutines.launch
-import yaroslavgorbach.logic_quizz.data.puzzle.Puzzle
-import yaroslavgorbach.logic_quizz.data.puzzle.PuzzleName
-import yaroslavgorbach.logic_quizz.data.puzzle.PuzzleRepo
-import yaroslavgorbach.logic_quizz.data.puzzle.table.Table
+import yaroslavgorbach.logic_quizz.data.puzzle.model.Puzzle
+import yaroslavgorbach.logic_quizz.data.common.model.PuzzleName
+import yaroslavgorbach.logic_quizz.data.common.PuzzleRepo
+import yaroslavgorbach.logic_quizz.data.puzzle.model.table.Table
 import yaroslavgorbach.logic_quizz.feature.puzzle.model.PuzzleAction
-import yaroslavgorbach.logic_quizz.feature.puzzle.model.PuzzleUiMessage
 import yaroslavgorbach.logic_quizz.feature.puzzle.model.PuzzleViewState
+import yaroslavgorbach.logic_quizz.feature.puzzles.model.PuzzlesAction
+import yaroslavgorbach.logic_quizz.feature.puzzles.model.PuzzlesUiMessage
+import yaroslavgorbach.logic_quizz.feature.puzzles.model.PuzzlesViewState
 import yaroslavgorbach.logic_quizz.utills.UiMessageManager
 import javax.inject.Inject
 
@@ -28,7 +30,7 @@ class PuzzleViewModel @Inject constructor(
 
     private var hintedTitles: MutableStateFlow<Pair<String, String>?> = MutableStateFlow(null)
 
-    private val uiMessageManager: UiMessageManager<PuzzleUiMessage> = UiMessageManager()
+    private val uiMessageManager: UiMessageManager<PuzzlesUiMessage> = UiMessageManager()
 
     val state: StateFlow<PuzzleViewState> = combine(
         puzzle,

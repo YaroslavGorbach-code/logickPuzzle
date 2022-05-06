@@ -8,9 +8,10 @@ val Blue700 = Color(0xFF6E58F3)
 val Blue400 = Color(0xFF9181F2)
 val Blue200 = Color(0xFFA396F1)
 val Pink200 = Color(0xFFE040FB)
+val LightBlue = Color(0xFF304FFE)
 
 @Composable
-fun getTableCellColor(isDarkTheme: Boolean = isSystemInDarkTheme()): Color {
+fun getOnBackgroundColor(isDarkTheme: Boolean = isSystemInDarkTheme()): Color {
     return if (isDarkTheme) {
         Color(0xFF303030)
     } else {
@@ -19,7 +20,7 @@ fun getTableCellColor(isDarkTheme: Boolean = isSystemInDarkTheme()): Color {
 }
 
 @Composable
-fun getHintedTitleColor(isDarkTheme: Boolean = isSystemInDarkTheme()): Color {
+fun getOnBackgroundHinted(isDarkTheme: Boolean = isSystemInDarkTheme()): Color {
     return if (isDarkTheme) {
         Color(0xFF222222)
     } else {

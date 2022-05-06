@@ -1,4 +1,4 @@
-package yaroslavgorbach.logic_quizz.data.puzzle.table
+package yaroslavgorbach.logic_quizz.data.puzzle.model.table
 
 data class Table(
     val width: Int,

@@ -1,4 +1,8 @@
 <resources>
-    <string name="app_name">logic_quizz</string>
+    <string name="app_name">Logic puzzles</string>
+    <string name="app_description">
+        Use the logic to go through all the clues and find the
+        answer in each logic puzzle
+    </string>
 
 </resources>

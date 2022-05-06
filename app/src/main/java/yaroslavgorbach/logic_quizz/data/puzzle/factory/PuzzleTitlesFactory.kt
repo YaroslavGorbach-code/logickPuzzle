@@ -2,8 +2,8 @@ package yaroslavgorbach.logic_quizz.data.puzzle.factory
 
 import android.content.Context
 import yaroslavgorbach.logic_quizz.R
-import yaroslavgorbach.logic_quizz.data.puzzle.PuzzleName
-import yaroslavgorbach.logic_quizz.data.puzzle.table.TableTitle
+import yaroslavgorbach.logic_quizz.data.common.model.PuzzleName
+import yaroslavgorbach.logic_quizz.data.puzzle.model.table.TableTitle
 
 class PuzzleTitlesFactory(private val context: Context) {
 
@@ -34,11 +34,12 @@ class PuzzleTitlesFactory(private val context: Context) {
                     ),
                     TableTitle(
                         name = context.getString(R.string.snack_time_items_2_name),
-                            items = context.resources.getStringArray(R.array.snack_time_items_2).toList(),
-                            orderNumber = 2,
-                            orientation = TableTitle.Orientation.HORIZONTAL
-                        )
+                        items = context.resources.getStringArray(R.array.snack_time_items_2)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.HORIZONTAL
                     )
+                )
             }
         }
     }
