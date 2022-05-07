@@ -47,5 +47,11 @@ data class Table(
             }
         }
     }
+
+    fun getCheckedPairs(): List<Pair<String, String>> {
+        return cells.filter { it.state == Cell.State.CORRECT }.map {
+            Pair(it.titleHorizontal, it.titleVertical)
+        }
+    }
 }
 

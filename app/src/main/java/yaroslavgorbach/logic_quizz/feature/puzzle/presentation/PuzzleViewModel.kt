@@ -1,5 +1,6 @@
 package yaroslavgorbach.logic_quizz.feature.puzzle.presentation
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -7,16 +8,16 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.flow.SharingStarted.Companion.WhileSubscribed
 import kotlinx.coroutines.launch
-import yaroslavgorbach.logic_quizz.data.puzzle.model.Puzzle
-import yaroslavgorbach.logic_quizz.data.common.model.PuzzleName
 import yaroslavgorbach.logic_quizz.data.common.PuzzleRepo
+import yaroslavgorbach.logic_quizz.data.common.model.PuzzleName
+import yaroslavgorbach.logic_quizz.data.puzzle.model.Puzzle
 import yaroslavgorbach.logic_quizz.data.puzzle.model.table.Table
 import yaroslavgorbach.logic_quizz.feature.puzzle.model.PuzzleAction
+import yaroslavgorbach.logic_quizz.feature.puzzle.model.PuzzleUiMessage
 import yaroslavgorbach.logic_quizz.feature.puzzle.model.PuzzleViewState
-import yaroslavgorbach.logic_quizz.feature.puzzles.model.PuzzlesAction
-import yaroslavgorbach.logic_quizz.feature.puzzles.model.PuzzlesUiMessage
-import yaroslavgorbach.logic_quizz.feature.puzzles.model.PuzzlesViewState
+import yaroslavgorbach.logic_quizz.utills.UiMessage
 import yaroslavgorbach.logic_quizz.utills.UiMessageManager
+import yaroslavgorbach.logic_quizz.utills.compare
 import javax.inject.Inject
 
 @HiltViewModel
@@ -30,16 +31,24 @@ class PuzzleViewModel @Inject constructor(
 
     private var hintedTitles: MutableStateFlow<Pair<String, String>?> = MutableStateFlow(null)
 
-    private val uiMessageManager: UiMessageManager<PuzzlesUiMessage> = UiMessageManager()
+    private var isCheckAnswerVisible: MutableStateFlow<Boolean> = MutableStateFlow(false)
+
+    private val uiMessageManager: UiMessageManager<PuzzleUiMessage> = UiMessageManager()
 
     val state: StateFlow<PuzzleViewState> = combine(
+        isCheckAnswerVisible,
         puzzle,
         hintedTitles,
         uiMessageManager.message,
-    ) { puzzle, hintedTitles, message ->
-        PuzzleViewState(puzzle = puzzle?.copy(tables = puzzle.tables.map { table ->
-            table.copy(cells = table.cells.markIncorrectCells(table))
-        }), message = message, hintedTitles = hintedTitles)
+    ) { isCheckAnswerVisible, puzzle, hintedTitles, message ->
+        PuzzleViewState(
+            puzzle = puzzle?.copy(tables = puzzle.tables.map { table ->
+                table.copy(cells = table.cells.markIncorrectCells(table))
+            }),
+            message = message,
+            hintedTitles = hintedTitles,
+            isCheckAnswerVisible = isCheckAnswerVisible
+        )
     }.stateIn(
         scope = viewModelScope,
         started = WhileSubscribed(5000),
@@ -58,8 +67,49 @@ class PuzzleViewModel @Inject constructor(
                         handleTitleHint(action)
                         handleCellClick(action)
                     }
+
+                    PuzzleAction.CheckAnswer -> {
+                        checkAnswers()
+                    }
+                    PuzzleAction.TableUpdated -> {
+                        handleCheckAnswerButtonVisibility()
+
+                    }
                 }
             }
+        }
+    }
+
+    private suspend fun handleCheckAnswerButtonVisibility() {
+        state.value.puzzle?.let { puzzle ->
+            val checkedPairs: MutableList<Pair<String, String>> = ArrayList()
+
+            puzzle.tables.forEach { table -> checkedPairs.addAll(table.getCheckedPairs()) }
+
+            if (checkedPairs.size >= puzzle.correctPairs.size) {
+                isCheckAnswerVisible.emit(true)
+            } else {
+                isCheckAnswerVisible.emit(false)
+            }
+        }
+    }
+
+    private suspend fun checkAnswers() {
+        puzzle.value?.let { puzzle ->
+            val checkedPairs: MutableList<Pair<String, String>> = ArrayList()
+
+            puzzle.tables.forEach { table -> checkedPairs.addAll(table.getCheckedPairs()) }
+
+            val answers = state.value.puzzle?.correctPairs?.map { answer ->
+                checkedPairs.any { it.compare(answer) }
+            }
+
+            if (answers!!.any { it.not() }) {
+                uiMessageManager.emitMessage(UiMessage(PuzzleUiMessage.ShowPuzzleErrorDialog))
+            } else {
+                uiMessageManager.emitMessage(UiMessage(PuzzleUiMessage.ShowWinDialog))
+            }
+
         }
     }
 

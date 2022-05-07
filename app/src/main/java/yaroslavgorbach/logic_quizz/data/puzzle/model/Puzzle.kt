@@ -8,6 +8,7 @@ data class Puzzle(
     val titles: List<TableTitle>,
     val tables: List<Table>,
     val clues: List<String>,
+    val correctPairs: List<Pair<String, String>>,
     val name: PuzzleName
 ) {
     val numberOfRows: Int

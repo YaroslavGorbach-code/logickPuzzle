@@ -9,3 +9,7 @@ fun Context.findActivity(): Activity? = when (this) {
     is ContextWrapper -> baseContext.findActivity()
     else -> null
 }
+
+fun <A, B> Pair<A, B>.compare(second: Pair<A, B>): Boolean {
+    return this.toList().containsAll(second.toList())
+}

@@ -7,7 +7,8 @@ import yaroslavgorbach.logic_quizz.data.puzzle.model.table.TableTitle
 
 class PuzzleFactory(
     private val puzzleTitleFactory: PuzzleTitlesFactory,
-    private val puzzleCluesProvider: PuzzleCluesProvider
+    private val puzzleCluesProvider: PuzzleCluesProvider,
+    private val correctPairsProvider: CorrectPairsProvider,
 ) {
 
     fun create(name: PuzzleName): Puzzle {
@@ -36,6 +37,13 @@ class PuzzleFactory(
             }
             horizontalTitles.removeLast()
         }
-        return Puzzle(titles, tables, puzzleCluesProvider.provide(name), name)
+
+        return Puzzle(
+            titles,
+            tables,
+            puzzleCluesProvider.provide(name),
+            correctPairsProvider.provide(name),
+            name
+        )
     }
 }

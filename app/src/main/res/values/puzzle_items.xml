@@ -6,21 +6,21 @@
     <!--    Sophie wanted water and banana slices.-->
 
     <string name="snack_time_items_1_name">Friends</string>
-    <string-array name="snack_time_items_1">
+    <string-array name="snack_time_items_1_friends">
         <item>Katie</item>
         <item>Rachel</item>
         <item>Sophie</item>
     </string-array>
 
-    <string name="snack_time_items_2_name">Foods</string>
-    <string-array name="snack_time_items_2">
+    <string name="snack_time_items_2_food">Foods</string>
+    <string-array name="snack_time_items_2_food">
         <item>Apple</item>
         <item>Banana</item>
         <item>Orange</item>
     </string-array>
 
-    <string name="snack_time_items_3_name">Drinks</string>
-    <string-array name="snack_time_items_3">
+    <string name="snack_time_items_3_drinks">Drinks</string>
+    <string-array name="snack_time_items_3_drinks">
         <item>Juice</item>
         <item>Milk</item>
         <item>Water</item>
