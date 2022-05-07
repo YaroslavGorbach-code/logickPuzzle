@@ -73,7 +73,6 @@ class PuzzleViewModel @Inject constructor(
                     }
                     PuzzleAction.TableUpdated -> {
                         handleCheckAnswerButtonVisibility()
-
                     }
                 }
             }

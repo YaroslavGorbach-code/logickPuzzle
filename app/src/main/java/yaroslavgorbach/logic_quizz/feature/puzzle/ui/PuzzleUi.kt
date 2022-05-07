@@ -1,9 +1,6 @@
 package yaroslavgorbach.logic_quizz.feature.puzzle.ui
 
-import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -14,11 +11,15 @@ import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.Alignment.Companion.Center
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.res.vectorResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -26,8 +27,10 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import yaroslavgorbach.logic_quizz.R
 import yaroslavgorbach.logic_quizz.feature.common.ui.theme.getOnBackgroundColor
 import yaroslavgorbach.logic_quizz.feature.puzzle.model.PuzzleAction
+import yaroslavgorbach.logic_quizz.feature.puzzle.model.PuzzleUiMessage
 import yaroslavgorbach.logic_quizz.feature.puzzle.model.PuzzleViewState
 import yaroslavgorbach.logic_quizz.feature.puzzle.presentation.PuzzleViewModel
+import yaroslavgorbach.logic_quizz.utills.UiMessage
 
 @ExperimentalFoundationApi
 @ExperimentalMaterialApi
@@ -68,7 +71,11 @@ internal fun PuzzleUi(
 
     state.message?.let { message ->
         when (message.message) {
-            else -> {
+            PuzzleUiMessage.ShowPuzzleErrorDialog -> {
+                ShowFailDialog(clearMessage, message)
+            }
+            PuzzleUiMessage.ShowWinDialog -> {
+                ShowWinDialog(clearMessage, message)
             }
         }
     }
@@ -173,13 +180,114 @@ internal fun PuzzleUi(
                     items(state.puzzle?.clues ?: emptyList()) { clue ->
                         Text(
                             text = clue,
-                            modifier = Modifier.padding(start = 8.dp, top = 8.dp, end = 8.dp))
+                            modifier = Modifier.padding(start = 8.dp, top = 8.dp, end = 8.dp)
+                        )
                     }
                 }
             }
 
         }
     }
+}
+
+@Composable
+private fun ShowWinDialog(
+    clearMessage: (id: Long) -> Unit,
+    message: UiMessage<PuzzleUiMessage>
+) {
+    AlertDialog(onDismissRequest = {
+        clearMessage(message.id)
+    }, buttons = {
+        Column(modifier = Modifier.fillMaxWidth()) {
+            Button(
+                onClick = { clearMessage(message.id) },
+                modifier = Modifier
+                    .width(100.dp)
+                    .padding(8.dp)
+                    .align(CenterHorizontally)
+            ) {
+                Text(text = "OK")
+            }
+        }
+
+    }, title = {
+
+        Box(modifier = Modifier.fillMaxWidth()) {
+            Image(
+                modifier = Modifier
+                    .size(100.dp)
+                    .align(Center),
+                imageVector = ImageVector.vectorResource(id = R.drawable.ic_correct),
+                contentDescription = ""
+            )
+        }
+
+    }, text = {
+        Column(modifier = Modifier.fillMaxWidth()) {
+            Text(
+                modifier = Modifier.align(CenterHorizontally),
+                text = stringResource(id = R.string.congratulations),
+                style = MaterialTheme.typography.caption
+            )
+
+            Text(
+                modifier = Modifier.align(CenterHorizontally),
+                text = stringResource(id = R.string.you_completed_puzzle),
+                fontSize = 12.sp
+            )
+        }
+    })
+}
+
+@Composable
+private fun ShowFailDialog(
+    clearMessage: (id: Long) -> Unit,
+    message: UiMessage<PuzzleUiMessage>
+) {
+    AlertDialog(onDismissRequest = {
+        clearMessage(message.id)
+    }, buttons = {
+        Column(modifier = Modifier.fillMaxWidth()) {
+            Button(
+                onClick = { clearMessage(message.id) },
+                modifier = Modifier
+                    .width(100.dp)
+                    .padding(8.dp)
+                    .align(CenterHorizontally)
+            ) {
+                Text(text = "OK")
+            }
+        }
+
+    }, title = {
+
+        Box(modifier = Modifier.fillMaxWidth()) {
+            Image(
+                modifier = Modifier
+                    .size(100.dp)
+                    .align(Center),
+                imageVector = ImageVector.vectorResource(id = R.drawable.ic_wrong),
+                contentDescription = ""
+            )
+        }
+
+    }, text = {
+        Column(modifier = Modifier.fillMaxWidth()) {
+            Text(
+                modifier = Modifier.align(CenterHorizontally),
+                text = stringResource(id = R.string.oops),
+                style = MaterialTheme.typography.caption,
+                textAlign = TextAlign.Center
+            )
+
+            Text(
+                modifier = Modifier.align(CenterHorizontally),
+                text = stringResource(id = R.string.check_answers),
+                fontSize = 12.sp,
+                textAlign = TextAlign.Center
+            )
+        }
+    })
 }
 
 @ExperimentalFoundationApi
