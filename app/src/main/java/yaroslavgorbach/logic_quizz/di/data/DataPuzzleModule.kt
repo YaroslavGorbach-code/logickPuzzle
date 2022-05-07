@@ -7,6 +7,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import yaroslavgorbach.logic_quizz.data.common.PuzzleRepo
 import yaroslavgorbach.logic_quizz.data.common.PuzzleRepoImp
+import yaroslavgorbach.logic_quizz.data.puzzle.factory.PuzzleCluesProvider
 import yaroslavgorbach.logic_quizz.data.puzzle.factory.PuzzleFactory
 import yaroslavgorbach.logic_quizz.data.puzzle.factory.PuzzleTitlesFactory
 import yaroslavgorbach.logic_quizz.data.puzzles.factory.PuzzlesFactory
@@ -25,8 +26,13 @@ object DataPuzzleModule {
     }
 
     @Provides
-    fun providePuzzleFactory(fac: PuzzleTitlesFactory): PuzzleFactory {
-        return PuzzleFactory(fac)
+    fun providePuzzleCluesProvider(app: Application): PuzzleCluesProvider {
+        return PuzzleCluesProvider(app)
+    }
+
+    @Provides
+    fun providePuzzleFactory(fac: PuzzleTitlesFactory, cluesProvider: PuzzleCluesProvider): PuzzleFactory {
+        return PuzzleFactory(fac, cluesProvider)
     }
 
     @Provides

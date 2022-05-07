@@ -1,11 +1,14 @@
 package yaroslavgorbach.logic_quizz.data.puzzle.factory
 
-import yaroslavgorbach.logic_quizz.data.puzzle.model.Puzzle
 import yaroslavgorbach.logic_quizz.data.common.model.PuzzleName
+import yaroslavgorbach.logic_quizz.data.puzzle.model.Puzzle
 import yaroslavgorbach.logic_quizz.data.puzzle.model.table.Table
 import yaroslavgorbach.logic_quizz.data.puzzle.model.table.TableTitle
 
-class PuzzleFactory(private val puzzleTitleFactory: PuzzleTitlesFactory) {
+class PuzzleFactory(
+    private val puzzleTitleFactory: PuzzleTitlesFactory,
+    private val puzzleCluesProvider: PuzzleCluesProvider
+) {
 
     fun create(name: PuzzleName): Puzzle {
         val titles = puzzleTitleFactory.create(name)
@@ -33,6 +36,6 @@ class PuzzleFactory(private val puzzleTitleFactory: PuzzleTitlesFactory) {
             }
             horizontalTitles.removeLast()
         }
-        return Puzzle(titles, tables)
+        return Puzzle(titles, tables, puzzleCluesProvider.provide(name), name)
     }
 }

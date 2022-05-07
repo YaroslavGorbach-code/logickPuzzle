@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    Answer-->
+    <!--    Katie wanted juice and apple slices.-->
+    <!--    Rachel wanted milk and orange slices.-->
+    <!--    Sophie wanted water and banana slices.-->
+
+    <string-array name="snack_time_clues">
+        <item>1. Of course, Rachel remembered that she wanted milk and orange slices</item>
+        <item>2. Although she couldn\'t remember who it was, Rachel knew that the person who wanted juice also wanted apple slices</item>
+        <item>3. Rachel knew that Sophie didn\'t like apples</item>
+    </string-array>
+
+</resources>
