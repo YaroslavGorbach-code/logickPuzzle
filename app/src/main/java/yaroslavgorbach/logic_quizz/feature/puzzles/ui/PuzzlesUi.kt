@@ -114,20 +114,20 @@ internal fun PuzzlesUi(
                             .height(2.dp)
                             .background(color = getOnBackgroundColor())
                     )
+
                     PuzzleItemUi(item = item, onPuzzle = {
                         navigateToPuzzle(item.name)
                     }, showUnavailableDialog = {
                         actioner(PuzzlesAction.ShowPuzzleUnAvailableDialog(item.name))
                     })
-
-                    Spacer(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .height(2.dp)
-                            .background(color = getOnBackgroundColor())
-                    )
                 }
             }
+            Spacer(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(2.dp)
+                    .background(color = getOnBackgroundColor())
+            )
         }
     }
 }
