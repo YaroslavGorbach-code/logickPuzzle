@@ -8,20 +8,26 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.LifecycleOwner
 import yaroslavgorbach.logic_quizz.R
 import yaroslavgorbach.logic_quizz.data.common.model.PuzzleName
 import yaroslavgorbach.logic_quizz.feature.common.ui.theme.getOnBackgroundColor
+import yaroslavgorbach.logic_quizz.feature.puzzle.model.PuzzleAction
 import yaroslavgorbach.logic_quizz.feature.puzzles.model.PuzzlesAction
 import yaroslavgorbach.logic_quizz.feature.puzzles.model.PuzzlesUiMessage
 import yaroslavgorbach.logic_quizz.feature.puzzles.model.PuzzlesViewState
@@ -59,8 +65,23 @@ internal fun PuzzlesUi(
     state: PuzzlesViewState,
     actioner: (PuzzlesAction) -> Unit,
     navigateToPuzzle: (name: PuzzleName) -> Unit,
-    clearMessage: (id: Long) -> Unit
+    clearMessage: (id: Long) -> Unit,
+    lifecycleOwner: LifecycleOwner = LocalLifecycleOwner.current,
 ) {
+
+    DisposableEffect(lifecycleOwner) {
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_START) {
+                actioner(PuzzlesAction.LoadPuzzle)
+            }
+        }
+
+        lifecycleOwner.lifecycle.addObserver(observer)
+
+        onDispose {
+            lifecycleOwner.lifecycle.removeObserver(observer)
+        }
+    }
 
     state.message?.let { message ->
         when (message.message) {

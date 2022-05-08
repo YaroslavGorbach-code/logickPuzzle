@@ -3,13 +3,14 @@ package yaroslavgorbach.logic_quizz.feature.puzzles.ui
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
+import androidx.compose.material.Icon
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.NavigateNext
 import androidx.compose.material.icons.filled.Psychology
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -23,8 +24,6 @@ import yaroslavgorbach.logic_quizz.data.puzzles.model.DifficultLevel
 import yaroslavgorbach.logic_quizz.data.puzzles.model.PuzzleItem
 import yaroslavgorbach.logic_quizz.feature.common.ui.theme.LightBlue
 import yaroslavgorbach.logic_quizz.feature.common.ui.theme.getOnBackgroundHinted
-import yaroslavgorbach.logic_quizz.feature.puzzle.model.PuzzleUiMessage
-import yaroslavgorbach.logic_quizz.utills.UiMessage
 
 @Composable
 fun PuzzleItemUi(item: PuzzleItem, onPuzzle: () -> Unit, showUnavailableDialog: () -> Unit) {
@@ -84,25 +83,37 @@ fun PuzzleItemUi(item: PuzzleItem, onPuzzle: () -> Unit, showUnavailableDialog: 
                     .padding(start = 8.dp, top = 4.dp),
             )
 
-            if (item.isAvailable) {
-                Icon(
-                    Icons.Default.NavigateNext,
+            if (item.isCompleted) {
+                Image(
+                    ImageVector.vectorResource(id = R.drawable.ic_done),
                     modifier = Modifier
                         .align(CenterVertically)
-                        .size(70.dp)
+                        .size(60.dp)
                         .padding(bottom = 32.dp),
                     contentDescription = ""
                 )
             } else {
-                Icon(
-                    Icons.Default.Lock,
-                    modifier = Modifier
-                        .align(CenterVertically)
-                        .size(55.dp)
-                        .padding(bottom = 32.dp),
-                    contentDescription = ""
-                )
+                if (item.isAvailable) {
+                    Icon(
+                        Icons.Default.NavigateNext,
+                        modifier = Modifier
+                            .align(CenterVertically)
+                            .size(70.dp)
+                            .padding(bottom = 32.dp),
+                        contentDescription = ""
+                    )
+                } else {
+                    Icon(
+                        Icons.Default.Lock,
+                        modifier = Modifier
+                            .align(CenterVertically)
+                            .size(55.dp)
+                            .padding(bottom = 32.dp),
+                        contentDescription = ""
+                    )
+                }
             }
+
         }
     }
 }

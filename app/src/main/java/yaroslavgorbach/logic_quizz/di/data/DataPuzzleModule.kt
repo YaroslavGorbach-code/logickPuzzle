@@ -8,8 +8,11 @@ import dagger.hilt.components.SingletonComponent
 import yaroslavgorbach.logic_quizz.data.common.PuzzleRepo
 import yaroslavgorbach.logic_quizz.data.common.PuzzleRepoImp
 import yaroslavgorbach.logic_quizz.data.puzzle.factory.*
+import yaroslavgorbach.logic_quizz.data.puzzles.PuzzleDataStore
+import yaroslavgorbach.logic_quizz.data.puzzles.PuzzleDataStoreImp
+import yaroslavgorbach.logic_quizz.data.puzzles.factory.PuzzleAvailabilityProvider
+import yaroslavgorbach.logic_quizz.data.puzzles.factory.PuzzleCompleteProvider
 import yaroslavgorbach.logic_quizz.data.puzzles.factory.PuzzlesFactory
-import yaroslavgorbach.logic_quizz.data.puzzles.mapper.PuzzleAvailabilityProvider
 import yaroslavgorbach.logic_quizz.data.puzzles.mapper.PuzzleNameToDescriptionMapper
 import yaroslavgorbach.logic_quizz.data.puzzles.mapper.PuzzleNameToDifficultyMapper
 import javax.inject.Singleton
@@ -21,6 +24,16 @@ object DataPuzzleModule {
     @Provides
     fun providePuzzleTitlesFactory(app: Application): PuzzleTitlesFactory {
         return PuzzleTitlesFactory(app)
+    }
+
+    @Provides
+    fun providePuzzleAvailabilityDataStore(app: Application): PuzzleDataStore {
+        return PuzzleDataStoreImp(app)
+    }
+
+    @Provides
+    fun providePuzzleCompleteDataStore(puzzleDataStore: PuzzleDataStore): PuzzleCompleteProvider {
+        return PuzzleCompleteProvider(puzzleDataStore)
     }
 
     @Provides
@@ -59,27 +72,33 @@ object DataPuzzleModule {
     }
 
     @Provides
-    fun providePuzzleAvailabilityProvider(): PuzzleAvailabilityProvider {
-        return PuzzleAvailabilityProvider()
+    fun providePuzzleAvailabilityProvider(puzzleDataStore: PuzzleDataStore): PuzzleAvailabilityProvider {
+        return PuzzleAvailabilityProvider(puzzleDataStore)
     }
 
     @Provides
     fun providePuzzlesFactory(
         puzzleNameToDescriptionMapper: PuzzleNameToDescriptionMapper,
         puzzleNameToDifficultyMapper: PuzzleNameToDifficultyMapper,
-        puzzleAvailabilityProvider: PuzzleAvailabilityProvider
+        puzzleAvailabilityProvider: PuzzleAvailabilityProvider,
+        puzzleCompleteProvider: PuzzleCompleteProvider
     ): PuzzlesFactory {
         return PuzzlesFactory(
             nameToDescriptionMapper = puzzleNameToDescriptionMapper,
             puzzleNameToDifficultyMapper = puzzleNameToDifficultyMapper,
-            puzzleAvailabilityProvider = puzzleAvailabilityProvider
+            puzzleAvailabilityProvider = puzzleAvailabilityProvider,
+            puzzleCompleteProvider = puzzleCompleteProvider
         )
     }
 
     @Singleton
     @Provides
-    fun providePuzzleRepo(factory: PuzzleFactory, puzzlesFactory: PuzzlesFactory): PuzzleRepo {
-        return PuzzleRepoImp(factory, puzzlesFactory)
+    fun providePuzzleRepo(
+        factory: PuzzleFactory,
+        puzzlesFactory: PuzzlesFactory,
+        puzzleDataStore: PuzzleDataStore
+    ): PuzzleRepo {
+        return PuzzleRepoImp(factory, puzzlesFactory, puzzleDataStore)
     }
 
 }

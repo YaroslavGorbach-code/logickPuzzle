@@ -6,5 +6,6 @@ data class PuzzleItem(
     val name: PuzzleName,
     val description: String,
     val difficultLevel: DifficultLevel,
-    val isAvailable: Boolean
+    val isAvailable: Boolean,
+    val isCompleted: Boolean
 )

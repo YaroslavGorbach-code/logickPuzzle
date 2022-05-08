@@ -11,6 +11,7 @@ import kotlinx.coroutines.launch
 import yaroslavgorbach.logic_quizz.PUZZLE_NAME_ARG
 import yaroslavgorbach.logic_quizz.data.common.PuzzleRepo
 import yaroslavgorbach.logic_quizz.data.common.model.PuzzleName
+import yaroslavgorbach.logic_quizz.data.common.model.findNext
 import yaroslavgorbach.logic_quizz.data.puzzle.model.Puzzle
 import yaroslavgorbach.logic_quizz.data.puzzle.model.table.Table
 import yaroslavgorbach.logic_quizz.feature.puzzle.model.PuzzleAction
@@ -110,6 +111,10 @@ class PuzzleViewModel @Inject constructor(
             if (answers!!.any { it.not() }) {
                 uiMessageManager.emitMessage(UiMessage(PuzzleUiMessage.ShowPuzzleErrorDialog))
             } else {
+                puzzleName.findNext()?.let {
+                    puzzleRepo.makeAvailable(it)
+                }
+                puzzleRepo.finishPuzzle(puzzleName)
                 uiMessageManager.emitMessage(UiMessage(PuzzleUiMessage.ShowWinDialog))
             }
 

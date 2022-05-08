@@ -8,5 +8,7 @@ import yaroslavgorbach.logic_quizz.data.puzzles.model.PuzzleItem
 
 interface PuzzleRepo {
     fun getPuzzle(puzzleName: PuzzleName): Flow<Puzzle>
-    fun getPuzzleItems(): Flow<List<PuzzleItem>>
+    suspend fun getPuzzleItems(): Flow<List<PuzzleItem>>
+    suspend fun makeAvailable(name: PuzzleName)
+    suspend fun finishPuzzle(name: PuzzleName)
 }
