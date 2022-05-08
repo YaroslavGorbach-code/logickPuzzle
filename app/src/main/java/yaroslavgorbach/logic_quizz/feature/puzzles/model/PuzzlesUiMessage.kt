@@ -1,5 +1,7 @@
 package yaroslavgorbach.logic_quizz.feature.puzzles.model
 
-sealed class PuzzlesUiMessage {
+import yaroslavgorbach.logic_quizz.data.common.model.PuzzleName
 
+sealed class PuzzlesUiMessage {
+    class ShowPuzzleUnAvailableDialog(val name: PuzzleName): PuzzlesUiMessage()
 }

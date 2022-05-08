@@ -75,7 +75,7 @@ internal fun PuzzleUi(
                 ShowFailDialog(clearMessage, message)
             }
             PuzzleUiMessage.ShowWinDialog -> {
-                ShowWinDialog(clearMessage, message)
+                ShowWinDialog(clearMessage, message, onBack)
             }
             PuzzleUiMessage.ShowStoryDialog -> {
                 ShowStoryDialog(state, clearMessage, message)
@@ -196,24 +196,13 @@ internal fun PuzzleUi(
 @Composable
 private fun ShowWinDialog(
     clearMessage: (id: Long) -> Unit,
-    message: UiMessage<PuzzleUiMessage>
+    message: UiMessage<PuzzleUiMessage>,
+    onBack: () -> Unit
 ) {
     AlertDialog(onDismissRequest = {
         clearMessage(message.id)
-    }, buttons = {
-        Column(modifier = Modifier.fillMaxWidth()) {
-            Button(
-                onClick = { clearMessage(message.id) },
-                modifier = Modifier
-                    .width(100.dp)
-                    .padding(8.dp)
-                    .align(CenterHorizontally)
-            ) {
-                Text(text = "OK")
-            }
-        }
-
-    }, title = {
+        onBack()
+    }, buttons = {}, title = {
 
         Box(modifier = Modifier.fillMaxWidth()) {
             Image(
@@ -230,13 +219,16 @@ private fun ShowWinDialog(
             Text(
                 modifier = Modifier.align(CenterHorizontally),
                 text = stringResource(id = R.string.congratulations),
-                style = MaterialTheme.typography.caption
+                style = MaterialTheme.typography.caption,
+                fontSize = 24.sp,
+                textAlign = TextAlign.Center
             )
 
             Text(
                 modifier = Modifier.align(CenterHorizontally),
                 text = stringResource(id = R.string.you_completed_puzzle),
-                fontSize = 12.sp
+                fontSize = 13.sp,
+                textAlign = TextAlign.Center
             )
         }
     })
@@ -249,20 +241,7 @@ private fun ShowFailDialog(
 ) {
     AlertDialog(onDismissRequest = {
         clearMessage(message.id)
-    }, buttons = {
-        Column(modifier = Modifier.fillMaxWidth()) {
-            Button(
-                onClick = { clearMessage(message.id) },
-                modifier = Modifier
-                    .width(100.dp)
-                    .padding(8.dp)
-                    .align(CenterHorizontally)
-            ) {
-                Text(text = "OK")
-            }
-        }
-
-    }, title = {
+    }, buttons = {}, title = {
 
         Box(modifier = Modifier.fillMaxWidth()) {
             Image(
@@ -280,13 +259,14 @@ private fun ShowFailDialog(
                 modifier = Modifier.align(CenterHorizontally),
                 text = stringResource(id = R.string.oops),
                 style = MaterialTheme.typography.caption,
-                textAlign = TextAlign.Center
+                textAlign = TextAlign.Center,
+                fontSize = 34.sp
             )
 
             Text(
                 modifier = Modifier.align(CenterHorizontally),
                 text = stringResource(id = R.string.check_answers),
-                fontSize = 12.sp,
+                fontSize = 13.sp,
                 textAlign = TextAlign.Center
             )
         }
@@ -302,17 +282,6 @@ private fun ShowStoryDialog(
     AlertDialog(onDismissRequest = {
         clearMessage(message.id)
     }, buttons = {
-        Column(modifier = Modifier.fillMaxWidth()) {
-            Button(
-                onClick = { clearMessage(message.id) },
-                modifier = Modifier
-                    .width(100.dp)
-                    .padding(8.dp)
-                    .align(CenterHorizontally)
-            ) {
-                Text(text = "OK")
-            }
-        }
 
     }, title = {
 

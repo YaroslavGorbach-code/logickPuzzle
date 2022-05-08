@@ -13,6 +13,7 @@ import yaroslavgorbach.logic_quizz.data.common.PuzzleRepo
 import yaroslavgorbach.logic_quizz.feature.puzzles.model.PuzzlesAction
 import yaroslavgorbach.logic_quizz.feature.puzzles.model.PuzzlesUiMessage
 import yaroslavgorbach.logic_quizz.feature.puzzles.model.PuzzlesViewState
+import yaroslavgorbach.logic_quizz.utills.UiMessage
 import yaroslavgorbach.logic_quizz.utills.UiMessageManager
 import javax.inject.Inject
 
@@ -35,6 +36,24 @@ class PuzzlesViewModel @Inject constructor(
         started = WhileSubscribed(5000),
         initialValue = PuzzlesViewState.Test
     )
+
+    init {
+        viewModelScope.launch {
+            pendingActions.collect { action ->
+                when (action) {
+                    is PuzzlesAction.ShowPuzzleUnAvailableDialog -> {
+                        uiMessageManager.emitMessage(
+                            UiMessage(
+                                PuzzlesUiMessage.ShowPuzzleUnAvailableDialog(
+                                    action.name
+                                )
+                            )
+                        )
+                    }
+                }
+            }
+        }
+    }
 
     fun submitAction(action: PuzzlesAction) {
         viewModelScope.launch {

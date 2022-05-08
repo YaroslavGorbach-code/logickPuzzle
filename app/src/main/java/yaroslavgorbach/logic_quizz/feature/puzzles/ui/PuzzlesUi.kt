@@ -1,18 +1,21 @@
 package yaroslavgorbach.logic_quizz.feature.puzzles.ui
 
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material.ExperimentalMaterialApi
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.res.vectorResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -20,8 +23,10 @@ import yaroslavgorbach.logic_quizz.R
 import yaroslavgorbach.logic_quizz.data.common.model.PuzzleName
 import yaroslavgorbach.logic_quizz.feature.common.ui.theme.getOnBackgroundColor
 import yaroslavgorbach.logic_quizz.feature.puzzles.model.PuzzlesAction
+import yaroslavgorbach.logic_quizz.feature.puzzles.model.PuzzlesUiMessage
 import yaroslavgorbach.logic_quizz.feature.puzzles.model.PuzzlesViewState
 import yaroslavgorbach.logic_quizz.feature.puzzles.presentation.PuzzlesViewModel
+import yaroslavgorbach.logic_quizz.utills.UiMessage
 
 @ExperimentalFoundationApi
 @ExperimentalMaterialApi
@@ -59,8 +64,10 @@ internal fun PuzzlesUi(
 
     state.message?.let { message ->
         when (message.message) {
-            else -> {
-            }
+            is PuzzlesUiMessage.ShowPuzzleUnAvailableDialog -> ShowUnavailableDialog(
+                clearMessage,
+                message
+            )
         }
     }
 
@@ -78,7 +85,6 @@ internal fun PuzzlesUi(
                 modifier = Modifier.padding(bottom = 32.dp, start = 8.dp, end = 8.dp),
             )
 
-
             LazyColumn {
                 items(state.puzzleItems) { item ->
                     Spacer(
@@ -87,9 +93,12 @@ internal fun PuzzlesUi(
                             .height(2.dp)
                             .background(color = getOnBackgroundColor())
                     )
-                    PuzzleItemUi(item = item) {
+                    PuzzleItemUi(item = item, onPuzzle = {
                         navigateToPuzzle(item.name)
-                    }
+                    }, showUnavailableDialog = {
+                        actioner(PuzzlesAction.ShowPuzzleUnAvailableDialog(item.name))
+                    })
+
                     Spacer(
                         modifier = Modifier
                             .fillMaxWidth()
@@ -100,5 +109,55 @@ internal fun PuzzlesUi(
             }
         }
     }
+}
 
+@Composable
+private fun ShowUnavailableDialog(
+    clearMessage: (id: Long) -> Unit,
+    message: UiMessage<PuzzlesUiMessage>
+) {
+    AlertDialog(onDismissRequest = {
+        clearMessage(message.id)
+    }, buttons = {
+        Column(modifier = Modifier.fillMaxWidth()) {
+            Button(
+                onClick = { clearMessage(message.id) },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(8.dp)
+                    .align(Alignment.CenterHorizontally)
+            ) {
+                Text(text = stringResource(id = R.string.view_ads), color = Color.White)
+            }
+        }
+
+    }, title = {
+
+        Box(modifier = Modifier.fillMaxWidth()) {
+            Image(
+                modifier = Modifier
+                    .size(100.dp)
+                    .align(Alignment.Center),
+                imageVector = ImageVector.vectorResource(id = R.drawable.ic_lock),
+                contentDescription = ""
+            )
+        }
+
+    }, text = {
+        Column(modifier = Modifier.fillMaxWidth()) {
+            Text(
+                modifier = Modifier.align(Alignment.CenterHorizontally),
+                text = stringResource(id = R.string.puzzle_is_unavailable),
+                style = MaterialTheme.typography.caption,
+                textAlign = TextAlign.Center
+            )
+
+            Text(
+                modifier = Modifier.align(Alignment.CenterHorizontally),
+                text = stringResource(id = R.string.puzzle_is_unavailable_explanation),
+                fontSize = 12.sp,
+                textAlign = TextAlign.Center
+            )
+        }
+    })
 }

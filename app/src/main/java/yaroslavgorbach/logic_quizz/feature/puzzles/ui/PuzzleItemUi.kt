@@ -1,35 +1,44 @@
 package yaroslavgorbach.logic_quizz.feature.puzzles.ui
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.Icon
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.NavigateNext
 import androidx.compose.material.icons.filled.Psychology
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import yaroslavgorbach.logic_quizz.R
 import yaroslavgorbach.logic_quizz.data.puzzles.model.DifficultLevel
 import yaroslavgorbach.logic_quizz.data.puzzles.model.PuzzleItem
 import yaroslavgorbach.logic_quizz.feature.common.ui.theme.LightBlue
 import yaroslavgorbach.logic_quizz.feature.common.ui.theme.getOnBackgroundHinted
+import yaroslavgorbach.logic_quizz.feature.puzzle.model.PuzzleUiMessage
+import yaroslavgorbach.logic_quizz.utills.UiMessage
 
 @Composable
-fun PuzzleItemUi(item: PuzzleItem, onPuzzle: () -> Unit) {
+fun PuzzleItemUi(item: PuzzleItem, onPuzzle: () -> Unit, showUnavailableDialog: () -> Unit) {
 
     Column(
         modifier = Modifier
             .fillMaxWidth()
             .height(110.dp)
             .clickable {
-                onPuzzle()
+                if (item.isAvailable) {
+                    onPuzzle()
+                } else {
+                    showUnavailableDialog()
+                }
             }
     ) {
         Column(
@@ -87,10 +96,11 @@ fun PuzzleItemUi(item: PuzzleItem, onPuzzle: () -> Unit) {
             } else {
                 Icon(
                     Icons.Default.Lock,
-                    contentDescription = "",
                     modifier = Modifier
                         .align(CenterVertically)
-                        .size(24.dp)
+                        .size(55.dp)
+                        .padding(bottom = 32.dp),
+                    contentDescription = ""
                 )
             }
         }
