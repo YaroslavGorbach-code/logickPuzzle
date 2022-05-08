@@ -27,4 +27,31 @@
     </string-array>
 
 
+    <!--    Answer-->
+<!--    Charlotte had a fabulous time on her date with Matt, even if she did get a bit wet sitting on the grass at the park.-->
+<!--    Sarah and Ben didn't really get on, but the dinner was good none the less.-->
+<!--    Natalie loved the movie and it was even better having Nick to hold on to at the scary parts.-->
+
+    <string name="mates_plus_dates_items_1_name">Friends</string>
+    <string-array name="mates_plus_dates_items_1_friends">
+        <item>Sarah</item>
+        <item>Natalie</item>
+        <item>Charlotte</item>
+    </string-array>
+
+    <string name="mates_plus_dates_items_2_name">Dates</string>
+    <string-array name="mates_plus_dates_items_2_dates">
+        <item>Nick</item>
+        <item>Matt</item>
+        <item>Ben</item>
+    </string-array>
+
+    <string name="mates_plus_dates_items_3_name">Places</string>
+    <string-array name="mates_plus_dates_items_3_places">
+        <item>Park</item>
+        <item>Movie</item>
+        <item>Dinner</item>
+    </string-array>
+
+
 </resources>

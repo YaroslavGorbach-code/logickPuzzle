@@ -16,14 +16,12 @@ class PuzzlesFactory(
 
     fun create(): List<PuzzleItem> {
        return names.map { name ->
-            when (name) {
-                PuzzleName.SNACK_TIME -> PuzzleItem(
-                    name = name,
-                    description = nameToDescriptionMapper.map(name),
-                    difficultLevel = puzzleNameToDifficultyMapper.map(name),
-                    isAvailable = puzzleAvailabilityProvider.isAvailable(name)
-                )
-            }
-        }
+           PuzzleItem(
+               name = name,
+               description = nameToDescriptionMapper.map(name),
+               difficultLevel = puzzleNameToDifficultyMapper.map(name),
+               isAvailable = puzzleAvailabilityProvider.isAvailable(name)
+           )
+       }
     }
 }

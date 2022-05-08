@@ -1,5 +1,6 @@
 package yaroslavgorbach.logic_quizz.feature.puzzle.presentation
 
+import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -7,6 +8,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.flow.SharingStarted.Companion.WhileSubscribed
 import kotlinx.coroutines.launch
+import yaroslavgorbach.logic_quizz.PUZZLE_NAME_ARG
 import yaroslavgorbach.logic_quizz.data.common.PuzzleRepo
 import yaroslavgorbach.logic_quizz.data.common.model.PuzzleName
 import yaroslavgorbach.logic_quizz.data.puzzle.model.Puzzle
@@ -21,8 +23,10 @@ import javax.inject.Inject
 
 @HiltViewModel
 class PuzzleViewModel @Inject constructor(
-    private val puzzleRepo: PuzzleRepo
+    private val puzzleRepo: PuzzleRepo,
+    savedState: SavedStateHandle
 ) : ViewModel() {
+    val puzzleName: PuzzleName = savedState[PUZZLE_NAME_ARG]!!
 
     private val pendingActions = MutableSharedFlow<PuzzleAction>()
 
@@ -57,7 +61,7 @@ class PuzzleViewModel @Inject constructor(
     init {
         viewModelScope.launch {
             uiMessageManager.emitMessage(UiMessage(PuzzleUiMessage.ShowStoryDialog))
-            loadPuzzle()
+            loadPuzzle(puzzleName)
         }
 
         viewModelScope.launch {
@@ -184,8 +188,8 @@ class PuzzleViewModel @Inject constructor(
         }.toMutableList()
     }
 
-    private suspend fun loadPuzzle() {
-        puzzleRepo.getPuzzle(PuzzleName.SNACK_TIME)
+    private suspend fun loadPuzzle(name: PuzzleName) {
+        puzzleRepo.getPuzzle(name)
             .flowOn(Dispatchers.IO)
             .collect(puzzle::emit)
     }

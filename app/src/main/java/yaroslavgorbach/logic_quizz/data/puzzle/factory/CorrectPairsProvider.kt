@@ -25,6 +25,23 @@ class CorrectPairsProvider(private val context: Context) {
                     Pair(people[2], foods[1]),
                 )
             }
+            PuzzleName.MATES_PLUS_DATES -> {
+                val places =
+                    context.resources.getStringArray(R.array.mates_plus_dates_items_3_places).toList()
+                val dates =
+                    context.resources.getStringArray(R.array.mates_plus_dates_items_2_dates).toList()
+                val people =
+                    context.resources.getStringArray(R.array.mates_plus_dates_items_1_friends).toList()
+
+                listOf<Pair<String, String>>(
+                    Pair(people[2], dates[1]),
+                    Pair(people[2], places[0]),
+                    Pair(people[0], dates[2]),
+                    Pair(people[0], places[2]),
+                    Pair(people[1], dates[0]),
+                    Pair(people[1], places[1]),
+                )
+            }
         }
     }
 }

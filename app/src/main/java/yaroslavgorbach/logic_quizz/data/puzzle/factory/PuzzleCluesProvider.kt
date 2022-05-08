@@ -11,6 +11,9 @@ class PuzzleCluesProvider(private val context: Context) {
             PuzzleName.SNACK_TIME -> {
                 context.resources.getStringArray(R.array.snack_time_clues).toList()
             }
+            PuzzleName.MATES_PLUS_DATES -> {
+                context.resources.getStringArray(R.array.mates_plus_dates_clues).toList()
+            }
         }
     }
 }

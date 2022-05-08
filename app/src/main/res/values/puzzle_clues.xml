@@ -11,4 +11,14 @@
         <item>3. Rachel knew that Sophie didn\'t like apples</item>
     </string-array>
 
+
+    <string-array name="mates_plus_dates_clues">
+        <item>1. 5:45 \n
+            Can\'t believe how cold it is and the grass is all wet, yuck. It\'s okay though, Matt gave me his coat, I think he really likes me.</item>
+        <item>2. 8:34 \n
+            Hey guys, hope you\'re having a better time than I am. Ben is such a bore, I don\'t think I\'ll be doing this again. xoxoxo love, Sarah oxoxox</item>
+        <item>3. 9:24 \n
+            Wow, this movie is fantastic and he\'s just as into it as I am. I don\'t think it\'d ever be as fun with a geek like Matt (no offence). I don\'t ever want this to end. Good luck on your dates, love Natalie</item>
+    </string-array>
+
 </resources>

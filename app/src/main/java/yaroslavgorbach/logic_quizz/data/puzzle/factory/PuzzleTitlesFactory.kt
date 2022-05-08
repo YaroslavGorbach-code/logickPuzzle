@@ -41,6 +41,38 @@ class PuzzleTitlesFactory(private val context: Context) {
                     )
                 )
             }
+            PuzzleName.MATES_PLUS_DATES -> {
+                return listOf(
+                    TableTitle(
+                        name = context.getString(R.string.mates_plus_dates_items_1_name),
+                        items = context.resources.getStringArray(R.array.mates_plus_dates_items_1_friends)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.mates_plus_dates_items_2_name),
+                        items = context.resources.getStringArray(R.array.mates_plus_dates_items_2_dates)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.mates_plus_dates_items_3_name),
+                        items = context.resources.getStringArray(R.array.mates_plus_dates_items_3_places)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.mates_plus_dates_items_2_name),
+                        items = context.resources.getStringArray(R.array.mates_plus_dates_items_2_dates)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    )
+                )
+            }
         }
     }
 }
