@@ -77,6 +77,9 @@ internal fun PuzzleUi(
             PuzzleUiMessage.ShowWinDialog -> {
                 ShowWinDialog(clearMessage, message)
             }
+            PuzzleUiMessage.ShowStoryDialog -> {
+                ShowStoryDialog(state, clearMessage, message)
+            }
         }
     }
 
@@ -285,6 +288,60 @@ private fun ShowFailDialog(
                 text = stringResource(id = R.string.check_answers),
                 fontSize = 12.sp,
                 textAlign = TextAlign.Center
+            )
+        }
+    })
+}
+
+@Composable
+private fun ShowStoryDialog(
+    state: PuzzleViewState,
+    clearMessage: (id: Long) -> Unit,
+    message: UiMessage<PuzzleUiMessage>
+) {
+    AlertDialog(onDismissRequest = {
+        clearMessage(message.id)
+    }, buttons = {
+        Column(modifier = Modifier.fillMaxWidth()) {
+            Button(
+                onClick = { clearMessage(message.id) },
+                modifier = Modifier
+                    .width(100.dp)
+                    .padding(8.dp)
+                    .align(CenterHorizontally)
+            ) {
+                Text(text = "OK")
+            }
+        }
+
+    }, title = {
+
+        Box(modifier = Modifier.fillMaxWidth()) {
+            Image(
+                modifier = Modifier
+                    .size(100.dp)
+                    .align(Center),
+                imageVector = ImageVector.vectorResource(id = R.drawable.ic_book),
+                contentDescription = ""
+            )
+        }
+
+    }, text = {
+        Column(modifier = Modifier.fillMaxWidth()) {
+            Text(
+                modifier = Modifier.align(CenterHorizontally),
+                text = stringResource(
+                    id = state.puzzle?.name?.resId ?: R.string.app_name
+                ),
+                style = MaterialTheme.typography.caption,
+                textAlign = TextAlign.Center
+            )
+
+            Text(
+                modifier = Modifier.align(CenterHorizontally),
+                text = state.puzzle?.story ?: "",
+                fontSize = 16.sp,
+                textAlign = TextAlign.Justify
             )
         }
     })

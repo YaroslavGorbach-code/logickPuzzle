@@ -1,6 +1,5 @@
 package yaroslavgorbach.logic_quizz.feature.puzzle.presentation
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -57,6 +56,7 @@ class PuzzleViewModel @Inject constructor(
 
     init {
         viewModelScope.launch {
+            uiMessageManager.emitMessage(UiMessage(PuzzleUiMessage.ShowStoryDialog))
             loadPuzzle()
         }
 

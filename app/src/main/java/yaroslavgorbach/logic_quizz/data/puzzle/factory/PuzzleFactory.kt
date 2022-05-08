@@ -9,6 +9,7 @@ class PuzzleFactory(
     private val puzzleTitleFactory: PuzzleTitlesFactory,
     private val puzzleCluesProvider: PuzzleCluesProvider,
     private val correctPairsProvider: CorrectPairsProvider,
+    private val puzzleStoryProvider: PuzzleStoryProvider
 ) {
 
     fun create(name: PuzzleName): Puzzle {
@@ -43,7 +44,8 @@ class PuzzleFactory(
             tables,
             puzzleCluesProvider.provide(name),
             correctPairsProvider.provide(name),
-            name
+            name,
+            puzzleStoryProvider.provide(name)
         )
     }
 }
