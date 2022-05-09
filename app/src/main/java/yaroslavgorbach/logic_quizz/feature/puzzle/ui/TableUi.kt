@@ -31,6 +31,7 @@ import yaroslavgorbach.logic_quizz.feature.common.ui.theme.getOnBackgroundColor
 @Composable
 fun TableUi(
     modifier: Modifier = Modifier,
+    cellSize: Int = 30,
     table: Table,
     hintedTitles: Pair<String, String>?,
     onCell: (table: Table, cell: Table.Cell) -> Unit
@@ -44,7 +45,7 @@ fun TableUi(
                         modifier = Modifier
                             .vertical()
                             .width(100.dp)
-                            .height(30.dp)
+                            .height(cellSize.dp)
                             .rotate(-90f)
                             .padding(1.dp)
                             .background(color = if (hintedTitles?.first == table.titleHorizontal.items[index]) getOnBackgroundHinted() else getOnBackgroundColor())
@@ -65,7 +66,7 @@ fun TableUi(
                     repeat(table.titleVertical.items.size) { index ->
                         Box(
                             modifier = Modifier
-                                .height(30.dp)
+                                .height(cellSize.dp)
                                 .width(100.dp)
                                 .padding(1.dp)
                                 .background(color = if (hintedTitles?.second == table.titleVertical.items[index]) getOnBackgroundHinted() else getOnBackgroundColor())
@@ -88,7 +89,7 @@ fun TableUi(
                     items(table.cells) { cell ->
                         Box(
                             modifier = Modifier
-                                .size(30.dp)
+                                .size(cellSize.dp)
                                 .padding(1.dp)
                                 .background(color = getOnBackgroundColor())
                                 .clickable { onCell(table, cell) }

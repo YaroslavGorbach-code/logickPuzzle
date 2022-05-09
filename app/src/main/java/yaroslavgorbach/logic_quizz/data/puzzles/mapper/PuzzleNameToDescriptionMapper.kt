@@ -10,6 +10,7 @@ class PuzzleNameToDescriptionMapper(private val context: Context) {
         return when (name) {
             PuzzleName.SNACK_TIME -> context.getString(R.string.snack_time_story)
             PuzzleName.MATES_PLUS_DATES -> context.getString(R.string.mates_plus_dates_story)
+            PuzzleName.MORE_PAINTERS -> context.getString(R.string.more_painters_story)
         }
     }
 }

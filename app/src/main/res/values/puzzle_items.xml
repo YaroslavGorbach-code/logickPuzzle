@@ -53,5 +53,38 @@
         <item>Dinner</item>
     </string-array>
 
+<!--    Answer-->
+<!--    Painter 1. House 4. Brown-->
+<!--    Painter 2. House 1. Blue-->
+<!--    Painter 3. House 5. White-->
+<!--    Painter 4. House 2. Yellow-->
+<!--    Painter 5. House 3. Green-->
+
+    <string name="more_painters_items_1_name">Painters</string>
+    <string-array name="more_painters_items_1_painters">
+        <item>Painter 1</item>
+        <item>Painter 2</item>
+        <item>Painter 3</item>
+        <item>Painter 4</item>
+        <item>Painter 5</item>
+    </string-array>
+
+    <string name="more_painters_items_2_name">Houses</string>
+    <string-array name="more_painters_items_2_houses">
+        <item>House 1</item>
+        <item>House 2</item>
+        <item>House 3</item>
+        <item>House 4</item>
+        <item>House 5</item>
+    </string-array>
+
+    <string name="more_painters_items_3_name">Colors</string>
+    <string-array name="more_painters_items_3_colors">
+        <item>White</item>
+        <item>Green</item>
+        <item>Blue</item>
+        <item>Yellow</item>
+        <item>Brown</item>
+    </string-array>
 
 </resources>

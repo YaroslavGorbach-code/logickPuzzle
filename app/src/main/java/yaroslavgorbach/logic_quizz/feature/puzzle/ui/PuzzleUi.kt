@@ -3,6 +3,7 @@ package yaroslavgorbach.logic_quizz.feature.puzzle.ui
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
@@ -116,21 +117,23 @@ internal fun PuzzleUi(
             }
 
             state.puzzle?.let { puzzle ->
-                Column(
+                LazyColumn(
                     modifier = Modifier
                         .align(Alignment.CenterHorizontally)
                         .weight(0.55f)
                         .padding(top = 32.dp)
                 ) {
-                    repeat(puzzle.numberOfRows) { rowNumber ->
+                    items(puzzle.numberOfRows) { rowNumber ->
+
                         Spacer(modifier = Modifier.size(1.dp))
 
-                        Row {
-                            puzzle.tables.forEach { table ->
+                        LazyRow() {
+                            items(puzzle.tables) { table ->
                                 if (table.indexInPuzzleVertical == rowNumber) {
                                     TableUi(
+                                        cellSize = table.uiCellSize,
                                         table = table,
-                                        modifier = Modifier.size(90.dp),
+                                        modifier = Modifier.size(table.uiTableSize.dp),
                                         hintedTitles = state.hintedTitles
                                     ) { table, cell ->
                                         if (cell.filledAutomatically.not()) {

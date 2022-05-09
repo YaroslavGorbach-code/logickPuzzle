@@ -14,6 +14,9 @@ class PuzzleStoryProvider(private val context: Context) {
             PuzzleName.MATES_PLUS_DATES -> {
                 context.resources.getString(R.string.mates_plus_dates_story)
             }
+            PuzzleName.MORE_PAINTERS -> {
+                context.resources.getString(R.string.more_painters_story)
+            }
         }
     }
 }

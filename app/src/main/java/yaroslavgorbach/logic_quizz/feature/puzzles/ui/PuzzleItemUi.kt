@@ -61,7 +61,7 @@ fun PuzzleItemUi(item: PuzzleItem, onPuzzle: () -> Unit, showUnavailableDialog: 
                         Icon(
                             Icons.Default.Psychology,
                             contentDescription = "",
-                            tint = if (difficultLevel == item.difficultLevel) LightBlue else getOnBackgroundHinted(),
+                            tint = if (difficultLevel.ordinal <= item.difficultLevel.ordinal) LightBlue else getOnBackgroundHinted(),
                             modifier = Modifier.size(20.dp)
                         )
                     }

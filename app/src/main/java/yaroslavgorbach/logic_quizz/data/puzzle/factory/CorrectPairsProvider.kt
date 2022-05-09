@@ -42,6 +42,27 @@ class CorrectPairsProvider(private val context: Context) {
                     Pair(people[1], places[1]),
                 )
             }
+            PuzzleName.MORE_PAINTERS -> {
+                val painters =
+                    context.resources.getStringArray(R.array.more_painters_items_1_painters).toList()
+                val houses =
+                    context.resources.getStringArray(R.array.more_painters_items_2_houses).toList()
+                val colors =
+                    context.resources.getStringArray(R.array.more_painters_items_3_colors).toList()
+
+                listOf<Pair<String, String>>(
+                    Pair(painters[0], houses[3]),
+                    Pair(painters[0], colors[4]),
+                    Pair(painters[1], houses[0]),
+                    Pair(painters[1], colors[2]),
+                    Pair(painters[2], houses[4]),
+                    Pair(painters[2], colors[0]),
+                    Pair(painters[3], houses[1]),
+                    Pair(painters[3], colors[3]),
+                    Pair(painters[4], houses[2]),
+                    Pair(painters[4], colors[1]),
+                )
+            }
         }
     }
 }

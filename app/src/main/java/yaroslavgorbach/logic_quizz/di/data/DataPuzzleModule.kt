@@ -52,13 +52,19 @@ object DataPuzzleModule {
     }
 
     @Provides
+    fun provideTableCellSizeProvider(): TableCellSizeProvider {
+        return TableCellSizeProvider()
+    }
+
+    @Provides
     fun providePuzzleFactory(
         fac: PuzzleTitlesFactory,
         cluesProvider: PuzzleCluesProvider,
         correctPairsProvider: CorrectPairsProvider,
-        puzzleStoryProvider: PuzzleStoryProvider
+        puzzleStoryProvider: PuzzleStoryProvider,
+        providerCellSizeProvider: TableCellSizeProvider
     ): PuzzleFactory {
-        return PuzzleFactory(fac, cluesProvider, correctPairsProvider, puzzleStoryProvider)
+        return PuzzleFactory(fac, cluesProvider, correctPairsProvider, puzzleStoryProvider, providerCellSizeProvider)
     }
 
     @Provides

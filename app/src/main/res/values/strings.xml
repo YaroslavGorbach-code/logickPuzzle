@@ -6,6 +6,9 @@
     </string>
 
     <string name="clues">CLUES</string>
+    <string name="easy">EASY</string>
+    <string name="middle">MIDDLE</string>
+    <string name="hard">HARD</string>
     <string name="check_answer">CHECK ANSWER</string>
     <string name="congratulations">CONGRATULATIONS</string>
     <string name="you_completed_puzzle">YOU COMPLETED THE PUZZLE</string>

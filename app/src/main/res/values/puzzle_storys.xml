@@ -8,4 +8,8 @@
 
     <string name="mates_plus_dates_story">Three girls all got dates on the same day. From their
         texts, can you figure out which girl went with which guy and where they went on their dates.</string>
+
+    <string name="more_painters_story">At the Painted House painting company they have 5 painters.
+        The home-owners can choose from 5 paint colors; white, green, blue, yellow and brown.
+        Can you figure out which painter painted which house with which color?</string>
 </resources>

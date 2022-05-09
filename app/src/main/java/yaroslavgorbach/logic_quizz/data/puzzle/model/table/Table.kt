@@ -10,6 +10,8 @@ data class Table(
     val indexInPuzzleVertical: Int,
     val verticalTitleVisible: Boolean = indexInPuzzleVertical == 0,
     val horizontalTitleVisible: Boolean = indexInPuzzleHorizontal == 0,
+    val uiCellSize: Int = 30,
+    val uiTableSize: Int = titleHorizontal.items.size * uiCellSize,
     var cells: MutableList<Cell> = List(size) {
         var indexHorizontal: Int = it
         var indexVertical: Int = 0

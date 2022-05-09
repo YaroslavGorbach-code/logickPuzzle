@@ -8,6 +8,7 @@ class PuzzleAvailabilityProvider(private val puzzleDataStore: PuzzleDataStore) {
     suspend fun isAvailable(puzzleName: PuzzleName): Boolean {
         return when (puzzleName) {
             PuzzleName.SNACK_TIME -> true
+            PuzzleName.MORE_PAINTERS ->true
             else -> puzzleDataStore.isAvailable(puzzleName).first()
         }
     }

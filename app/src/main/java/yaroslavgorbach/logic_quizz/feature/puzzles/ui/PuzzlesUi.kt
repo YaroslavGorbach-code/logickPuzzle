@@ -27,7 +27,6 @@ import androidx.lifecycle.LifecycleOwner
 import yaroslavgorbach.logic_quizz.R
 import yaroslavgorbach.logic_quizz.data.common.model.PuzzleName
 import yaroslavgorbach.logic_quizz.feature.common.ui.theme.getOnBackgroundColor
-import yaroslavgorbach.logic_quizz.feature.puzzle.model.PuzzleAction
 import yaroslavgorbach.logic_quizz.feature.puzzles.model.PuzzlesAction
 import yaroslavgorbach.logic_quizz.feature.puzzles.model.PuzzlesUiMessage
 import yaroslavgorbach.logic_quizz.feature.puzzles.model.PuzzlesViewState
@@ -108,6 +107,52 @@ internal fun PuzzlesUi(
 
             LazyColumn {
                 items(state.puzzleItems) { item ->
+
+                    if (item.isEasyTittleVisible) {
+                        Text(
+                            text = stringResource(id = R.string.easy),
+                            modifier = Modifier.padding(8.dp),
+                            style = MaterialTheme.typography.caption,
+                            fontSize = 16.sp
+                        )
+                    }
+
+                    if (item.isMiddleTittleVisible) {
+                        Spacer(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(2.dp)
+                                .background(color = getOnBackgroundColor())
+                        )
+
+                        Text(
+                            text = stringResource(id = R.string.middle),
+                            modifier = Modifier.padding(8.dp),
+                            style = MaterialTheme.typography.caption,
+                            fontSize = 16.sp
+                        )
+                    }
+
+                    if (item.isHardTittleVisible) {
+                        Spacer(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(2.dp)
+                                .background(color = getOnBackgroundColor())
+                        )
+
+                        Text(
+                            text = stringResource(id = R.string.hard),
+                            modifier = Modifier.padding(8.dp),
+                            style = MaterialTheme.typography.caption,
+                            fontSize = 16.sp
+                        )
+                    }
+
+                    if (item.isEasyBudgetVisible){
+
+                    }
+
                     Spacer(
                         modifier = Modifier
                             .fillMaxWidth()

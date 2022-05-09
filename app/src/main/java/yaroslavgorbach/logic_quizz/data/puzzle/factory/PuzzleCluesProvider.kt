@@ -14,6 +14,9 @@ class PuzzleCluesProvider(private val context: Context) {
             PuzzleName.MATES_PLUS_DATES -> {
                 context.resources.getStringArray(R.array.mates_plus_dates_clues).toList()
             }
+            PuzzleName.MORE_PAINTERS -> {
+                context.resources.getStringArray(R.array.more_painters_clues).toList()
+            }
         }
     }
 }

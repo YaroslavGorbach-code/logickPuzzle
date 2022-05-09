@@ -13,12 +13,31 @@
 
 
     <string-array name="mates_plus_dates_clues">
-        <item>1. 5:45 \n
-            Can\'t believe how cold it is and the grass is all wet, yuck. It\'s okay though, Matt gave me his coat, I think he really likes me.</item>
-        <item>2. 8:34 \n
-            Hey guys, hope you\'re having a better time than I am. Ben is such a bore, I don\'t think I\'ll be doing this again. xoxoxo love, Sarah oxoxox</item>
-        <item>3. 9:24 \n
-            Wow, this movie is fantastic and he\'s just as into it as I am. I don\'t think it\'d ever be as fun with a geek like Matt (no offence). I don\'t ever want this to end. Good luck on your dates, love Natalie</item>
+        <item>1. 5:45 \n Can\'t believe how cold it is and the grass is all wet, yuck. It\'s okay though, Matt gave me his coat, I think he really likes me.</item>
+        <item>2. 8:34 \n Hey guys, hope you\'re having a better time than I am. Ben is such a bore, I don\'t think I\'ll be doing this again. xoxoxo love, Sarah oxoxox</item>
+        <item>3. 9:24 \n Wow, this movie is fantastic and he\'s just as into it as I am. I don\'t think it\'d ever be as fun with a geek like Matt (no offence). I don\'t ever want this to end. Good luck on your dates, love Natalie</item>
     </string-array>
 
+    <string-array name="more_painters_clues">
+        <item>1. Painter 3 painted his house white.
+        </item>
+        <item>2. House 1 wasn\'t painted green or yellow.
+        </item>
+        <item>3. Painters 1 and 4 didn\'t use green or blue paint.
+        </item>
+        <item>4. Houses 1, 3 and 5 weren\'t painted brown.
+        </item>
+        <item>5. Painters 2, 4 and 5 didn\'t use brown paint.
+        </item>
+        <item>6. Houses 1, 3 and 4 weren\'t painted white.
+        </item>
+        <item>7. Painter 2 didn\'t use green or yellow paint.
+        </item>
+        <item>8. Houses 2 and 5 weren\'t painted green.
+        </item>
+        <item>9. Houses 3 and 4 weren\'t painted yellow.
+        </item>
+        <item>10. House 2 was not painted white.
+        </item>
+    </string-array>
 </resources>

@@ -9,7 +9,8 @@ class PuzzleFactory(
     private val puzzleTitleFactory: PuzzleTitlesFactory,
     private val puzzleCluesProvider: PuzzleCluesProvider,
     private val correctPairsProvider: CorrectPairsProvider,
-    private val puzzleStoryProvider: PuzzleStoryProvider
+    private val puzzleStoryProvider: PuzzleStoryProvider,
+    private val puzzleCellSizeProvider: TableCellSizeProvider
 ) {
 
     fun create(name: PuzzleName): Puzzle {
@@ -33,6 +34,7 @@ class PuzzleFactory(
                         titleVertical = verticalTitle,
                         indexInPuzzleVertical = indexVertical,
                         indexInPuzzleHorizontal = indexHorizontal,
+                        uiCellSize = puzzleCellSizeProvider.provide(name)
                     )
                 )
             }

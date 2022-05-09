@@ -9,6 +9,7 @@ class PuzzleNameToDifficultyMapper() {
         return when (name) {
             PuzzleName.SNACK_TIME -> DifficultLevel.ONE
             PuzzleName.MATES_PLUS_DATES -> DifficultLevel.ONE
+            PuzzleName.MORE_PAINTERS -> DifficultLevel.THREE
         }
     }
 }
