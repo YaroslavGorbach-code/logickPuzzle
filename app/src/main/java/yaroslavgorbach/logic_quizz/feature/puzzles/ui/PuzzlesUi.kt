@@ -144,6 +144,8 @@ internal fun PuzzlesUi(
                                 .background(color = getOnBackgroundColor())
                         )
 
+                        ShowMiddleAchievement(state)
+
                         Text(
                             text = stringResource(id = R.string.hard),
                             modifier = Modifier.padding(8.dp),
@@ -229,6 +231,67 @@ private fun ShowEasyAchievement(state: PuzzlesViewState) {
                 text = stringResource(
                     id =
                     R.string.all_easy_puzzles_solved
+                ).uppercase(),
+                fontSize = 12.sp,
+                textAlign = TextAlign.Center,
+                style = MaterialTheme.typography.subtitle1,
+            )
+        }
+
+    }
+}
+
+@Composable
+private fun ShowMiddleAchievement(state: PuzzlesViewState) {
+    Column(modifier = Modifier
+        .fillMaxWidth()
+        .padding(vertical = 40.dp)) {
+
+        if (state.allEasyPuzzlesDone.not()) {
+            Image(
+                modifier = Modifier
+                    .size(100.dp)
+                    .align(CenterHorizontally)
+                    .padding(bottom = 8.dp),
+                imageVector = ImageVector.vectorResource(R.drawable.ic_brain_blured),
+                contentDescription = ""
+            )
+            Text(
+                modifier = Modifier.align(CenterHorizontally),
+                text = stringResource(
+                    id =
+                    R.string.all_middle_puzzles_explanation
+                ).uppercase(),
+                fontSize = 10.sp,
+                textAlign = TextAlign.Center,
+                style = MaterialTheme.typography.subtitle1,
+            )
+        } else {
+            Image(
+                modifier = Modifier
+                    .size(100.dp)
+                    .align(CenterHorizontally)
+                    .padding(bottom = 8.dp),
+                imageVector = ImageVector.vectorResource(R.drawable.ic_brain_middle),
+                contentDescription = ""
+            )
+
+            Text(
+                modifier = Modifier.align(CenterHorizontally),
+                text = stringResource(
+                    id =
+                    R.string.congratulations
+                ).uppercase(),
+                fontSize = 16.sp,
+                textAlign = TextAlign.Center,
+                style = MaterialTheme.typography.caption,
+            )
+
+            Text(
+                modifier = Modifier.align(CenterHorizontally),
+                text = stringResource(
+                    id =
+                    R.string.all_middle_puzzles_solved
                 ).uppercase(),
                 fontSize = 12.sp,
                 textAlign = TextAlign.Center,
