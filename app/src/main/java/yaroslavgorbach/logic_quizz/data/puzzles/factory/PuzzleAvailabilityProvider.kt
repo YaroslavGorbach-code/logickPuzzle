@@ -9,6 +9,7 @@ class PuzzleAvailabilityProvider(private val puzzleDataStore: PuzzleDataStore) {
         return when (puzzleName) {
             PuzzleName.SNACK_TIME -> true
             PuzzleName.MORE_PAINTERS ->true
+            PuzzleName.KITTENS_AND_KIDS ->true
             else -> puzzleDataStore.isAvailable(puzzleName).first()
         }
     }

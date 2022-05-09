@@ -17,6 +17,9 @@ class PuzzleStoryProvider(private val context: Context) {
             PuzzleName.MORE_PAINTERS -> {
                 context.resources.getString(R.string.more_painters_story)
             }
+            PuzzleName.KITTENS_AND_KIDS -> {
+                context.resources.getString(R.string.kittens_and_kids_story)
+            }
         }
     }
 }

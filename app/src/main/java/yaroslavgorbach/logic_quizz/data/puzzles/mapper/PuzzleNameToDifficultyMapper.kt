@@ -10,6 +10,7 @@ class PuzzleNameToDifficultyMapper() {
             PuzzleName.SNACK_TIME -> DifficultLevel.ONE
             PuzzleName.MATES_PLUS_DATES -> DifficultLevel.ONE
             PuzzleName.MORE_PAINTERS -> DifficultLevel.THREE
+            PuzzleName.KITTENS_AND_KIDS -> DifficultLevel.THREE
         }
     }
 }

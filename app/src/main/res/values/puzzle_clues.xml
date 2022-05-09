@@ -40,4 +40,21 @@
         <item>10. House 2 was not painted white.
         </item>
     </string-array>
+
+    <string-array name="kittens_and_kids_clues">
+        <item>1. Catapult weighs more than the kitten taken by Martha.
+        </item>
+        <item>2. The kitten that weighs 17 oz. is not Bandit.
+        </item>
+        <item>3. Codi weighs just under a pound but is not the lightest.
+        </item>
+        <item>4. Kurt\'s kitten is not Bandit.
+        </item>
+        <item>5. Ted\'s kitten is not the largest, but weighs over a pound.
+        </item>
+        <item>6. Hallie weighs less than Codi.
+        </item>
+        <item>7. Martha\'s kitten weighs 14 oz.
+        </item>
+    </string-array>
 </resources>

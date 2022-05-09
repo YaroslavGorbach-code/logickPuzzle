@@ -12,4 +12,13 @@
     <string name="more_painters_story">At the Painted House painting company they have 5 painters.
         The home-owners can choose from 5 paint colors; white, green, blue, yellow and brown.
         Can you figure out which painter painted which house with which color?</string>
+
+    <string name="kittens_and_kids_story">Four kittens weigh four pounds together,
+        but they don\'t weigh one pound each. No, no, that would make this puzzle
+        too easy for such a smart person as you! Two of the kittens weigh
+        less than a pound and two of them weigh more than a pound. Four
+        kids come along and take the four kittens. Makes sense,
+        the kittens being really cute and all! So, see if you c
+        an figure out which kid takes which kitten and how much
+        each one weighs (no, not the kids… the kittens) from the clues presented below.</string>
 </resources>

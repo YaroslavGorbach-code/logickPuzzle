@@ -105,6 +105,38 @@ class PuzzleTitlesFactory(private val context: Context) {
                     )
                 )
             }
+            PuzzleName.KITTENS_AND_KIDS -> {
+                return listOf(
+                    TableTitle(
+                        name = context.getString(R.string.kittens_and_kids_items_1_name),
+                        items = context.resources.getStringArray(R.array.kittens_and_kids_items_1_kids)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.kittens_and_kids_items_3_name),
+                        items = context.resources.getStringArray(R.array.kittens_and_kids_items_3_things)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.kittens_and_kids_items_2_name),
+                        items = context.resources.getStringArray(R.array.kittens_and_kids_items_2_weight)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.kittens_and_kids_items_3_name),
+                        items = context.resources.getStringArray(R.array.kittens_and_kids_items_3_things)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    )
+                )
+            }
         }
     }
 }

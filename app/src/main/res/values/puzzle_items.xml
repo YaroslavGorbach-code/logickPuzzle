@@ -87,4 +87,33 @@
         <item>Brown</item>
     </string-array>
 
+<!--    Answer-->
+<!--    1) Martha gets Codi, who weighs 14 oz.-->
+<!--    2) Pam gets Bandit, who weighs 20 oz.-->
+<!--    3) Kurt gets Hallie, who weighs 13 oz.-->
+<!--    4) Ted gets Catapult, who weighs 17 oz.-->
+    <string name="kittens_and_kids_items_1_name">Kids</string>
+    <string-array name="kittens_and_kids_items_1_kids">
+        <item>Martha</item>
+        <item>Pam</item>
+        <item>Kurt</item>
+        <item>Ted</item>
+    </string-array>
+
+    <string name="kittens_and_kids_items_2_name">Weight</string>
+    <string-array name="kittens_and_kids_items_2_weight">
+        <item>13 Ounces</item>
+        <item>14 Ounces</item>
+        <item>17 Ounces</item>
+        <item>20 Ounces</item>
+    </string-array>
+
+    <string name="kittens_and_kids_items_3_name">Things</string>
+    <string-array name="kittens_and_kids_items_3_things">
+        <item>Catapult</item>
+        <item>Codi</item>
+        <item>Hallie</item>
+        <item>Bandit</item>
+    </string-array>
+
 </resources>

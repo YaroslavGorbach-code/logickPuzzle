@@ -17,6 +17,9 @@ class PuzzleCluesProvider(private val context: Context) {
             PuzzleName.MORE_PAINTERS -> {
                 context.resources.getStringArray(R.array.more_painters_clues).toList()
             }
+            PuzzleName.KITTENS_AND_KIDS -> {
+                context.resources.getStringArray(R.array.kittens_and_kids_clues).toList()
+            }
         }
     }
 }

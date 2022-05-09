@@ -5,7 +5,8 @@ import yaroslavgorbach.logic_quizz.R
 enum class PuzzleName(val resId: Int) {
     SNACK_TIME(R.string.snack_time_name),
     MATES_PLUS_DATES(R.string.mates_plus_dates_name),
-    MORE_PAINTERS(R.string.more_painters_name)
+    MORE_PAINTERS(R.string.more_painters_name),
+    KITTENS_AND_KIDS(R.string.kittens_and_kids_name)
 }
 
 fun PuzzleName.findNext(): PuzzleName? {
