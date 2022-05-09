@@ -5,6 +5,9 @@ import yaroslavgorbach.logic_quizz.utills.UiMessage
 
 data class PuzzlesViewState(
     val puzzleItems: List<PuzzleItem>,
+    val allEasyPuzzlesDone: Boolean = true,
+    val allMiddlePuzzlesDone: Boolean = false,
+    val allHardPuzzlesDone: Boolean = false,
     val message: UiMessage<PuzzlesUiMessage>?,
 ) {
     companion object {

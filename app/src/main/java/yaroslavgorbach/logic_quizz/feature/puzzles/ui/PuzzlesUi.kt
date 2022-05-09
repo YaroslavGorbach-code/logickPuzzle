@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -125,6 +126,8 @@ internal fun PuzzlesUi(
                                 .background(color = getOnBackgroundColor())
                         )
 
+                        ShowEasyAchievement(state)
+
                         Text(
                             text = stringResource(id = R.string.middle),
                             modifier = Modifier.padding(8.dp),
@@ -149,10 +152,6 @@ internal fun PuzzlesUi(
                         )
                     }
 
-                    if (item.isEasyBudgetVisible){
-
-                    }
-
                     Spacer(
                         modifier = Modifier
                             .fillMaxWidth()
@@ -173,7 +172,70 @@ internal fun PuzzlesUi(
                     .height(2.dp)
                     .background(color = getOnBackgroundColor())
             )
+
         }
+
+    }
+}
+
+@Composable
+private fun ShowEasyAchievement(state: PuzzlesViewState) {
+    Column(modifier = Modifier
+        .fillMaxWidth()
+        .padding(vertical = 40.dp)) {
+
+        if (state.allEasyPuzzlesDone.not()) {
+            Image(
+                modifier = Modifier
+                    .size(100.dp)
+                    .align(CenterHorizontally)
+                    .padding(bottom = 8.dp),
+                imageVector = ImageVector.vectorResource(R.drawable.ic_brain_blured),
+                contentDescription = ""
+            )
+            Text(
+                modifier = Modifier.align(CenterHorizontally),
+                text = stringResource(
+                    id =
+                    R.string.all_easy_puzzles_explanation
+                ).uppercase(),
+                fontSize = 10.sp,
+                textAlign = TextAlign.Center,
+                style = MaterialTheme.typography.subtitle1,
+            )
+        } else {
+            Image(
+                modifier = Modifier
+                    .size(100.dp)
+                    .align(CenterHorizontally)
+                    .padding(bottom = 8.dp),
+                imageVector = ImageVector.vectorResource(R.drawable.ic_brain_easy),
+                contentDescription = ""
+            )
+
+            Text(
+                modifier = Modifier.align(CenterHorizontally),
+                text = stringResource(
+                    id =
+                    R.string.congratulations
+                ).uppercase(),
+                fontSize = 16.sp,
+                textAlign = TextAlign.Center,
+                style = MaterialTheme.typography.caption,
+            )
+
+            Text(
+                modifier = Modifier.align(CenterHorizontally),
+                text = stringResource(
+                    id =
+                    R.string.all_easy_puzzles_solved
+                ).uppercase(),
+                fontSize = 12.sp,
+                textAlign = TextAlign.Center,
+                style = MaterialTheme.typography.subtitle1,
+            )
+        }
+
     }
 }
 

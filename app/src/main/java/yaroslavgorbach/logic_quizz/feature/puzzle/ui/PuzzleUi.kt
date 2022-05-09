@@ -119,8 +119,8 @@ internal fun PuzzleUi(
             state.puzzle?.let { puzzle ->
                 LazyColumn(
                     modifier = Modifier
-                        .align(Alignment.CenterHorizontally)
-                        .weight(0.55f)
+                        .align(CenterHorizontally)
+                        .weight(0.70f)
                         .padding(top = 32.dp)
                 ) {
                     items(puzzle.numberOfRows) { rowNumber ->
@@ -152,7 +152,7 @@ internal fun PuzzleUi(
 
             Column(
                 modifier = Modifier
-                    .weight(0.45f)
+                    .weight(0.30f)
             ) {
 
                 if (state.isCheckAnswerVisible) {
