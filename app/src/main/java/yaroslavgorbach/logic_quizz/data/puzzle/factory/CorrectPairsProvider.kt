@@ -84,6 +84,29 @@ class CorrectPairsProvider(private val context: Context) {
                     Pair(kids[3], weight[2]),
                 )
             }
+            PuzzleName.JAZZ_BANDS_SOLOS -> {
+                val firstNames =
+                    context.resources.getStringArray(R.array.jazz_band_solos_1_first_names).toList()
+                val lastNames =
+                    context.resources.getStringArray(R.array.jazz_band_solos_items_2_last_names)
+                        .toList()
+                val instruments =
+                    context.resources.getStringArray(R.array.jazz_band_solos_items_3_instruments)
+                        .toList()
+
+                listOf<Pair<String, String>>(
+                    Pair(firstNames[0], lastNames[4]),
+                    Pair(firstNames[0], instruments[0]),
+                    Pair(firstNames[1], lastNames[1]),
+                    Pair(firstNames[1], instruments[3]),
+                    Pair(firstNames[2], lastNames[0]),
+                    Pair(firstNames[2], instruments[1]),
+                    Pair(firstNames[3], lastNames[3]),
+                    Pair(firstNames[3], instruments[2]),
+                    Pair(firstNames[4], lastNames[2]),
+                    Pair(firstNames[4], instruments[4]),
+                )
+            }
         }
     }
 }

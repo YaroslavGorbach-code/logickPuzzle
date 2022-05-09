@@ -20,6 +20,9 @@ class PuzzleCluesProvider(private val context: Context) {
             PuzzleName.KITTENS_AND_KIDS -> {
                 context.resources.getStringArray(R.array.kittens_and_kids_clues).toList()
             }
+            PuzzleName.JAZZ_BANDS_SOLOS -> {
+                context.resources.getStringArray(R.array.jazz_band_solos_clues).toList()
+            }
         }
     }
 }

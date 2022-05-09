@@ -10,6 +10,7 @@ class TableCellSizeProvider() {
             PuzzleName.MATES_PLUS_DATES -> 40
             PuzzleName.MORE_PAINTERS -> 30
             PuzzleName.KITTENS_AND_KIDS -> 30
+            PuzzleName.JAZZ_BANDS_SOLOS -> 30
         }
     }
 }

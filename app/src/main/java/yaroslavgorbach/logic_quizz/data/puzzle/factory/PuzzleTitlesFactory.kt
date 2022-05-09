@@ -137,6 +137,38 @@ class PuzzleTitlesFactory(private val context: Context) {
                     )
                 )
             }
+            PuzzleName.JAZZ_BANDS_SOLOS -> {
+                return listOf(
+                    TableTitle(
+                        name = context.getString(R.string.jazz_band_solos_1_name),
+                        items = context.resources.getStringArray(R.array.jazz_band_solos_1_first_names)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.jazz_band_solos_items_3_name),
+                        items = context.resources.getStringArray(R.array.jazz_band_solos_items_3_instruments)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.jazz_band_solos_2_name),
+                        items = context.resources.getStringArray(R.array.jazz_band_solos_items_2_last_names)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.jazz_band_solos_items_3_name),
+                        items = context.resources.getStringArray(R.array.jazz_band_solos_items_3_instruments)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    )
+                )
+            }
         }
     }
 }

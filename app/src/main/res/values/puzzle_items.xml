@@ -116,4 +116,38 @@
         <item>Bandit</item>
     </string-array>
 
+<!--    Answer-->
+<!--    Evan Wilson played the alto sax first.-->
+<!--    Lucy Lewis played the trombone second.-->
+<!--    Maria Earl played the piano third.-->
+<!--    Steve Sacks played the tenor sax fourth.-->
+<!--    Will Masters played the trumpet fifth.-->
+
+    <string name="jazz_band_solos_1_name">First names</string>
+    <string-array name="jazz_band_solos_1_first_names">
+        <item>Evan</item>
+        <item>Lucy</item>
+        <item>Maria</item>
+        <item>Steve</item>
+        <item>Will</item>
+    </string-array>
+
+    <string name="jazz_band_solos_2_name">Last names</string>
+    <string-array name="jazz_band_solos_items_2_last_names">
+        <item>Earl</item>
+        <item>Lewis</item>
+        <item>Masters</item>
+        <item>Sacks</item>
+        <item>Wilson</item>
+    </string-array>
+
+    <string name="jazz_band_solos_items_3_name">Instruments</string>
+    <string-array name="jazz_band_solos_items_3_instruments">
+        <item>Alto Sax</item>
+        <item>Piano</item>
+        <item>Tenor Sax</item>
+        <item>Trombone</item>
+        <item>Trumpet</item>
+    </string-array>
+
 </resources>

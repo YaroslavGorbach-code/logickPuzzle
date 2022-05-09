@@ -57,4 +57,21 @@
         <item>7. Martha\'s kitten weighs 14 oz.
         </item>
     </string-array>
+
+    <string-array name="jazz_band_solos_clues">
+        <item>1. Maria\'s solo was unique. She sang as she played.
+        </item>
+        <item>2. Steve\'s last name sounded like the instrument he played.
+        </item>
+        <item>3. Mr. Wilson played his solo before the tenor sax player.
+        </item>
+        <item>4. Will played his trumpet during the fifth solo.
+        </item>
+        <item>5. Ms Earl, who didn\'t play trombone, played her solo before Steve but after Ms Lewis.
+        </item>
+        <item>6. The alto sax was featured in the first solo.
+        </item>
+        <item>7. Lucy played a brass instrument.
+        </item>
+    </string-array>
 </resources>

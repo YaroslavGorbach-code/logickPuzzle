@@ -21,4 +21,10 @@
         the kittens being really cute and all! So, see if you c
         an figure out which kid takes which kitten and how much
         each one weighs (no, not the kids… the kittens) from the clues presented below.</string>
+
+    <string name="jazz_band_solos_story">
+        Evan, Lucy, Maria, Steve,
+        and Will all played together in a local jazz band.
+        At their last concert, they each had a solo. Match
+        the musicians with their last name, instrument, and order they played.</string>
 </resources>

@@ -13,7 +13,6 @@ import yaroslavgorbach.logic_quizz.data.puzzles.PuzzleDataStoreImp
 import yaroslavgorbach.logic_quizz.data.puzzles.factory.PuzzleAvailabilityProvider
 import yaroslavgorbach.logic_quizz.data.puzzles.factory.PuzzleCompleteProvider
 import yaroslavgorbach.logic_quizz.data.puzzles.factory.PuzzlesFactory
-import yaroslavgorbach.logic_quizz.data.puzzles.mapper.PuzzleNameToDescriptionMapper
 import yaroslavgorbach.logic_quizz.data.puzzles.mapper.PuzzleNameToDifficultyMapper
 import javax.inject.Singleton
 
@@ -67,10 +66,6 @@ object DataPuzzleModule {
         return PuzzleFactory(fac, cluesProvider, correctPairsProvider, puzzleStoryProvider, providerCellSizeProvider)
     }
 
-    @Provides
-    fun providePuzzleNameToDescriptionMapper(app: Application): PuzzleNameToDescriptionMapper {
-        return PuzzleNameToDescriptionMapper(app)
-    }
 
     @Provides
     fun provideNameToDifficultyMapper(): PuzzleNameToDifficultyMapper {
@@ -84,13 +79,13 @@ object DataPuzzleModule {
 
     @Provides
     fun providePuzzlesFactory(
-        puzzleNameToDescriptionMapper: PuzzleNameToDescriptionMapper,
+        storyProvider: PuzzleStoryProvider,
         puzzleNameToDifficultyMapper: PuzzleNameToDifficultyMapper,
         puzzleAvailabilityProvider: PuzzleAvailabilityProvider,
         puzzleCompleteProvider: PuzzleCompleteProvider
     ): PuzzlesFactory {
         return PuzzlesFactory(
-            nameToDescriptionMapper = puzzleNameToDescriptionMapper,
+            puzzleStoryProvider = storyProvider,
             puzzleNameToDifficultyMapper = puzzleNameToDifficultyMapper,
             puzzleAvailabilityProvider = puzzleAvailabilityProvider,
             puzzleCompleteProvider = puzzleCompleteProvider

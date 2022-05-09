@@ -10,7 +10,9 @@ class PuzzleAvailabilityProvider(private val puzzleDataStore: PuzzleDataStore) {
             PuzzleName.SNACK_TIME -> true
             PuzzleName.MORE_PAINTERS ->true
             PuzzleName.KITTENS_AND_KIDS ->true
-            else -> puzzleDataStore.isAvailable(puzzleName).first()
+            //else -> puzzleDataStore.isAvailable(puzzleName).first()
+            PuzzleName.MATES_PLUS_DATES -> true
+            PuzzleName.JAZZ_BANDS_SOLOS -> true
         }
     }
 }
