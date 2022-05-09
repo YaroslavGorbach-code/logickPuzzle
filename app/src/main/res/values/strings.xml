@@ -17,8 +17,10 @@
     <string name="ok">OK</string>
     <string name="all_easy_puzzles_explanation">Complete all the easy puzzles to earn this achievement</string>
     <string name="all_middle_puzzles_explanation">Complete all the middle puzzles to earn this achievement</string>
+    <string name="all_hard_puzzles_explanation">Complete all the hard puzzles to earn this achievement</string>
     <string name="all_easy_puzzles_solved">You have completed all the easy puzzles</string>
     <string name="all_middle_puzzles_solved">You have completed all the middle puzzles</string>
+    <string name="all_hard_puzzles_solved">You have completed all the hard puzzles</string>
     <string name="view_ads">VIEW ADS</string>
     <string name="puzzle_is_unavailable">Puzzle is not available</string>
     <string name="puzzle_is_unavailable_explanation">Get access by viewing ads or complete the previous puzzle successfully</string>

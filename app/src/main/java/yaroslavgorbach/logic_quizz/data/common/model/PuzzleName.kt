@@ -14,3 +14,8 @@ fun PuzzleName.findNext(): PuzzleName? {
     val currentIndex = PuzzleName.values().indexOf(this)
     return PuzzleName.values().getOrNull(currentIndex + 1)
 }
+
+
+fun PuzzleName.isLast(): Boolean {
+    return this == PuzzleName.values().last()
+}

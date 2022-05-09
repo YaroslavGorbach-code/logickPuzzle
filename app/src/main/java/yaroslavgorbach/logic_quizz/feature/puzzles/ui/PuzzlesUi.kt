@@ -27,6 +27,7 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.LifecycleOwner
 import yaroslavgorbach.logic_quizz.R
 import yaroslavgorbach.logic_quizz.data.common.model.PuzzleName
+import yaroslavgorbach.logic_quizz.data.common.model.isLast
 import yaroslavgorbach.logic_quizz.feature.common.ui.theme.getOnBackgroundColor
 import yaroslavgorbach.logic_quizz.feature.puzzles.model.PuzzlesAction
 import yaroslavgorbach.logic_quizz.feature.puzzles.model.PuzzlesUiMessage
@@ -166,14 +167,21 @@ internal fun PuzzlesUi(
                     }, showUnavailableDialog = {
                         actioner(PuzzlesAction.ShowPuzzleUnAvailableDialog(item.name))
                     })
+
+                    if (item.name.isLast()){
+                        Spacer(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(2.dp)
+                                .background(color = getOnBackgroundColor())
+                        )
+
+                        ShowHardAchievement(state)
+                    }
                 }
+
             }
-            Spacer(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(2.dp)
-                    .background(color = getOnBackgroundColor())
-            )
+
 
         }
 
@@ -292,6 +300,69 @@ private fun ShowMiddleAchievement(state: PuzzlesViewState) {
                 text = stringResource(
                     id =
                     R.string.all_middle_puzzles_solved
+                ).uppercase(),
+                fontSize = 12.sp,
+                textAlign = TextAlign.Center,
+                style = MaterialTheme.typography.subtitle1,
+            )
+        }
+
+    }
+}
+
+@Composable
+private fun ShowHardAchievement(state: PuzzlesViewState) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 40.dp)
+    ) {
+
+        if (state.allEasyPuzzlesDone.not()) {
+            Image(
+                modifier = Modifier
+                    .size(100.dp)
+                    .align(CenterHorizontally)
+                    .padding(bottom = 8.dp),
+                imageVector = ImageVector.vectorResource(R.drawable.ic_brain_blured),
+                contentDescription = ""
+            )
+            Text(
+                modifier = Modifier.align(CenterHorizontally),
+                text = stringResource(
+                    id =
+                    R.string.all_hard_puzzles_explanation
+                ).uppercase(),
+                fontSize = 10.sp,
+                textAlign = TextAlign.Center,
+                style = MaterialTheme.typography.subtitle1,
+            )
+        } else {
+            Image(
+                modifier = Modifier
+                    .size(100.dp)
+                    .align(CenterHorizontally)
+                    .padding(bottom = 8.dp),
+                imageVector = ImageVector.vectorResource(R.drawable.ic_brain_hard),
+                contentDescription = ""
+            )
+
+            Text(
+                modifier = Modifier.align(CenterHorizontally),
+                text = stringResource(
+                    id =
+                    R.string.congratulations
+                ).uppercase(),
+                fontSize = 16.sp,
+                textAlign = TextAlign.Center,
+                style = MaterialTheme.typography.caption,
+            )
+
+            Text(
+                modifier = Modifier.align(CenterHorizontally),
+                text = stringResource(
+                    id =
+                    R.string.all_hard_puzzles_solved
                 ).uppercase(),
                 fontSize = 12.sp,
                 textAlign = TextAlign.Center,
