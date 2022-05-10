@@ -1,5 +1,6 @@
 package yaroslavgorbach.logic_quizz.feature.puzzle.ui
 
+import android.util.Log
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -9,15 +10,17 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.Lightbulb
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.Center
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Alignment.Companion.CenterVertically
+import androidx.compose.ui.Alignment.Companion.Start
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.style.TextAlign
@@ -32,6 +35,7 @@ import yaroslavgorbach.logic_quizz.feature.puzzle.model.PuzzleUiMessage
 import yaroslavgorbach.logic_quizz.feature.puzzle.model.PuzzleViewState
 import yaroslavgorbach.logic_quizz.feature.puzzle.presentation.PuzzleViewModel
 import yaroslavgorbach.logic_quizz.utills.UiMessage
+import yaroslavgorbach.logic_quizz.utills.findActivity
 
 @ExperimentalFoundationApi
 @ExperimentalMaterialApi
@@ -81,6 +85,18 @@ internal fun PuzzleUi(
             PuzzleUiMessage.ShowStoryDialog -> {
                 ShowStoryDialog(state, clearMessage, message)
             }
+            PuzzleUiMessage.ShowHintsDialog -> {
+                ShowHintsDialog(
+                    state = state,
+                    actioner = actioner,
+                    clearMessage = clearMessage,
+                    message = message
+                )
+            }
+            PuzzleUiMessage.ShowRewardAd -> {
+                actioner(PuzzleAction.ShowRewordAd(requireNotNull(LocalContext.current.findActivity())))
+                clearMessage(message.id)
+            }
         }
     }
 
@@ -107,12 +123,22 @@ internal fun PuzzleUi(
                 Text(
                     modifier = Modifier
                         .align(CenterVertically)
+                        .weight(1f)
                         .padding(start = 16.dp),
                     text = stringResource(
                         id =
                         state.puzzle?.name?.resId ?: R.string.app_name
                     ),
                     style = MaterialTheme.typography.caption
+                )
+
+                Icon(
+                    Icons.Default.Lightbulb,
+                    modifier = Modifier
+                        .align(CenterVertically)
+                        .clickable { actioner(PuzzleAction.ShowHintsDialog) }
+                        .padding(start = 16.dp, end = 16.dp),
+                    contentDescription = ""
                 )
             }
 
@@ -127,7 +153,7 @@ internal fun PuzzleUi(
 
                         Spacer(modifier = Modifier.size(1.dp))
 
-                        LazyRow() {
+                        LazyRow {
                             items(puzzle.tables) { table ->
                                 if (table.indexInPuzzleVertical == rowNumber) {
                                     TableUi(
@@ -315,6 +341,66 @@ private fun ShowStoryDialog(
                 fontSize = 16.sp,
                 textAlign = TextAlign.Justify
             )
+        }
+    })
+}
+
+@Composable
+private fun ShowHintsDialog(
+    state: PuzzleViewState,
+    actioner: (PuzzleAction) -> Unit,
+    clearMessage: (id: Long) -> Unit,
+    message: UiMessage<PuzzleUiMessage>
+) {
+    AlertDialog(onDismissRequest = {
+        clearMessage(message.id)
+    }, buttons = {
+        if(state.isHintByAdAvailable){
+            Column(modifier = Modifier.fillMaxWidth()) {
+                Button(
+                    onClick = {
+                        clearMessage(message.id)
+                        actioner(PuzzleAction.RequestShowRewordAd)
+                    },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(8.dp)
+                        .align(CenterHorizontally),
+                ) {
+                    Text(text = stringResource(id = R.string.view_ads), color = Color.White)
+                }
+            }
+        }
+
+    }, title = {
+        Column(modifier = Modifier.fillMaxWidth()) {
+            Text(
+                modifier = Modifier.align(Start),
+                text = stringResource(id = R.string.hints),
+                fontSize = 18.sp,
+                style = MaterialTheme.typography.caption,
+                textAlign = TextAlign.Center
+            )
+
+            if (state.isHintByAdAvailable) {
+                Text(
+                    modifier = Modifier.align(Start),
+                    text = stringResource(id = R.string.get_hint_by_viewing_ads),
+                    fontSize = 12.sp,
+                    textAlign = TextAlign.Center
+                )
+            }
+        }
+    }, text = {
+            LazyColumn {
+                items(state.puzzleHints) { hint ->
+                    Text(
+                        modifier = Modifier.padding(4.dp),
+                        style = MaterialTheme.typography.caption,
+                        text = hint.index.inc().toString() + "." + " " + hint.text,
+                        fontSize = 16.sp,
+                    )
+                }
         }
     })
 }

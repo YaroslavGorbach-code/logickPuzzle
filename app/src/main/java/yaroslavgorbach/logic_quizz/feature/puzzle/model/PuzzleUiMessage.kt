@@ -4,4 +4,6 @@ sealed class PuzzleUiMessage {
     object ShowWinDialog: PuzzleUiMessage()
     object ShowPuzzleErrorDialog: PuzzleUiMessage()
     object ShowStoryDialog: PuzzleUiMessage()
+    object ShowHintsDialog: PuzzleUiMessage()
+    object ShowRewardAd: PuzzleUiMessage()
 }

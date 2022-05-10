@@ -1,5 +1,6 @@
 package yaroslavgorbach.logic_quizz.feature.puzzle.presentation
 
+import android.util.Log
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -12,11 +13,13 @@ import yaroslavgorbach.logic_quizz.PUZZLE_NAME_ARG
 import yaroslavgorbach.logic_quizz.data.common.PuzzleRepo
 import yaroslavgorbach.logic_quizz.data.common.model.PuzzleName
 import yaroslavgorbach.logic_quizz.data.common.model.findNext
+import yaroslavgorbach.logic_quizz.data.puzzle.model.Hint
 import yaroslavgorbach.logic_quizz.data.puzzle.model.Puzzle
 import yaroslavgorbach.logic_quizz.data.puzzle.model.table.Table
 import yaroslavgorbach.logic_quizz.feature.puzzle.model.PuzzleAction
 import yaroslavgorbach.logic_quizz.feature.puzzle.model.PuzzleUiMessage
 import yaroslavgorbach.logic_quizz.feature.puzzle.model.PuzzleViewState
+import yaroslavgorbach.logic_quizz.utills.AdManager
 import yaroslavgorbach.logic_quizz.utills.UiMessage
 import yaroslavgorbach.logic_quizz.utills.UiMessageManager
 import yaroslavgorbach.logic_quizz.utills.compare
@@ -25,6 +28,7 @@ import javax.inject.Inject
 @HiltViewModel
 class PuzzleViewModel @Inject constructor(
     private val puzzleRepo: PuzzleRepo,
+    private val adManager: AdManager,
     savedState: SavedStateHandle
 ) : ViewModel() {
     val puzzleName: PuzzleName = savedState[PUZZLE_NAME_ARG]!!
@@ -32,6 +36,8 @@ class PuzzleViewModel @Inject constructor(
     private val pendingActions = MutableSharedFlow<PuzzleAction>()
 
     private var puzzle: MutableStateFlow<Puzzle?> = MutableStateFlow(null)
+
+    private var puzzleHints: MutableStateFlow<MutableList<Hint>> = MutableStateFlow(ArrayList())
 
     private var hintedTitles: MutableStateFlow<Pair<String, String>?> = MutableStateFlow(null)
 
@@ -43,15 +49,20 @@ class PuzzleViewModel @Inject constructor(
         isCheckAnswerVisible,
         puzzle,
         hintedTitles,
+        puzzleHints,
         uiMessageManager.message,
-    ) { isCheckAnswerVisible, puzzle, hintedTitles, message ->
+    ) { isCheckAnswerVisible, puzzle, hintedTitles, hints, message ->
+        initHints(puzzle)
+
         PuzzleViewState(
+            isHintByAdAvailable = hints.any { it.isVisible.not() },
             puzzle = puzzle?.copy(tables = puzzle.tables.map { table ->
                 table.copy(cells = table.cells.markIncorrectCells(table))
             }),
             message = message,
             hintedTitles = hintedTitles,
-            isCheckAnswerVisible = isCheckAnswerVisible
+            isCheckAnswerVisible = isCheckAnswerVisible,
+            puzzleHints = hints.filter { it.isVisible },
         )
     }.stateIn(
         scope = viewModelScope,
@@ -59,7 +70,15 @@ class PuzzleViewModel @Inject constructor(
         initialValue = PuzzleViewState.Test
     )
 
+    private suspend fun initHints(puzzle: Puzzle?) {
+        if (puzzleHints.value.isEmpty()) {
+            puzzleHints.emit(puzzle?.hints?.toMutableList() ?: ArrayList())
+        }
+    }
+
     init {
+        adManager.loadRewordAd()
+
         viewModelScope.launch {
             uiMessageManager.emitMessage(UiMessage(PuzzleUiMessage.ShowStoryDialog))
             loadPuzzle(puzzleName)
@@ -78,6 +97,33 @@ class PuzzleViewModel @Inject constructor(
                     }
                     PuzzleAction.TableUpdated -> {
                         handleCheckAnswerButtonVisibility()
+                    }
+                    PuzzleAction.ShowHintsDialog -> {
+                        Log.i("dssdsd", "ssd")
+                        uiMessageManager.emitMessage(UiMessage(PuzzleUiMessage.ShowHintsDialog))
+                    }
+                    PuzzleAction.RequestShowRewordAd -> {
+                        uiMessageManager.emitMessage(
+                            UiMessage(PuzzleUiMessage.ShowRewardAd)
+                        )
+                    }
+                    is PuzzleAction.ShowRewordAd -> {
+                        adManager.showRewardAd(
+                            activity = action.activity,
+                        ) {
+                            viewModelScope.launch {
+                                puzzleHints.update { it ->
+                                    it.apply {
+                                        val indexOfFirstInvisible =
+                                            indexOfFirst { it.isVisible.not() }
+                                        set(
+                                            indexOfFirstInvisible,
+                                            get(indexOfFirstInvisible).copy(isVisible = true)
+                                        )
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
