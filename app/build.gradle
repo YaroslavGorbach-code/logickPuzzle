@@ -84,4 +84,6 @@ dependencies {
     kapt "com.google.dagger:hilt-compiler:2.40.5"
 
     implementation "androidx.hilt:hilt-navigation-compose:1.0.0"
+
+    implementation 'com.google.android.gms:play-services-ads-lite:20.6.0'
 }

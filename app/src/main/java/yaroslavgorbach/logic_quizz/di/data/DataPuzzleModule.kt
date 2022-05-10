@@ -14,11 +14,17 @@ import yaroslavgorbach.logic_quizz.data.puzzles.factory.PuzzleAvailabilityProvid
 import yaroslavgorbach.logic_quizz.data.puzzles.factory.PuzzleCompleteProvider
 import yaroslavgorbach.logic_quizz.data.puzzles.factory.PuzzlesFactory
 import yaroslavgorbach.logic_quizz.data.puzzles.mapper.PuzzleNameToDifficultyMapper
+import yaroslavgorbach.logic_quizz.utills.AdManager
 import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
 object DataPuzzleModule {
+
+    @Provides
+    fun provideAdManagerFactory(app: Application): AdManager {
+        return AdManager(app)
+    }
 
     @Provides
     fun providePuzzleTitlesFactory(app: Application): PuzzleTitlesFactory {

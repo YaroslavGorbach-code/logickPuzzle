@@ -11,13 +11,15 @@ import yaroslavgorbach.logic_quizz.data.puzzles.model.PuzzleItem
 import yaroslavgorbach.logic_quizz.feature.puzzles.model.PuzzlesAction
 import yaroslavgorbach.logic_quizz.feature.puzzles.model.PuzzlesUiMessage
 import yaroslavgorbach.logic_quizz.feature.puzzles.model.PuzzlesViewState
+import yaroslavgorbach.logic_quizz.utills.AdManager
 import yaroslavgorbach.logic_quizz.utills.UiMessage
 import yaroslavgorbach.logic_quizz.utills.UiMessageManager
 import javax.inject.Inject
 
 @HiltViewModel
 class PuzzlesViewModel @Inject constructor(
-    private val puzzleRepo: PuzzleRepo
+    private val puzzleRepo: PuzzleRepo,
+    private val adManager: AdManager
 ) : ViewModel() {
 
     private val pendingActions = MutableSharedFlow<PuzzlesAction>()
@@ -38,6 +40,8 @@ class PuzzlesViewModel @Inject constructor(
     )
 
     init {
+        adManager.loadRewordAd()
+
         viewModelScope.launch {
             pendingActions.collect { action ->
                 when (action) {
@@ -52,6 +56,25 @@ class PuzzlesViewModel @Inject constructor(
                     }
                     PuzzlesAction.LoadPuzzle -> {
                         loadPuzzles()
+                    }
+                    is PuzzlesAction.RequestShowRewordAd -> {
+                        uiMessageManager.emitMessage(
+                            UiMessage(
+                                PuzzlesUiMessage.ShowRewardAd(
+                                    action.puzzleName
+                                )
+                            )
+                        )
+                    }
+                    is PuzzlesAction.ShowRewordAd -> {
+                        adManager.showRewardAd(
+                            activity = action.activity,
+                        ) {
+                            viewModelScope.launch {
+                                puzzleRepo.makeAvailable(action.puzzleName)
+                                loadPuzzles()
+                            }
+                        }
                     }
                 }
             }

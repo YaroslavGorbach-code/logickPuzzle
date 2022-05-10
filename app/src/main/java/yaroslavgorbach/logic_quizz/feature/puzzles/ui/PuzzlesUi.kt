@@ -1,5 +1,6 @@
 package yaroslavgorbach.logic_quizz.feature.puzzles.ui
 
+import android.util.Log
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -15,6 +16,7 @@ import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
@@ -34,6 +36,7 @@ import yaroslavgorbach.logic_quizz.feature.puzzles.model.PuzzlesUiMessage
 import yaroslavgorbach.logic_quizz.feature.puzzles.model.PuzzlesViewState
 import yaroslavgorbach.logic_quizz.feature.puzzles.presentation.PuzzlesViewModel
 import yaroslavgorbach.logic_quizz.utills.UiMessage
+import yaroslavgorbach.logic_quizz.utills.findActivity
 
 @ExperimentalFoundationApi
 @ExperimentalMaterialApi
@@ -85,11 +88,23 @@ internal fun PuzzlesUi(
     }
 
     state.message?.let { message ->
-        when (message.message) {
+        when (val m = message.message) {
             is PuzzlesUiMessage.ShowPuzzleUnAvailableDialog -> ShowUnavailableDialog(
+                m.name,
+                actioner,
                 clearMessage,
                 message
             )
+            is PuzzlesUiMessage.ShowRewardAd -> {
+                Log.i("dsdds", "dsss")
+                actioner(
+                    PuzzlesAction.ShowRewordAd(
+                        activity = requireNotNull(LocalContext.current.findActivity()),
+                        puzzleName = m.puzzleName
+                    )
+                )
+                clearMessage(message.id)
+            }
         }
     }
 
@@ -375,6 +390,8 @@ private fun ShowHardAchievement(state: PuzzlesViewState) {
 
 @Composable
 private fun ShowUnavailableDialog(
+    name: PuzzleName,
+    actioner: (PuzzlesAction) -> Unit,
     clearMessage: (id: Long) -> Unit,
     message: UiMessage<PuzzlesUiMessage>
 ) {
@@ -383,11 +400,18 @@ private fun ShowUnavailableDialog(
     }, buttons = {
         Column(modifier = Modifier.fillMaxWidth()) {
             Button(
-                onClick = { clearMessage(message.id) },
+                onClick = {
+                    actioner(
+                        PuzzlesAction.RequestShowRewordAd(
+                            name
+                        )
+                    )
+                    clearMessage(message.id)
+                },
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(8.dp)
-                    .align(Alignment.CenterHorizontally)
+                    .align(Alignment.CenterHorizontally),
             ) {
                 Text(text = stringResource(id = R.string.view_ads), color = Color.White)
             }
