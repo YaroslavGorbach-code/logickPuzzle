@@ -96,7 +96,6 @@ internal fun PuzzlesUi(
                 message
             )
             is PuzzlesUiMessage.ShowRewardAd -> {
-                Log.i("dsdds", "dsss")
                 actioner(
                     PuzzlesAction.ShowRewordAd(
                         activity = requireNotNull(LocalContext.current.findActivity()),

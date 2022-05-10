@@ -62,16 +62,28 @@ object DataPuzzleModule {
     }
 
     @Provides
+    fun provideHintsProvider(app: Application): PuzzleHintsProvider {
+        return PuzzleHintsProvider(app)
+    }
+
+    @Provides
     fun providePuzzleFactory(
         fac: PuzzleTitlesFactory,
         cluesProvider: PuzzleCluesProvider,
         correctPairsProvider: CorrectPairsProvider,
         puzzleStoryProvider: PuzzleStoryProvider,
-        providerCellSizeProvider: TableCellSizeProvider
+        providerCellSizeProvider: TableCellSizeProvider,
+        puzzleHintsProvider: PuzzleHintsProvider
     ): PuzzleFactory {
-        return PuzzleFactory(fac, cluesProvider, correctPairsProvider, puzzleStoryProvider, providerCellSizeProvider)
+        return PuzzleFactory(
+            fac,
+            cluesProvider,
+            puzzleHintsProvider,
+            correctPairsProvider,
+            puzzleStoryProvider,
+            providerCellSizeProvider
+        )
     }
-
 
     @Provides
     fun provideNameToDifficultyMapper(): PuzzleNameToDifficultyMapper {

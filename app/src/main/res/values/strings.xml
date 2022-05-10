@@ -23,5 +23,7 @@
     <string name="all_hard_puzzles_solved">You have completed all the hard puzzles</string>
     <string name="view_ads">VIEW ADS</string>
     <string name="puzzle_is_unavailable">Puzzle is not available</string>
+    <string name="hints">HINTS</string>
     <string name="puzzle_is_unavailable_explanation">Get access by viewing ads or complete the previous puzzle successfully</string>
+    <string name="get_hint_by_viewing_ads">Get one more hint by viewing ads</string>
 </resources>

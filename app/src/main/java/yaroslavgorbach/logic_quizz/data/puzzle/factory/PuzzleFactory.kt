@@ -8,6 +8,7 @@ import yaroslavgorbach.logic_quizz.data.puzzle.model.table.TableTitle
 class PuzzleFactory(
     private val puzzleTitleFactory: PuzzleTitlesFactory,
     private val puzzleCluesProvider: PuzzleCluesProvider,
+    private val puzzleHintsProvider: PuzzleHintsProvider,
     private val correctPairsProvider: CorrectPairsProvider,
     private val puzzleStoryProvider: PuzzleStoryProvider,
     private val puzzleCellSizeProvider: TableCellSizeProvider
@@ -45,6 +46,7 @@ class PuzzleFactory(
             titles,
             tables,
             puzzleCluesProvider.provide(name),
+            puzzleHintsProvider.provide(name),
             correctPairsProvider.provide(name),
             name,
             puzzleStoryProvider.provide(name)
