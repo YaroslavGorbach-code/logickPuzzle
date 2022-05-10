@@ -1,13 +1,12 @@
 package yaroslavgorbach.logic_quizz.feature.puzzles.ui
 
-import android.util.Log
-import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
+import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.HelpOutline
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.collectAsState
@@ -88,9 +87,9 @@ internal fun PuzzlesUi(
     }
 
     state.message?.let { message ->
-        when (val m = message.message) {
+        when (message.message) {
             is PuzzlesUiMessage.ShowPuzzleUnAvailableDialog -> ShowUnavailableDialog(
-                m.name,
+                message.message.name,
                 actioner,
                 clearMessage,
                 message
@@ -99,22 +98,40 @@ internal fun PuzzlesUi(
                 actioner(
                     PuzzlesAction.ShowRewordAd(
                         activity = requireNotNull(LocalContext.current.findActivity()),
-                        puzzleName = m.puzzleName
+                        puzzleName = message.message.puzzleName
                     )
                 )
                 clearMessage(message.id)
+            }
+            PuzzlesUiMessage.ShowHelpDialog -> {
+                ShowHelpDialogDialog(clearMessage = clearMessage, message = message)
             }
         }
     }
 
     Surface(modifier = Modifier.fillMaxSize()) {
         Column {
-            Text(
-                text = stringResource(id = R.string.app_name),
-                style = MaterialTheme.typography.caption,
-                fontSize = 32.sp,
-                modifier = Modifier.padding(horizontal = 8.dp)
-            )
+            Row() {
+                Text(
+                    text = stringResource(id = R.string.app_name),
+                    style = MaterialTheme.typography.caption,
+                    fontSize = 32.sp,
+                    modifier = Modifier
+                        .padding(horizontal = 8.dp)
+                        .weight(1f)
+                )
+
+                Icon(
+                    Icons.Default.HelpOutline,
+                    contentDescription = "",
+                    modifier = Modifier
+                        .padding(8.dp)
+                        .size(30.dp)
+                        .clickable {
+                            actioner(PuzzlesAction.ShowHelpDialog)
+                        }
+                )
+            }
 
             Text(
                 text = stringResource(id = R.string.app_description),
@@ -410,7 +427,7 @@ private fun ShowUnavailableDialog(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(8.dp)
-                    .align(Alignment.CenterHorizontally),
+                    .align(CenterHorizontally),
             ) {
                 Text(text = stringResource(id = R.string.view_ads), color = Color.White)
             }
@@ -431,17 +448,76 @@ private fun ShowUnavailableDialog(
     }, text = {
         Column(modifier = Modifier.fillMaxWidth()) {
             Text(
-                modifier = Modifier.align(Alignment.CenterHorizontally),
+                modifier = Modifier.align(CenterHorizontally),
                 text = stringResource(id = R.string.puzzle_is_unavailable),
                 style = MaterialTheme.typography.caption,
                 textAlign = TextAlign.Center
             )
 
             Text(
-                modifier = Modifier.align(Alignment.CenterHorizontally),
+                modifier = Modifier.align(CenterHorizontally),
                 text = stringResource(id = R.string.puzzle_is_unavailable_explanation),
                 fontSize = 12.sp,
                 textAlign = TextAlign.Center
+            )
+        }
+    })
+}
+
+@Composable
+private fun ShowHelpDialogDialog(
+    clearMessage: (id: Long) -> Unit,
+    message: UiMessage<PuzzlesUiMessage>
+) {
+    val scroll = rememberScrollState(0)
+
+    AlertDialog(onDismissRequest = {
+        clearMessage(message.id)
+    }, buttons = {
+        Column(modifier = Modifier.fillMaxWidth()) {
+            Button(
+                onClick = {
+                    clearMessage(message.id)
+                },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(8.dp)
+                    .align(CenterHorizontally),
+            ) {
+                Text(text = stringResource(id = R.string.play_the_simple_button).uppercase(), color = Color.White)
+            }
+        }
+
+    }, title = {
+        Column(modifier = Modifier
+            .fillMaxWidth()
+            .verticalScroll(scroll)) {
+            Text(
+                modifier = Modifier.align(CenterHorizontally),
+                text = stringResource(id = R.string.how_to_play),
+                style = MaterialTheme.typography.caption,
+                textAlign = TextAlign.Start
+            )
+
+            Text(
+                modifier = Modifier.align(CenterHorizontally).padding(top = 8.dp),
+                text = stringResource(id = R.string.how_to_play_explanation),
+                fontSize = 16.sp,
+                textAlign = TextAlign.Justify
+            )
+
+            Text(
+                modifier = Modifier.align(CenterHorizontally).padding(top = 8.dp),
+                text = stringResource(id = R.string.play_the_basics),
+                style = MaterialTheme.typography.caption,
+                textAlign = TextAlign.Start
+            )
+
+            Text(
+                modifier = Modifier.align(CenterHorizontally).padding(top = 8.dp),
+                text = stringResource(id = R.string.play_the_basics_explanation),
+                fontSize = 16.sp,
+                textAlign = TextAlign.Justify
             )
         }
     })

@@ -76,6 +76,10 @@ class PuzzlesViewModel @Inject constructor(
                             }
                         }
                     }
+
+                    PuzzlesAction.ShowHelpDialog -> {
+                        uiMessageManager.emitMessage(UiMessage(PuzzlesUiMessage.ShowHelpDialog))
+                    }
                 }
             }
         }

@@ -26,4 +26,10 @@
     <string name="hints">HINTS</string>
     <string name="puzzle_is_unavailable_explanation">Get access by viewing ads or complete the previous puzzle successfully</string>
     <string name="get_hint_by_viewing_ads">Get one more hint by viewing ads</string>
+    <string name="how_to_play">How to play</string>
+    <string name="play_the_simple_button">Play the simple puzzle</string>
+    <string name="play_the_basics">Play the basics</string>
+    <string name="play_the_basics_explanation">If you are having a hard time, play this basic logic puzzle to get started. It is very simple.</string>
+    <string name="how_to_play_explanation">1. The first step is to read the clues and find the most basic ones;\n2. Those clues can be marked on the grid without using any other information;
+        \n3. After this, you will need to read the clues again and use logic deduction</string>
 </resources>

@@ -8,4 +8,5 @@ sealed class PuzzlesAction {
     object LoadPuzzle: PuzzlesAction()
     data class ShowRewordAd(val activity: Activity, val puzzleName: PuzzleName) : PuzzlesAction()
     data class RequestShowRewordAd(val puzzleName: PuzzleName) : PuzzlesAction()
+    object ShowHelpDialog : PuzzlesAction()
 }
