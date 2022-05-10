@@ -347,6 +347,67 @@ private fun ShowStoryDialog(
     })
 }
 
+@Composable
+private fun ShowHintsDialog(
+    state: PuzzleViewState,
+    actioner: (PuzzleAction) -> Unit,
+    clearMessage: (id: Long) -> Unit,
+    message: UiMessage<PuzzleUiMessage>
+) {
+    AlertDialog(onDismissRequest = {
+        clearMessage(message.id)
+    }, buttons = {
+        if(state.isHintByAdAvailable){
+            Column(modifier = Modifier.fillMaxWidth()) {
+                Button(
+                    onClick = {
+                        clearMessage(message.id)
+                        actioner(PuzzleAction.RequestShowRewordAd)
+                    },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(8.dp)
+                        .align(CenterHorizontally),
+                ) {
+                    Text(text = stringResource(id = R.string.view_ads), color = Color.White)
+                }
+            }
+        }
+
+    }, title = {
+        Column(modifier = Modifier.fillMaxWidth()) {
+            Text(
+                modifier = Modifier.align(Start),
+                text = stringResource(id = R.string.hints),
+                fontSize = 18.sp,
+                style = MaterialTheme.typography.caption,
+                textAlign = TextAlign.Center
+            )
+
+            if (state.isHintByAdAvailable) {
+                Text(
+                    modifier = Modifier.align(Start),
+                    text = stringResource(id = R.string.get_hint_by_viewing_ads),
+                    fontSize = 12.sp,
+                    textAlign = TextAlign.Center
+                )
+            }
+        }
+    }, text = {
+        LazyColumn {
+            items(state.puzzleHints) { hint ->
+                Text(
+                    modifier = Modifier.padding(4.dp),
+                    style = MaterialTheme.typography.caption,
+                    text = hint.index.inc().toString() + "." + " " + hint.text,
+                    fontSize = 16.sp,
+                )
+            }
+        }
+    })
+}
+
+
 @ExperimentalFoundationApi
 @ExperimentalMaterialApi
 @Preview(showBackground = true, showSystemUi = true)
