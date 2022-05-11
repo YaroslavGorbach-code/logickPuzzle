@@ -38,6 +38,9 @@ class PuzzleCluesProvider(private val context: Context) {
             PuzzleName.JUST_A_THOUGHT -> {
                 context.resources.getStringArray(R.array.just_a_thought_clues).toList()
             }
+            PuzzleName.FAMILY_TRIPS -> {
+                context.resources.getStringArray(R.array.family_trips_clues).toList()
+            }
         }
     }
 }

@@ -49,6 +49,34 @@
         <item>9</item>
     </string-array>
 
+<!--    Answer-->
+<!--    2001, Alexandra, Gardens-->
+<!--    2002, Hazel, Niagara Falls-->
+<!--    2003, Ezekiel, Philadelphia-->
+<!--    2004, Cliff, Williamsburg-->
+    <string name="family_trips_items_1_name">Years</string>
+    <string-array name="family_trips_items_1_years">
+        <item>2001</item>
+        <item>2002</item>
+        <item>2003</item>
+        <item>2004</item>
+    </string-array>
+
+    <string name="family_trips_items_2_name">Children</string>
+    <string-array name="family_trips_items_2_children">
+        <item>Alexandra</item>
+        <item>Cliff</item>
+        <item>Ezekiel</item>
+        <item>Hazel</item>
+    </string-array>
+
+    <string name="family_trips_items_3_name">Locations</string>
+    <string-array name="family_trips_items_3_locations">
+        <item>Gardens</item>
+        <item>Niagara Falls</item>
+        <item>Philadelphia</item>
+        <item>Williamsburg</item>
+    </string-array>
 
     <!--    Answer-->
     <!--    Jenny - Orange - Saturday-->

@@ -329,6 +329,38 @@ class PuzzleTitlesFactory(private val context: Context) {
                     )
                 )
             }
+            PuzzleName.FAMILY_TRIPS -> {
+                return listOf(
+                    TableTitle(
+                        name = context.getString(R.string.family_trips_items_1_name),
+                        items = context.resources.getStringArray(R.array.family_trips_items_1_years)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.family_trips_items_3_name),
+                        items = context.resources.getStringArray(R.array.family_trips_items_3_locations)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.family_trips_items_2_name),
+                        items = context.resources.getStringArray(R.array.family_trips_items_2_children)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.family_trips_items_3_name),
+                        items = context.resources.getStringArray(R.array.family_trips_items_3_locations)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    )
+                )
+            }
         }
         }
     }

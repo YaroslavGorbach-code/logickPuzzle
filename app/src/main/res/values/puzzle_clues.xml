@@ -21,6 +21,20 @@
         <item>6. Jenny loved eating her orange.</item>
     </string-array>
 
+<!--    Answer-->
+<!--    2001, Alexandra, Gardens-->
+<!--    2002, Hazel, Niagara Falls-->
+<!--    2003, Ezekiel, Philadelphia-->
+<!--    2004, Cliff, Williamsburg-->
+    <string-array name="family_trips_clues">
+        <item>1. Neither Alexandra nor Cliff planned the 2003 trip.</item>
+        <item>2. Ezekiel didn\'t plan a trip to Niagara Falls.</item>
+        <item>3. Hazel picked the 2002 destination.</item>
+        <item>4. Alexandra planned a trip to Gardens.</item>
+        <item>5. Neither Ezekiel nor Hazel planned the trip to Williamsburg.</item>
+        <item>6. A boy planned the 2004 vacation trip.</item>
+    </string-array>
+
 <!--    Student Subject Number-->
 <!--    Helga Journalism 2-->
 <!--    Johannes Science 9-->

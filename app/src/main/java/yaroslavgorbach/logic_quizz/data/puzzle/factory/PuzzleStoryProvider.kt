@@ -38,6 +38,9 @@ class PuzzleStoryProvider(private val context: Context) {
             PuzzleName.JUST_A_THOUGHT -> {
                 context.resources.getString(R.string.just_a_thought_story)
             }
+            PuzzleName.FAMILY_TRIPS -> {
+                context.resources.getString(R.string.family_trips_story)
+            }
         }
     }
 }

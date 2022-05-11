@@ -11,6 +11,7 @@ enum class PuzzleName(val resId: Int) {
     WHO_ATE_WHICH_FRUIT(R.string.who_ate_which_fruit_name),
     DRACONIA_TRAINERS(R.string.draconia_trainers_name),
     JUST_A_THOUGHT(R.string.just_a_thought_name),
+    FAMILY_TRIPS(R.string.family_trips_name),
 
     //middle
     MORE_PAINTERS(R.string.more_painters_name),
