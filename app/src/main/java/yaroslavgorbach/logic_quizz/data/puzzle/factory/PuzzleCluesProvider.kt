@@ -29,6 +29,9 @@ class PuzzleCluesProvider(private val context: Context) {
             PuzzleName.MULTICOLOUR_DOORS -> {
                 context.resources.getStringArray(R.array.multicolour_doors_clues).toList()
             }
+            PuzzleName.WHO_ATE_WHICH_FRUIT -> {
+                context.resources.getStringArray(R.array.who_ate_which_fruit_clues).toList()
+            }
         }
     }
 }

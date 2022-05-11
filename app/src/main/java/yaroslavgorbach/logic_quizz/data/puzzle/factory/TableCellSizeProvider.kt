@@ -13,6 +13,7 @@ class TableCellSizeProvider() {
             PuzzleName.JAZZ_BANDS_SOLOS -> 30
             PuzzleName.TRAINING_PUZZLE -> 40
             PuzzleName.MULTICOLOUR_DOORS -> 40
+            PuzzleName.WHO_ATE_WHICH_FRUIT -> 30
         }
     }
 }

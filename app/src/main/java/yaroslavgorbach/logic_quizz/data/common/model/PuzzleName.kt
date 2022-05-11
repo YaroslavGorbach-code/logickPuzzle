@@ -8,6 +8,7 @@ enum class PuzzleName(val resId: Int) {
     SNACK_TIME(R.string.snack_time_name),
     MATES_PLUS_DATES(R.string.mates_plus_dates_name),
     MULTICOLOUR_DOORS(R.string.multicolour_doors_name),
+    WHO_ATE_WHICH_FRUIT(R.string.who_ate_which_fruit_name),
 
     //middle
     MORE_PAINTERS(R.string.more_painters_name),

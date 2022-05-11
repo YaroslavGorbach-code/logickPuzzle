@@ -233,6 +233,38 @@ class PuzzleTitlesFactory(private val context: Context) {
                     )
                 )
             }
+            PuzzleName.WHO_ATE_WHICH_FRUIT -> {
+                return listOf(
+                    TableTitle(
+                        name = context.getString(R.string.who_ate_which_fruit_items_1_name),
+                        items = context.resources.getStringArray(R.array.who_ate_which_fruit_items_1_friends)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.who_ate_which_fruit_items_3_name),
+                        items = context.resources.getStringArray(R.array.who_ate_which_fruit_items_3_days)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.who_ate_which_fruit_items_2_name),
+                        items = context.resources.getStringArray(R.array.who_ate_which_fruit_items_2_fruits)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.who_ate_which_fruit_items_3_name),
+                        items = context.resources.getStringArray(R.array.who_ate_which_fruit_items_3_days)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    )
+                )
+            }
+            }
         }
     }
-}

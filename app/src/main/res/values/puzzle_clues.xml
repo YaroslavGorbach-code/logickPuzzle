@@ -7,12 +7,26 @@
         <item>4. Belle likes apples..</item>
     </string-array>
 
-<!--    Answer-->
-<!--    Harry lives on Oak St and has a blue door.-->
+    <!--    Answer-->
+    <!--    Jenny - Orange - Saturday-->
+    <!--    Bob - Banana - Tuesday-->
+    <!--    Kate - Apple - Friday-->
+    <!--    Joseph - Grapes - Monday-->
+    <string-array name="who_ate_which_fruit_clues">
+        <item>1. The person that had the orange ate it on Saturday.</item>
+        <item>2. The woman who had the apple did not eat it on Tuesday.</item>
+        <item>3. Joseph did not eat the bananas and did not eat on Friday.</item>
+        <item>4. People with O in their name did not eat the orange.</item>
+        <item>5. Bob ate his fruit on Tuesday.</item>
+        <item>6. Jenny loved eating her orange.</item>
+    </string-array>
 
-<!--    Carly lives on Drury Ave and has a pink door.-->
+    <!--    Answer-->
+    <!--    Harry lives on Oak St and has a blue door.-->
 
-<!--    Alan lives on South Ave and has a red door.-->
+    <!--    Carly lives on Drury Ave and has a pink door.-->
+
+    <!--    Alan lives on South Ave and has a red door.-->
     <string-array name="multicolour_doors_clues">
         <item>1. Carly just loves the colour pink and she was ecstatic when her mom painted the door for her.</item>
         <item>2. Alan\'s always around at Harry\'s house. It\'s easy to get there because Oak St is only just around the corner from Alan\'s house.</item>

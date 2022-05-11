@@ -23,7 +23,39 @@
         <item>Grape</item>
     </string-array>
 
+
 <!--    Answer-->
+<!--    Jenny - Orange - Saturday-->
+<!--    Bob - Banana - Tuesday-->
+<!--    Kate - Apple - Friday-->
+<!--    Joseph - Grapes - Monday-->
+
+    <string name="who_ate_which_fruit_items_1_name">Friends</string>
+    <string-array name="who_ate_which_fruit_items_1_friends">
+        <item>Jenny</item>
+        <item>Bob</item>
+        <item>Kate</item>
+        <item>Joseph</item>
+    </string-array>
+
+    <string name="who_ate_which_fruit_items_2_name">Fruits</string>
+    <string-array name="who_ate_which_fruit_items_2_fruits">
+        <item>Orange</item>
+        <item>Apple</item>
+        <item>Grapes</item>
+        <item>Banana</item>
+    </string-array>
+
+    <string name="who_ate_which_fruit_items_3_name">Days</string>
+    <string-array name="who_ate_which_fruit_items_3_days">
+        <item>Monday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Tuesday</item>
+    </string-array>
+
+
+    <!--    Answer-->
 <!--    Harry lives on Oak St and has a blue door.-->
 
 <!--    Carly lives on Drury Ave and has a pink door.-->

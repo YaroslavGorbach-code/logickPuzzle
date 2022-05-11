@@ -2,6 +2,11 @@
 <resources>
     <string name="training_puzzle_story">Follow the clues to determine which fruit does the oldest girl like.</string>
 
+    <string name="who_ate_which_fruit_story">There are 4 people - Jenny, Bob, Kate and Joseph.
+        They each had a piece of fruit - Orange, Apple, Grapes and Banana.
+        On a certain day - Monday, Friday, Saturday, Tuesday.
+        Can you work out who has which fruit on which day?</string>
+
     <string name="multicolour_doors_story">Three friends all live in houses with painted doors.
         Can you use these clues to find out what colour door they have and what road they live on?    </string>
 
