@@ -8,6 +8,7 @@ import kotlinx.coroutines.flow.SharingStarted.Companion.WhileSubscribed
 import kotlinx.coroutines.launch
 import yaroslavgorbach.logic_quizz.data.common.PuzzleRepo
 import yaroslavgorbach.logic_quizz.data.puzzles.model.PuzzleItem
+import yaroslavgorbach.logic_quizz.data.settings.repo.RepoSettings
 import yaroslavgorbach.logic_quizz.feature.puzzles.model.PuzzlesAction
 import yaroslavgorbach.logic_quizz.feature.puzzles.model.PuzzlesUiMessage
 import yaroslavgorbach.logic_quizz.feature.puzzles.model.PuzzlesViewState
@@ -19,6 +20,7 @@ import javax.inject.Inject
 @HiltViewModel
 class PuzzlesViewModel @Inject constructor(
     private val puzzleRepo: PuzzleRepo,
+    private val puzzleSettings: RepoSettings,
     private val adManager: AdManager
 ) : ViewModel() {
 
@@ -40,6 +42,15 @@ class PuzzlesViewModel @Inject constructor(
     )
 
     init {
+        viewModelScope.launch {
+            puzzleSettings.observeIsFirstAppOpen().collect { isFirstOpen ->
+                if (isFirstOpen){
+                    uiMessageManager.emitMessage(UiMessage(PuzzlesUiMessage.ShowHelpDialog))
+                    puzzleSettings.changeIsFirsAppOpen(false)
+                }
+            }
+        }
+
         adManager.loadRewordAd()
 
         viewModelScope.launch {

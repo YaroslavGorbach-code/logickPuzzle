@@ -310,6 +310,8 @@ private fun ShowStoryDialog(
     clearMessage: (id: Long) -> Unit,
     message: UiMessage<PuzzleUiMessage>
 ) {
+    val scroll = rememberScrollState(0)
+
     AlertDialog(onDismissRequest = {
         clearMessage(message.id)
     }, buttons = {
@@ -338,7 +340,7 @@ private fun ShowStoryDialog(
             )
 
             Text(
-                modifier = Modifier.align(CenterHorizontally),
+                modifier = Modifier.align(CenterHorizontally).verticalScroll(scroll),
                 text = state.puzzle?.story ?: "",
                 fontSize = 16.sp,
                 textAlign = TextAlign.Justify

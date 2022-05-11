@@ -11,20 +11,20 @@ import kotlinx.coroutines.flow.map
 
 private val Context.settingsDataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
-class SettingsDataStoreImp : SettingsDataStore {
+class SettingsDataStoreImp(private val context: Context) : SettingsDataStore {
 
     companion object {
         private val IS_FIRST_APP_OPEN_KEY = booleanPreferencesKey("IS_FIRST_APP_OPEN_KEY")
     }
 
-    override fun observeIsFirstAppOpen(context: Context): Flow<Boolean> {
+    override fun observeIsFirstAppOpen(): Flow<Boolean> {
         return context.settingsDataStore.data
             .map { prefs ->
                 prefs[IS_FIRST_APP_OPEN_KEY] ?: true
             }
     }
 
-    override suspend fun changeIsFirstAppOpen(context: Context, isFirstAppOpen: Boolean) {
+    override suspend fun changeIsFirstAppOpen(isFirstAppOpen: Boolean) {
         context.settingsDataStore.edit { prefs ->
             prefs[IS_FIRST_APP_OPEN_KEY] = isFirstAppOpen
         }

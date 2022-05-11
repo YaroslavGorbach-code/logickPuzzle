@@ -14,6 +14,10 @@ import yaroslavgorbach.logic_quizz.data.puzzles.factory.PuzzleAvailabilityProvid
 import yaroslavgorbach.logic_quizz.data.puzzles.factory.PuzzleCompleteProvider
 import yaroslavgorbach.logic_quizz.data.puzzles.factory.PuzzlesFactory
 import yaroslavgorbach.logic_quizz.data.puzzles.mapper.PuzzleNameToDifficultyMapper
+import yaroslavgorbach.logic_quizz.data.settings.local.SettingsDataStore
+import yaroslavgorbach.logic_quizz.data.settings.local.SettingsDataStoreImp
+import yaroslavgorbach.logic_quizz.data.settings.repo.RepoSettings
+import yaroslavgorbach.logic_quizz.data.settings.repo.RepoSettingsImp
 import yaroslavgorbach.logic_quizz.utills.AdManager
 import javax.inject.Singleton
 
@@ -39,6 +43,11 @@ object DataPuzzleModule {
     @Provides
     fun providePuzzleCompleteDataStore(puzzleDataStore: PuzzleDataStore): PuzzleCompleteProvider {
         return PuzzleCompleteProvider(puzzleDataStore)
+    }
+
+    @Provides
+    fun provideSettingsDataStore(app: Application): SettingsDataStore {
+        return SettingsDataStoreImp(app)
     }
 
     @Provides
@@ -118,6 +127,14 @@ object DataPuzzleModule {
         puzzleDataStore: PuzzleDataStore
     ): PuzzleRepo {
         return PuzzleRepoImp(factory, puzzlesFactory, puzzleDataStore)
+    }
+
+    @Singleton
+    @Provides
+    fun provideSettingsRepo(
+        settingsDataStore: SettingsDataStore
+    ): RepoSettings {
+        return RepoSettingsImp(settingsDataStore)
     }
 
 }
