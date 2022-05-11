@@ -23,7 +23,41 @@
         <item>Grape</item>
     </string-array>
 
-<!--    Student Subject Number-->
+<!--    Answer-->
+<!--    Pete is the father of Zach who has Black shoes.-->
+<!--    Sam is the father of Tim who has Red shoes.-->
+<!--    Mark is the father of Chris who has Yellow shoes.-->
+<!--    Kaleb is the father of Laura who has Green shoes.-->
+<!--    Zander is the father of Natalie who has Pink shoes.-->
+
+    <string name="jungle_gym_hoopla_items_1_name">Fathers</string>
+    <string-array name="jungle_gym_hoopla_items_1_fathers">
+        <item>Pete</item>
+        <item>Sam</item>
+        <item>Mark</item>
+        <item>Kaleb</item>
+        <item>Zander</item>
+    </string-array>
+
+    <string name="jungle_gym_hoopla_items_2_name">Children</string>
+    <string-array name="jungle_gym_hoopla_items_2_Children">
+        <item>Zach</item>
+        <item>Tim</item>
+        <item>Chris</item>
+        <item>Laura</item>
+        <item>Natalie</item>
+    </string-array>
+
+    <string name="jungle_gym_hoopla_items_3_name">Shoes</string>
+    <string-array name="jungle_gym_hoopla_items_3_shoes">
+        <item>Black</item>
+        <item>Red</item>
+        <item>Yellow</item>
+        <item>Green</item>
+        <item>Pink</item>
+    </string-array>
+
+    <!--    Student Subject Number-->
 <!--    Helga Journalism 2-->
 <!--    Johannes Science 9-->
 <!--    Sebastian History 5-->

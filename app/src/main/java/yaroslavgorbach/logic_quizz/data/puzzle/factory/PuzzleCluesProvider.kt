@@ -41,6 +41,9 @@ class PuzzleCluesProvider(private val context: Context) {
             PuzzleName.FAMILY_TRIPS -> {
                 context.resources.getStringArray(R.array.family_trips_clues).toList()
             }
+            PuzzleName.JUNGLE_GYM_HOOPLA -> {
+                context.resources.getStringArray(R.array.jungle_gym_hoopla_clues).toList()
+            }
         }
     }
 }

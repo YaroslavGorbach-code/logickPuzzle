@@ -361,6 +361,38 @@ class PuzzleTitlesFactory(private val context: Context) {
                     )
                 )
             }
+            PuzzleName.JUNGLE_GYM_HOOPLA -> {
+                return listOf(
+                    TableTitle(
+                        name = context.getString(R.string.jungle_gym_hoopla_items_1_name),
+                        items = context.resources.getStringArray(R.array.jungle_gym_hoopla_items_1_fathers)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.jungle_gym_hoopla_items_3_name),
+                        items = context.resources.getStringArray(R.array.jungle_gym_hoopla_items_3_shoes)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.jungle_gym_hoopla_items_2_name),
+                        items = context.resources.getStringArray(R.array.jungle_gym_hoopla_items_2_Children)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.jungle_gym_hoopla_items_3_name),
+                        items = context.resources.getStringArray(R.array.jungle_gym_hoopla_items_3_shoes)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    )
+                )
+            }
         }
         }
     }

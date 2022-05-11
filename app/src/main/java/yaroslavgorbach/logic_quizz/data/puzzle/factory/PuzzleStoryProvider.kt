@@ -41,6 +41,9 @@ class PuzzleStoryProvider(private val context: Context) {
             PuzzleName.FAMILY_TRIPS -> {
                 context.resources.getString(R.string.family_trips_story)
             }
+            PuzzleName.JUNGLE_GYM_HOOPLA -> {
+                context.resources.getString(R.string.jungle_gym_hoopla_story)
+            }
         }
     }
 }

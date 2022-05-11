@@ -17,6 +17,7 @@ class TableCellSizeProvider() {
             PuzzleName.DRACONIA_TRAINERS -> 30
             PuzzleName.JUST_A_THOUGHT -> 40
             PuzzleName.FAMILY_TRIPS -> 30
+            PuzzleName.JUNGLE_GYM_HOOPLA -> 30
         }
     }
 }

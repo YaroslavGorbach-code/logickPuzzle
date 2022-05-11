@@ -18,6 +18,7 @@ class PuzzleNameToDifficultyMapper() {
             PuzzleName.DRACONIA_TRAINERS ->  DifficultLevel.ONE
             PuzzleName.JUST_A_THOUGHT -> DifficultLevel.TWO
             PuzzleName.FAMILY_TRIPS ->  DifficultLevel.TWO
+            PuzzleName.JUNGLE_GYM_HOOPLA ->  DifficultLevel.TWO
         }
     }
 }

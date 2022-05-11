@@ -29,6 +29,10 @@ class PuzzleHintsProvider(private val context: Context) {
                 context.resources.getStringArray(R.array.family_trips_hints).toList()
                     .mapIndexed(::Hint)
             }
+            PuzzleName.JUNGLE_GYM_HOOPLA -> {
+                context.resources.getStringArray(R.array.jungle_gym_hoopla_hints).toList()
+                    .mapIndexed(::Hint)
+            }
             PuzzleName.MORE_PAINTERS,
             PuzzleName.TRAINING_PUZZLE,
             PuzzleName.MULTICOLOUR_DOORS,

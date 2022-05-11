@@ -12,6 +12,7 @@ enum class PuzzleName(val resId: Int) {
     DRACONIA_TRAINERS(R.string.draconia_trainers_name),
     JUST_A_THOUGHT(R.string.just_a_thought_name),
     FAMILY_TRIPS(R.string.family_trips_name),
+    JUNGLE_GYM_HOOPLA(R.string.jungle_gym_hoopla_name),
 
     //middle
     MORE_PAINTERS(R.string.more_painters_name),

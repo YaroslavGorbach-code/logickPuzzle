@@ -2,6 +2,16 @@
 <resources>
     <string name="training_puzzle_story">Follow the clues to determine which fruit does the oldest girl like.</string>
 
+    <string name="jungle_gym_hoopla_story">After the sandbox disaster the week before,
+        five fathers were in charge of taking the children to the park.
+        The fathers did not want to have the same mix-up with the
+        sandbox that their wives went through, so this week they
+        kept all their children on the jungle gym. Everything
+        was going good until it was time to leave and the kids
+        had to put their shoes on. It was at that time that the
+        fathers realized that the shoes were all mixed up. Can
+        you help these fathers figure out which shoes belong to which child?</string>
+
     <string name="family_trips_story">The Fennings encourage their
         four children to take the lead in planning family events.
         In each of the last four years, a different child has planned

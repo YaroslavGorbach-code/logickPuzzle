@@ -7,6 +7,22 @@
         <item>4. Belle likes apples..</item>
     </string-array>
 
+
+<!--    Answer-->
+<!--    Pete is the father of Zach who has Black shoes.-->
+<!--    Sam is the father of Tim who has Red shoes.-->
+<!--    Mark is the father of Chris who has Yellow shoes.-->
+<!--    Kaleb is the father of Laura who has Green shoes.-->
+<!--    Zander is the father of Natalie who has Pink shoes.-->
+    <string-array name="jungle_gym_hoopla_clues">
+        <item>1. Pete bought his son black shoes, but his son is neither Chris or Tim.</item>
+        <item>2. Chris hates the colors green and pink, but his friend Laura loves green.</item>
+        <item>3. Sam, Tim\'s dad, was searching for shoes the same color as a firetruck</item>
+        <item>4. Kaleb and Zander are the only dads with daughters.</item>
+        <item>5. Natalie\'s dad is not Kaleb.</item>
+    </string-array>
+
+
     <!--    Answer-->
     <!--    Jenny - Orange - Saturday-->
     <!--    Bob - Banana - Tuesday-->
