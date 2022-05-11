@@ -23,6 +23,9 @@ class PuzzleStoryProvider(private val context: Context) {
             PuzzleName.JAZZ_BANDS_SOLOS -> {
                 context.resources.getString(R.string.jazz_band_solos_story)
             }
+            PuzzleName.TRAINING_PUZZLE -> {
+                context.resources.getString(R.string.training_puzzle_story)
+            }
         }
     }
 }

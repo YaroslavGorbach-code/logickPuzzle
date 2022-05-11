@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="training_puzzle_clues">
+        <item>1. Amy likes bananas.</item>
+        <item>2. Belle isn\'t 10.</item>
+        <item>3. The 9 years old girl likes grapes.</item>
+        <item>4. Belle likes apples..</item>
+    </string-array>
+
     <!--    Answer-->
     <!--    Katie wanted juice and apple slices.-->
     <!--    Rachel wanted milk and orange slices.-->

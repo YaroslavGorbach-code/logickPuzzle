@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <string name="training_puzzle_items_1_name">Names</string>
+    <string-array name="training_puzzle_items_1_names">
+        <item>Amy</item>
+        <item>Belle</item>
+        <item>Chloe</item>
+    </string-array>
+
+    <string name="training_puzzle_items_2_name">Age</string>
+    <string-array name="training_puzzle_items_2_age">
+        <item>8 years</item>
+        <item>9 years</item>
+        <item>10 years</item>
+    </string-array>
+
+    <string name="training_puzzle_items_3_name">Fruit</string>
+    <string-array name="training_puzzle_items_3_fruits">
+        <item>Apple</item>
+        <item>Banana</item>
+        <item>Grape</item>
+    </string-array>
+
     <!--    Answer-->
     <!--    Katie wanted juice and apple slices.-->
     <!--    Rachel wanted milk and orange slices.-->

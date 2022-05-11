@@ -104,7 +104,7 @@ internal fun PuzzlesUi(
                 clearMessage(message.id)
             }
             PuzzlesUiMessage.ShowHelpDialog -> {
-                ShowHelpDialogDialog(clearMessage = clearMessage, message = message)
+                ShowHelpDialogDialog(clearMessage = clearMessage, message = message, navigateToPuzzle = navigateToPuzzle)
             }
         }
     }
@@ -466,6 +466,7 @@ private fun ShowUnavailableDialog(
 
 @Composable
 private fun ShowHelpDialogDialog(
+    navigateToPuzzle: (name: PuzzleName) -> Unit,
     clearMessage: (id: Long) -> Unit,
     message: UiMessage<PuzzlesUiMessage>
 ) {
@@ -477,6 +478,7 @@ private fun ShowHelpDialogDialog(
         Column(modifier = Modifier.fillMaxWidth()) {
             Button(
                 onClick = {
+                    navigateToPuzzle(PuzzleName.TRAINING_PUZZLE)
                     clearMessage(message.id)
                 },
                 modifier = Modifier

@@ -23,6 +23,6 @@ class PuzzlesFactory(
                 isAvailable = puzzleAvailabilityProvider.isAvailable(name),
                 isCompleted = puzzleCompleteProvider.isCompleted(name)
             )
-        }
+        }.filterNot { it.name == PuzzleName.TRAINING_PUZZLE }
     }
 }

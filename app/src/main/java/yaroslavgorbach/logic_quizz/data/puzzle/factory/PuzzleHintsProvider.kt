@@ -22,6 +22,7 @@ class PuzzleHintsProvider(private val context: Context) {
                     .mapIndexed(::Hint)
             }
             PuzzleName.MORE_PAINTERS,
+            PuzzleName.TRAINING_PUZZLE,
             PuzzleName.KITTENS_AND_KIDS -> emptyList()
         }
     }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="training_puzzle_name">Training Puzzle</string>
     <string name="snack_time_name">Snack Time</string>
     <string name="mates_plus_dates_name">Mates + Dates</string>
     <string name="more_painters_name">More Painters</string>
