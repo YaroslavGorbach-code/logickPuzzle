@@ -9,6 +9,7 @@ enum class PuzzleName(val resId: Int) {
     MATES_PLUS_DATES(R.string.mates_plus_dates_name),
     MULTICOLOUR_DOORS(R.string.multicolour_doors_name),
     WHO_ATE_WHICH_FRUIT(R.string.who_ate_which_fruit_name),
+    DRACONIA_TRAINERS(R.string.draconia_trainers_name),
 
     //middle
     MORE_PAINTERS(R.string.more_painters_name),

@@ -21,6 +21,10 @@ class PuzzleHintsProvider(private val context: Context) {
                 context.resources.getStringArray(R.array.jazz_band_solos_hints).toList()
                     .mapIndexed(::Hint)
             }
+            PuzzleName.DRACONIA_TRAINERS -> {
+                context.resources.getStringArray(R.array.draconia_trainers_hints).toList()
+                    .mapIndexed(::Hint)
+            }
             PuzzleName.MORE_PAINTERS,
             PuzzleName.TRAINING_PUZZLE,
             PuzzleName.MULTICOLOUR_DOORS,

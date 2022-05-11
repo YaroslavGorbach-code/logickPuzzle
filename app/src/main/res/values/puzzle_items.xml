@@ -23,6 +23,35 @@
         <item>Grape</item>
     </string-array>
 
+    <!--    Answer-->
+    <!--    Jenny - Orange - Saturday-->
+    <!--    Bob - Banana - Tuesday-->
+    <!--    Kate - Apple - Friday-->
+    <!--    Joseph - Grapes - Monday-->
+
+    <string name="draconia_trainers_items_1_name">Trainers</string>
+    <string-array name="draconia_trainers_items_1_trainers">
+        <item>Lillie</item>
+        <item>Harley</item>
+        <item>Crystal</item>
+        <item>Geneva</item>
+    </string-array>
+
+    <string name="draconia_trainers_items_2_name">Dragons</string>
+    <string-array name="draconia_trainers_items_2_dragons">
+        <item>Brookzhay</item>
+        <item>Skae</item>
+        <item>Reikke</item>
+        <item>Aero</item>
+    </string-array>
+
+    <string name="draconia_trainers_items_3_name">Colors</string>
+    <string-array name="draconia_trainers_items_3_colors">
+        <item>Gold</item>
+        <item>Black</item>
+        <item>Blue</item>
+        <item>Red</item>
+    </string-array>
 
 <!--    Answer-->
 <!--    Jenny - Orange - Saturday-->

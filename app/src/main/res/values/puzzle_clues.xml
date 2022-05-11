@@ -21,6 +21,24 @@
         <item>6. Jenny loved eating her orange.</item>
     </string-array>
 
+
+<!--    Answer-->
+<!--    Lillie has the Gold Dragon and calls it Reikke.-->
+<!--    Harley has the Black Dragon and calls it Brookzhay.-->
+<!--    Crystal has the Blue Dragon and calls it Aero.-->
+<!--    Geneva has the Red Dragon and calls it Skae.-->
+
+    <string-array name="draconia_trainers_clues">
+        <item>1. The four people are: the one who owns the Red Dragon,
+            the one who owns Brookzhay, the one who owns the Gold Dragon, and Crystal.</item>
+        <item>2. Lillie thinks Aero and Brookzhay
+            are nice-looking dragons, but prefers her own, the Gold Dragon.</item>
+        <item>3. Harley\'s dragon is the fastest, but Aero is right behind.</item>
+        <item>4. Even though Skae\'s name sounds like "Sky", she is not the color of the sky, day or night.</item>
+        <item>5. Reikke, the Gold Dragon, wishes she belonged to Crystal because she gives her dragon more treats.</item>
+        <item>6. Harley thinks she\'s cool because her dragon is the color of the night, but Geneva thinks her dragon, Skae, is much cooler.</item>
+    </string-array>
+
     <!--    Answer-->
     <!--    Harry lives on Oak St and has a blue door.-->
 

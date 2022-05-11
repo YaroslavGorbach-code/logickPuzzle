@@ -8,13 +8,39 @@ class CorrectPairsProvider(private val context: Context) {
 
     fun provide(puzzleName: PuzzleName): List<Pair<String, String>> {
         return when (puzzleName) {
+            PuzzleName.DRACONIA_TRAINERS -> {
+                val names =
+                    context.resources.getStringArray(R.array.draconia_trainers_items_1_trainers)
+                        .toList()
+                val dragons =
+                    context.resources.getStringArray(R.array.draconia_trainers_items_2_dragons)
+                        .toList()
+                val colors =
+                    context.resources.getStringArray(R.array.draconia_trainers_items_3_colors)
+                        .toList()
+
+                listOf<Pair<String, String>>(
+                    Pair(names[0], colors[0]),
+                    Pair(names[0], dragons[2]),
+                    Pair(names[1], colors[1]),
+                    Pair(names[1], dragons[0]),
+                    Pair(names[2], colors[2]),
+                    Pair(names[2], dragons[3]),
+                    Pair(names[3], colors[3]),
+                    Pair(names[3], dragons[1]),
+                )
+            }
+
             PuzzleName.WHO_ATE_WHICH_FRUIT -> {
                 val names =
-                    context.resources.getStringArray(R.array.who_ate_which_fruit_items_1_friends).toList()
+                    context.resources.getStringArray(R.array.who_ate_which_fruit_items_1_friends)
+                        .toList()
                 val fruits =
-                    context.resources.getStringArray(R.array.who_ate_which_fruit_items_2_fruits).toList()
+                    context.resources.getStringArray(R.array.who_ate_which_fruit_items_2_fruits)
+                        .toList()
                 val days =
-                    context.resources.getStringArray(R.array.who_ate_which_fruit_items_3_days).toList()
+                    context.resources.getStringArray(R.array.who_ate_which_fruit_items_3_days)
+                        .toList()
 
                 listOf<Pair<String, String>>(
                     Pair(names[0], fruits[0]),
