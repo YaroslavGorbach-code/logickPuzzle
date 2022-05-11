@@ -23,6 +23,7 @@ class PuzzleHintsProvider(private val context: Context) {
             }
             PuzzleName.MORE_PAINTERS,
             PuzzleName.TRAINING_PUZZLE,
+            PuzzleName.MULTICOLOUR_DOORS,
             PuzzleName.KITTENS_AND_KIDS -> emptyList()
         }
     }

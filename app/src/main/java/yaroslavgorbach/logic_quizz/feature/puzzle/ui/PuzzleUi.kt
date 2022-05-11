@@ -1,6 +1,5 @@
 package yaroslavgorbach.logic_quizz.feature.puzzle.ui
 
-import android.util.Log
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -145,36 +144,40 @@ internal fun PuzzleUi(
             }
 
             state.puzzle?.let { puzzle ->
-                LazyColumn(
+                Box(
                     modifier = Modifier
-                        .align(CenterHorizontally)
+                        .fillMaxWidth()
                         .weight(0.70f)
-                        .padding(top = 32.dp)
                 ) {
-                    items(puzzle.numberOfRows) { rowNumber ->
 
-                        Spacer(modifier = Modifier.size(1.dp))
+                    LazyColumn(
+                        modifier = Modifier.align(Center)
+                    ) {
+                        items(puzzle.numberOfRows) { rowNumber ->
 
-                        LazyRow {
-                            items(puzzle.tables) { table ->
-                                if (table.indexInPuzzleVertical == rowNumber) {
-                                    TableUi(
-                                        cellSize = table.uiCellSize,
-                                        table = table,
-                                        modifier = Modifier.size(table.uiTableSize.dp),
-                                        hintedTitles = state.hintedTitles
-                                    ) { table, cell ->
-                                        if (cell.filledAutomatically.not()) {
-                                            actioner(PuzzleAction.OnCell(table, cell))
+                            Spacer(modifier = Modifier.size(1.dp))
+
+                            LazyRow {
+                                items(puzzle.tables) { table ->
+                                    if (table.indexInPuzzleVertical == rowNumber) {
+                                        TableUi(
+                                            cellSize = table.uiCellSize,
+                                            table = table,
+                                            modifier = Modifier.size(table.uiTableSize.dp),
+                                            hintedTitles = state.hintedTitles
+                                        ) { table, cell ->
+                                            if (cell.filledAutomatically.not()) {
+                                                actioner(PuzzleAction.OnCell(table, cell))
+                                            }
                                         }
-                                    }
 
-                                    Spacer(modifier = Modifier.size(1.dp))
+                                        Spacer(modifier = Modifier.size(1.dp))
+                                    }
                                 }
                             }
                         }
+                        actioner(PuzzleAction.TableUpdated)
                     }
-                    actioner(PuzzleAction.TableUpdated)
                 }
             }
 
@@ -340,7 +343,9 @@ private fun ShowStoryDialog(
             )
 
             Text(
-                modifier = Modifier.align(CenterHorizontally).verticalScroll(scroll),
+                modifier = Modifier
+                    .align(CenterHorizontally)
+                    .verticalScroll(scroll),
                 text = state.puzzle?.story ?: "",
                 fontSize = 16.sp,
                 textAlign = TextAlign.Justify

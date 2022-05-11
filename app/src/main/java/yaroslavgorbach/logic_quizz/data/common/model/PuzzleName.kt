@@ -3,11 +3,17 @@ package yaroslavgorbach.logic_quizz.data.common.model
 import yaroslavgorbach.logic_quizz.R
 
 enum class PuzzleName(val resId: Int) {
+    // easy
     TRAINING_PUZZLE(R.string.training_puzzle_name),
     SNACK_TIME(R.string.snack_time_name),
     MATES_PLUS_DATES(R.string.mates_plus_dates_name),
+    MULTICOLOUR_DOORS(R.string.multicolour_doors_name),
+
+    //middle
     MORE_PAINTERS(R.string.more_painters_name),
     KITTENS_AND_KIDS(R.string.kittens_and_kids_name),
+
+    //hard
     JAZZ_BANDS_SOLOS(R.string.jazz_band_solos_name),
 }
 

@@ -7,6 +7,19 @@
         <item>4. Belle likes apples..</item>
     </string-array>
 
+<!--    Answer-->
+<!--    Harry lives on Oak St and has a blue door.-->
+
+<!--    Carly lives on Drury Ave and has a pink door.-->
+
+<!--    Alan lives on South Ave and has a red door.-->
+    <string-array name="multicolour_doors_clues">
+        <item>1. Carly just loves the colour pink and she was ecstatic when her mom painted the door for her.</item>
+        <item>2. Alan\'s always around at Harry\'s house. It\'s easy to get there because Oak St is only just around the corner from Alan\'s house.</item>
+        <item>3. South Ave has mostly white doors, so the red one, belonging to one of the friends, stands out easily to the passing cars.</item>
+        <item>4. Alan thinks that his friend\'s blue door clashes badly with their house but he doesn\'t want to tell them in case he hurts their feelings.</item>
+    </string-array>
+
     <!--    Answer-->
     <!--    Katie wanted juice and apple slices.-->
     <!--    Rachel wanted milk and orange slices.-->

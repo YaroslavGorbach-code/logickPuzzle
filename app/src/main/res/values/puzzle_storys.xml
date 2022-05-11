@@ -2,6 +2,9 @@
 <resources>
     <string name="training_puzzle_story">Follow the clues to determine which fruit does the oldest girl like.</string>
 
+    <string name="multicolour_doors_story">Three friends all live in houses with painted doors.
+        Can you use these clues to find out what colour door they have and what road they live on?    </string>
+
     <string name="snack_time_story">One day, Rachel had her two best friends over
         for a play date. When it came time for a snack, her mom
         asked her to find out what everyone wanted. Rachel was happy

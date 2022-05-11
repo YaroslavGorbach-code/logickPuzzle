@@ -26,6 +26,9 @@ class PuzzleStoryProvider(private val context: Context) {
             PuzzleName.TRAINING_PUZZLE -> {
                 context.resources.getString(R.string.training_puzzle_story)
             }
+            PuzzleName.MULTICOLOUR_DOORS -> {
+                context.resources.getString(R.string.multicolour_doors_story)
+            }
         }
     }
 }

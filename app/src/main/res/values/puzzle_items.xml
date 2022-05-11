@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--    training puzzle-->
 
     <string name="training_puzzle_items_1_name">Names</string>
     <string-array name="training_puzzle_items_1_names">
@@ -20,6 +21,34 @@
         <item>Apple</item>
         <item>Banana</item>
         <item>Grape</item>
+    </string-array>
+
+<!--    Answer-->
+<!--    Harry lives on Oak St and has a blue door.-->
+
+<!--    Carly lives on Drury Ave and has a pink door.-->
+
+<!--    Alan lives on South Ave and has a red door.-->
+
+    <string name="multicolour_doors_items_1_friends_name">Friends </string>
+    <string-array name="multicolour_doors_items_1_friends">
+        <item>Carly</item>
+        <item>Harry</item>
+        <item>Alan</item>
+    </string-array>
+
+    <string name="multicolour_doors_items_2_colours_name">Colours</string>
+    <string-array name="multicolour_doors_items_2_colours">
+        <item>Red</item>
+        <item>Blue</item>
+        <item>Pink</item>
+    </string-array>
+
+    <string name="multicolour_doors_items_3_streets_name">Streets</string>
+    <string-array name="multicolour_doors_items_3_streets">
+        <item>Oak St</item>
+        <item>South Ave</item>
+        <item>Drury Ave</item>
     </string-array>
 
     <!--    Answer-->

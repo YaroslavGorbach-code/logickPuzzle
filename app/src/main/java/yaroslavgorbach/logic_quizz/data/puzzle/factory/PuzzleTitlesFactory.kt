@@ -201,6 +201,38 @@ class PuzzleTitlesFactory(private val context: Context) {
                     )
                 )
             }
+            PuzzleName.MULTICOLOUR_DOORS -> {
+                return listOf(
+                    TableTitle(
+                        name = context.getString(R.string.multicolour_doors_items_1_friends_name),
+                        items = context.resources.getStringArray(R.array.multicolour_doors_items_1_friends)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.multicolour_doors_items_3_streets_name),
+                        items = context.resources.getStringArray(R.array.multicolour_doors_items_3_streets)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.multicolour_doors_items_2_colours_name),
+                        items = context.resources.getStringArray(R.array.multicolour_doors_items_2_colours)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.multicolour_doors_items_3_streets_name),
+                        items = context.resources.getStringArray(R.array.multicolour_doors_items_3_streets)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    )
+                )
+            }
         }
     }
 }

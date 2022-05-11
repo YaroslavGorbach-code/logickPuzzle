@@ -7,8 +7,9 @@ import yaroslavgorbach.logic_quizz.data.puzzles.PuzzleDataStore
 class PuzzleAvailabilityProvider(private val puzzleDataStore: PuzzleDataStore) {
     suspend fun isAvailable(puzzleName: PuzzleName): Boolean {
         return when (puzzleName) {
-            PuzzleName.SNACK_TIME -> true
-            else -> puzzleDataStore.isAvailable(puzzleName).first()
+//            PuzzleName.SNACK_TIME -> true
+//            else -> puzzleDataStore.isAvailable(puzzleName).first()
+            else -> true
         }
     }
 }
