@@ -35,6 +35,9 @@ class PuzzleStoryProvider(private val context: Context) {
             PuzzleName.DRACONIA_TRAINERS -> {
                 context.resources.getString(R.string.draconia_trainers_story)
             }
+            PuzzleName.JUST_A_THOUGHT -> {
+                context.resources.getString(R.string.just_a_thought_story)
+            }
         }
     }
 }

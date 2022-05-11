@@ -21,6 +21,19 @@
         <item>6. Jenny loved eating her orange.</item>
     </string-array>
 
+<!--    Student Subject Number-->
+<!--    Helga Journalism 2-->
+<!--    Johannes Science 9-->
+<!--    Sebastian History 5-->
+    <string-array name="just_a_thought_clues">
+    <item>1. The students were not studying subjects that
+        started with the same letter as their names.</item>
+    <item>2.The one who checked out the books on Journalism, checked out an even number of books.</item>
+    <item>3. The number of books about history was not a square number.</item>
+    <item>4.When he\'s not writing papers on the fall of Rome,
+        Sebastian likes to read about ancient civilizations.</item>
+    </string-array>
+
 
 <!--    Answer-->
 <!--    Lillie has the Gold Dragon and calls it Reikke.-->

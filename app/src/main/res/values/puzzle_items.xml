@@ -23,6 +23,33 @@
         <item>Grape</item>
     </string-array>
 
+<!--    Student Subject Number-->
+<!--    Helga Journalism 2-->
+<!--    Johannes Science 9-->
+<!--    Sebastian History 5-->
+
+    <string name="just_a_thought_items_1_name">Names</string>
+    <string-array name="just_a_thought_items_1_names">
+        <item>Helga</item>
+        <item>Johannes</item>
+        <item>Sebastian</item>
+    </string-array>
+
+    <string name="just_a_thought_items_2_name">Subject</string>
+    <string-array name="just_a_thought_items_2_subject">
+        <item>History</item>
+        <item>Journalism</item>
+        <item>Science</item>
+    </string-array>
+
+    <string name="just_a_thought_items_3_name">Number</string>
+    <string-array name="just_a_thought_items_3_numbers">
+        <item>2</item>
+        <item>5</item>
+        <item>9</item>
+    </string-array>
+
+
     <!--    Answer-->
     <!--    Jenny - Orange - Saturday-->
     <!--    Bob - Banana - Tuesday-->

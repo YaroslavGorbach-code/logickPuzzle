@@ -35,6 +35,9 @@ class PuzzleCluesProvider(private val context: Context) {
             PuzzleName.DRACONIA_TRAINERS -> {
                 context.resources.getStringArray(R.array.draconia_trainers_clues).toList()
             }
+            PuzzleName.JUST_A_THOUGHT -> {
+                context.resources.getStringArray(R.array.just_a_thought_clues).toList()
+            }
         }
     }
 }

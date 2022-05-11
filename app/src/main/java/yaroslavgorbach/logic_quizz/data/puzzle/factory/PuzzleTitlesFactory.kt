@@ -297,6 +297,38 @@ class PuzzleTitlesFactory(private val context: Context) {
                     )
                 )
             }
+            PuzzleName.JUST_A_THOUGHT -> {
+                return listOf(
+                    TableTitle(
+                        name = context.getString(R.string.just_a_thought_items_1_name),
+                        items = context.resources.getStringArray(R.array.just_a_thought_items_1_names)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.just_a_thought_items_3_name),
+                        items = context.resources.getStringArray(R.array.just_a_thought_items_3_numbers)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.just_a_thought_items_2_name),
+                        items = context.resources.getStringArray(R.array.just_a_thought_items_2_subject)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.just_a_thought_items_3_name),
+                        items = context.resources.getStringArray(R.array.just_a_thought_items_3_numbers)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    )
+                )
+            }
         }
         }
     }

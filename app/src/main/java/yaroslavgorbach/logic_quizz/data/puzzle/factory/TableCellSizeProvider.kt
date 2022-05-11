@@ -15,6 +15,7 @@ class TableCellSizeProvider() {
             PuzzleName.MULTICOLOUR_DOORS -> 40
             PuzzleName.WHO_ATE_WHICH_FRUIT -> 30
             PuzzleName.DRACONIA_TRAINERS -> 30
+            PuzzleName.JUST_A_THOUGHT -> 40
         }
     }
 }

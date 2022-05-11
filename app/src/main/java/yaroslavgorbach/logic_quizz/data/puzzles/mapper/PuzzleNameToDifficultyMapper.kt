@@ -16,6 +16,7 @@ class PuzzleNameToDifficultyMapper() {
             PuzzleName.JAZZ_BANDS_SOLOS -> DifficultLevel.FIVE
             PuzzleName.TRAINING_PUZZLE -> DifficultLevel.ONE
             PuzzleName.DRACONIA_TRAINERS ->  DifficultLevel.ONE
+            PuzzleName.JUST_A_THOUGHT -> DifficultLevel.TWO
         }
     }
 }
