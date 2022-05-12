@@ -17,6 +17,7 @@ enum class PuzzleName(val resId: Int) {
     SANDBOX_DISASTER(R.string.sandbox_disaster_name),
     PAINTBALLING_WEEKEND(R.string.paintballing_weekend_name),
     WHY(R.string.why_name),
+    OFFICE_ORDER(R.string.office_order_name),
 
     //middle
     MORE_PAINTERS(R.string.more_painters_name),

@@ -18,6 +18,13 @@
        <item>6. Kaylee was found dead on the toilet.</item>
     </string-array>
 
+    <string-array name="office_order_clues">
+      <item>1. The projector is not the most expensive item; however, it\'s not cheapest either.</item>
+      <item>2. The paper costs $55 per carton through Recycling Co.</item>
+      <item>3. The binders are the most expensive and are not ordered from Office Chain; however, the cheapest item is.</item>
+      <item>4. The most expensive item is not ordered from Presentation Co.</item>
+    </string-array>
+
     <string-array name="paintballing_weekend_clues">
         <item>1. Brenda used blue paint balls.</item>
         <item>2. The person in the green T-shirt used yellow paint balls.</item>

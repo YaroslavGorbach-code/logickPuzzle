@@ -344,6 +344,27 @@ class CorrectPairsProvider(private val context: Context) {
                     Pair(killers[2], reason[1]),
                 )
             }
+            PuzzleName.OFFICE_ORDER -> {
+                val items =
+                    context.resources.getStringArray(R.array.office_order_items_1_Items).toList()
+                val suppliers =
+                    context.resources.getStringArray(R.array.office_order_items_2_Suppliers)
+                        .toList()
+                val cost =
+                    context.resources.getStringArray(R.array.office_order_items_3_cost)
+                        .toList()
+
+                listOf<Pair<String, String>>(
+                    Pair(items[0], cost[0]),
+                    Pair(items[0], suppliers[3]),
+                    Pair(items[1], cost[1]),
+                    Pair(items[1], suppliers[1]),
+                    Pair(items[2], cost[2]),
+                    Pair(items[2], suppliers[0]),
+                    Pair(items[3], cost[3]),
+                    Pair(items[3], suppliers[2]),
+                )
+            }
         }
     }
 }

@@ -56,6 +56,9 @@ class PuzzleStoryProvider(private val context: Context) {
             PuzzleName.WHY -> {
                 context.resources.getString(R.string.why_story)
             }
+            PuzzleName.OFFICE_ORDER -> {
+                context.resources.getString(R.string.office_order_story)
+            }
         }
     }
 }

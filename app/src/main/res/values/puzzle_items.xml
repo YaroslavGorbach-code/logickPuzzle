@@ -23,8 +23,35 @@
         <item>Grape</item>
     </string-array>
 
+<!--    24 Pens - $20 - Office Chain-->
+<!--    24 Binders - $480 - Reporting Corp.-->
+<!--    1 Overhead Projector - $250 - Presentation Co.-->
+<!--    2 Cartons of Paper - $110 - Recycling Co.-->
+    <string name="office_order_1_name">Items</string>
+    <string-array name="office_order_items_1_Items">
+        <item>24 Binders</item>
+        <item>1 Projector</item>
+        <item>24 Pens</item>
+        <item>2 Paper</item>
+    </string-array>
 
-<!--    Answer-->
+    <string name="office_order_items_2_name">Suppliers</string>
+    <string-array name="office_order_items_2_Suppliers">
+        <item>Office Chain</item>
+        <item>Pres. Co</item>
+        <item>Rec. Co</item>
+        <item>Report. Corp</item>
+    </string-array>
+
+    <string name="office_order_items_3_name">Cost of Items</string>
+    <string-array name="office_order_items_3_cost">
+        <item>$480</item>
+        <item>$250</item>
+        <item>$20</item>
+        <item>$110</item>
+    </string-array>
+
+    <!--    Answer-->
 <!--    Aviva killed Camille in the garden because of a silly bet with her friends. -->
 <!--    She was in need of some money after she bought the upgrade on her house.-->
 <!--    Kaleb killed Tyler in the library because he carelessly threw a dictionary -->

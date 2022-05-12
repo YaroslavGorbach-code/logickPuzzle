@@ -22,6 +22,7 @@ class TableCellSizeProvider() {
             PuzzleName.SANDBOX_DISASTER -> 30
             PuzzleName.PAINTBALLING_WEEKEND -> 30
             PuzzleName.WHY -> 30
+            PuzzleName.OFFICE_ORDER -> 30
         }
     }
 }

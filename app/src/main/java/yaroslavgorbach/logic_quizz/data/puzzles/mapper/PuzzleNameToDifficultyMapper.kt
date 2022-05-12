@@ -23,6 +23,7 @@ class PuzzleNameToDifficultyMapper() {
             PuzzleName.SANDBOX_DISASTER ->  DifficultLevel.TWO
             PuzzleName.PAINTBALLING_WEEKEND -> DifficultLevel.TWO
             PuzzleName.WHY -> DifficultLevel.TWO
+            PuzzleName.OFFICE_ORDER -> DifficultLevel.TWO
         }
     }
 }

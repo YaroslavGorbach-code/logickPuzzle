@@ -56,6 +56,9 @@ class PuzzleCluesProvider(private val context: Context) {
             PuzzleName.WHY -> {
                 context.resources.getStringArray(R.array.why_clues).toList()
             }
+            PuzzleName.OFFICE_ORDER -> {
+                context.resources.getStringArray(R.array.office_order_clues).toList()
+            }
         }
     }
 }

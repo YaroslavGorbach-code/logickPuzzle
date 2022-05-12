@@ -2,6 +2,13 @@
 <resources>
     <string name="training_puzzle_story">Follow the clues to determine which fruit does the oldest girl like.</string>
 
+    <string name="office_order_story">
+        Monica\'s boss asked her to order some supplies for
+        an important project. While organizing her desk,
+        she spilled her coffee all over her ordering list.
+        The list was soaked and partially unreadable. Please help Monica determine the ordering information.
+    </string>
+
     <string name="why_story">Three people were killed in one night,
         in the same mansion, in three different rooms, and for three
         different reasons. The killers were Aviva, Kaleb, and Liz.
