@@ -9,6 +9,10 @@ class PuzzleHintsProvider(private val context: Context) {
 
     fun provide(puzzleName: PuzzleName): List<Hint> {
         return when (puzzleName) {
+            PuzzleName.HOGWARTS ->{
+                context.resources.getStringArray(R.array.hogwarts_hints).toList()
+                    .mapIndexed(::Hint)
+            }
             PuzzleName.SNACK_TIME -> {
                 context.resources.getStringArray(R.array.snack_time_hints).toList()
                     .mapIndexed(::Hint)

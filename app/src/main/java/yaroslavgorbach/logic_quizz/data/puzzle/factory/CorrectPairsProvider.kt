@@ -8,6 +8,28 @@ class CorrectPairsProvider(private val context: Context) {
 
     fun provide(puzzleName: PuzzleName): List<Pair<String, String>> {
         return when (puzzleName) {
+            PuzzleName.HOGWARTS -> {
+                val names =
+                    context.resources.getStringArray(R.array.hogwarts_items_1_names)
+                        .toList()
+                val houses =
+                    context.resources.getStringArray(R.array.hogwarts_items_2_houses)
+                        .toList()
+                val time =
+                    context.resources.getStringArray(R.array.hogwarts_items_3_time)
+                        .toList()
+
+                listOf<Pair<String, String>>(
+                    Pair(names[0], houses[2]),
+                    Pair(names[0], time[1]),
+                    Pair(names[1], houses[1]),
+                    Pair(names[1], time[2]),
+                    Pair(names[2], houses[3]),
+                    Pair(names[2], time[0]),
+                    Pair(names[3], houses[0]),
+                    Pair(names[3], time[3]),
+                )
+            }
             PuzzleName.JUNGLE_GYM_HOOPLA->{
                 val fathers =
                     context.resources.getStringArray(R.array.jungle_gym_hoopla_items_1_fathers)

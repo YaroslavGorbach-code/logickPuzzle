@@ -18,6 +18,7 @@ class TableCellSizeProvider() {
             PuzzleName.JUST_A_THOUGHT -> 40
             PuzzleName.FAMILY_TRIPS -> 30
             PuzzleName.JUNGLE_GYM_HOOPLA -> 30
+            PuzzleName.HOGWARTS ->  30
         }
     }
 }

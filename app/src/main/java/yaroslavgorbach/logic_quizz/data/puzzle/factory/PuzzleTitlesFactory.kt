@@ -393,6 +393,38 @@ class PuzzleTitlesFactory(private val context: Context) {
                     )
                 )
             }
+            PuzzleName.HOGWARTS -> {
+                return listOf(
+                    TableTitle(
+                        name = context.getString(R.string.hogwarts_items_1_name),
+                        items = context.resources.getStringArray(R.array.hogwarts_items_1_names)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.hogwarts_items_3_name),
+                        items = context.resources.getStringArray(R.array.hogwarts_items_3_time)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.hogwarts_items_2_name),
+                        items = context.resources.getStringArray(R.array.hogwarts_items_2_houses)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.hogwarts_items_3_name),
+                        items = context.resources.getStringArray(R.array.hogwarts_items_3_time)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    )
+                )
+            }
         }
         }
     }

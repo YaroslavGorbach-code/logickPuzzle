@@ -2,6 +2,16 @@
 <resources>
     <string name="training_puzzle_story">Follow the clues to determine which fruit does the oldest girl like.</string>
 
+    <string name="hogwarts_story">A group of soon-to-be-first-years at Hogwarts
+        School of Witchcraft and Wizardry just walked into the Great Hall.
+        Everybody has been sorted into a house of either Slytherin, Hufflepuff,
+        Gryffindor, or Ravenclaw. Hufflepuff = Loyal and Trustworthy;
+        Ravenclaw = cunning and intelligent; Gryffindor = brave and noble;
+        Slytherin = keen and ambitious.
+        There are still 4 kids to be sorted. Their names are Billy, Shelby,
+        Anthony, and Kristen. The sorting hat takes some time for each kid.
+        Find out the amount of time the hat took and which house each kid ended up in.</string>
+
     <string name="jungle_gym_hoopla_story">After the sandbox disaster the week before,
         five fathers were in charge of taking the children to the park.
         The fathers did not want to have the same mix-up with the

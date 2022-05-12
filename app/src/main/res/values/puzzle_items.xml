@@ -24,6 +24,37 @@
     </string-array>
 
 <!--    Answer-->
+<!--    Shelby = Ravenclaw, 1 minute-->
+<!--    Billy = Hufflepuff, 30 seconds-->
+<!--    Kristen = Gryffindor, 2 minutes-->
+<!--    Anthony = Slytherin, 20 seconds-->
+
+    <string name="hogwarts_items_1_name">Names</string>
+    <string-array name="hogwarts_items_1_names">
+        <item>Billy</item>
+        <item>Shelby</item>
+        <item>Anthony</item>
+        <item>Kristen</item>
+    </string-array>
+
+    <string name="hogwarts_items_2_name">Houses</string>
+    <string-array name="hogwarts_items_2_houses">
+        <item>Gryffindor</item>
+        <item>Ravelclaw</item>
+        <item>Hufflepuff</item>
+        <item>Slytherin</item>
+    </string-array>
+
+    <string name="hogwarts_items_3_name">Time</string>
+    <string-array name="hogwarts_items_3_time">
+        <item>20 seconds</item>
+        <item>30 seconds</item>
+        <item>1 minute</item>
+        <item>2 minutes</item>
+=    </string-array>
+
+
+    <!--    Answer-->
 <!--    Pete is the father of Zach who has Black shoes.-->
 <!--    Sam is the father of Tim who has Red shoes.-->
 <!--    Mark is the father of Chris who has Yellow shoes.-->

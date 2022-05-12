@@ -7,6 +7,20 @@
         <item>4. Belle likes apples..</item>
     </string-array>
 
+<!--    Answer-->
+<!--    Shelby = Ravenclaw, 1 minute-->
+<!--    Billy = Hufflepuff, 30 seconds-->
+<!--    Kristen = Gryffindor, 2 minutes-->
+<!--    Anthony = Slytherin, 20 seconds-->
+    <string-array name="hogwarts_clues">
+        <item>1. Shelby is VERY smart.</item>
+        <item>2. Billy is a scaredy cat.</item>
+        <item>3. Billy and the boy in Slytherin took under a minute to be sorted.</item>
+        <item>4. Billy always keeps promises and is not very bright.</item>
+        <item>5. The person in Gryffindor took the longest.</item>
+        <item>6. Anthony was the fastest to be sorted.</item>
+        <item>7. Billy was sorted 30 seconds faster than the Ravenclaw.</item>
+    </string-array>
 
 <!--    Answer-->
 <!--    Pete is the father of Zach who has Black shoes.-->

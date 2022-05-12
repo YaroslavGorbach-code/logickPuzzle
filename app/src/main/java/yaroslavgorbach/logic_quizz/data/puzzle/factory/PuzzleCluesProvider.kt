@@ -44,6 +44,9 @@ class PuzzleCluesProvider(private val context: Context) {
             PuzzleName.JUNGLE_GYM_HOOPLA -> {
                 context.resources.getStringArray(R.array.jungle_gym_hoopla_clues).toList()
             }
+            PuzzleName.HOGWARTS -> {
+                context.resources.getStringArray(R.array.hogwarts_clues).toList()
+            }
         }
     }
 }

@@ -10,6 +10,11 @@
         <item>I wouldn\'t want to go to the park on a date, it\'d be cold and it might be wet</item>
     </string-array>
 
+    <string-array name="hogwarts_hints">
+        <item>Kristen = Gryffindor</item>
+        <item>2 minutes (Shelby is a girl)</item>
+    </string-array>
+
     <string-array name="draconia_trainers_hints">
         <item>The day sky is blue and the night sky is black.</item>
     </string-array>
