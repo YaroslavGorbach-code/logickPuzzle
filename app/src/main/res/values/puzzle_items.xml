@@ -23,8 +23,39 @@
         <item>Grape</item>
     </string-array>
 
-
 <!--    Answer-->
+<!--    Name, Wore, Paint-->
+<!--    Simon, red, red-->
+<!--    Brenda, yellow, blue-->
+<!--    James, green, yellow-->
+<!--    Diane, blue, green-->
+
+    <string name="paintballing_weekend_items_1_name">Friends</string>
+    <string-array name="paintballing_weekend_items_1_friends">
+        <item>Simon</item>
+        <item>James</item>
+        <item>Diane</item>
+        <item>Brenda</item>
+    </string-array>
+
+    <string name="paintballing_weekend_items_2_name">Shirts</string>
+    <string-array name="paintballing_weekend_items_2_Shirts">
+        <item>Red shirt</item>
+        <item>Yellow shirt</item>
+        <item>Blue shirt</item>
+        <item>Green shirt</item>
+    </string-array>
+
+    <string name="paintballing_weekend_items_3_name">Paint</string>
+    <string-array name="paintballing_weekend_items_3_paint">
+        <item>Red paint</item>
+        <item>Blue paint</item>
+        <item>Green paint</item>
+        <item>Yellow paint</item>
+    </string-array>
+
+
+    <!--    Answer-->
 <!--    Thank you for getting everybody back together!-->
 <!--    1. Shelby is Tim's mother and they brought the dump truck.-->
 <!--    2. Monica is Chris's mother and they brought the bucket.-->

@@ -50,6 +50,9 @@ class PuzzleCluesProvider(private val context: Context) {
             PuzzleName.SANDBOX_DISASTER -> {
                 context.resources.getStringArray(R.array.sandbox_disaster_clues).toList()
             }
+            PuzzleName.PAINTBALLING_WEEKEND -> {
+                context.resources.getStringArray(R.array.paintballing_weekend_clues).toList()
+            }
         }
     }
 }

@@ -298,6 +298,27 @@ class CorrectPairsProvider(private val context: Context) {
                         Pair(mothers[4], toys[4]),
                     )
             }
+            PuzzleName.PAINTBALLING_WEEKEND -> {
+                val friends =
+                    context.resources.getStringArray(R.array.paintballing_weekend_items_1_friends).toList()
+                val shirts =
+                    context.resources.getStringArray(R.array.paintballing_weekend_items_2_Shirts)
+                        .toList()
+                val paint =
+                    context.resources.getStringArray(R.array.paintballing_weekend_items_3_paint)
+                        .toList()
+
+                listOf<Pair<String, String>>(
+                    Pair(friends[0], shirts[0]),
+                    Pair(friends[0], paint[0]),
+                    Pair(friends[1], shirts[3]),
+                    Pair(friends[1], paint[3]),
+                    Pair(friends[2], shirts[2]),
+                    Pair(friends[2], paint[2]),
+                    Pair(friends[3], shirts[1]),
+                    Pair(friends[3], paint[1]),
+                )
+            }
         }
     }
 }

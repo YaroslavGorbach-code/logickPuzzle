@@ -50,6 +50,9 @@ class PuzzleStoryProvider(private val context: Context) {
             PuzzleName.SANDBOX_DISASTER -> {
                 context.resources.getString(R.string.sandbox_disaster_story)
             }
+            PuzzleName.PAINTBALLING_WEEKEND -> {
+                context.resources.getString(R.string.paintballing_weekend_story)
+            }
         }
     }
 }

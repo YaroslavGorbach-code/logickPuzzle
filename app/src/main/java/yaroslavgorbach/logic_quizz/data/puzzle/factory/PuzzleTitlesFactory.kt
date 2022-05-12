@@ -442,7 +442,7 @@ class PuzzleTitlesFactory(private val context: Context) {
                         orientation = TableTitle.Orientation.VERTICAL
                     ),
                     TableTitle(
-                        name = context.getString(R.string.sandbox_disaster_items_3_name),
+                        name = context.getString(R.string.sandbox_disaster_items_2_name),
                         items = context.resources.getStringArray(R.array.sandbox_disaster_items_2_Children)
                             .toList(),
                         orderNumber = 1,
@@ -451,6 +451,38 @@ class PuzzleTitlesFactory(private val context: Context) {
                     TableTitle(
                         name = context.getString(R.string.sandbox_disaster_items_3_name),
                         items = context.resources.getStringArray(R.array.sandbox_disaster_items_3_Toys)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    )
+                )
+            }
+            PuzzleName.PAINTBALLING_WEEKEND -> {
+                return listOf(
+                    TableTitle(
+                        name = context.getString(R.string.paintballing_weekend_items_1_name),
+                        items = context.resources.getStringArray(R.array.paintballing_weekend_items_1_friends)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.paintballing_weekend_items_3_name),
+                        items = context.resources.getStringArray(R.array.paintballing_weekend_items_3_paint)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.paintballing_weekend_items_2_name),
+                        items = context.resources.getStringArray(R.array.paintballing_weekend_items_2_Shirts)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.paintballing_weekend_items_3_name),
+                        items = context.resources.getStringArray(R.array.paintballing_weekend_items_3_paint)
                             .toList(),
                         orderNumber = 2,
                         orientation = TableTitle.Orientation.HORIZONTAL

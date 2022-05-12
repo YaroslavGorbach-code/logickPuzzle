@@ -2,6 +2,12 @@
 <resources>
     <string name="training_puzzle_story">Follow the clues to determine which fruit does the oldest girl like.</string>
 
+    <string name="paintballing_weekend_story">
+       During a crazy weekend of paintball, four friends were having great fun.
+        The paint came in blue, green, yellow and red. Coincidentally, the four friends had T-shirts in those same colours.
+        Can you tell which colour paint they each used and the colour of their respective T-shirts?
+    </string>
+
     <string name="sandbox_disaster_story">
         Five mothers decided to take their adorable children to the park.
         Each woman allowed her child to bring one toy. All the children raced

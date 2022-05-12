@@ -7,23 +7,37 @@
         <item>4. Belle likes apples..</item>
     </string-array>
 
-<!--    Answer-->
-<!--    Thank you for getting everybody back together!-->
-<!--    1. Shelby is Tim's mother and they brought the dump truck.-->
-<!--    2. Monica is Chris's mother and they brought the bucket.-->
-<!--    3. Lisa is Laura's mother and they brought the shovel.-->
-<!--    4. Abbie is Natalie's mother and they brought the doll.-->
-<!--    5. Marie is Zach's mother and they brought the car.-->
-    <string-array name="sandbox_disaster_clues">
-      <item>1. The child with the dump truck is not Chris or Zach.</item>
-      <item>2. Monica\'s son brought a bucket, but his name is not Tim.</item>
-      <item>3. Lisa\'s daughter shares a first initial with her mother and she brought a shovel along.</item>
-      <item>4. The doll belongs to Abbie\'s daughter.</item>
-      <item>5. Zach is Marie\'s son.</item>
+    <!--    Answer-->
+    <!--    Name, Wore, Paint-->
+    <!--    Simon, red, red-->
+    <!--    Brenda, yellow, blue-->
+    <!--    James, green, yellow-->
+    <!--    Diane, blue, green-->
+    <string-array name="paintballing_weekend_clues">
+        <item>1. Brenda used blue paint balls.</item>
+        <item>2. The person in the green T-shirt used yellow paint balls.</item>
+        <item>3. James was not wearing a red T-shirt.</item>
+        <item>4. Diane used green paint balls and wore a blue T-shirt.</item>
+        <item>5. Simon was the only person who used paint which was the same colour as his T-shirt.</item>
     </string-array>
 
-<!--    Answer-->
-<!--    Shelby = Ravenclaw, 1 minute-->
+    <!--    Answer-->
+    <!--    Thank you for getting everybody back together!-->
+    <!--    1. Shelby is Tim's mother and they brought the dump truck.-->
+    <!--    2. Monica is Chris's mother and they brought the bucket.-->
+    <!--    3. Lisa is Laura's mother and they brought the shovel.-->
+    <!--    4. Abbie is Natalie's mother and they brought the doll.-->
+    <!--    5. Marie is Zach's mother and they brought the car.-->
+    <string-array name="sandbox_disaster_clues">
+        <item>1. The child with the dump truck is not Chris or Zach.</item>
+        <item>2. Monica\'s son brought a bucket, but his name is not Tim.</item>
+        <item>3. Lisa\'s daughter shares a first initial with her mother and she brought a shovel along.</item>
+        <item>4. The doll belongs to Abbie\'s daughter.</item>
+        <item>5. Zach is Marie\'s son.</item>
+    </string-array>
+
+    <!--    Answer-->
+    <!--    Shelby = Ravenclaw, 1 minute-->
 <!--    Billy = Hufflepuff, 30 seconds-->
 <!--    Kristen = Gryffindor, 2 minutes-->
 <!--    Anthony = Slytherin, 20 seconds-->

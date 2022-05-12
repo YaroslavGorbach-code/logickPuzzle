@@ -20,6 +20,7 @@ class TableCellSizeProvider() {
             PuzzleName.JUNGLE_GYM_HOOPLA -> 30
             PuzzleName.HOGWARTS ->  30
             PuzzleName.SANDBOX_DISASTER -> 30
+            PuzzleName.PAINTBALLING_WEEKEND -> 30
         }
     }
 }
