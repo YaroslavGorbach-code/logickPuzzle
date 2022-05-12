@@ -47,6 +47,9 @@ class PuzzleCluesProvider(private val context: Context) {
             PuzzleName.HOGWARTS -> {
                 context.resources.getStringArray(R.array.hogwarts_clues).toList()
             }
+            PuzzleName.SANDBOX_DISASTER -> {
+                context.resources.getStringArray(R.array.sandbox_disaster_clues).toList()
+            }
         }
     }
 }

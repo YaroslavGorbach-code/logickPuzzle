@@ -425,6 +425,38 @@ class PuzzleTitlesFactory(private val context: Context) {
                     )
                 )
             }
+            PuzzleName.SANDBOX_DISASTER -> {
+                return listOf(
+                    TableTitle(
+                        name = context.getString(R.string.sandbox_disaster_items_1_name),
+                        items = context.resources.getStringArray(R.array.sandbox_disaster_items_1_mothers)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.sandbox_disaster_items_3_name),
+                        items = context.resources.getStringArray(R.array.sandbox_disaster_items_3_Toys)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.sandbox_disaster_items_3_name),
+                        items = context.resources.getStringArray(R.array.sandbox_disaster_items_2_Children)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.sandbox_disaster_items_3_name),
+                        items = context.resources.getStringArray(R.array.sandbox_disaster_items_3_Toys)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    )
+                )
+            }
         }
         }
     }

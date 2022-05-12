@@ -275,6 +275,29 @@ class CorrectPairsProvider(private val context: Context) {
                     Pair(firstNames[4], instruments[4]),
                 )
             }
+            PuzzleName.SANDBOX_DISASTER -> {
+                    val mothers =
+                        context.resources.getStringArray(R.array.sandbox_disaster_items_1_mothers).toList()
+                    val children =
+                        context.resources.getStringArray(R.array.sandbox_disaster_items_2_Children)
+                            .toList()
+                    val toys =
+                        context.resources.getStringArray(R.array.sandbox_disaster_items_3_Toys)
+                            .toList()
+
+                    listOf<Pair<String, String>>(
+                        Pair(mothers[0], children[1]),
+                        Pair(mothers[0], toys[0]),
+                        Pair(mothers[1], children[2]),
+                        Pair(mothers[1], toys[2]),
+                        Pair(mothers[2], children[3]),
+                        Pair(mothers[2], toys[1]),
+                        Pair(mothers[3], children[4]),
+                        Pair(mothers[3], toys[3]),
+                        Pair(mothers[4], children[0]),
+                        Pair(mothers[4], toys[4]),
+                    )
+            }
         }
     }
 }

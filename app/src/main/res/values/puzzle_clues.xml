@@ -8,6 +8,21 @@
     </string-array>
 
 <!--    Answer-->
+<!--    Thank you for getting everybody back together!-->
+<!--    1. Shelby is Tim's mother and they brought the dump truck.-->
+<!--    2. Monica is Chris's mother and they brought the bucket.-->
+<!--    3. Lisa is Laura's mother and they brought the shovel.-->
+<!--    4. Abbie is Natalie's mother and they brought the doll.-->
+<!--    5. Marie is Zach's mother and they brought the car.-->
+    <string-array name="sandbox_disaster_clues">
+      <item>1. The child with the dump truck is not Chris or Zach.</item>
+      <item>2. Monica\'s son brought a bucket, but his name is not Tim.</item>
+      <item>3. Lisa\'s daughter shares a first initial with her mother and she brought a shovel along.</item>
+      <item>4. The doll belongs to Abbie\'s daughter.</item>
+      <item>5. Zach is Marie\'s son.</item>
+    </string-array>
+
+<!--    Answer-->
 <!--    Shelby = Ravenclaw, 1 minute-->
 <!--    Billy = Hufflepuff, 30 seconds-->
 <!--    Kristen = Gryffindor, 2 minutes-->

@@ -20,6 +20,7 @@ class PuzzleNameToDifficultyMapper() {
             PuzzleName.FAMILY_TRIPS ->  DifficultLevel.TWO
             PuzzleName.JUNGLE_GYM_HOOPLA ->  DifficultLevel.TWO
             PuzzleName.HOGWARTS -> DifficultLevel.TWO
+            PuzzleName.SANDBOX_DISASTER ->  DifficultLevel.TWO
         }
     }
 }

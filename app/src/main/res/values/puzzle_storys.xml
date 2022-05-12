@@ -2,6 +2,15 @@
 <resources>
     <string name="training_puzzle_story">Follow the clues to determine which fruit does the oldest girl like.</string>
 
+    <string name="sandbox_disaster_story">
+        Five mothers decided to take their adorable children to the park.
+        Each woman allowed her child to bring one toy. All the children raced
+        to the sandbox with their toy. They had so much fun in the sandbox
+        that all the toys got mixed up, and each mother lost track of her
+        child. Can you help them sort this mess out so each child goes home
+        with the correct toy, and each parent goes home with the correct child?
+    </string>
+
     <string name="hogwarts_story">A group of soon-to-be-first-years at Hogwarts
         School of Witchcraft and Wizardry just walked into the Great Hall.
         Everybody has been sorted into a house of either Slytherin, Hufflepuff,

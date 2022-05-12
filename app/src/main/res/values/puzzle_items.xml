@@ -23,7 +23,43 @@
         <item>Grape</item>
     </string-array>
 
+
 <!--    Answer-->
+<!--    Thank you for getting everybody back together!-->
+<!--    1. Shelby is Tim's mother and they brought the dump truck.-->
+<!--    2. Monica is Chris's mother and they brought the bucket.-->
+<!--    3. Lisa is Laura's mother and they brought the shovel.-->
+<!--    4. Abbie is Natalie's mother and they brought the doll.-->
+<!--    5. Marie is Zach's mother and they brought the car.-->
+
+    <string name="sandbox_disaster_items_1_name">Mothers</string>
+    <string-array name="sandbox_disaster_items_1_mothers">
+        <item>Shelby</item>
+        <item>Monica</item>
+        <item>Lisa</item>
+        <item>Abbie</item>
+        <item>Marie</item>
+    </string-array>
+
+    <string name="sandbox_disaster_items_2_name">Children</string>
+    <string-array name="sandbox_disaster_items_2_Children">
+        <item>Zach</item>
+        <item>Tim</item>
+        <item>Chris</item>
+        <item>Laura</item>
+        <item>Natalie</item>
+    </string-array>
+
+    <string name="sandbox_disaster_items_3_name">Toys</string>
+    <string-array name="sandbox_disaster_items_3_Toys">
+        <item>dump truck</item>
+        <item>shovel</item>
+        <item>bucket</item>
+        <item>doll</item>
+        <item>car</item>
+    </string-array>
+
+    <!--    Answer-->
 <!--    Shelby = Ravenclaw, 1 minute-->
 <!--    Billy = Hufflepuff, 30 seconds-->
 <!--    Kristen = Gryffindor, 2 minutes-->
@@ -51,7 +87,7 @@
         <item>30 seconds</item>
         <item>1 minute</item>
         <item>2 minutes</item>
-=    </string-array>
+    </string-array>
 
 
     <!--    Answer-->
