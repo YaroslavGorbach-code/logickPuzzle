@@ -2,6 +2,12 @@
 <resources>
     <string name="training_puzzle_story">Follow the clues to determine which fruit does the oldest girl like.</string>
 
+    <string name="why_story">Three people were killed in one night,
+        in the same mansion, in three different rooms, and for three
+        different reasons. The killers were Aviva, Kaleb, and Liz.
+        They killed Camille, Tyler, and Kaylee. Based on the following clues,
+        help Detective Miff find who killed whom and for what reason.</string>
+
     <string name="paintballing_weekend_story">
        During a crazy weekend of paintball, four friends were having great fun.
         The paint came in blue, green, yellow and red. Coincidentally, the four friends had T-shirts in those same colours.

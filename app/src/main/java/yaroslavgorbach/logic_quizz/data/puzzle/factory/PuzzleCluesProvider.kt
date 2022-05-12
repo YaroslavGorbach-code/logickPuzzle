@@ -53,6 +53,9 @@ class PuzzleCluesProvider(private val context: Context) {
             PuzzleName.PAINTBALLING_WEEKEND -> {
                 context.resources.getStringArray(R.array.paintballing_weekend_clues).toList()
             }
+            PuzzleName.WHY -> {
+                context.resources.getStringArray(R.array.why_clues).toList()
+            }
         }
     }
 }

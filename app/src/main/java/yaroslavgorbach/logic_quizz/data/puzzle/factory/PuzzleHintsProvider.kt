@@ -41,6 +41,11 @@ class PuzzleHintsProvider(private val context: Context) {
                 context.resources.getStringArray(R.array.sandbox_disaster_hints).toList()
                     .mapIndexed(::Hint)
             }
+            PuzzleName.WHY -> {
+                context.resources.getStringArray(R.array.why_hints).toList()
+                    .mapIndexed(::Hint)
+            }
+
             PuzzleName.MORE_PAINTERS,
             PuzzleName.TRAINING_PUZZLE,
             PuzzleName.MULTICOLOUR_DOORS,

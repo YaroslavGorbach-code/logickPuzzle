@@ -7,12 +7,17 @@
         <item>4. Belle likes apples..</item>
     </string-array>
 
-    <!--    Answer-->
-    <!--    Name, Wore, Paint-->
-    <!--    Simon, red, red-->
-    <!--    Brenda, yellow, blue-->
-    <!--    James, green, yellow-->
-    <!--    Diane, blue, green-->
+
+    <string-array name="why_clues">
+       <item>1. Camille was killed by another girl because of a silly bet made earlier that day.</item>
+       <item>2. Kaleb killed his victim by accident.</item>
+       <item>3. Liz killed Kaylee in a lime green room out of a sudden burst of rage from the wall hangings she noticed in the kitchen.</item>
+       <item>4. Aviva killed her victim in the garden and won five hundred dollars.</item>
+       <item>5. Tyler was killed by a flying book that
+           struck him in the back of his head. Later his killer was upset by the news of Tyler\'s death.</item>
+       <item>6. Kaylee was found dead on the toilet.</item>
+    </string-array>
+
     <string-array name="paintballing_weekend_clues">
         <item>1. Brenda used blue paint balls.</item>
         <item>2. The person in the green T-shirt used yellow paint balls.</item>
@@ -21,13 +26,6 @@
         <item>5. Simon was the only person who used paint which was the same colour as his T-shirt.</item>
     </string-array>
 
-    <!--    Answer-->
-    <!--    Thank you for getting everybody back together!-->
-    <!--    1. Shelby is Tim's mother and they brought the dump truck.-->
-    <!--    2. Monica is Chris's mother and they brought the bucket.-->
-    <!--    3. Lisa is Laura's mother and they brought the shovel.-->
-    <!--    4. Abbie is Natalie's mother and they brought the doll.-->
-    <!--    5. Marie is Zach's mother and they brought the car.-->
     <string-array name="sandbox_disaster_clues">
         <item>1. The child with the dump truck is not Chris or Zach.</item>
         <item>2. Monica\'s son brought a bucket, but his name is not Tim.</item>
@@ -36,11 +34,6 @@
         <item>5. Zach is Marie\'s son.</item>
     </string-array>
 
-    <!--    Answer-->
-    <!--    Shelby = Ravenclaw, 1 minute-->
-<!--    Billy = Hufflepuff, 30 seconds-->
-<!--    Kristen = Gryffindor, 2 minutes-->
-<!--    Anthony = Slytherin, 20 seconds-->
     <string-array name="hogwarts_clues">
         <item>1. Shelby is VERY smart.</item>
         <item>2. Billy is a scaredy cat.</item>
@@ -51,12 +44,6 @@
         <item>7. Billy was sorted 30 seconds faster than the Ravenclaw.</item>
     </string-array>
 
-<!--    Answer-->
-<!--    Pete is the father of Zach who has Black shoes.-->
-<!--    Sam is the father of Tim who has Red shoes.-->
-<!--    Mark is the father of Chris who has Yellow shoes.-->
-<!--    Kaleb is the father of Laura who has Green shoes.-->
-<!--    Zander is the father of Natalie who has Pink shoes.-->
     <string-array name="jungle_gym_hoopla_clues">
         <item>1. Pete bought his son black shoes, but his son is neither Chris or Tim.</item>
         <item>2. Chris hates the colors green and pink, but his friend Laura loves green.</item>
@@ -65,12 +52,6 @@
         <item>5. Natalie\'s dad is not Kaleb.</item>
     </string-array>
 
-
-    <!--    Answer-->
-    <!--    Jenny - Orange - Saturday-->
-    <!--    Bob - Banana - Tuesday-->
-    <!--    Kate - Apple - Friday-->
-    <!--    Joseph - Grapes - Monday-->
     <string-array name="who_ate_which_fruit_clues">
         <item>1. The person that had the orange ate it on Saturday.</item>
         <item>2. The woman who had the apple did not eat it on Tuesday.</item>
@@ -80,11 +61,6 @@
         <item>6. Jenny loved eating her orange.</item>
     </string-array>
 
-<!--    Answer-->
-<!--    2001, Alexandra, Gardens-->
-<!--    2002, Hazel, Niagara Falls-->
-<!--    2003, Ezekiel, Philadelphia-->
-<!--    2004, Cliff, Williamsburg-->
     <string-array name="family_trips_clues">
         <item>1. Neither Alexandra nor Cliff planned the 2003 trip.</item>
         <item>2. Ezekiel didn\'t plan a trip to Niagara Falls.</item>
@@ -94,10 +70,6 @@
         <item>6. A boy planned the 2004 vacation trip.</item>
     </string-array>
 
-<!--    Student Subject Number-->
-<!--    Helga Journalism 2-->
-<!--    Johannes Science 9-->
-<!--    Sebastian History 5-->
     <string-array name="just_a_thought_clues">
     <item>1. The students were not studying subjects that
         started with the same letter as their names.</item>
@@ -106,13 +78,6 @@
     <item>4.When he\'s not writing papers on the fall of Rome,
         Sebastian likes to read about ancient civilizations.</item>
     </string-array>
-
-
-<!--    Answer-->
-<!--    Lillie has the Gold Dragon and calls it Reikke.-->
-<!--    Harley has the Black Dragon and calls it Brookzhay.-->
-<!--    Crystal has the Blue Dragon and calls it Aero.-->
-<!--    Geneva has the Red Dragon and calls it Skae.-->
 
     <string-array name="draconia_trainers_clues">
         <item>1. The four people are: the one who owns the Red Dragon,
@@ -125,12 +90,6 @@
         <item>6. Harley thinks she\'s cool because her dragon is the color of the night, but Geneva thinks her dragon, Skae, is much cooler.</item>
     </string-array>
 
-    <!--    Answer-->
-    <!--    Harry lives on Oak St and has a blue door.-->
-
-    <!--    Carly lives on Drury Ave and has a pink door.-->
-
-    <!--    Alan lives on South Ave and has a red door.-->
     <string-array name="multicolour_doors_clues">
         <item>1. Carly just loves the colour pink and she was ecstatic when her mom painted the door for her.</item>
         <item>2. Alan\'s always around at Harry\'s house. It\'s easy to get there because Oak St is only just around the corner from Alan\'s house.</item>
@@ -138,17 +97,11 @@
         <item>4. Alan thinks that his friend\'s blue door clashes badly with their house but he doesn\'t want to tell them in case he hurts their feelings.</item>
     </string-array>
 
-    <!--    Answer-->
-    <!--    Katie wanted juice and apple slices.-->
-    <!--    Rachel wanted milk and orange slices.-->
-    <!--    Sophie wanted water and banana slices.-->
-
     <string-array name="snack_time_clues">
         <item>1. Of course, Rachel remembered that she wanted milk and orange slices</item>
         <item>2. Although she couldn\'t remember who it was, Rachel knew that the person who wanted juice also wanted apple slices</item>
         <item>3. Rachel knew that Sophie didn\'t like apples</item>
     </string-array>
-
 
     <string-array name="mates_plus_dates_clues">
         <item>1. 5:45 \n Can\'t believe how cold it is and the grass is all wet, yuck. It\'s okay though, Matt gave me his coat, I think he really likes me.</item>

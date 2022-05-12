@@ -319,6 +319,31 @@ class CorrectPairsProvider(private val context: Context) {
                     Pair(friends[3], paint[1]),
                 )
             }
+            PuzzleName.WHY -> {
+                val killers =
+                    context.resources.getStringArray(R.array.why_items_1_killers).toList()
+                val killed =
+                    context.resources.getStringArray(R.array.why_items_2_Killed)
+                        .toList()
+                val place =
+                    context.resources.getStringArray(R.array.why_items_3_place)
+                        .toList()
+                val reason =
+                    context.resources.getStringArray(R.array.why_items_4_reason)
+                        .toList()
+
+                listOf<Pair<String, String>>(
+                    Pair(killers[0], killed[1]),
+                    Pair(killers[0], place[0]),
+                    Pair(killers[0], reason[0]),
+                    Pair(killers[1], killed[2]),
+                    Pair(killers[1], place[2]),
+                    Pair(killers[1], reason[2]),
+                    Pair(killers[2], killed[0]),
+                    Pair(killers[2], place[1]),
+                    Pair(killers[2], reason[1]),
+                )
+            }
         }
     }
 }

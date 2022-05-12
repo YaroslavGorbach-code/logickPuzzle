@@ -16,6 +16,7 @@ enum class PuzzleName(val resId: Int) {
     HOGWARTS(R.string.hogwarts_name),
     SANDBOX_DISASTER(R.string.sandbox_disaster_name),
     PAINTBALLING_WEEKEND(R.string.paintballing_weekend_name),
+    WHY(R.string.why_name),
 
     //middle
     MORE_PAINTERS(R.string.more_painters_name),

@@ -23,6 +23,43 @@
         <item>Grape</item>
     </string-array>
 
+
+<!--    Answer-->
+<!--    Aviva killed Camille in the garden because of a silly bet with her friends. -->
+<!--    She was in need of some money after she bought the upgrade on her house.-->
+<!--    Kaleb killed Tyler in the library because he carelessly threw a dictionary -->
+<!--    behind his head after moving it aside to look at something on the shelf.-->
+<!--    Liz killed Kaylee in the bathroom after she was talking to Kaylee in the kitchen -->
+<!--    and noticed a lot of the missing paintings from her living room and dining -->
+<!--    room hanging on the kitchen walls. She had an outburst of rage and struck Kaylee hard with a butcher knife.-->
+    <string name="why_items_1_name">Killer</string>
+    <string-array name="why_items_1_killers">
+        <item>Aviva</item>
+        <item>Kaleb</item>
+        <item>Liz</item>
+    </string-array>
+
+    <string name="why_items_2_name">Killed</string>
+    <string-array name="why_items_2_Killed">
+        <item>Kaylee</item>
+        <item>Camille</item>
+        <item>Tyler</item>
+    </string-array>
+
+    <string name="why_items_3_name">Place</string>
+    <string-array name="why_items_3_place">
+        <item>Garden</item>
+        <item>Bathroom</item>
+        <item>Library</item>
+    </string-array>
+
+    <string name="why_items_4_name">Reason</string>
+    <string-array name="why_items_4_reason">
+        <item>Silly Bet</item>
+        <item>Rage</item>
+        <item>Accident</item>
+    </string-array>
+
 <!--    Answer-->
 <!--    Name, Wore, Paint-->
 <!--    Simon, red, red-->

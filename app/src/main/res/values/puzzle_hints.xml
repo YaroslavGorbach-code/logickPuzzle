@@ -10,6 +10,12 @@
         <item>I wouldn\'t want to go to the park on a date, it\'d be cold and it might be wet</item>
     </string-array>
 
+    <string-array name="why_hints">
+        <item>Kaleb and Tyler are boys and Kaylee, Camille, Aviva, and Liz are girls</item>
+        <item>The mansion they are in belongs to Kaylee.</item>
+        <item>They are having this get together to discuss the break in that just happened at Liz\'s mansion next door.</item>
+    </string-array>
+
     <string-array name="sandbox_disaster_hints">
        <item>The only female children are Natalie and Laura.</item>
     </string-array>
