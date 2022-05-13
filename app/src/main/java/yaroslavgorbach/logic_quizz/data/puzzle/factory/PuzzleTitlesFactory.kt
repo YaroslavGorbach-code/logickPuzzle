@@ -741,6 +741,38 @@ class PuzzleTitlesFactory(private val context: Context) {
                     )
                 )
             }
+            PuzzleName.COMMUTER_PROBLEMS -> {
+                return listOf(
+                    TableTitle(
+                        name = context.getString(R.string.commuter_problems_name),
+                        items = context.resources.getStringArray(R.array.commuter_problems_items_1_friends)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.commuter_problems_items_3_name),
+                        items = context.resources.getStringArray(R.array.commuter_problems_items_3_reason)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.commuter_problems_items_2_name),
+                        items = context.resources.getStringArray(R.array.commuter_problems_items_2_transport)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.commuter_problems_items_3_name),
+                        items = context.resources.getStringArray(R.array.commuter_problems_items_3_reason)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    )
+                )
+            }
         }
         }
     }

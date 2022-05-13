@@ -23,6 +23,40 @@
         <item>Grape</item>
     </string-array>
 
+    <!--    Answer-->
+    <!--    Shannon Ware is 80.-->
+    <!--    Janice Peterson is 60.-->
+    <!--    Jessica Malone is 50.-->
+    <!--    Kate Smith is 40.-->
+    <!--    Jennifer Lewis is 20.-->
+
+    <string name="commuter_problems_items_1_name">FRIENDS</string>
+    <string-array name="commuter_problems_items_1_friends">
+        <item>Larry</item>
+        <item>Carrie</item>
+        <item>Harry</item>
+        <item>Mary</item>
+        <item>Jerry</item>
+    </string-array>
+
+    <string name="commuter_problems_items_2_name">Transport</string>
+    <string-array name="commuter_problems_items_2_transport">
+        <item>Car</item>
+        <item>Motorcycle</item>
+        <item>Bus</item>
+        <item>Bike</item>
+        <item>Walk</item>
+    </string-array>
+
+    <string name="commuter_problems_items_3_name">Reason</string>
+    <string-array name="commuter_problems_items_3_reason">
+        <item>Construction</item>
+        <item>Flat tire</item>
+        <item>Accident</item>
+        <item>Storm</item>
+        <item>Traffic signal</item>
+    </string-array>
+
 <!--    Answer-->
 <!--    Shannon Ware is 80.-->
 <!--    Janice Peterson is 60.-->

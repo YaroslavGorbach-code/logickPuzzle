@@ -29,6 +29,7 @@ class PuzzleNameToDifficultyMapper() {
             PuzzleName.NIGHTY_NIGHT -> DifficultLevel.THREE
             PuzzleName.MISS_BROWN_MURDER -> DifficultLevel.THREE
             PuzzleName.NEVER_ASK_A_WOMAN_HEE_AGE -> DifficultLevel.THREE
+            PuzzleName.COMMUTER_PROBLEMS -> DifficultLevel.THREE
         }
     }
 }

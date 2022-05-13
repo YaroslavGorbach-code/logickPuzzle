@@ -74,6 +74,9 @@ class PuzzleCluesProvider(private val context: Context) {
             PuzzleName.NEVER_ASK_A_WOMAN_HEE_AGE -> {
                 context.resources.getStringArray(R.array.never_ask_a_woman_her_age_clues).toList()
             }
+            PuzzleName.COMMUTER_PROBLEMS -> {
+                context.resources.getStringArray(R.array.commuter_problems_clues).toList()
+            }
         }
     }
 }

@@ -74,6 +74,9 @@ class PuzzleStoryProvider(private val context: Context) {
             PuzzleName.NEVER_ASK_A_WOMAN_HEE_AGE -> {
                 context.resources.getString(R.string.never_ask_a_woman_her_age_story)
             }
+            PuzzleName.COMMUTER_PROBLEMS -> {
+                context.resources.getString(R.string.commuter_problems_story)
+            }
         }
     }
 }

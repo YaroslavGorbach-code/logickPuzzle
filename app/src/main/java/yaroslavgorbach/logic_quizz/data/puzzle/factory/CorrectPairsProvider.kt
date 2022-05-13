@@ -482,6 +482,29 @@ class CorrectPairsProvider(private val context: Context) {
                     Pair(firstName[4], age[1]),
                 )
             }
+            PuzzleName.COMMUTER_PROBLEMS -> {
+                val friends =
+                    context.resources.getStringArray(R.array.commuter_problems_items_1_friends).toList()
+                val transport =
+                    context.resources.getStringArray(R.array.commuter_problems_items_2_transport)
+                        .toList()
+                val reason =
+                    context.resources.getStringArray(R.array.commuter_problems_items_3_reason)
+                        .toList()
+
+                listOf(
+                    Pair(friends[0], transport[1]),
+                    Pair(friends[0], reason[3]),
+                    Pair(friends[1], transport[4]),
+                    Pair(friends[1], reason[2]),
+                    Pair(friends[2], transport[3]),
+                    Pair(friends[2], reason[1]),
+                    Pair(friends[3], transport[0]),
+                    Pair(friends[3], reason[4]),
+                    Pair(friends[4], transport[2]),
+                    Pair(friends[4], reason[0]),
+                )
+            }
         }
     }
 }

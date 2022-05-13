@@ -15,6 +15,19 @@
         <item>5. Kate is 10 years younger than Jessica but 20 years older than Jennifer.</item>
     </string-array>
 
+    <string-array name="commuter_problems_clues">
+        <item>1. Neither of the women took public transportation.</item>
+        <item>2. Mary is still fuming over that faulty traffic signal.</item>
+        <item>3. The rider on two wheels (who wasn\'t Carrie) decided to wait out the storm.</item>
+        <item>4. Harry passed Carrie (who wasn\'t affected by construction or the storm) on his way to work.
+            She later caught up to him because he forgot to pack his air pump.</item>
+        <item>5. Jerry hoped to bypass other vehicles on the road by letting someone else
+            drive, but the construction delays were too much.</item>
+        <item>6. Larry and Mary worked too far away to walk to work and were glad they had full tanks of gas.
+</item>
+        <item>7. The walker was an eyewitness to an accident and had to wait around to give a statement to police.</item>
+    </string-array>
+
     <string-array name="miss_brown_murder_clues">
         <item>1. Mr. Blues was in the kitchen when Miss Brown was murdered.</item>
         <item>2. The person with the sword was in the study the whole time.</item>
