@@ -436,6 +436,29 @@ class CorrectPairsProvider(private val context: Context) {
                     Pair(girls[3], animal[3]),
                 )
             }
+            PuzzleName.MISS_BROWN_MURDER -> {
+                val person =
+                    context.resources.getStringArray(R.array.miss_brown_murder_items_1_person).toList()
+                val weapon =
+                    context.resources.getStringArray(R.array.miss_brown_murder_items_2_weapon)
+                        .toList()
+                val place =
+                    context.resources.getStringArray(R.array.miss_brown_murder_items_3_place)
+                        .toList()
+
+                listOf<Pair<String, String>>(
+                    Pair(person[0], weapon[1]),
+                    Pair(person[0], place[3]),
+                    Pair(person[1], weapon[0]),
+                    Pair(person[1], place[0]),
+                    Pair(person[2], weapon[2]),
+                    Pair(person[2], place[1]),
+                    Pair(person[3], weapon[4]),
+                    Pair(person[3], place[4]),
+                    Pair(person[4], weapon[3]),
+                    Pair(person[4], place[2]),
+                )
+            }
         }
     }
 }

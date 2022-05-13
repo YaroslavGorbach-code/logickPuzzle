@@ -68,7 +68,9 @@ class PuzzleStoryProvider(private val context: Context) {
             PuzzleName.NIGHTY_NIGHT -> {
                 context.resources.getString(R.string.murder_at_brainteaser_story)
             }
-
+            PuzzleName.MISS_BROWN_MURDER -> {
+                context.resources.getString(R.string.miss_brown_murder_story)
+            }
         }
     }
 }

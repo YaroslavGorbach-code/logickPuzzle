@@ -62,6 +62,40 @@
         <item>cat</item>
     </string-array>
 
+
+<!--    Answer-->
+<!--    Daphne- 2 pillows, orange, dog-->
+<!--    Rose- 1 pillow, blue, bear-->
+<!--    Gabi- 4 pillows, pink, rabbit-->
+<!--    Chelsea- 3 pillows, purple, cat-->
+
+    <string name="miss_brown_murder_items_1_name">Person</string>
+    <string-array name="miss_brown_murder_items_1_person">
+        <item>Sir Red</item>
+        <item>Mr. Blues</item>
+        <item>Pinkham</item>
+        <item>Marigold</item>
+        <item>Mr.Whitehall</item>
+    </string-array>
+
+    <string name="miss_brown_murder_items_2_name">Weapon</string>
+    <string-array name="miss_brown_murder_items_2_weapon">
+        <item>Dagger</item>
+        <item>Sword</item>
+        <item>Candelabra</item>
+        <item>Rope</item>
+        <item>Plumbing</item>
+    </string-array>
+
+    <string name="miss_brown_murder_items_3_name">Place</string>
+    <string-array name="miss_brown_murder_items_3_place">
+        <item>Kitchen</item>
+        <item>Lounge</item>
+        <item>Hall</item>
+        <item>Study</item>
+        <item>Porch</item>
+    </string-array>
+
 <!--    Gail, Map, 1-->
 <!--    Helen, Books, 2-->
 <!--    Charlotte, Seeds, 3-->

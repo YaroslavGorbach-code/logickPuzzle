@@ -25,6 +25,7 @@ enum class PuzzleName(val resId: Int) {
     MURDER_AT_BRAINTASER(R.string.murder_at_brainteaser_name),
     MOVING_TO_LONDON(R.string.moving_to_london_name),
     NIGHTY_NIGHT(R.string.nighty_night_name),
+    MISS_BROWN_MURDER(R.string.miss_brown_murder_name),
 
     //hard
     JAZZ_BANDS_SOLOS(R.string.jazz_band_solos_name),

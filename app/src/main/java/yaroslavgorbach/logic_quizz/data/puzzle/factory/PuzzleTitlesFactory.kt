@@ -677,6 +677,38 @@ class PuzzleTitlesFactory(private val context: Context) {
                     )
                 )
             }
+            PuzzleName.MISS_BROWN_MURDER -> {
+                return listOf(
+                    TableTitle(
+                        name = context.getString(R.string.miss_brown_murder_items_1_name),
+                        items = context.resources.getStringArray(R.array.miss_brown_murder_items_1_person)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.miss_brown_murder_items_3_name),
+                        items = context.resources.getStringArray(R.array.miss_brown_murder_items_3_place)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.miss_brown_murder_items_2_name),
+                        items = context.resources.getStringArray(R.array.miss_brown_murder_items_2_weapon)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.miss_brown_murder_items_3_name),
+                        items = context.resources.getStringArray(R.array.miss_brown_murder_items_3_place)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    )
+                )
+            }
         }
         }
     }

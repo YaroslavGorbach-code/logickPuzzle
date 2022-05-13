@@ -27,6 +27,7 @@ class PuzzleNameToDifficultyMapper() {
             PuzzleName.MURDER_AT_BRAINTASER -> DifficultLevel.THREE
             PuzzleName.MOVING_TO_LONDON -> DifficultLevel.THREE
             PuzzleName.NIGHTY_NIGHT -> DifficultLevel.THREE
+            PuzzleName.MISS_BROWN_MURDER -> DifficultLevel.THREE
         }
     }
 }

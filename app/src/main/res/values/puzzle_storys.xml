@@ -9,6 +9,19 @@
         The list was soaked and partially unreadable. Please help Monica determine the ordering information.
     </string>
 
+    <string name="miss_brown_murder_story">
+       Miss Brown was walking alone in her over-sized house, when suddenly a figure jumped out and killed her.
+        "It is like a Cluedo case," commented Mr. Lombang, a detective. "Who killed her, what was their weapon,
+        and where did they kill her?"
+        The murderer would have been someone staying in Miss Brown\'s home.
+        Therefore, it is either Mr. Blues, Sir Red, Mr. Whitehall, Countess Marigold, or Miss Pinkham.
+        The weapons most likely to be used were a candelabra, a dagger, a plumbing piece, an ancient
+        sword, or a piece of rope. The room in which Miss Brown was murdered was either the lounge,
+        the kitchen, the porch, the hall, or the study. Now the detective Mr. Lombang must
+        figure out who did it based on the following clues. Work out where everyone was:
+        the person in the hall was the murderer.
+    </string>
+
     <string name="nighty_night_story">
         While her four daughters were at camp,
         Mrs. Smith decided to clean their rooms for them.
