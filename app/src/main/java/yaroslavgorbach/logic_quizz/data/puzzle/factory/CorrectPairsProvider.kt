@@ -459,6 +459,29 @@ class CorrectPairsProvider(private val context: Context) {
                     Pair(person[4], place[2]),
                 )
             }
+            PuzzleName.NEVER_ASK_A_WOMAN_HEE_AGE -> {
+                val firstName =
+                    context.resources.getStringArray(R.array.never_ask_a_woman_her_age_items_1_first_name).toList()
+                val lastName =
+                    context.resources.getStringArray(R.array.never_ask_a_woman_her_age_items_2_last_name)
+                        .toList()
+                val age =
+                    context.resources.getStringArray(R.array.never_ask_a_woman_her_age_items_3_age)
+                        .toList()
+
+                listOf(
+                    Pair(firstName[0], lastName[4]),
+                    Pair(firstName[0], age[4]),
+                    Pair(firstName[1], lastName[3]),
+                    Pair(firstName[1], age[0]),
+                    Pair(firstName[2], lastName[2]),
+                    Pair(firstName[2], age[2]),
+                    Pair(firstName[3], lastName[1]),
+                    Pair(firstName[3], age[3]),
+                    Pair(firstName[4], lastName[0]),
+                    Pair(firstName[4], age[1]),
+                )
+            }
         }
     }
 }

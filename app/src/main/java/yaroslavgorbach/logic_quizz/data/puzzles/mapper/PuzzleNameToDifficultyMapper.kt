@@ -28,6 +28,7 @@ class PuzzleNameToDifficultyMapper() {
             PuzzleName.MOVING_TO_LONDON -> DifficultLevel.THREE
             PuzzleName.NIGHTY_NIGHT -> DifficultLevel.THREE
             PuzzleName.MISS_BROWN_MURDER -> DifficultLevel.THREE
+            PuzzleName.NEVER_ASK_A_WOMAN_HEE_AGE -> DifficultLevel.THREE
         }
     }
 }

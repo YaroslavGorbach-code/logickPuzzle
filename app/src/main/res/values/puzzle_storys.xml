@@ -9,6 +9,15 @@
         The list was soaked and partially unreadable. Please help Monica determine the ordering information.
     </string>
 
+    <string name="never_ask_a_woman_her_age_story">
+        Jennifer, Shannon, Jessica, Kate, and Janice,
+        whose last names are Peterson, Smith, Malone,
+        Ware, and Lewis, all go to the same exercise gym.
+        From the clues below, try to determine the first
+        and last name of each woman and her age.
+        Their ages are 80, 60, 50, 40, and 20
+    </string>
+
     <string name="miss_brown_murder_story">
        Miss Brown was walking alone in her over-sized house, when suddenly a figure jumped out and killed her.
         "It is like a Cluedo case," commented Mr. Lombang, a detective. "Who killed her, what was their weapon,

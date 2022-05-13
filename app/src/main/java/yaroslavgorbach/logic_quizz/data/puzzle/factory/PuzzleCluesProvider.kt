@@ -71,6 +71,9 @@ class PuzzleCluesProvider(private val context: Context) {
             PuzzleName.MISS_BROWN_MURDER -> {
                 context.resources.getStringArray(R.array.miss_brown_murder_clues).toList()
             }
+            PuzzleName.NEVER_ASK_A_WOMAN_HEE_AGE -> {
+                context.resources.getStringArray(R.array.never_ask_a_woman_her_age_clues).toList()
+            }
         }
     }
 }

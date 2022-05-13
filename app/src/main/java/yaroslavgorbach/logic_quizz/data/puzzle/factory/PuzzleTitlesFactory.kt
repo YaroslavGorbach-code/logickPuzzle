@@ -709,6 +709,38 @@ class PuzzleTitlesFactory(private val context: Context) {
                     )
                 )
             }
+            PuzzleName.NEVER_ASK_A_WOMAN_HEE_AGE -> {
+                return listOf(
+                    TableTitle(
+                        name = context.getString(R.string.never_ask_a_woman_her_age_name),
+                        items = context.resources.getStringArray(R.array.never_ask_a_woman_her_age_items_1_first_name)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.never_ask_a_woman_her_age_items_3_name),
+                        items = context.resources.getStringArray(R.array.never_ask_a_woman_her_age_items_3_age)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.never_ask_a_woman_her_age_items_2_name),
+                        items = context.resources.getStringArray(R.array.never_ask_a_woman_her_age_items_2_last_name)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.never_ask_a_woman_her_age_items_3_name),
+                        items = context.resources.getStringArray(R.array.never_ask_a_woman_her_age_items_3_age)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    )
+                )
+            }
         }
         }
     }

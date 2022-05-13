@@ -7,6 +7,14 @@
         <item>4. Belle likes apples..</item>
     </string-array>
 
+    <string-array name="never_ask_a_woman_her_age_clues">
+        <item>1. Jennifer\'s name is not Malone.</item>
+        <item>2. Kate is twice as old as Lewis, but only half as old as Shannon.</item>
+        <item>3. Jessica is 10 years older than Mrs. Smith, but 10 years younger than Mrs. Peterson.</item>
+        <item>4. Janice is 20 years older than Kate and 20 years younger than Mrs. Ware.</item>
+        <item>5. Kate is 10 years younger than Jessica but 20 years older than Jennifer.</item>
+    </string-array>
+
     <string-array name="miss_brown_murder_clues">
         <item>1. Mr. Blues was in the kitchen when Miss Brown was murdered.</item>
         <item>2. The person with the sword was in the study the whole time.</item>

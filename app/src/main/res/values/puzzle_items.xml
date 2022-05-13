@@ -23,6 +23,39 @@
         <item>Grape</item>
     </string-array>
 
+<!--    Answer-->
+<!--    Shannon Ware is 80.-->
+<!--    Janice Peterson is 60.-->
+<!--    Jessica Malone is 50.-->
+<!--    Kate Smith is 40.-->
+<!--    Jennifer Lewis is 20.-->
+
+    <string name="never_ask_a_woman_her_age_items_1_name">First name</string>
+    <string-array name="never_ask_a_woman_her_age_items_1_first_name">
+        <item>Jennifer</item>
+        <item>Shannon</item>
+        <item>Jessica</item>
+        <item>Kate</item>
+        <item>Janice</item>
+    </string-array>
+
+    <string name="never_ask_a_woman_her_age_items_2_name">Last name</string>
+    <string-array name="never_ask_a_woman_her_age_items_2_last_name">
+        <item>Peterson</item>
+        <item>Smith</item>
+        <item>Malone</item>
+        <item>Ware</item>
+        <item>Lewis</item>
+    </string-array>
+
+    <string name="never_ask_a_woman_her_age_items_3_name">age</string>
+    <string-array name="never_ask_a_woman_her_age_items_3_age">
+        <item>80</item>
+        <item>60</item>
+        <item>50</item>
+        <item>40</item>
+        <item>20</item>
+    </string-array>
 
 <!--    Answer-->
 <!--    Daphne- 2 pillows, orange, dog-->
