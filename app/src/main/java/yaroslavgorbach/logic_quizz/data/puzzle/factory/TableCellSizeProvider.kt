@@ -25,6 +25,7 @@ class TableCellSizeProvider() {
             PuzzleName.OFFICE_ORDER -> 30
             PuzzleName.MURDER_AT_BRAINTASER -> 30
             PuzzleName.MOVING_TO_LONDON -> 30
+            PuzzleName.NIGHTY_NIGHT -> 30
         }
     }
 }

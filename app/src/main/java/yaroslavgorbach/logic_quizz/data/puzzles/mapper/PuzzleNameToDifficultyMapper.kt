@@ -26,6 +26,7 @@ class PuzzleNameToDifficultyMapper() {
             PuzzleName.OFFICE_ORDER -> DifficultLevel.TWO
             PuzzleName.MURDER_AT_BRAINTASER -> DifficultLevel.THREE
             PuzzleName.MOVING_TO_LONDON -> DifficultLevel.THREE
+            PuzzleName.NIGHTY_NIGHT -> DifficultLevel.THREE
         }
     }
 }

@@ -65,6 +65,9 @@ class PuzzleCluesProvider(private val context: Context) {
             PuzzleName.MOVING_TO_LONDON -> {
                 context.resources.getStringArray(R.array.moving_to_london_clues).toList()
             }
+            PuzzleName.NIGHTY_NIGHT -> {
+                context.resources.getStringArray(R.array.nighty_night_items_2_color).toList()
+            }
         }
     }
 }

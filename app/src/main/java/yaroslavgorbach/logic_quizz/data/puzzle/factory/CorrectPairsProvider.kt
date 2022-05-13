@@ -409,6 +409,33 @@ class CorrectPairsProvider(private val context: Context) {
                     Pair(numbers[4], reason[1]),
                 )
             }
+            PuzzleName.NIGHTY_NIGHT -> {
+                val girls =
+                    context.resources.getStringArray(R.array.nighty_night_items_1_girls).toList()
+                val color =
+                    context.resources.getStringArray(R.array.nighty_night_items_2_color)
+                        .toList()
+                val number =
+                    context.resources.getStringArray(R.array.nighty_night_items_3_number)
+                val animal =
+                    context.resources.getStringArray(R.array.nighty_night_items_4_animal)
+                        .toList()
+
+                listOf<Pair<String, String>>(
+                    Pair(girls[0], number[1]),
+                    Pair(girls[0], color[0]),
+                    Pair(girls[0], animal[0]),
+                    Pair(girls[1], number[0]),
+                    Pair(girls[1], color[3]),
+                    Pair(girls[1], animal[1]),
+                    Pair(girls[2], number[3]),
+                    Pair(girls[2], color[1]),
+                    Pair(girls[2], animal[2]),
+                    Pair(girls[3], number[2]),
+                    Pair(girls[3], color[2]),
+                    Pair(girls[3], animal[3]),
+                )
+            }
         }
     }
 }

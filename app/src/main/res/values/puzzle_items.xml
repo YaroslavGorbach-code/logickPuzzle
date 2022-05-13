@@ -24,6 +24,44 @@
     </string-array>
 
 
+<!--    Answer-->
+<!--    Daphne- 2 pillows, orange, dog-->
+<!--    Rose- 1 pillow, blue, bear-->
+<!--    Gabi- 4 pillows, pink, rabbit-->
+<!--    Chelsea- 3 pillows, purple, cat-->
+
+    <string name="nighty_night_items_1_name">Girls</string>
+    <string-array name="nighty_night_items_1_girls">
+        <item>Daphne</item>
+        <item>Rose</item>
+        <item>Gabi</item>
+        <item>Chelsea</item>
+    </string-array>
+
+    <string name="nighty_night_items_2_name">Color of comforter</string>
+    <string-array name="nighty_night_items_2_color">
+        <item>orange</item>
+        <item>pink</item>
+        <item>purple</item>
+        <item>blue</item>
+    </string-array>
+
+    <string name="nighty_night_items_3_name">Pills</string>
+    <string-array name="nighty_night_items_3_number">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string name="nighty_night_items_4_name">Animal</string>
+    <string-array name="nighty_night_items_4_animal">
+        <item>dog</item>
+        <item>bear</item>
+        <item>rabbit</item>
+        <item>cat</item>
+    </string-array>
+
 <!--    Gail, Map, 1-->
 <!--    Helen, Books, 2-->
 <!--    Charlotte, Seeds, 3-->
@@ -56,8 +94,6 @@
         <item>Helen</item>
         <item>Donna</item>
     </string-array>
-
-
 
     <!--    Answer-->
 <!--    Ms. Emerald, Candlestick, Love.-->

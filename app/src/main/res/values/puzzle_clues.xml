@@ -7,6 +7,25 @@
         <item>4. Belle likes apples..</item>
     </string-array>
 
+    <string-array name="nighty_night_clues">
+        <item>1. The girls are Rose, the girl that likes purple,
+            the one that has a stuffed rabbit, and the person that has two pillows.</item>
+        <item>2. Chelsea doesn\'t have the most pillows or the least.
+</item>
+        <item>3. The girl with the most pillows also has a stuffed rabbit.
+</item>
+        <item>4. Gabi feels snug in the most pillows.
+</item>
+        <item>5. Rose has a blue bear to match her comforter.
+</item>
+        <item>6. Daphne and Chelsea both have animals that begin with the same letter as their name.
+</item>
+        <item>7. Daphne\'s favorite color is orange and Chelsea has three pillows.
+</item>
+        <item></item>
+        <item></item>
+    </string-array>
+
     <string-array name="moving_to_london_clues">
         <item>1. When I was young, I was taught to plant and
             grow flowers by the only aunt whose name contains a C, so she gave me things to plant in my new garden.</item>
