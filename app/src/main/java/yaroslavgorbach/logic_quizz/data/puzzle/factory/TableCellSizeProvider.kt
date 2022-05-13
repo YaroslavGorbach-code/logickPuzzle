@@ -23,6 +23,8 @@ class TableCellSizeProvider() {
             PuzzleName.PAINTBALLING_WEEKEND -> 30
             PuzzleName.WHY -> 30
             PuzzleName.OFFICE_ORDER -> 30
+            PuzzleName.MURDER_AT_BRAINTASER -> 30
+            PuzzleName.MOVING_TO_LONDON -> 30
         }
     }
 }

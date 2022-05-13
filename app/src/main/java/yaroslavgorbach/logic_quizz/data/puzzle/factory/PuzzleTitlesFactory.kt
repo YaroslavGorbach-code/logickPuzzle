@@ -567,6 +567,70 @@ class PuzzleTitlesFactory(private val context: Context) {
                     )
                 )
             }
+            PuzzleName.MURDER_AT_BRAINTASER -> {
+                return listOf(
+                    TableTitle(
+                        name = context.getString(R.string.murder_at_brainteaser_items_1_name),
+                        items = context.resources.getStringArray(R.array.murder_at_brainteaser_items_1_names)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.murder_at_brainteaser_items_3_name),
+                        items = context.resources.getStringArray(R.array.murder_at_brainteaser_items_3_reason)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.office_order_items_2_name),
+                        items = context.resources.getStringArray(R.array.murder_at_brainteaser_items_2_weapon)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.office_order_items_3_name),
+                        items = context.resources.getStringArray(R.array.murder_at_brainteaser_items_3_reason)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    )
+                )
+            }
+            PuzzleName.MOVING_TO_LONDON -> {
+                return listOf(
+                    TableTitle(
+                        name = context.getString(R.string.moving_to_london_items_1_name),
+                        items = context.resources.getStringArray(R.array.moving_to_london_items_1_numbers)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.moving_to_london_items_3_name),
+                        items = context.resources.getStringArray(R.array.moving_to_london_items_3_reason)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.moving_to_london_items_2_name),
+                        items = context.resources.getStringArray(R.array.moving_to_london_items_2_thing)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.moving_to_london_items_3_name),
+                        items = context.resources.getStringArray(R.array.moving_to_london_items_3_reason)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    )
+                )
+            }
         }
         }
     }

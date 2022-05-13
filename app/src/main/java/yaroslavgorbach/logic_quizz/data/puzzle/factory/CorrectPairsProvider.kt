@@ -365,6 +365,50 @@ class CorrectPairsProvider(private val context: Context) {
                     Pair(items[3], suppliers[2]),
                 )
             }
+            PuzzleName.MURDER_AT_BRAINTASER -> {
+                val items =
+                    context.resources.getStringArray(R.array.murder_at_brainteaser_items_1_names).toList()
+                val weapon =
+                    context.resources.getStringArray(R.array.murder_at_brainteaser_items_2_weapon)
+                        .toList()
+                val reason =
+                    context.resources.getStringArray(R.array.murder_at_brainteaser_items_3_reason)
+                        .toList()
+
+                listOf<Pair<String, String>>(
+                    Pair(items[0], weapon[0]),
+                    Pair(items[0], reason[0]),
+                    Pair(items[1], weapon[3]),
+                    Pair(items[1], reason[3]),
+                    Pair(items[2], weapon[2]),
+                    Pair(items[2], reason[2]),
+                    Pair(items[3], weapon[1]),
+                    Pair(items[3], reason[1]),
+                )
+            }
+            PuzzleName.MOVING_TO_LONDON -> {
+                val numbers =
+                    context.resources.getStringArray(R.array.moving_to_london_items_1_numbers).toList()
+                val things =
+                    context.resources.getStringArray(R.array.moving_to_london_items_2_thing)
+                        .toList()
+                val reason =
+                    context.resources.getStringArray(R.array.moving_to_london_items_3_reason)
+                        .toList()
+
+                listOf<Pair<String, String>>(
+                    Pair(numbers[0], things[3]),
+                    Pair(numbers[0], reason[0]),
+                    Pair(numbers[1], things[4]),
+                    Pair(numbers[1], reason[3]),
+                    Pair(numbers[2], things[1]),
+                    Pair(numbers[2], reason[2]),
+                    Pair(numbers[3], things[2]),
+                    Pair(numbers[3], reason[4]),
+                    Pair(numbers[4], things[0]),
+                    Pair(numbers[4], reason[1]),
+                )
+            }
         }
     }
 }

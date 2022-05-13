@@ -9,6 +9,25 @@
         The list was soaked and partially unreadable. Please help Monica determine the ordering information.
     </string>
 
+    <string name="moving_to_london_story">
+        Last year, as I prepared to board the plane
+        that would take me to my new home in London, my five
+        aunts each gave me a gift. Each gift was something I
+        had always cherished deeply. Charlotte, Patsy, Helen,
+        Gail and Donna (in no particular order) gave me seeds
+        to plant, advice, books, a map, and my grandmother\'s sewing box (in no particular order).
+        Can you deduce from these clues, which aunt gave which gift and in what order?
+    </string>
+
+    <string name="murder_at_brainteaser_story">
+      Four guests, Mrs. Red, Mr. Crimson, Lady Scarlet and Mr. Sienna, were all invited
+        to an exclusive party at Brainteaser Mansion. However, during the long, dark night,
+        the owner of the spectacular mansion, Mr. Death, was found dead in the library.
+        Since no one apparently knew what happened, rumours were multiplying by the
+        second, because everyone was suspected of killing him with a different weapon.
+        From the following clues, can you work out who killed him?
+    </string>
+
     <string name="why_story">Three people were killed in one night,
         in the same mansion, in three different rooms, and for three
         different reasons. The killers were Aviva, Kaleb, and Liz.

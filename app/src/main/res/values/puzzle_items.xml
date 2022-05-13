@@ -23,6 +23,72 @@
         <item>Grape</item>
     </string-array>
 
+
+<!--    Gail, Map, 1-->
+<!--    Helen, Books, 2-->
+<!--    Charlotte, Seeds, 3-->
+<!--    Donna, Sewing Box, 4-->
+<!--    Patsy, Advice, 5-->
+
+    <string name="moving_to_london_items_1_name">Numbers</string>
+    <string-array name="moving_to_london_items_1_numbers">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string name="moving_to_london_items_2_name">Thing</string>
+    <string-array name="moving_to_london_items_2_thing">
+        <item>Advice</item>
+        <item>Seeds</item>
+        <item>Sewing Box</item>
+        <item>Map</item>
+        <item>Books</item>
+    </string-array>
+
+    <string name="moving_to_london_items_3_name">Reason</string>
+    <string-array name="moving_to_london_items_3_reason">
+        <item>Gail</item>
+        <item>Patsy</item>
+        <item>Charlotte</item>
+        <item>Helen</item>
+        <item>Donna</item>
+    </string-array>
+
+
+
+    <!--    Answer-->
+<!--    Ms. Emerald, Candlestick, Love.-->
+<!--    Mr. Green, Sword, Rage.-->
+<!--    Sir Jade, Revolver , Greed.-->
+<!--    Mr. Olive, Rope, Revenge.-->
+
+    <string name="murder_at_brainteaser_items_1_name">Names</string>
+    <string-array name="murder_at_brainteaser_items_1_names">
+        <item>Mrs. Red</item>
+        <item>Mr. Crimson</item>
+        <item>Lady Scarlet</item>
+        <item>Mr. Sienna</item>
+    </string-array>
+
+    <string name="murder_at_brainteaser_items_2_name">Weapon</string>
+    <string-array name="murder_at_brainteaser_items_2_weapon">
+        <item>Poison</item>
+        <item>Dagger</item>
+        <item>Rope</item>
+        <item>Gun</item>
+    </string-array>
+
+    <string name="murder_at_brainteaser_items_3_name">Reason</string>
+    <string-array name="murder_at_brainteaser_items_3_reason">
+        <item>Money</item>
+        <item>Revenge</item>
+        <item>Jealousy</item>
+        <item>Blackmail</item>
+    </string-array>
+
 <!--    24 Pens - $20 - Office Chain-->
 <!--    24 Binders - $480 - Reporting Corp.-->
 <!--    1 Overhead Projector - $250 - Presentation Co.-->

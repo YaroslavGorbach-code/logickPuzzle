@@ -59,6 +59,12 @@ class PuzzleCluesProvider(private val context: Context) {
             PuzzleName.OFFICE_ORDER -> {
                 context.resources.getStringArray(R.array.office_order_clues).toList()
             }
+            PuzzleName.MURDER_AT_BRAINTASER -> {
+                context.resources.getStringArray(R.array.murder_at_brainteaser_clues).toList()
+            }
+            PuzzleName.MOVING_TO_LONDON -> {
+                context.resources.getStringArray(R.array.moving_to_london_clues).toList()
+            }
         }
     }
 }

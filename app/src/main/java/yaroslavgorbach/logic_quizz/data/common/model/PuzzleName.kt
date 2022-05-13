@@ -22,6 +22,8 @@ enum class PuzzleName(val resId: Int) {
     //middle
     MORE_PAINTERS(R.string.more_painters_name),
     KITTENS_AND_KIDS(R.string.kittens_and_kids_name),
+    MURDER_AT_BRAINTASER(R.string.murder_at_brainteaser_name),
+    MOVING_TO_LONDON(R.string.moving_to_london_name),
 
     //hard
     JAZZ_BANDS_SOLOS(R.string.jazz_band_solos_name),

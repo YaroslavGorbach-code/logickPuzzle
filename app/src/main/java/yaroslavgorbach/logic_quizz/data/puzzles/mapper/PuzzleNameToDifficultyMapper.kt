@@ -24,6 +24,8 @@ class PuzzleNameToDifficultyMapper() {
             PuzzleName.PAINTBALLING_WEEKEND -> DifficultLevel.TWO
             PuzzleName.WHY -> DifficultLevel.TWO
             PuzzleName.OFFICE_ORDER -> DifficultLevel.TWO
+            PuzzleName.MURDER_AT_BRAINTASER -> DifficultLevel.THREE
+            PuzzleName.MOVING_TO_LONDON -> DifficultLevel.THREE
         }
     }
 }

@@ -7,6 +7,30 @@
         <item>4. Belle likes apples..</item>
     </string-array>
 
+    <string-array name="moving_to_london_clues">
+        <item>1. When I was young, I was taught to plant and
+            grow flowers by the only aunt whose name contains a C, so she gave me things to plant in my new garden.</item>
+        <item>2. The first gift I was given, at the airport, was so I could always find my way home.</item>
+        <item>3. The sewing box was not given last although it was given after the seeds.</item>
+        <item>4. Aunt Helen always told stories about how I would simply
+            devour the written word, so she gave me plenty of volumes to read.</item>
+        <item>5. The books were the only gift whose first letter corresponded
+            to its place in the alphabet and to the order in which it was given.</item>
+        <item>6. The last gift I received was from Aunt Patsy.
+            She told me to "never quit believing that there was
+            good in all," and that "teaching is the noblest of professions.
+            For while teachers do not make millions, they do make tomorrow\'s leaders."</item>
+        <item>7. Aunt Gail cannot sew, so grandmother did not give her the sewing box.</item>
+    </string-array>
+
+    <string-array name="murder_at_brainteaser_clues">
+        <item>1. The person who "allegedly" used the poison was a female. </item>
+        <item>2. Mrs. Red\'s motive was "supposedly" money.</item>
+        <item>3. The motive of the person who used the rope was jealousy.</item>
+        <item>4. Mr. Crimson "apparently" used the gun but his motive wasn\'t revenge.</item>
+        <item>5. Lady Scarlet was believed to have used the rope.
+</item>
+    </string-array>
 
     <string-array name="why_clues">
        <item>1. Camille was killed by another girl because of a silly bet made earlier that day.</item>

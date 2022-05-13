@@ -45,6 +45,10 @@ class PuzzleHintsProvider(private val context: Context) {
                 context.resources.getStringArray(R.array.why_hints).toList()
                     .mapIndexed(::Hint)
             }
+            PuzzleName.MOVING_TO_LONDON -> {
+                context.resources.getStringArray(R.array.moving_to_london_hints).toList()
+                    .mapIndexed(::Hint)
+            }
 
             PuzzleName.MORE_PAINTERS,
             PuzzleName.TRAINING_PUZZLE,
@@ -52,6 +56,7 @@ class PuzzleHintsProvider(private val context: Context) {
             PuzzleName.WHO_ATE_WHICH_FRUIT,
             PuzzleName.JUST_A_THOUGHT,
             PuzzleName.PAINTBALLING_WEEKEND,
+            PuzzleName.MURDER_AT_BRAINTASER,
             PuzzleName.OFFICE_ORDER,
             PuzzleName.KITTENS_AND_KIDS -> emptyList()
         }
