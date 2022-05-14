@@ -7,6 +7,15 @@
         <item>4. Belle likes apples..</item>
     </string-array>
 
+    <string-array name="last_year_gifts_clues">
+        <item>1. The four girls are Diana, the girl who has a birthday in February,
+           the girl who received the diamond ring, and Allison.</item>
+        <item>2. Christine received the ring in October, but it wasn\'t from Tom or Dave.</item>
+        <item>3. Betty is allergic to flowers, so her boyfriend, Tom, knew not to get them for her.</item>
+        <item>4. Dave gave the bracelet to his girlfriend in August, and Bill proposed in October.</item>
+        <item>5. Allison\'s boyfriend did not buy flowers for her.</item>
+    </string-array>
+
     <string-array name="fortune_teller_name_clues">
         <item>1. Geneeva revealed to Greg (who is neither the Leo nor the Virgo) that he would soon meet his true love.</item>
         <item>2. Whitney isn\'t the woman born under the sign of Cancer (who was told to prepare for a trip to a faraway land).</item>

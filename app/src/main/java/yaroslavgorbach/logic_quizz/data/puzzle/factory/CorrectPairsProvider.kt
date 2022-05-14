@@ -555,6 +555,33 @@ class CorrectPairsProvider(private val context: Context) {
                     Pair(friends[4], events[3]),
                 )
             }
+            PuzzleName.LAST_YEAR_GIFTS -> {
+                val friends =
+                    context.resources.getStringArray(R.array.last_year_gifts_items_1_friends).toList()
+                val boyfriends =
+                    context.resources.getStringArray(R.array.last_year_gifts_items_2_Boyfriends)
+                        .toList()
+                val birthday =
+                    context.resources.getStringArray(R.array.last_year_gifts_items_3_Birthdays)
+                val gifts =
+                    context.resources.getStringArray(R.array.last_year_gifts_items_4_Gifts)
+                        .toList()
+
+                listOf<Pair<String, String>>(
+                    Pair(friends[0], boyfriends[1]),
+                    Pair(friends[0], birthday[2]),
+                    Pair(friends[0], gifts[0]),
+                    Pair(friends[1], boyfriends[2]),
+                    Pair(friends[1], birthday[0]),
+                    Pair(friends[1], gifts[2]),
+                    Pair(friends[2], boyfriends[3]),
+                    Pair(friends[2], birthday[3]),
+                    Pair(friends[2], gifts[3]),
+                    Pair(friends[3], boyfriends[0]),
+                    Pair(friends[3], birthday[1]),
+                    Pair(friends[3], gifts[1]),
+                )
+            }
         }
     }
 }

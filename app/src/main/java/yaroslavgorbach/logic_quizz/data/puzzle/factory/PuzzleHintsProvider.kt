@@ -53,6 +53,10 @@ class PuzzleHintsProvider(private val context: Context) {
                 context.resources.getStringArray(R.array.world_domination_hints).toList()
                     .mapIndexed(::Hint)
             }
+            PuzzleName.LAST_YEAR_GIFTS ->{
+                context.resources.getStringArray(R.array.last_year_gifts_hints).toList()
+                    .mapIndexed(::Hint)
+            }
 
             PuzzleName.NIGHTY_NIGHT,
             PuzzleName.MORE_PAINTERS,

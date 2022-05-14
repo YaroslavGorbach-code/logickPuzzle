@@ -851,6 +851,52 @@ class PuzzleTitlesFactory(private val context: Context) {
                     )
                 )
             }
+            PuzzleName.LAST_YEAR_GIFTS -> {
+                return listOf(
+                    TableTitle(
+                        name = context.getString(R.string.last_year_gifts_items_1_name),
+                        items = context.resources.getStringArray(R.array.last_year_gifts_items_1_friends)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.last_year_gifts_items_4_name),
+                        items = context.resources.getStringArray(R.array.last_year_gifts_items_4_Gifts)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.last_year_gifts_items_3_name),
+                        items = context.resources.getStringArray(R.array.last_year_gifts_items_3_Birthdays)
+                            .toList(),
+                        orderNumber = 3,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.last_year_gifts_items_2_name),
+                        items = context.resources.getStringArray(R.array.last_year_gifts_items_2_Boyfriends)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.last_year_gifts_items_3_name),
+                        items = context.resources.getStringArray(R.array.last_year_gifts_items_3_Birthdays)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.last_year_gifts_items_4_name),
+                        items = context.resources.getStringArray(R.array.last_year_gifts_items_4_Gifts)
+                            .toList(),
+                        orderNumber = 3,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    )
+                )
+            }
         }
         }
     }

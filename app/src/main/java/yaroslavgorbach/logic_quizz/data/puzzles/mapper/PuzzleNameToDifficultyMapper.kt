@@ -32,6 +32,7 @@ class PuzzleNameToDifficultyMapper() {
             PuzzleName.COMMUTER_PROBLEMS -> DifficultLevel.THREE
             PuzzleName.WORLD_DOMINATION -> DifficultLevel.FOUR
             PuzzleName.FORTUNE_TELLER -> DifficultLevel.FOUR
+            PuzzleName.LAST_YEAR_GIFTS -> DifficultLevel.FOUR
         }
     }
 }

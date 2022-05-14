@@ -25,6 +25,44 @@
 
 
 <!--    Answer-->
+<!--    Allison's boyfriend is Dave, and he gave her the bracelet on August 24.-->
+<!--    Betty's boyfriend is Tom, and he gave her the earrings on February 18.-->
+<!--    Christine's boyfriend is Bill, and he gave her the diamond ring on October 30.-->
+<!--    Diana's boyfriend is Chris, and he gave her the flowers on April 7.-->
+
+    <string name="last_year_gifts_items_1_name">Friends</string>
+    <string-array name="last_year_gifts_items_1_friends">
+        <item>Allison</item>
+        <item>Betty</item>
+        <item>Christine</item>
+        <item>Diana</item>
+    </string-array>
+
+    <string name="last_year_gifts_items_2_name">Boyfriends</string>
+    <string-array name="last_year_gifts_items_2_Boyfriends">
+        <item>Chris</item>
+        <item>Dave</item>
+        <item>Tom</item>
+        <item>Bill</item>
+    </string-array>
+
+    <string name="last_year_gifts_items_3_name">Birthdays</string>
+    <string-array name="last_year_gifts_items_3_Birthdays">
+        <item>February 18</item>
+        <item>April 7</item>
+        <item>August 24</item>
+        <item>October 30</item>
+    </string-array>
+
+  <string name="last_year_gifts_items_4_name">Gifts</string>
+    <string-array name="last_year_gifts_items_4_Gifts">
+        <item>bracelet</item>
+        <item>flowers</item>
+        <item>earrings</item>
+        <item>diamond ring</item>
+    </string-array>
+
+<!--    Answer-->
 <!--    Beth, Virgo, promotion-->
 <!--    Greg, Aquarius, love-->
 <!--    Karl, Leo, money-->

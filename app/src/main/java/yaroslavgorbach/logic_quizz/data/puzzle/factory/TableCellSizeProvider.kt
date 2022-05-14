@@ -31,6 +31,7 @@ class TableCellSizeProvider() {
             PuzzleName.COMMUTER_PROBLEMS -> 30
             PuzzleName.WORLD_DOMINATION -> 30
             PuzzleName.FORTUNE_TELLER -> 30
+            PuzzleName.LAST_YEAR_GIFTS -> 30
         }
     }
 }

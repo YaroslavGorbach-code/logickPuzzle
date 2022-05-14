@@ -2,6 +2,12 @@
 <resources>
     <string name="training_puzzle_story">Follow the clues to determine which fruit does the oldest girl like.</string>
 
+    <string name="last_year_gifts_story">
+        Four friends were talking about what their boyfriends gave
+        them as a birthday present last year. Using the clues below,
+        determine who their boyfriends are, when their birthdays are, and what they received.
+    </string>
+
     <string name="office_order_story">
         Monica\'s boss asked her to order some supplies for
         an important project. While organizing her desk,
