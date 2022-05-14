@@ -9,6 +9,15 @@
         The list was soaked and partially unreadable. Please help Monica determine the ordering information.
     </string>
 
+    <string name="fortune_teller_story">
+        While at a carnival, five friends, Beth, Michelle, Whitney,
+        Greg and Karl had their fortunes told by Geneeva the Seer.
+        Each person gave Geneeva his or her astrological sign and
+        she gazed into her crystal ball. She then predicted a different
+        momentous event for each. From the information provided,
+        determine each friend\'s sign and the event Geneeva had predicted:
+    </string>
+
 
     <string name="world_domination_story">
         Mad Scientist Sassi the Sane was hell bent on taking over the world.

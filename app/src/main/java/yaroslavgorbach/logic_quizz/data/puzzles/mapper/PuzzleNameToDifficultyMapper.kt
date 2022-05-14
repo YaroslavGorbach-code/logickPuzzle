@@ -31,6 +31,7 @@ class PuzzleNameToDifficultyMapper() {
             PuzzleName.NEVER_ASK_A_WOMAN_HEE_AGE -> DifficultLevel.THREE
             PuzzleName.COMMUTER_PROBLEMS -> DifficultLevel.THREE
             PuzzleName.WORLD_DOMINATION -> DifficultLevel.FOUR
+            PuzzleName.FORTUNE_TELLER -> DifficultLevel.FOUR
         }
     }
 }

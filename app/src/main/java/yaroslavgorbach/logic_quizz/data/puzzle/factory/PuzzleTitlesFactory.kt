@@ -819,6 +819,38 @@ class PuzzleTitlesFactory(private val context: Context) {
                     )
                 )
             }
+            PuzzleName.FORTUNE_TELLER -> {
+                return listOf(
+                    TableTitle(
+                        name = context.getString(R.string.fortune_teller_items_1_name),
+                        items = context.resources.getStringArray(R.array.fortune_teller_items_1_friends)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.fortune_teller_items_3_name),
+                        items = context.resources.getStringArray(R.array.fortune_teller_items_3_Events)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.fortune_teller_items_2_name),
+                        items = context.resources.getStringArray(R.array.fortune_teller_items_2_Signs)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.fortune_teller_items_3_name),
+                        items = context.resources.getStringArray(R.array.fortune_teller_items_3_Events)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    )
+                )
+            }
         }
         }
     }

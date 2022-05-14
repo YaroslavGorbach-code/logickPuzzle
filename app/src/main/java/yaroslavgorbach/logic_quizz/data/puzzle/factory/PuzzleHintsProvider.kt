@@ -66,6 +66,7 @@ class PuzzleHintsProvider(private val context: Context) {
             PuzzleName.NEVER_ASK_A_WOMAN_HEE_AGE,
             PuzzleName.MISS_BROWN_MURDER,
             PuzzleName.COMMUTER_PROBLEMS,
+            PuzzleName.FORTUNE_TELLER,
             PuzzleName.KITTENS_AND_KIDS -> emptyList()
         }
     }

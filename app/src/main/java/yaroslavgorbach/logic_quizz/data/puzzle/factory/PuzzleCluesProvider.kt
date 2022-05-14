@@ -80,6 +80,10 @@ class PuzzleCluesProvider(private val context: Context) {
             PuzzleName.WORLD_DOMINATION -> {
                 context.resources.getStringArray(R.array.world_domination_clues).toList()
             }
+            PuzzleName.FORTUNE_TELLER -> {
+                context.resources.getStringArray(R.array.fortune_teller_name_clues).toList()
+            }
+
         }
     }
 }

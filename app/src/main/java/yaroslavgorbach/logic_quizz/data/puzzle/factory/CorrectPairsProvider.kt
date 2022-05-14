@@ -532,6 +532,29 @@ class CorrectPairsProvider(private val context: Context) {
                     Pair(friends[3], effect[3]),
                 )
             }
+            PuzzleName.FORTUNE_TELLER -> {
+                val friends =
+                    context.resources.getStringArray(R.array.fortune_teller_items_1_friends).toList()
+                val sings =
+                    context.resources.getStringArray(R.array.fortune_teller_items_2_Signs)
+                        .toList()
+                val events =
+                    context.resources.getStringArray(R.array.fortune_teller_items_3_Events)
+                        .toList()
+
+                listOf(
+                    Pair(friends[0], sings[4]),
+                    Pair(friends[0], events[2]),
+                    Pair(friends[1], sings[0]),
+                    Pair(friends[1], events[0]),
+                    Pair(friends[2], sings[2]),
+                    Pair(friends[2], events[1]),
+                    Pair(friends[3], sings[1]),
+                    Pair(friends[3], events[4]),
+                    Pair(friends[4], sings[3]),
+                    Pair(friends[4], events[3]),
+                )
+            }
         }
     }
 }

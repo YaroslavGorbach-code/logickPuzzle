@@ -25,6 +25,41 @@
 
 
 <!--    Answer-->
+<!--    Beth, Virgo, promotion-->
+<!--    Greg, Aquarius, love-->
+<!--    Karl, Leo, money-->
+<!--    Michelle, Cancer, trip-->
+<!--    Whitney, Taurus, relative-->
+
+
+    <string name="fortune_teller_items_1_name">Friends</string>
+    <string-array name="fortune_teller_items_1_friends">
+        <item>Beth</item>
+        <item>Greg</item>
+        <item>Karl</item>
+        <item>Michelle</item>
+        <item>Whitney</item>
+    </string-array>
+
+    <string name="fortune_teller_items_2_name">Signs</string>
+    <string-array name="fortune_teller_items_2_Signs">
+        <item>Aquarius</item>
+        <item>Cancer</item>
+        <item>Leo</item>
+        <item>Taurus</item>
+        <item>Virgo</item>
+    </string-array>
+
+    <string name="fortune_teller_items_3_name">Events</string>
+    <string-array name="fortune_teller_items_3_Events">
+        <item>Love</item>
+        <item>Money</item>
+        <item>Promotion</item>
+        <item>Relative</item>
+        <item>Trip</item>
+    </string-array>
+
+    <!--    Answer-->
 <!--    Jessica, gumtree, tulip, poison.-->
 <!--    Nicholas, oak, rose, fly.-->
 <!--    Cassandra, gardenia, daffodil, invisible.-->

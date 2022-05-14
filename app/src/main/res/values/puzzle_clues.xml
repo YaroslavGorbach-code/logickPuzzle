@@ -7,6 +7,16 @@
         <item>4. Belle likes apples..</item>
     </string-array>
 
+    <string-array name="fortune_teller_name_clues">
+        <item>1. Geneeva revealed to Greg (who is neither the Leo nor the Virgo) that he would soon meet his true love.</item>
+        <item>2. Whitney isn\'t the woman born under the sign of Cancer (who was told to prepare for a trip to a faraway land).</item>
+        <item>3. The Virgo isn\'t the one whom Geneeva predicted would inherit a large sum of money.</item>
+        <item>4. Beth was pleased to hear that she would receive an important promotion at work.
+</item>
+        <item>5. A surprise visit from a long-lost relative was foretold for the Taurus woman.
+</item>
+    </string-array>
+
     <string-array name="world_domination_clues">
       <item>1. The four potions were: the one given to Jessica, the one containing gardenia,
           the one containing rose, and the one that made its victim charming.</item>

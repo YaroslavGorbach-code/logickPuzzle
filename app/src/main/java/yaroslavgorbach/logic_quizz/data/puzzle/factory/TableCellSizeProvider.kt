@@ -30,6 +30,7 @@ class TableCellSizeProvider() {
             PuzzleName.NEVER_ASK_A_WOMAN_HEE_AGE -> 30
             PuzzleName.COMMUTER_PROBLEMS -> 30
             PuzzleName.WORLD_DOMINATION -> 30
+            PuzzleName.FORTUNE_TELLER -> 30
         }
     }
 }
