@@ -29,6 +29,7 @@ class TableCellSizeProvider() {
             PuzzleName.MISS_BROWN_MURDER -> 30
             PuzzleName.NEVER_ASK_A_WOMAN_HEE_AGE -> 30
             PuzzleName.COMMUTER_PROBLEMS -> 30
+            PuzzleName.WORLD_DOMINATION -> 30
         }
     }
 }

@@ -77,6 +77,9 @@ class PuzzleCluesProvider(private val context: Context) {
             PuzzleName.COMMUTER_PROBLEMS -> {
                 context.resources.getStringArray(R.array.commuter_problems_clues).toList()
             }
+            PuzzleName.WORLD_DOMINATION -> {
+                context.resources.getStringArray(R.array.world_domination_clues).toList()
+            }
         }
     }
 }

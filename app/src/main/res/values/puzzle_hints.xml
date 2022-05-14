@@ -10,6 +10,11 @@
         <item>I wouldn\'t want to go to the park on a date, it\'d be cold and it might be wet</item>
     </string-array>
 
+    <string-array name="world_domination_hints">
+        <item>Cassandra and Jessica are girls</item>
+        <item>Alfred and Nicholas are boys.</item>
+    </string-array>
+
     <string-array name="moving_to_london_hints">
         <item>Volumes: think about encyclopedias. If you need more then I am really bad at this.</item>
     </string-array>

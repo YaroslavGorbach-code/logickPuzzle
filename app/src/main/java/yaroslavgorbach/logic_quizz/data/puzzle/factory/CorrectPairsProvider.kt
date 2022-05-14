@@ -505,6 +505,33 @@ class CorrectPairsProvider(private val context: Context) {
                     Pair(friends[4], reason[0]),
                 )
             }
+            PuzzleName.WORLD_DOMINATION -> {
+                val friends =
+                    context.resources.getStringArray(R.array.world_domination_items_1_friends).toList()
+                val effect =
+                    context.resources.getStringArray(R.array.world_domination_items_4_effect)
+                        .toList()
+                val flower =
+                    context.resources.getStringArray(R.array.world_domination_items_3_flower)
+                val tree =
+                    context.resources.getStringArray(R.array.world_domination_items_2_tree)
+                        .toList()
+
+                listOf<Pair<String, String>>(
+                    Pair(friends[0], tree[0]),
+                    Pair(friends[0], flower[0]),
+                    Pair(friends[0], effect[2]),
+                    Pair(friends[1], tree[1]),
+                    Pair(friends[1], flower[1]),
+                    Pair(friends[1], effect[0]),
+                    Pair(friends[2], tree[3]),
+                    Pair(friends[2], flower[2]),
+                    Pair(friends[2], effect[1]),
+                    Pair(friends[3], tree[2]),
+                    Pair(friends[3], flower[3]),
+                    Pair(friends[3], effect[3]),
+                )
+            }
         }
     }
 }

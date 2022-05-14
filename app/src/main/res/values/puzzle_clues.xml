@@ -7,6 +7,16 @@
         <item>4. Belle likes apples..</item>
     </string-array>
 
+    <string-array name="world_domination_clues">
+      <item>1. The four potions were: the one given to Jessica, the one containing gardenia,
+          the one containing rose, and the one that made its victim charming.</item>
+      <item>2. The two boys each had a potion made partly from a tree with three letters.</item>
+      <item>3. The daffodil was in the invisibility potion.</item>
+      <item>4. Cassandra and Alfred each had a potion with a flower that started with the same letter.</item>
+      <item>5. When the elm and daisy were mixed together, they did not make a poison.</item>
+      <item>6. The potion which allows you to fly was created by plants which have the letter "o" in them.</item>
+    </string-array>
+
     <string-array name="never_ask_a_woman_her_age_clues">
         <item>1. Jennifer\'s name is not Malone.</item>
         <item>2. Kate is twice as old as Lewis, but only half as old as Shannon.</item>

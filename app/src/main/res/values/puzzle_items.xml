@@ -23,6 +23,47 @@
         <item>Grape</item>
     </string-array>
 
+
+<!--    Answer-->
+<!--    Jessica, gumtree, tulip, poison.-->
+<!--    Nicholas, oak, rose, fly.-->
+<!--    Cassandra, gardenia, daffodil, invisible.-->
+<!--    Alfred, elm, daisy, charming-->
+
+
+    <string name="world_domination_items_1_name">FRIENDS</string>
+    <string-array name="world_domination_items_1_friends">
+        <item>Jessica</item>
+        <item>Nicholas</item>
+        <item>Cassandra</item>
+        <item>Alfred</item>
+    </string-array>
+
+    <string name="world_domination_items_2_name">tree</string>
+    <string-array name="world_domination_items_2_tree">
+        <item>Gumtree</item>
+        <item>Oak</item>
+        <item>Elm</item>
+        <item>Gardenia</item>
+    </string-array>
+
+    <string name="world_domination_items_3_name">flower</string>
+    <string-array name="world_domination_items_3_flower">
+        <item>Tulip</item>
+        <item>Rose</item>
+        <item>Daffodil</item>
+        <item>Daisy</item>
+    </string-array>
+
+    <string name="world_domination_items_4_name">effect</string>
+    <string-array name="world_domination_items_4_effect">
+        <item>Fly</item>
+        <item>Invisibility</item>
+        <item>Poison</item>
+        <item>Charming</item>
+    </string-array>
+
+
     <!--    Answer-->
     <!--    Shannon Ware is 80.-->
     <!--    Janice Peterson is 60.-->

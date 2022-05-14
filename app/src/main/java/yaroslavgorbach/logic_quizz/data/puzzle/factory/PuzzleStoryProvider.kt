@@ -77,6 +77,9 @@ class PuzzleStoryProvider(private val context: Context) {
             PuzzleName.COMMUTER_PROBLEMS -> {
                 context.resources.getString(R.string.commuter_problems_story)
             }
+            PuzzleName.WORLD_DOMINATION -> {
+                context.resources.getString(R.string.world_domination_story)
+            }
         }
     }
 }

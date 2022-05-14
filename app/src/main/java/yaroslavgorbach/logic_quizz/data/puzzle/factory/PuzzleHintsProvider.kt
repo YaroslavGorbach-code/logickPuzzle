@@ -49,6 +49,10 @@ class PuzzleHintsProvider(private val context: Context) {
                 context.resources.getStringArray(R.array.moving_to_london_hints).toList()
                     .mapIndexed(::Hint)
             }
+            PuzzleName.WORLD_DOMINATION -> {
+                context.resources.getStringArray(R.array.world_domination_hints).toList()
+                    .mapIndexed(::Hint)
+            }
 
             PuzzleName.NIGHTY_NIGHT,
             PuzzleName.MORE_PAINTERS,
@@ -63,7 +67,6 @@ class PuzzleHintsProvider(private val context: Context) {
             PuzzleName.MISS_BROWN_MURDER,
             PuzzleName.COMMUTER_PROBLEMS,
             PuzzleName.KITTENS_AND_KIDS -> emptyList()
-
         }
     }
 }

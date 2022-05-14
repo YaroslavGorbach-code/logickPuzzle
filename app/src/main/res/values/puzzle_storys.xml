@@ -9,6 +9,19 @@
         The list was soaked and partially unreadable. Please help Monica determine the ordering information.
     </string>
 
+
+    <string name="world_domination_story">
+        Mad Scientist Sassi the Sane was hell bent on taking over the world.
+        Her latest plan was to mix together a number of plants to see what properties they contained.
+        She managed to lure four unsuspecting people (Jessica, Nicholas, Cassandra and Alfred) into
+        her secret cave. Once there she fed them each a type of tree
+        (gumtree, oak, elm, gardenia) and a type of flower (tulip, rose, daffodil and daisy).
+        Each tree/flower pairing created a different effect: one caused you to be able to fly;
+        another caused you to turn invisible; one potion was poisonous; and one made you instantly charming.
+        Can you determine which two plants were mixed together,
+        what effect it had, and which hapless victim was forced to try it?
+    </string>
+
     <string name="commuter_problems_story">
         Five friends (Men: Larry, Harry, and Jerry; Women: Carrie and Mary)
         each had trouble getting to work one day. Identify which friend
