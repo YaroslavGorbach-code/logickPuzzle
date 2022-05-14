@@ -8,6 +8,12 @@
         determine who their boyfriends are, when their birthdays are, and what they received.
     </string>
 
+    <string name="payday_story">
+        The new accountant is putting together payroll.
+        She is having a hard time remembering who does what in the office,
+        which makes it hard to print out the pay checks. This is what she does know.
+    </string>
+
     <string name="office_order_story">
         Monica\'s boss asked her to order some supplies for
         an important project. While organizing her desk,

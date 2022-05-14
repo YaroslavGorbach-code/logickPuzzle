@@ -31,6 +31,7 @@ enum class PuzzleName(val resId: Int) {
     WORLD_DOMINATION(R.string.world_domination_name),
     FORTUNE_TELLER(R.string.fortune_teller_name),
     LAST_YEAR_GIFTS(R.string.last_year_gifts_name),
+    PAYDAY(R.string.payday_name),
 
     //hard
     JAZZ_BANDS_SOLOS(R.string.jazz_band_solos_name),

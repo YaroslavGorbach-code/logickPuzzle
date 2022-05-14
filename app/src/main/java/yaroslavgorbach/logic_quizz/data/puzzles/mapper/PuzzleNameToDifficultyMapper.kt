@@ -33,6 +33,7 @@ class PuzzleNameToDifficultyMapper() {
             PuzzleName.WORLD_DOMINATION -> DifficultLevel.FOUR
             PuzzleName.FORTUNE_TELLER -> DifficultLevel.FOUR
             PuzzleName.LAST_YEAR_GIFTS -> DifficultLevel.FOUR
+            PuzzleName.PAYDAY -> DifficultLevel.FOUR
         }
     }
 }

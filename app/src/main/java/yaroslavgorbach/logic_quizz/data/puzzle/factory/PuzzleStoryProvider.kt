@@ -87,6 +87,9 @@ class PuzzleStoryProvider(private val context: Context) {
                 context.resources.getString(R.string.last_year_gifts_story)
 
             }
+            PuzzleName.PAYDAY -> {
+                context.resources.getString(R.string.payday_story)
+            }
         }
     }
 }

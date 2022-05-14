@@ -582,6 +582,36 @@ class CorrectPairsProvider(private val context: Context) {
                     Pair(friends[3], gifts[1]),
                 )
             }
+            PuzzleName.PAYDAY -> {
+                val friends =
+                    context.resources.getStringArray(R.array.payday_items_1_friends).toList()
+                val title =
+                    context.resources.getStringArray(R.array.payday_items_2_title)
+                        .toList()
+                val price =
+                    context.resources.getStringArray(R.array.payday_items_3_price)
+                val numbers =
+                    context.resources.getStringArray(R.array.payday_items_4_numbers)
+                        .toList()
+
+                listOf<Pair<String, String>>(
+                    Pair(friends[0], title[0]),
+                    Pair(friends[0], price[0]),
+                    Pair(friends[0], numbers[4]),
+                    Pair(friends[1], title[1]),
+                    Pair(friends[1], price[1]),
+                    Pair(friends[1], numbers[1]),
+                    Pair(friends[2], title[2]),
+                    Pair(friends[2], price[2]),
+                    Pair(friends[2], numbers[3]),
+                    Pair(friends[3], title[3]),
+                    Pair(friends[3], price[4]),
+                    Pair(friends[3], numbers[0]),
+                    Pair(friends[4], title[4]),
+                    Pair(friends[4], price[3]),
+                    Pair(friends[4], numbers[2]),
+                )
+            }
         }
     }
 }

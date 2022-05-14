@@ -25,6 +25,48 @@
 
 
 <!--    Answer-->
+<!--    Carla - Secretary - $500 - 4 yrs-->
+<!--    Jill - Admin. Asst. - $600 - 12 yrs-->
+<!--    Laurie - Catering Manager - $700 - 6 yrs-->
+<!--    Mike - General Manager - $900 - 15 yrs-->
+<!--    Warren - Sales Manager - $800 - 10 yrs-->
+    <string name="payday_items_1_name"></string>
+    <string-array name="payday_items_1_friends">
+        <item>Carla</item>
+        <item>Jill</item>
+        <item>Laurie</item>
+        <item>Mike</item>
+        <item>Warren</item>
+    </string-array>
+
+    <string name="payday_items_2_name">Title</string>
+    <string-array name="payday_items_2_title">
+        <item>Secretary</item>
+        <item>Admin</item>
+        <item>Catering</item>
+        <item>General</item>
+        <item>Sales Man</item>
+    </string-array>
+
+    <string name="payday_items_3_name">Price</string>
+    <string-array name="payday_items_3_price">
+        <item>$500</item>
+        <item>$600</item>
+        <item>$700</item>
+        <item>$800</item>
+        <item>$900</item>
+    </string-array>
+
+  <string name="payday_items_4_name">numbers</string>
+    <string-array name="payday_items_4_numbers">
+        <item>15</item>
+        <item>12</item>
+        <item>10</item>
+        <item>6</item>
+        <item>4</item>
+    </string-array>
+
+    <!--    Answer-->
 <!--    Allison's boyfriend is Dave, and he gave her the bracelet on August 24.-->
 <!--    Betty's boyfriend is Tom, and he gave her the earrings on February 18.-->
 <!--    Christine's boyfriend is Bill, and he gave her the diamond ring on October 30.-->
