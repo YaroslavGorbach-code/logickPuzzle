@@ -7,6 +7,22 @@
         <item>4. Belle likes apples..</item>
     </string-array>
 
+
+ <string-array name="secret_in_stone_clues">
+       <item>1. Neither the opal necklace nor the piece set with a moonstone is the patchouli-scented item (which wasn\'t created by Dr. Ruth).
+</item>
+       <item>2. Dr. Phil\'s piece of jewelry is neither the lavender-scented one nor the rose-scented item.
+</item>
+       <item>3. The amethyst (which wasn\'t placed in the ring altered by Dr. Zhivago) wasn\'t set in the pair of earrings Dr. Seuss altered.
+</item>
+       <item>4. Dr. Spock is neither the scientist who worked on the brooch nor the one who fashioned the necklace.
+</item>
+       <item>5. Dr. Seuss scented his jewelry with musk. A garnet was set in Dr. Ruth\'s piece.
+</item>
+       <item>6. The piece set with moonstone (which isn\'t rose-scented) isn\'t the pair of earrings.
+</item>
+    </string-array>
+
     <string-array name="on_the_canal_clues">
         <item>1. Bill\'s barge, which carried sand, was not named after a woman. His horse was not Star.</item>
         <item>2. Buck, who did not belong to Bob, pulled The Elizabeth.</item>

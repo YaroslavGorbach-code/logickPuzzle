@@ -1021,6 +1021,52 @@ class PuzzleTitlesFactory(private val context: Context) {
                     )
                 )
             }
+            PuzzleName.SECRET_IN_STONE -> {
+                return listOf(
+                    TableTitle(
+                        name = context.getString(R.string.secret_in_stone_items_1_name),
+                        items = context.resources.getStringArray(R.array.secret_in_stone_items_1_Scientist)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.secret_in_stone_items_4_name),
+                        items = context.resources.getStringArray(R.array.secret_in_stone_items_4_Stone)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.secret_in_stone_items_3_name),
+                        items = context.resources.getStringArray(R.array.secret_in_stone_items_3_Scent)
+                            .toList(),
+                        orderNumber = 3,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.secret_in_stone_items_2_name),
+                        items = context.resources.getStringArray(R.array.secret_in_stone_items_2_Jewelry)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.secret_in_stone_items_3_name),
+                        items = context.resources.getStringArray(R.array.secret_in_stone_items_3_Scent)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.secret_in_stone_items_4_name),
+                        items = context.resources.getStringArray(R.array.secret_in_stone_items_4_Stone)
+                            .toList(),
+                        orderNumber = 3,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    )
+                )
+            }
         }
         }
     }

@@ -671,6 +671,40 @@ class CorrectPairsProvider(private val context: Context) {
                     Pair(days[4], flours[0]),
                 )
             }
+            PuzzleName.SECRET_IN_STONE -> {
+                val scientist =
+                    context.resources.getStringArray(R.array.secret_in_stone_items_1_Scientist).toList()
+
+                val jewelry =
+                    context.resources.getStringArray(R.array.secret_in_stone_items_2_Jewelry)
+                        .toList()
+
+                val scent =
+                    context.resources.getStringArray(R.array.secret_in_stone_items_3_Scent)
+                        .toList()
+
+                val stone =
+                    context.resources.getStringArray(R.array.secret_in_stone_items_4_Stone)
+                        .toList()
+
+                listOf(
+                    Pair(scientist[0], jewelry[3]),
+                    Pair(scientist[0], scent[4]),
+                    Pair(scientist[0], stone[4]),
+                    Pair(scientist[1], jewelry[1]),
+                    Pair(scientist[1], scent[3]),
+                    Pair(scientist[1], stone[2]),
+                    Pair(scientist[2], jewelry[2]),
+                    Pair(scientist[2], scent[1]),
+                    Pair(scientist[2], stone[1]),
+                    Pair(scientist[3], jewelry[0]),
+                    Pair(scientist[3], scent[2]),
+                    Pair(scientist[3], stone[0]),
+                    Pair(scientist[4], jewelry[4]),
+                    Pair(scientist[4], scent[0]),
+                    Pair(scientist[4], stone[3]),
+                )
+            }
         }
     }
 }

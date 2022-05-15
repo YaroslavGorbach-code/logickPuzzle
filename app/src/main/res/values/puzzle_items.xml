@@ -23,8 +23,50 @@
         <item>Grape</item>
     </string-array>
 
-
 <!--    Answer-->
+<!--    Dr. Phil, necklace, sandalwood, opal-->
+<!--    Dr. Ruth, brooch, rose, garnet-->
+<!--    Dr. Seuss, earrings, musk, cat's eye-->
+<!--    Dr. Spock, bracelet, patchouli, amethyst-->
+<!--    Dr. Zhivago, ring, lavender, moonstone-->
+
+    <string name="secret_in_stone_items_1_name">Scientist</string>
+    <string-array name="secret_in_stone_items_1_Scientist">
+        <item>Dr. Phil</item>
+        <item>Dr. Ruth</item>
+        <item>Dr. Seuss</item>
+        <item>Dr. Spock</item>
+        <item>Dr. Zhivago</item>
+    </string-array>
+
+    <string name="secret_in_stone_items_2_name">Jewelry</string>
+    <string-array name="secret_in_stone_items_2_Jewelry">
+        <item>Bracelet</item>
+        <item>Brooch</item>
+        <item>Earrings</item>
+        <item>Necklace</item>
+        <item>Ring</item>
+    </string-array>
+
+    <string name="secret_in_stone_items_3_name">Scent</string>
+    <string-array name="secret_in_stone_items_3_Scent">
+        <item>Lavender</item>
+        <item>Musk</item>
+        <item>Patchouli</item>
+        <item>Rose</item>
+        <item>Sandalwood</item>
+    </string-array>
+
+    <string name="secret_in_stone_items_4_name">Stone</string>
+    <string-array name="secret_in_stone_items_4_Stone">
+        <item>Amethyst</item>
+        <item>Cat\'s Eye</item>
+        <item>Garnet</item>
+        <item>Moonstone</item>
+        <item>Opal</item>
+    </string-array>
+
+    <!--    Answer-->
 <!--    Bill owned the Blackbird, which carried sand and was pulled by Prince.-->
 <!--    Fred owned The Mermaid, which carried iron and was pulled by Itchy.-->
 <!--    George owned The Elizabeth, which carried gravel and was pulled by Buck.-->

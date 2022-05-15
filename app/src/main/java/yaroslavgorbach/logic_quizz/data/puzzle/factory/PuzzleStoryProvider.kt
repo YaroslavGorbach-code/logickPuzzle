@@ -95,6 +95,9 @@ class PuzzleStoryProvider(private val context: Context) {
             PuzzleName.ON_THE_CANAL -> {
                 context.resources.getString(R.string.on_the_canal_story)
             }
+            PuzzleName.SECRET_IN_STONE -> {
+                context.resources.getString(R.string.secret_in_stone_story)
+            }
         }
     }
 }

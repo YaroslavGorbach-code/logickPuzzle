@@ -95,6 +95,9 @@ class PuzzleCluesProvider(private val context: Context) {
             PuzzleName.ON_THE_CANAL -> {
                 context.resources.getStringArray(R.array.on_the_canal_clues).toList()
             }
+            PuzzleName.SECRET_IN_STONE -> {
+                context.resources.getStringArray(R.array.secret_in_stone_clues).toList()
+            }
         }
     }
 }

@@ -36,6 +36,7 @@ class PuzzleNameToDifficultyMapper() {
             PuzzleName.PAYDAY -> DifficultLevel.FOUR
             PuzzleName.FLOUR_POWER -> DifficultLevel.FOUR
             PuzzleName.ON_THE_CANAL -> DifficultLevel.FOUR
+            PuzzleName.SECRET_IN_STONE -> DifficultLevel.FIVE
         }
     }
 }
