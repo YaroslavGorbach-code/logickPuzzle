@@ -18,6 +18,17 @@
         <item>8. Warren has worked there for 10 years.</item>
     </string-array>
 
+    <string-array name="flour_power_clues">
+       <item>1. The cupcakes were served the day after the dessert made with wheat flour. The turnovers were made on Friday.
+</item>
+        <item>2. Kristen used rice flour to make Wednesday\'s dessert (which wasn\'t cupcakes).
+</item>
+        <item>3. The barley flour dessert was served later in the week than the cookies, which weren\'t Monday\'s dessert.
+</item>
+        <item>4. The brownies were made with oat flour.
+</item>
+    </string-array>
+
     <string-array name="last_year_gifts_clues">
         <item>1. The four girls are Diana, the girl who has a birthday in February,
            the girl who received the diamond ring, and Allison.</item>

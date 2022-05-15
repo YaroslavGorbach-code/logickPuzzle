@@ -23,6 +23,40 @@
         <item>Grape</item>
     </string-array>
 
+<!--    Answer-->
+<!--    Monday, beignets, wheat-->
+<!--    Tuesday, cupcakes, soy-->
+<!--    Wednesday, cookies, rice-->
+<!--    Thursday, brownies, oat-->
+<!--    Friday, turnovers, barley-->
+
+    <string name="flour_power_items_2_name">Desserts</string>
+    <string-array name="flour_power_items_2_desserts">
+        <item>beignets</item>
+        <item>brownies</item>
+        <item>cookies</item>
+        <item>cupcakes</item>
+        <item>turnovers</item>
+    </string-array>
+
+    <string name="flour_power_items_3_name">Flours</string>
+    <string-array name="flour_power_items_3_flours">
+        <item>barley</item>
+        <item>oat</item>
+        <item>rice</item>
+        <item>soy</item>
+        <item>wheat</item>
+    </string-array>
+
+    <string name="flour_power_items_1_name">Days</string>
+    <string-array name="flour_power_items_1_days">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+    </string-array>
+
 
 <!--    Answer-->
 <!--    Carla - Secretary - $500 - 4 yrs-->

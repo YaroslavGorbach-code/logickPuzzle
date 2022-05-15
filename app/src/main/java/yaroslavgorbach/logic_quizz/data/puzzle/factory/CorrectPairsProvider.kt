@@ -612,6 +612,29 @@ class CorrectPairsProvider(private val context: Context) {
                     Pair(friends[4], numbers[2]),
                 )
             }
+            PuzzleName.FLOUR_POWER -> {
+                val days =
+                    context.resources.getStringArray(R.array.flour_power_items_1_days).toList()
+                val deserts =
+                    context.resources.getStringArray(R.array.flour_power_items_2_desserts)
+                        .toList()
+                val  flours =
+                    context.resources.getStringArray(R.array.flour_power_items_3_flours)
+                        .toList()
+
+                listOf(
+                    Pair(days[0], deserts[0]),
+                    Pair(days[0], flours[4]),
+                    Pair(days[1], deserts[3]),
+                    Pair(days[1], flours[3]),
+                    Pair(days[2], deserts[2]),
+                    Pair(days[2], flours[2]),
+                    Pair(days[3], deserts[1]),
+                    Pair(days[3], flours[1]),
+                    Pair(days[4], deserts[4]),
+                    Pair(days[4], flours[0]),
+                )
+            }
         }
     }
 }

@@ -89,6 +89,9 @@ class PuzzleCluesProvider(private val context: Context) {
             PuzzleName.PAYDAY -> {
                 context.resources.getStringArray(R.array.payday_clues).toList()
             }
+            PuzzleName.FLOUR_POWER -> {
+                context.resources.getStringArray(R.array.flour_power_clues).toList()
+            }
         }
     }
 }

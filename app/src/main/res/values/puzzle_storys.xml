@@ -8,6 +8,17 @@
         determine who their boyfriends are, when their birthdays are, and what they received.
     </string>
 
+  <string name="flour_power_gifts_story">
+    While studying to be a nutritionist, Kristen learned
+      of the many health benefits of using alternate
+      types of flour — but convincing her family was another matter!
+      To win them over, Kristen prepared a different type of dessert
+      (including beignets) each weekday last week, each time using a different type of flour.
+      After tasting her delicacies, Kristen\'s family didn\'t complain any longer —
+      they were too busy eating! From the information provided, determine the type
+      of flour used to make dessert she served on each week day.
+    </string>
+
     <string name="payday_story">
         The new accountant is putting together payroll.
         She is having a hard time remembering who does what in the office,

@@ -943,6 +943,38 @@ class PuzzleTitlesFactory(private val context: Context) {
                     )
                 )
             }
+            PuzzleName.FLOUR_POWER -> {
+                return listOf(
+                    TableTitle(
+                        name = context.getString(R.string.flour_power_items_1_name),
+                        items = context.resources.getStringArray(R.array.flour_power_items_1_days)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.flour_power_items_3_name),
+                        items = context.resources.getStringArray(R.array.flour_power_items_3_flours)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.flour_power_items_2_name),
+                        items = context.resources.getStringArray(R.array.flour_power_items_2_desserts)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.flour_power_items_3_name),
+                        items = context.resources.getStringArray(R.array.flour_power_items_3_flours)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    )
+                )
+            }
         }
         }
     }
