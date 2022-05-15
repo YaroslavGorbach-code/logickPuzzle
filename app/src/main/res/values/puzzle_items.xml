@@ -23,6 +23,50 @@
         <item>Grape</item>
     </string-array>
 
+
+<!--    Answer-->
+<!--    Bill owned the Blackbird, which carried sand and was pulled by Prince.-->
+<!--    Fred owned The Mermaid, which carried iron and was pulled by Itchy.-->
+<!--    George owned The Elizabeth, which carried gravel and was pulled by Buck.-->
+<!--    Bob owned The English Rose, which was pulled by Star and carried coal.-->
+<!--    Ted owned The Marianna, which was pulled by Rosie and carried slate.-->
+
+    <string name="on_the_canal_items_1_name">owner</string>
+    <string-array name="on_the_canal_items_1_owner">
+        <item>Bill</item>
+        <item>Fred</item>
+        <item>George</item>
+        <item>Bob</item>
+        <item>Ted</item>
+    </string-array>
+
+    <string name="on_the_canal_items_2_name">barges</string>
+    <string-array name="on_the_canal_items_2_barges">
+        <item>Blackbird</item>
+        <item>Mermaid</item>
+        <item>Elizabeth</item>
+        <item>Marianna</item>
+        <item>English Rose</item>
+    </string-array>
+
+    <string name="on_the_canal_items_3_name">horse</string>
+    <string-array name="on_the_canal_items_3_horse">
+        <item>Rosie</item>
+        <item>Star</item>
+        <item>Buck</item>
+        <item>Prince</item>
+        <item>Itchy</item>
+    </string-array>
+
+    <string name="on_the_canal_items_4_name">cargo</string>
+    <string-array name="on_the_canal_items_4_cargo">
+        <item>coal</item>
+        <item>gravel</item>
+        <item>iron</item>
+        <item>sand</item>
+        <item>slate</item>
+    </string-array>
+
 <!--    Answer-->
 <!--    Monday, beignets, wheat-->
 <!--    Tuesday, cupcakes, soy-->
@@ -56,7 +100,6 @@
         <item>Thursday</item>
         <item>Friday</item>
     </string-array>
-
 
 <!--    Answer-->
 <!--    Carla - Secretary - $500 - 4 yrs-->

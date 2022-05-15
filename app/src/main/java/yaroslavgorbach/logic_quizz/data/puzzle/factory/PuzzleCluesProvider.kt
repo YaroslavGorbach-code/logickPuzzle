@@ -92,6 +92,9 @@ class PuzzleCluesProvider(private val context: Context) {
             PuzzleName.FLOUR_POWER -> {
                 context.resources.getStringArray(R.array.flour_power_clues).toList()
             }
+            PuzzleName.ON_THE_CANAL -> {
+                context.resources.getStringArray(R.array.on_the_canal_clues).toList()
+            }
         }
     }
 }

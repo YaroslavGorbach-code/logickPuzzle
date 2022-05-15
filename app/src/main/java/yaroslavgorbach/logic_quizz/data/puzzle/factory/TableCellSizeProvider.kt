@@ -34,6 +34,7 @@ class TableCellSizeProvider() {
             PuzzleName.LAST_YEAR_GIFTS -> 30
             PuzzleName.PAYDAY -> 30
             PuzzleName.FLOUR_POWER -> 30
+            PuzzleName.ON_THE_CANAL -> 25
         }
     }
 }

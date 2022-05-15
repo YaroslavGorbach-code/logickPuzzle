@@ -612,6 +612,42 @@ class CorrectPairsProvider(private val context: Context) {
                     Pair(friends[4], numbers[2]),
                 )
             }
+
+            PuzzleName.ON_THE_CANAL -> {
+                val owner =
+                    context.resources.getStringArray(R.array.on_the_canal_items_1_owner).toList()
+
+                val barges =
+                    context.resources.getStringArray(R.array.on_the_canal_items_2_barges)
+                        .toList()
+
+                val cargo =
+                    context.resources.getStringArray(R.array.on_the_canal_items_4_cargo)
+                        .toList()
+
+                val horse =
+                    context.resources.getStringArray(R.array.on_the_canal_items_3_horse)
+                        .toList()
+
+                listOf(
+                    Pair(owner[0], barges[0]),
+                    Pair(owner[0], cargo[3]),
+                    Pair(owner[0], horse[3]),
+                    Pair(owner[1], barges[1]),
+                    Pair(owner[1], cargo[2]),
+                    Pair(owner[1], horse[4]),
+                    Pair(owner[2], barges[2]),
+                    Pair(owner[2], cargo[1]),
+                    Pair(owner[2], horse[2]),
+                    Pair(owner[3], barges[4]),
+                    Pair(owner[3], cargo[0]),
+                    Pair(owner[3], horse[1]),
+                    Pair(owner[4], barges[3]),
+                    Pair(owner[4], cargo[4]),
+                    Pair(owner[4], horse[0]),
+                )
+            }
+
             PuzzleName.FLOUR_POWER -> {
                 val days =
                     context.resources.getStringArray(R.array.flour_power_items_1_days).toList()

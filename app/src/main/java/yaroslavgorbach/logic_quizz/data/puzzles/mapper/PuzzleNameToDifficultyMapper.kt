@@ -35,6 +35,7 @@ class PuzzleNameToDifficultyMapper() {
             PuzzleName.LAST_YEAR_GIFTS -> DifficultLevel.FOUR
             PuzzleName.PAYDAY -> DifficultLevel.FOUR
             PuzzleName.FLOUR_POWER -> DifficultLevel.FOUR
+            PuzzleName.ON_THE_CANAL -> DifficultLevel.FOUR
         }
     }
 }

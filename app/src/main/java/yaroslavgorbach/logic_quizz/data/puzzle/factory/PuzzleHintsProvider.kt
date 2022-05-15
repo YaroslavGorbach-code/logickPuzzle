@@ -73,6 +73,7 @@ class PuzzleHintsProvider(private val context: Context) {
             PuzzleName.FORTUNE_TELLER,
             PuzzleName.PAYDAY,
             PuzzleName.FLOUR_POWER,
+            PuzzleName.ON_THE_CANAL,
             PuzzleName.KITTENS_AND_KIDS -> emptyList()
         }
     }

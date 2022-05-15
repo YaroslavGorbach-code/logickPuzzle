@@ -33,6 +33,7 @@ enum class PuzzleName(val resId: Int) {
     LAST_YEAR_GIFTS(R.string.last_year_gifts_name),
     PAYDAY(R.string.payday_name),
     FLOUR_POWER(R.string.flour_power_name),
+    ON_THE_CANAL(R.string.on_the_canal_name),
 
     //hard
     JAZZ_BANDS_SOLOS(R.string.jazz_band_solos_name),

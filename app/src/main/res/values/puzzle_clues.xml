@@ -7,15 +7,13 @@
         <item>4. Belle likes apples..</item>
     </string-array>
 
-    <string-array name="payday_clues">
-        <item>1. The secretary makes the least amount of money, and has worked there the shortest amount of time.</item>
-        <item>2. Jill makes less than the catering manager, but has worked there longer than everyone but the general manager.</item>
-        <item>3. The Sales Manager position pays $800.00.</item>
-        <item>4. The Administrative Assistant has worked there for 12 years.</item>
-        <item>5. The General Manager makes the most money because he has the highest position with the most experience.</item>
-        <item>6. Carla makes the least amount of money.</item>
-        <item>7. Laurie is the catering manager.</item>
-        <item>8. Warren has worked there for 10 years.</item>
+    <string-array name="on_the_canal_clues">
+        <item>1. Bill\'s barge, which carried sand, was not named after a woman. His horse was not Star.</item>
+        <item>2. Buck, who did not belong to Bob, pulled The Elizabeth.</item>
+        <item>3. Fred owned The Mermaid.</item>
+        <item>4. Ted\'s horse was Rosie but his barge was not The English Rose (which carried coal).</item>
+        <item>5. George\'s barge did not carry slate.</item>
+        <item>6. Itchy pulled the barge carrying Iron.</item>
     </string-array>
 
     <string-array name="flour_power_clues">
@@ -28,6 +26,18 @@
         <item>4. The brownies were made with oat flour.
 </item>
     </string-array>
+
+    <string-array name="payday_clues">
+        <item>1. The secretary makes the least amount of money, and has worked there the shortest amount of time.</item>
+        <item>2. Jill makes less than the catering manager, but has worked there longer than everyone but the general manager.</item>
+        <item>3. The Sales Manager position pays $800.00.</item>
+        <item>4. The Administrative Assistant has worked there for 12 years.</item>
+        <item>5. The General Manager makes the most money because he has the highest position with the most experience.</item>
+        <item>6. Carla makes the least amount of money.</item>
+        <item>7. Laurie is the catering manager.</item>
+        <item>8. Warren has worked there for 10 years.</item>
+    </string-array>
+
 
     <string-array name="last_year_gifts_clues">
         <item>1. The four girls are Diana, the girl who has a birthday in February,
