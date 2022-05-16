@@ -39,6 +39,7 @@ class TableCellSizeProvider() {
             PuzzleName.BOUND_FOR_CANADA -> 30
             PuzzleName.VANISHING_ACTORS -> 30
             PuzzleName.APPLE_PICKERS -> 30
+            PuzzleName.LATE_AT_THE_LAKE -> 30
         }
     }
 }

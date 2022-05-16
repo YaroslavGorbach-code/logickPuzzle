@@ -40,6 +40,7 @@ class PuzzleNameToDifficultyMapper() {
             PuzzleName.BOUND_FOR_CANADA -> DifficultLevel.FIVE
             PuzzleName.VANISHING_ACTORS -> DifficultLevel.FIVE
             PuzzleName.APPLE_PICKERS -> DifficultLevel.FIVE
+            PuzzleName.LATE_AT_THE_LAKE -> DifficultLevel.FIVE
         }
     }
 }

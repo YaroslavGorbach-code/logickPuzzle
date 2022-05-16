@@ -7,6 +7,17 @@
         <item>4. Belle likes apples.</item>
     </string-array>
 
+    <string-array name="late_at_the_lake_clues">
+       <item>1. The friend who brought cake arrived at the lake seven minutes
+           after the health-conscious girl who brought apples.</item>
+       <item>2. Don did not bring lettuce.</item>
+       <item>3. Kay arrived more than 10 minutes before the ham did, and immediately after the chips.</item>
+       <item>4. Paul got to Bear Lake seven minutes after Don, but more than ten minutes before the crackers.</item>
+       <item>5. The friend who went to the wrong spot brought cheese and arrived seven minutes ahead of the cake.</item>
+       <item>6. Becky was seven minutes behind the tomatoes.</item>
+       <item>7. Gary had a flat tire and arrived later than the chips.</item>
+    </string-array>
+
     <string-array name="apple_pickers_clues">
     <item>1. The recipes, in no particular order, were the recipe using cinnamon,
         the recipe using three apples, the apple tarts, the recipe using Macoun apples, and the apple crisp.

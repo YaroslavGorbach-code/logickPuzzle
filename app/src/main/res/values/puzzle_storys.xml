@@ -2,6 +2,14 @@
 <resources>
     <string name="training_puzzle_story">Follow the clues to determine which fruit does the oldest girl like.</string>
 
+    <string name="late_at_the_lake_story">
+        One spring day five friends decided to go to Bear Lake after school.
+        There were two girls named Becky and Kay, and three boys named Don,
+        Gary, and Paul. Each friend was to bring something to go in a sandwich
+        and some kind of snack. The plan was to meet at 3:30, but alas all of
+        them were late. From the clues given determine what time each friend
+        actually arrived and what food they brought.
+    </string>
 
     <string name="apple_pickers_story">
         Since Jeremy and his friends now had more apples

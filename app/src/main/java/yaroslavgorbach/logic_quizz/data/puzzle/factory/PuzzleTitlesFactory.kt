@@ -1205,6 +1205,52 @@ class PuzzleTitlesFactory(private val context: Context) {
                     )
                 )
             }
+            PuzzleName.LATE_AT_THE_LAKE -> {
+                return listOf(
+                    TableTitle(
+                        name = context.getString(R.string.late_at_the_lake_items_1_name),
+                        items = context.resources.getStringArray(R.array.late_at_the_lake_items_1_Name)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.late_at_the_lake_items_4_name),
+                        items = context.resources.getStringArray(R.array.late_at_the_lake_items_4_Food)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.late_at_the_lake_items_3_name),
+                        items = context.resources.getStringArray(R.array.late_at_the_lake_items_3_Thing)
+                            .toList(),
+                        orderNumber = 3,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.late_at_the_lake_items_2_name),
+                        items = context.resources.getStringArray(R.array.late_at_the_lake_items_2_time)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.late_at_the_lake_items_3_name),
+                        items = context.resources.getStringArray(R.array.late_at_the_lake_items_3_Thing)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.late_at_the_lake_items_4_name),
+                        items = context.resources.getStringArray(R.array.late_at_the_lake_items_4_Food)
+                            .toList(),
+                        orderNumber = 3,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    )
+                )
+            }
         }
         }
     }

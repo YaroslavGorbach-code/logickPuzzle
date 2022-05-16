@@ -23,7 +23,51 @@
         <item>Grape</item>
     </string-array>
 
+
 <!--    Answer-->
+<!--    Becky arrived at 4:13 with ham and crackers.-->
+<!--    Don arrived at 3:45 with turkey and doughnuts.-->
+<!--    Gary arrived at 4:06 with tomatoes and cake.-->
+<!--    Kay arrived at 3:59 with cheese and apples.-->
+<!--    Paul arrived at 3:52 with lettuce and chips.-->
+    <string name="late_at_the_lake_items_1_name">Name</string>
+    <string-array name="late_at_the_lake_items_1_Name">
+        <item>Becky</item>
+        <item>Don</item>
+        <item>Gary</item>
+        <item>Kay</item>
+        <item>Paul</item>
+    </string-array>
+
+    <string name="late_at_the_lake_items_2_name">Time</string>
+    <string-array name="late_at_the_lake_items_2_time">
+        <item>3:45</item>
+        <item>3:52</item>
+        <item>3:59</item>
+        <item>4:06</item>
+        <item>4:13</item>
+    </string-array>
+
+    <string name="late_at_the_lake_items_3_name">Thing</string>
+    <string-array name="late_at_the_lake_items_3_Thing">
+        <item>Tomatoes</item>
+        <item>Lettuce</item>
+        <item>Ham</item>
+        <item>Turkey</item>
+        <item>Cheese</item>
+    </string-array>
+
+    <string name="late_at_the_lake_items_4_name">Food</string>
+    <string-array name="late_at_the_lake_items_4_Food">
+        <item>Doughnuts</item>
+        <item>Crackers</item>
+        <item>Cake</item>
+        <item>Chips</item>
+        <item>Apples</item>
+    </string-array>
+
+
+    <!--    Answer-->
 <!--    Apple Bread-Macoun-walnuts-2-->
 <!--    Apple Crisp-Red Delicious-nutmeg-5-->
 <!--    Apple Muffins-Cortland-pecans-3-->
@@ -64,7 +108,6 @@
         <item>Nutmeg</item>
         <item>Cinnamon</item>
     </string-array>
-
 
 
     <!--    Answer-->
