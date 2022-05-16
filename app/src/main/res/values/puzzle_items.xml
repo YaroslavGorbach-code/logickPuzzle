@@ -24,6 +24,44 @@
     </string-array>
 
 <!--    Answer-->
+<!--    Wednesday, Reese DeWitt, Nick, stage fright-->
+<!--    Thursday, Blair Diaz, George, laryngitis-->
+<!--    Friday, Devon Rochan, Martha, jury duty-->
+<!--    Saturday, Kerry Peeples, Honey, filming movie-->
+    <string name="vanishing_actors_items_2_name">Actors</string>
+    <string-array name="vanishing_actors_items_2_Actors">
+       <item>Diaz</item>
+       <item>Rochan</item>
+       <item>Peeples</item>
+       <item>DeWitt</item>
+    </string-array>
+
+    <string name="vanishing_actors_items_1_name">Days</string>
+    <string-array name="vanishing_actors_items_1_Days">
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+    </string-array>
+
+    <string name="vanishing_actors_items_4_name">Reason</string>
+    <string-array name="vanishing_actors_items_4_Reason">
+      <item>Filming</item>
+      <item>jury duty</item>
+      <item>laryngitis</item>
+      <item>stage fright</item>
+    </string-array>
+
+    <string name="vanishing_actors_items_3_name">Role</string>
+    <string-array name="vanishing_actors_items_3_Role">
+        <item>George</item>
+        <item>Honey</item>
+        <item>Martha</item>
+        <item>Nick</item>
+    </string-array>
+
+
+<!--    Answer-->
 <!--    Dr. Phil, necklace, sandalwood, opal-->
 <!--    Dr. Ruth, brooch, rose, garnet-->
 <!--    Dr. Seuss, earrings, musk, cat's eye-->

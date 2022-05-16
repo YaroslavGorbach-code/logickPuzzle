@@ -1113,6 +1113,52 @@ class PuzzleTitlesFactory(private val context: Context) {
                     )
                 )
             }
+            PuzzleName.VANISHING_ACTORS -> {
+                return listOf(
+                    TableTitle(
+                        name = context.getString(R.string.vanishing_actors_items_1_name),
+                        items = context.resources.getStringArray(R.array.vanishing_actors_items_1_Days)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.vanishing_actors_items_4_name),
+                        items = context.resources.getStringArray(R.array.vanishing_actors_items_4_Reason)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.vanishing_actors_items_3_name),
+                        items = context.resources.getStringArray(R.array.vanishing_actors_items_3_Role)
+                            .toList(),
+                        orderNumber = 3,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.vanishing_actors_items_2_name),
+                        items = context.resources.getStringArray(R.array.vanishing_actors_items_2_Actors)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.vanishing_actors_items_3_name),
+                        items = context.resources.getStringArray(R.array.vanishing_actors_items_3_Role)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.vanishing_actors_items_4_name),
+                        items = context.resources.getStringArray(R.array.vanishing_actors_items_4_Reason)
+                            .toList(),
+                        orderNumber = 3,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    )
+                )
+            }
         }
         }
     }

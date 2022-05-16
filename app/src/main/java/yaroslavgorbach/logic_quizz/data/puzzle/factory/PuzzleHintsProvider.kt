@@ -76,6 +76,7 @@ class PuzzleHintsProvider(private val context: Context) {
             PuzzleName.ON_THE_CANAL,
             PuzzleName.SECRET_IN_STONE,
             PuzzleName.BOUND_FOR_CANADA,
+            PuzzleName.VANISHING_ACTORS,
             PuzzleName.KITTENS_AND_KIDS -> emptyList()
         }
     }

@@ -101,6 +101,9 @@ class PuzzleCluesProvider(private val context: Context) {
             PuzzleName.BOUND_FOR_CANADA -> {
                 context.resources.getStringArray(R.array.bound_for_canada_clues).toList()
             }
+            PuzzleName.VANISHING_ACTORS -> {
+                context.resources.getStringArray(R.array.vanishing_actors_clues).toList()
+            }
         }
     }
 }

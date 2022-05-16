@@ -739,6 +739,37 @@ class CorrectPairsProvider(private val context: Context) {
                     Pair(people[4], number[4]),
                 )
             }
+            PuzzleName.VANISHING_ACTORS -> {
+                val days =
+                    context.resources.getStringArray(R.array.vanishing_actors_items_1_Days).toList()
+
+                val actors =
+                    context.resources.getStringArray(R.array.vanishing_actors_items_2_Actors)
+                        .toList()
+
+                val role =
+                    context.resources.getStringArray(R.array.vanishing_actors_items_3_Role)
+                        .toList()
+
+                val reason =
+                    context.resources.getStringArray(R.array.vanishing_actors_items_4_Reason)
+                        .toList()
+
+                listOf(
+                    Pair(days[0], actors[3]),
+                    Pair(days[0], role[3]),
+                    Pair(days[0], reason[3]),
+                    Pair(days[1], actors[0]),
+                    Pair(days[1], role[0]),
+                    Pair(days[1], reason[2]),
+                    Pair(days[2], actors[1]),
+                    Pair(days[2], role[2]),
+                    Pair(days[2], reason[1]),
+                    Pair(days[3], actors[2]),
+                    Pair(days[3], role[1]),
+                    Pair(days[3], reason[0]),
+                )
+            }
         }
     }
 }

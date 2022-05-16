@@ -2,7 +2,26 @@
 <resources>
     <string name="training_puzzle_story">Follow the clues to determine which fruit does the oldest girl like.</string>
 
-    <string name="last_year_gifts_story">
+    <string name="vanishing_actors_story">The highly anticipated revival of Edward
+        Albee\'s "Who\'s Afraid of Virgina Woolf?"
+        began preview performances last week. Although
+        the show is generating a lot of buzz because of its
+        hot young cast of stars, the production has already
+        encountered some difficulties. In fact, in each of
+        the first four performances, each of which was held
+        on a different evening last week, a different cast
+        member was unable to appear for a different reason,
+        and his or her understudy had to perform that part for
+        the evening. Fortunately, the talented understudies
+        quickly won over the disappointed audiences, and were
+        greeted with ecstatic cheers at the curtain call. From
+        the information provided, determine the evening on which
+        each actor was unable to appear, the role he or she plays,
+        the reason for his or her absence.
+        (Note: All names can apply to either men or women.)
+    </string>
+
+  <string name="last_year_gifts_story">
         Four friends were talking about what their boyfriends gave
         them as a birthday present last year. Using the clues below,
         determine who their boyfriends are, when their birthdays are, and what they received.

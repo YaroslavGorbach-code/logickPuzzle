@@ -38,6 +38,7 @@ class PuzzleNameToDifficultyMapper() {
             PuzzleName.ON_THE_CANAL -> DifficultLevel.FOUR
             PuzzleName.SECRET_IN_STONE -> DifficultLevel.FIVE
             PuzzleName.BOUND_FOR_CANADA -> DifficultLevel.FIVE
+            PuzzleName.VANISHING_ACTORS -> DifficultLevel.FIVE
         }
     }
 }

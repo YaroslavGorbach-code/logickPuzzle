@@ -7,6 +7,19 @@
         <item>4. Belle likes apples.</item>
     </string-array>
 
+    <string-array name="vanishing_actors_clues">
+        <item>1. A cast member suffered from laryngitis at some point later in the week than an understudy took over the role of Nick.
+</item>
+        <item>2. The actor playing George was absent exactly two days before the one who was away filming a movie.
+</item>
+        <item>3. Blair Diaz missed a performance at some point earlier in the week than the person portraying Martha (who wasn\'t off filming a movie).
+</item>
+        <item>4. Devon Rochan wasn\'t the last actor to miss a performance.
+</item>
+        <item>5. Reese DeWitt was replaced by an understudy exactly two days before an actor serving jury duty was sequestered overnight and couldn\'t perform.
+</item>
+    </string-array>
+
    <string-array name="bound_for_canada_clues">
        <item>1. Flight 444 departs at some point before flight 303 (which is Louis\' flight).
 </item>

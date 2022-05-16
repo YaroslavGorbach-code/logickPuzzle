@@ -101,6 +101,9 @@ class PuzzleStoryProvider(private val context: Context) {
             PuzzleName.BOUND_FOR_CANADA -> {
                 context.resources.getString(R.string.bound_for_canada_story)
             }
+            PuzzleName.VANISHING_ACTORS -> {
+                context.resources.getString(R.string.vanishing_actors_story)
+            }
         }
     }
 }
