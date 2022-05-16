@@ -36,6 +36,7 @@ class TableCellSizeProvider() {
             PuzzleName.FLOUR_POWER -> 30
             PuzzleName.ON_THE_CANAL -> 25
             PuzzleName.SECRET_IN_STONE -> 30
+            PuzzleName.BOUND_FOR_CANADA -> 30
         }
     }
 }

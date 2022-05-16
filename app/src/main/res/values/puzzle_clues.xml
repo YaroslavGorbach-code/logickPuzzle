@@ -4,7 +4,20 @@
         <item>1. Amy likes bananas.</item>
         <item>2. Belle isn\'t 10.</item>
         <item>3. The 9 years old girl likes grapes.</item>
-        <item>4. Belle likes apples..</item>
+        <item>4. Belle likes apples.</item>
+    </string-array>
+
+   <string-array name="bound_for_canada_clues">
+       <item>1. Flight 444 departs at some point before flight 303 (which is Louis\' flight).
+</item>
+       <item>2. Franz\'s flight, which is going to Montreal, does not leave at either 10:00 a.m. or 2:00 p.m.
+</item>
+       <item>3. Flight 707 is destined for Quebec City. The flight to Vancouver (which isn\'t Heather\'s flight) leaves at precisely 11:00 a.m.
+</item>
+       <item>4. Sylvester\'s flight leaves at some point before flight 222 (which isn\'t Franz\'s flight).
+</item>
+       <item>5. Flight 505 is Maple Leaf Air\'s last one for the day. The flight to Toronto leaves at exactly 1:00 p.m.
+</item>
     </string-array>
 
 

@@ -66,6 +66,48 @@
         <item>Opal</item>
     </string-array>
 
+<!--    Answer-->
+<!--    Franz, Montreal, 12:00 pm, 444-->
+<!--    Heather, Halifax, 2:00 pm, 505-->
+<!--    Louis, Toronto, 1:00 pm, 303-->
+<!--    Roberta, Vancouver, 11:00 am, 222-->
+<!--    Sylvester, Quebec, 10:00 am, 707-->
+    <string name="bound_for_canada_items_1_name">People</string>
+    <string-array name="bound_for_canada_items_1_people">
+        <item>Franz</item>
+        <item>Heather</item>
+        <item>Louis</item>
+        <item>Roberta</item>
+        <item>Sylvester</item>
+    </string-array>
+
+    <string name="bound_for_canada_items_2_name">City</string>
+    <string-array name="bound_for_canada_items_2_city">
+        <item>Montreal</item>
+        <item>Halifax</item>
+        <item>Toronto</item>
+        <item>Vancouver</item>
+        <item>Quebec</item>
+    </string-array>
+
+    <string name="bound_for_canada_items_3_name">Time</string>
+    <string-array name="bound_for_canada_items_3_Time">
+        <item>12:00 pm</item>
+        <item>2:00 pm</item>
+        <item>1:00 pm</item>
+        <item>11:00 am</item>
+        <item>10:00 am</item>
+    </string-array>
+
+    <string name="bound_for_canada_items_4_name">Number</string>
+    <string-array name="bound_for_canada_items_4_Number">
+        <item>444</item>
+        <item>505</item>
+        <item>303</item>
+        <item>222</item>
+        <item>707</item>
+    </string-array>
+
     <!--    Answer-->
 <!--    Bill owned the Blackbird, which carried sand and was pulled by Prince.-->
 <!--    Fred owned The Mermaid, which carried iron and was pulled by Itchy.-->

@@ -98,6 +98,9 @@ class PuzzleCluesProvider(private val context: Context) {
             PuzzleName.SECRET_IN_STONE -> {
                 context.resources.getStringArray(R.array.secret_in_stone_clues).toList()
             }
+            PuzzleName.BOUND_FOR_CANADA -> {
+                context.resources.getStringArray(R.array.bound_for_canada_clues).toList()
+            }
         }
     }
 }

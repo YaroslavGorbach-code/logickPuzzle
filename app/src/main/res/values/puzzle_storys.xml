@@ -8,6 +8,21 @@
         determine who their boyfriends are, when their birthdays are, and what they received.
     </string>
 
+    <string name="bound_for_canada_story">
+        Maple Leaf Air has a busy schedule today.
+        Each of five nonstop flights, no two of
+        which have the same number (222, 303, 444, 505, or 707),
+        is departing at a different time from Hartford\'s Bradley
+        International Airport. Each of five different people,
+        including Roberta, is departing on a different one
+        of the five flights, each of which is bound for
+        a different Canadian city (including Halifax).
+        From the information provided, determine the
+        Canadian destination of each traveler, the departure
+        time (10:00 am, 11:00 am, 12:00 pm, 1:00 pm, or 2:00 pm)
+        of each flight, and the number of each flight.
+    </string>
+
     <string name="secret_in_stone_story">
        After months of hard work, five scientists have eliminated the need
         for perfume by perfecting a procedure for creating scented jewelry!

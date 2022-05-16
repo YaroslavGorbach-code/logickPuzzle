@@ -37,6 +37,7 @@ class PuzzleNameToDifficultyMapper() {
             PuzzleName.FLOUR_POWER -> DifficultLevel.FOUR
             PuzzleName.ON_THE_CANAL -> DifficultLevel.FOUR
             PuzzleName.SECRET_IN_STONE -> DifficultLevel.FIVE
+            PuzzleName.BOUND_FOR_CANADA -> DifficultLevel.FIVE
         }
     }
 }

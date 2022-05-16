@@ -38,6 +38,7 @@ enum class PuzzleName(val resId: Int) {
     //hard
     JAZZ_BANDS_SOLOS(R.string.jazz_band_solos_name),
     SECRET_IN_STONE(R.string.secret_in_stone_name),
+    BOUND_FOR_CANADA(R.string.bound_for_canada_name),
 }
 
 fun PuzzleName.findNext(): PuzzleName? {

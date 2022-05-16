@@ -705,6 +705,40 @@ class CorrectPairsProvider(private val context: Context) {
                     Pair(scientist[4], stone[3]),
                 )
             }
+            PuzzleName.BOUND_FOR_CANADA -> {
+                val people =
+                    context.resources.getStringArray(R.array.bound_for_canada_items_1_people).toList()
+
+                val city =
+                    context.resources.getStringArray(R.array.bound_for_canada_items_2_city)
+                        .toList()
+
+                val time =
+                    context.resources.getStringArray(R.array.bound_for_canada_items_3_Time)
+                        .toList()
+
+                val number =
+                    context.resources.getStringArray(R.array.bound_for_canada_items_4_Number)
+                        .toList()
+
+                listOf(
+                    Pair(people[0], city[0]),
+                    Pair(people[0], time[0]),
+                    Pair(people[0], number[0]),
+                    Pair(people[1], city[1]),
+                    Pair(people[1], time[1]),
+                    Pair(people[1], number[1]),
+                    Pair(people[2], city[2]),
+                    Pair(people[2], time[2]),
+                    Pair(people[2], number[2]),
+                    Pair(people[3], city[3]),
+                    Pair(people[3], time[3]),
+                    Pair(people[3], number[3]),
+                    Pair(people[4], city[4]),
+                    Pair(people[4], time[4]),
+                    Pair(people[4], number[4]),
+                )
+            }
         }
     }
 }

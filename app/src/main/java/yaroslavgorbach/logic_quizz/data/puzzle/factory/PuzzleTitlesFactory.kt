@@ -1067,6 +1067,52 @@ class PuzzleTitlesFactory(private val context: Context) {
                     )
                 )
             }
+            PuzzleName.BOUND_FOR_CANADA -> {
+                return listOf(
+                    TableTitle(
+                        name = context.getString(R.string.bound_for_canada_items_1_name),
+                        items = context.resources.getStringArray(R.array.bound_for_canada_items_1_people)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.bound_for_canada_items_4_name),
+                        items = context.resources.getStringArray(R.array.bound_for_canada_items_4_Number)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.bound_for_canada_items_3_name),
+                        items = context.resources.getStringArray(R.array.bound_for_canada_items_3_Time)
+                            .toList(),
+                        orderNumber = 3,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.bound_for_canada_items_2_name),
+                        items = context.resources.getStringArray(R.array.bound_for_canada_items_2_city)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.bound_for_canada_items_3_name),
+                        items = context.resources.getStringArray(R.array.bound_for_canada_items_3_Time)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.bound_for_canada_items_4_name),
+                        items = context.resources.getStringArray(R.array.bound_for_canada_items_4_Number)
+                            .toList(),
+                        orderNumber = 3,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    )
+                )
+            }
         }
         }
     }

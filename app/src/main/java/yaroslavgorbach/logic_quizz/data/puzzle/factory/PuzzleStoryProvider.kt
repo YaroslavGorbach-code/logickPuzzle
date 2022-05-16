@@ -98,6 +98,9 @@ class PuzzleStoryProvider(private val context: Context) {
             PuzzleName.SECRET_IN_STONE -> {
                 context.resources.getString(R.string.secret_in_stone_story)
             }
+            PuzzleName.BOUND_FOR_CANADA -> {
+                context.resources.getString(R.string.bound_for_canada_story)
+            }
         }
     }
 }
