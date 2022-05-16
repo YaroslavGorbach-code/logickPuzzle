@@ -2,6 +2,20 @@
 <resources>
     <string name="training_puzzle_story">Follow the clues to determine which fruit does the oldest girl like.</string>
 
+
+    <string name="apple_pickers_story">
+        Since Jeremy and his friends now had more apples
+        than they could possibly eat, they needed to find
+        ways to use them up. So each friend hit the cookbooks
+        and started busily baking (it\'s remarkable how many yummy
+        recipes there are for apples!). As it happens, each friend
+        did such a good job making one recipe, that it was forever
+        after their specialty. Fortunately for them, each one had a
+        different specialty. Determine the name of each friend\'s special recipe,
+        the type of apples and special ingredient each dish used,
+        and the number of apples each recipe used.
+    </string>
+
     <string name="vanishing_actors_story">The highly anticipated revival of Edward
         Albee\'s "Who\'s Afraid of Virgina Woolf?"
         began preview performances last week. Although

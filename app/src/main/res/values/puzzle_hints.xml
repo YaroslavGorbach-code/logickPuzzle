@@ -10,6 +10,10 @@
         <item>I wouldn\'t want to go to the park on a date, it\'d be cold and it might be wet</item>
     </string-array>
 
+    <string-array name="apple_pickers_hints">
+        <item>There were four Empire apples used with the raisins.</item>
+    </string-array>
+
     <string-array name="last_year_gifts_hints">
         <item>The diamond ring was given when one of the men proposed.</item>
     </string-array>

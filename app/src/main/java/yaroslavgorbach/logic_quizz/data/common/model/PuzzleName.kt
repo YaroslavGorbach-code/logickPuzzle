@@ -40,6 +40,7 @@ enum class PuzzleName(val resId: Int) {
     SECRET_IN_STONE(R.string.secret_in_stone_name),
     BOUND_FOR_CANADA(R.string.bound_for_canada_name),
     VANISHING_ACTORS(R.string.vanishing_actors_name),
+    APPLE_PICKERS(R.string.apple_pickers_name),
 }
 
 fun PuzzleName.findNext(): PuzzleName? {

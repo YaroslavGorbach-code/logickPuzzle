@@ -104,6 +104,9 @@ class PuzzleCluesProvider(private val context: Context) {
             PuzzleName.VANISHING_ACTORS -> {
                 context.resources.getStringArray(R.array.vanishing_actors_clues).toList()
             }
+            PuzzleName.APPLE_PICKERS -> {
+                context.resources.getStringArray(R.array.apple_pickers_clues).toList()
+            }
         }
     }
 }

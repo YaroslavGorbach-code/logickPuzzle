@@ -104,6 +104,9 @@ class PuzzleStoryProvider(private val context: Context) {
             PuzzleName.VANISHING_ACTORS -> {
                 context.resources.getString(R.string.vanishing_actors_story)
             }
+            PuzzleName.APPLE_PICKERS -> {
+                context.resources.getString(R.string.apple_pickers_story)
+            }
         }
     }
 }

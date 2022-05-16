@@ -7,6 +7,26 @@
         <item>4. Belle likes apples.</item>
     </string-array>
 
+    <string-array name="apple_pickers_clues">
+    <item>1. The recipes, in no particular order, were the recipe using cinnamon,
+        the recipe using three apples, the apple tarts, the recipe using Macoun apples, and the apple crisp.
+        </item>
+    <item>2. The recipe using the Cortland apples used one apple more than the
+        apple bread but one apple less than the recipe using the raisins.
+    </item>
+    <item>3. The muffins used one more apple than the recipe with the
+        walnuts but two less apples than the recipe using the Red Delicious apples.
+</item>
+    <item>4. The nutmeg was used in the apple crisp,
+        which used more than two apples but less than the apple pie used.
+        The apple pie used more apples than the treat with the raisins.
+</item>
+    <item>5. The apple muffins, which weren\'t made with Macoun apples, used pecans.
+</item>
+    <item>6. The Empire apples weren\'t used in the apple crisp. The recipe using the McIntosh apples used the most apples.
+</item>
+    </string-array>
+
     <string-array name="vanishing_actors_clues">
         <item>1. A cast member suffered from laryngitis at some point later in the week than an understudy took over the role of Nick.
 </item>

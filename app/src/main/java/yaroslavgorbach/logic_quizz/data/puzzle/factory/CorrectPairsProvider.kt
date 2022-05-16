@@ -770,6 +770,40 @@ class CorrectPairsProvider(private val context: Context) {
                     Pair(days[3], reason[0]),
                 )
             }
+            PuzzleName.APPLE_PICKERS -> {
+                val names =
+                    context.resources.getStringArray(R.array.apple_pickers_items_1_names).toList()
+
+                val receipts =
+                    context.resources.getStringArray(R.array.apple_pickers_items_2_Receipts)
+                        .toList()
+
+                val ingredients =
+                    context.resources.getStringArray(R.array.apple_pickers_items_3_Ingredients)
+                        .toList()
+
+                val number =
+                    context.resources.getStringArray(R.array.apple_pickers_items_4_number)
+                        .toList()
+
+                listOf(
+                    Pair(receipts[0], names[1]),
+                    Pair(receipts[0], ingredients[1]),
+                    Pair(receipts[0], number[0]),
+                    Pair(receipts[1], names[0]),
+                    Pair(receipts[1], ingredients[3]),
+                    Pair(receipts[1], number[3]),
+                    Pair(receipts[2], names[4]),
+                    Pair(receipts[2], ingredients[0]),
+                    Pair(receipts[2], number[1]),
+                    Pair(receipts[3], names[2]),
+                    Pair(receipts[3], ingredients[4]),
+                    Pair(receipts[3], number[4]),
+                    Pair(receipts[4], names[3]),
+                    Pair(receipts[4], ingredients[2]),
+                    Pair(receipts[4], number[2]),
+                )
+            }
         }
     }
 }

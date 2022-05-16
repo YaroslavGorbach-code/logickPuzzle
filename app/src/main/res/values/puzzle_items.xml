@@ -24,6 +24,50 @@
     </string-array>
 
 <!--    Answer-->
+<!--    Apple Bread-Macoun-walnuts-2-->
+<!--    Apple Crisp-Red Delicious-nutmeg-5-->
+<!--    Apple Muffins-Cortland-pecans-3-->
+<!--    Apple Pie-McIntosh-cinnamon-6-->
+<!--    Apple Tarts-Empire-raisins-4-->
+    <string name="apple_pickers_items_2_name">Receipts</string>
+    <string-array name="apple_pickers_items_2_Receipts">
+       <item>Apple Bread</item>
+       <item>Crisp</item>
+       <item>Muffins</item>
+       <item>Pie</item>
+       <item>Tarts</item>
+    </string-array>
+
+    <string name="apple_pickers_items_1_name">Names</string>
+    <string-array name="apple_pickers_items_1_names">
+        <item>Delicious</item>
+        <item>Macoun</item>
+        <item>McIntosh</item>
+        <item>Empire</item>
+        <item>Cortland</item>
+    </string-array>
+
+    <string name="apple_pickers_items_4_name">Number</string>
+    <string-array name="apple_pickers_items_4_number">
+      <item>2</item>
+      <item>3</item>
+      <item>4</item>
+      <item>5</item>
+      <item>6</item>
+    </string-array>
+
+    <string name="apple_pickers_items_3_name">Ingredients</string>
+    <string-array name="apple_pickers_items_3_Ingredients">
+        <item>Pecans</item>
+        <item>Walnut</item>
+        <item>Raisins</item>
+        <item>Nutmeg</item>
+        <item>Cinnamon</item>
+    </string-array>
+
+
+
+    <!--    Answer-->
 <!--    Wednesday, Reese DeWitt, Nick, stage fright-->
 <!--    Thursday, Blair Diaz, George, laryngitis-->
 <!--    Friday, Devon Rochan, Martha, jury duty-->

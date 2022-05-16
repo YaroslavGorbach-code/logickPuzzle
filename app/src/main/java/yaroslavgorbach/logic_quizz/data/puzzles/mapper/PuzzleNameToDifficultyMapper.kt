@@ -39,6 +39,7 @@ class PuzzleNameToDifficultyMapper() {
             PuzzleName.SECRET_IN_STONE -> DifficultLevel.FIVE
             PuzzleName.BOUND_FOR_CANADA -> DifficultLevel.FIVE
             PuzzleName.VANISHING_ACTORS -> DifficultLevel.FIVE
+            PuzzleName.APPLE_PICKERS -> DifficultLevel.FIVE
         }
     }
 }
