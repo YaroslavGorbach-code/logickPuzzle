@@ -7,6 +7,19 @@
         <item>4. Belle likes apples.</item>
     </string-array>
 
+    <string-array name="snail_races_clues">
+        <item>1. Of Todd and the snail with the teal shell, one finished in 24 minutes and the other is from Mexico.
+</item>
+        <item>2. The snail from Mexico finished 3 minutes after the snail with the lime shell, who finished 1 minute before the snail with the silver shell (who wasn\'t Hank).
+</item>
+        <item>3. The snail from USA finished 2 minutes before Kipp, who finished some time before the snail from Spain.
+</item>
+        <item>4. Of Ralph and the Spain contestant one had the fastest time and the other had the violet shell.
+</item>
+        <item>5. The snail from Canada was either the one with the teal shell or the one who finished in 25 minutes.
+</item>
+    </string-array>
+
     <string-array name="ballroom_dancing_clues">
        <item>1. Bradley (who didn\'t do the jitterbug) isn\'t Mr. Northrop.
 </item>

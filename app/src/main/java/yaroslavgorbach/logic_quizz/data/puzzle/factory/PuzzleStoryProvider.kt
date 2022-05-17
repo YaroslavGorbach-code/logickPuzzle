@@ -113,6 +113,9 @@ class PuzzleStoryProvider(private val context: Context) {
             PuzzleName.BALLROOM_DANCING -> {
                 context.resources.getString(R.string.ballroom_dancing_story)
             }
+            PuzzleName.SNAIL_RACES ->{
+                context.resources.getString(R.string.snail_races_story)
+            }
         }
     }
 }

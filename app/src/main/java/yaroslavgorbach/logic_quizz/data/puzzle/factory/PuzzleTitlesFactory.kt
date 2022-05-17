@@ -1297,6 +1297,52 @@ class PuzzleTitlesFactory(private val context: Context) {
                     )
                 )
             }
+            PuzzleName.SNAIL_RACES -> {
+                return listOf(
+                    TableTitle(
+                        name = context.getString(R.string.snail_races_items_1_name),
+                        items = context.resources.getStringArray(R.array.snail_races_items_1_name)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.snail_races_items_4_name),
+                        items = context.resources.getStringArray(R.array.snail_races_items_4_Color)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.snail_races_items_3_name),
+                        items = context.resources.getStringArray(R.array.snail_races_items_3_Country)
+                            .toList(),
+                        orderNumber = 3,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.snail_races_items_2_name),
+                        items = context.resources.getStringArray(R.array.snail_races_items_2_number)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.snail_races_items_3_name),
+                        items = context.resources.getStringArray(R.array.snail_races_items_3_Country)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.snail_races_items_4_name),
+                        items = context.resources.getStringArray(R.array.snail_races_items_4_Color)
+                            .toList(),
+                        orderNumber = 3,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    )
+                )
+            }
         }
         }
     }

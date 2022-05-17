@@ -872,6 +872,40 @@ class CorrectPairsProvider(private val context: Context) {
                     Pair(husbands[4], dance[4]),
                 )
             }
+            PuzzleName.SNAIL_RACES -> {
+                val name =
+                    context.resources.getStringArray(R.array.snail_races_items_1_name).toList()
+
+                val number =
+                    context.resources.getStringArray(R.array.snail_races_items_2_number)
+                        .toList()
+
+                val country =
+                    context.resources.getStringArray(R.array.snail_races_items_3_Country)
+                        .toList()
+
+                val color =
+                    context.resources.getStringArray(R.array.snail_races_items_4_Color)
+                        .toList()
+
+                listOf(
+                    Pair(name[0], number[4]),
+                    Pair(name[0], country[3]),
+                    Pair(name[0], color[4]),
+                    Pair(name[1], number[1]),
+                    Pair(name[1], country[1]),
+                    Pair(name[1], color[2]),
+                    Pair(name[2], number[2]),
+                    Pair(name[2], country[0]),
+                    Pair(name[2], color[3]),
+                    Pair(name[3], number[0]),
+                    Pair(name[3], country[4]),
+                    Pair(name[3], color[1]),
+                    Pair(name[4], number[3]),
+                    Pair(name[4], country[2]),
+                    Pair(name[4], color[0]),
+                )
+            }
         }
     }
 }

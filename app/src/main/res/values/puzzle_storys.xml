@@ -2,6 +2,14 @@
 <resources>
     <string name="training_puzzle_story">Follow the clues to determine which fruit does the oldest girl like.</string>
 
+    <string name="snail_races_story">
+        People have gathered from around the world to witness the 2015 snail races.
+        Each snail was handpicked by its country to race its way across the brutal
+        10cm track. Try to figure out the finishing time, country of origin,
+        and shell color for each of the five snails. Don\'t be discouraged
+        if it takes a while to solve, this is a snail race after all.
+    </string>
+
     <string name="ballroom_dancing_story">
         Once a year, a ballroom dancing extravaganza at the local country
         club is the social event of the season. Each of five distinguished

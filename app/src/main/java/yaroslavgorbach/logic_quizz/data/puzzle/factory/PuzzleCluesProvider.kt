@@ -113,6 +113,9 @@ class PuzzleCluesProvider(private val context: Context) {
             PuzzleName.BALLROOM_DANCING ->{
                 context.resources.getStringArray(R.array.ballroom_dancing_clues).toList()
             }
+            PuzzleName.SNAIL_RACES -> {
+                context.resources.getStringArray(R.array.snack_time_clues).toList()
+            }
         }
     }
 }

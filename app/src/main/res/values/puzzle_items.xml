@@ -25,6 +25,48 @@
 
 
 <!--    Answer-->
+<!--    Hank, 26, Spain, violet-->
+<!--    Mike, 23, China, silver-->
+<!--    Kipp, 24, Canada, teal-->
+<!--    Ralph, 22, USA, lime-->
+<!--    Todd, 25, Mexico, grey-->
+    <string name="snail_races_items_1_name">Name</string>
+    <string-array name="snail_races_items_1_name">
+        <item>Hank</item>
+        <item>Mike</item>
+        <item>Kipp</item>
+        <item>Ralph</item>
+        <item>Todd</item>
+    </string-array>
+
+    <string name="snail_races_items_2_name">Number</string>
+    <string-array name="snail_races_items_2_number">
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+    </string-array>
+
+    <string name="snail_races_items_3_name">Country</string>
+    <string-array name="snail_races_items_3_Country">
+        <item>Canada</item>
+        <item>China</item>
+        <item>Mexico</item>
+        <item>Spain</item>
+        <item>USA</item>
+    </string-array>
+
+    <string name="snail_races_items_4_name">Color</string>
+    <string-array name="snail_races_items_4_Color">
+        <item>Grey</item>
+        <item>Lime</item>
+        <item>Silver</item>
+        <item>Teal</item>
+        <item>Violet</item>
+    </string-array>
+
+    <!--    Answer-->
 <!--    Andrew & Audrey Kavanaugh; mambo-->
 <!--    Bradley & Phyllis Moylan; tango-->
 <!--    Logan & Vanessa Levy; jitterbug-->
