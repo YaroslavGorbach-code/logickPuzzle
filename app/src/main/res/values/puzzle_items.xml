@@ -23,8 +23,51 @@
         <item>Grape</item>
     </string-array>
 
+    <!--    Answer-->
+    <!--    Hank, 26, Spain, violet-->
+    <!--    Mike, 23, China, silver-->
+    <!--    Kipp, 24, Canada, teal-->
+    <!--    Ralph, 22, USA, lime-->
+    <!--    Todd, 25, Mexico, grey-->
+    <string name="lost_property_items_1_name">Day</string>
+    <string-array name="lost_property_items_1_day">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+    </string-array>
 
-<!--    Answer-->
+    <string name="lost_property_items_2_name">staff</string>
+    <string-array name="lost_property_items_2_staff">
+        <item>Briefcase</item>
+        <item>Car keys</item>
+        <item>House keys</item>
+        <item>Wallet</item>
+        <item>Watch</item>
+    </string-array>
+
+    <string name="lost_property_items_3_name">place</string>
+    <string-array name="lost_property_items_3_place">
+        <item>Bus</item>
+        <item>Car park</item>
+        <item>Taxi</item>
+        <item>Train</item>
+        <item>Waiting room</item>
+    </string-array>
+
+    <string name="lost_property_items_4_name">name</string>
+    <string-array name="lost_property_items_4_name">
+    <item>John</item>
+    <item>Lynda</item>
+    <item>Kenny</item>
+    <item>Pete</item>
+    <item>Sandra</item>
+    </string-array>
+
+
+
+    <!--    Answer-->
 <!--    Hank, 26, Spain, violet-->
 <!--    Mike, 23, China, silver-->
 <!--    Kipp, 24, Canada, teal-->

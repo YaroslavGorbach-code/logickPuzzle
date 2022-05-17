@@ -42,6 +42,7 @@ class TableCellSizeProvider() {
             PuzzleName.LATE_AT_THE_LAKE -> 30
             PuzzleName.BALLROOM_DANCING ->  30
             PuzzleName.SNAIL_RACES -> 30
+            PuzzleName.LOST_PROPERTY -> 30
         }
     }
 }

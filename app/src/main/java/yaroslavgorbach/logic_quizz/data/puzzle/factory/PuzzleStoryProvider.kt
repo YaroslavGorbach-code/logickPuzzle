@@ -116,6 +116,9 @@ class PuzzleStoryProvider(private val context: Context) {
             PuzzleName.SNAIL_RACES ->{
                 context.resources.getString(R.string.snail_races_story)
             }
+            PuzzleName.LOST_PROPERTY -> {
+                context.resources.getString(R.string.lost_property_story)
+            }
         }
     }
 }

@@ -7,6 +7,19 @@
         <item>4. Belle likes apples.</item>
     </string-array>
 
+    <string-array name="lost_property_clues">
+        <item>1. Pete left the train two stations earlier than he had intended, chasing Mr. Scruluce along the platform to return an item.
+</item>
+        <item>2. Ivor left his wallet behind (not on the train) later in the week than he forgot to pick up his house keys, which had fallen from his pocket, but one day earlier in the week than the day on which he lost his watch (which also wasn\'t on the train).
+</item>
+        <item>3. John is the taxi driver who noticed that Ivor had forgotten his briefcase. He returned it earlier in the week than the day on which Ivor lost his car keys.
+</item>
+        <item>4. Lynda picked up something in the car park the day after Ivor\'s house keys were returned to him by Kenny.
+</item>
+        <item>5. Something was left behind in the waiting room of the doctor\'s surgery on Tuesday.
+</item>
+    </string-array>
+
     <string-array name="snail_races_clues">
         <item>1. Of Todd and the snail with the teal shell, one finished in 24 minutes and the other is from Mexico.
 </item>

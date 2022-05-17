@@ -44,6 +44,7 @@ enum class PuzzleName(val resId: Int) {
     LATE_AT_THE_LAKE(R.string.late_at_the_lake_name),
     BALLROOM_DANCING(R.string.ballroom_dancing_name),
     SNAIL_RACES(R.string.snail_races_name),
+    LOST_PROPERTY(R.string.lost_property_name),
 }
 
 fun PuzzleName.findNext(): PuzzleName? {

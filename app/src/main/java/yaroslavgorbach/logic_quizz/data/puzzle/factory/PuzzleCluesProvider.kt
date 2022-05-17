@@ -116,6 +116,9 @@ class PuzzleCluesProvider(private val context: Context) {
             PuzzleName.SNAIL_RACES -> {
                 context.resources.getStringArray(R.array.snack_time_clues).toList()
             }
+            PuzzleName.LOST_PROPERTY -> {
+                context.resources.getStringArray(R.array.lost_property_clues).toList()
+            }
         }
     }
 }

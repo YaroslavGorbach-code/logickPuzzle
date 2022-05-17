@@ -1343,6 +1343,52 @@ class PuzzleTitlesFactory(private val context: Context) {
                     )
                 )
             }
+            PuzzleName.LOST_PROPERTY -> {
+                return listOf(
+                    TableTitle(
+                        name = context.getString(R.string.lost_property_name),
+                        items = context.resources.getStringArray(R.array.lost_property_items_1_day)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.lost_property_items_4_name),
+                        items = context.resources.getStringArray(R.array.lost_property_items_4_name)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.lost_property_items_3_name),
+                        items = context.resources.getStringArray(R.array.lost_property_items_3_place)
+                            .toList(),
+                        orderNumber = 3,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.lost_property_items_2_name),
+                        items = context.resources.getStringArray(R.array.lost_property_items_2_staff)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.lost_property_items_3_name),
+                        items = context.resources.getStringArray(R.array.lost_property_items_3_place)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.lost_property_items_4_name),
+                        items = context.resources.getStringArray(R.array.lost_property_items_4_name)
+                            .toList(),
+                        orderNumber = 3,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    )
+                )
+            }
         }
         }
     }

@@ -10,6 +10,14 @@
         if it takes a while to solve, this is a snail race after all.
     </string>
 
+
+    <string name="lost_property_story">
+        Ivor Scruluce often mislays things and last week was no exception.
+        Luckily, however, various members of the public noticed that he\'d left
+        things behind and ran after him to give them back. What was left behind on each day,
+        at which place and who returned his property to Ivor that very same day, before he\'d realized it was missing?
+    </string>
+
     <string name="ballroom_dancing_story">
         Once a year, a ballroom dancing extravaganza at the local country
         club is the social event of the season. Each of five distinguished

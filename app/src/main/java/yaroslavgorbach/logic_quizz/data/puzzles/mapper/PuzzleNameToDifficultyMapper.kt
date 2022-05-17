@@ -43,6 +43,7 @@ class PuzzleNameToDifficultyMapper() {
             PuzzleName.LATE_AT_THE_LAKE -> DifficultLevel.FIVE
             PuzzleName.BALLROOM_DANCING -> DifficultLevel.FIVE
             PuzzleName.SNAIL_RACES -> DifficultLevel.SIX
+            PuzzleName.LOST_PROPERTY -> DifficultLevel.SIX
         }
     }
 }

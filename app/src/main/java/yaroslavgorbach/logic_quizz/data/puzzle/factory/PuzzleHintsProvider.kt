@@ -86,6 +86,7 @@ class PuzzleHintsProvider(private val context: Context) {
             PuzzleName.VANISHING_ACTORS,
             PuzzleName.LATE_AT_THE_LAKE,
             PuzzleName.SNAIL_RACES,
+            PuzzleName.LOST_PROPERTY,
             PuzzleName.KITTENS_AND_KIDS -> emptyList()
         }
     }

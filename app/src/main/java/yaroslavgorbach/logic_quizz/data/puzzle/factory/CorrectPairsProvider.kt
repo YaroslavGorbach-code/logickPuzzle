@@ -906,6 +906,40 @@ class CorrectPairsProvider(private val context: Context) {
                     Pair(name[4], color[0]),
                 )
             }
+            PuzzleName.LOST_PROPERTY ->{
+                val day =
+                    context.resources.getStringArray(R.array.lost_property_items_1_day).toList()
+
+                val staff =
+                    context.resources.getStringArray(R.array.lost_property_items_2_staff)
+                        .toList()
+
+                val place =
+                    context.resources.getStringArray(R.array.lost_property_items_3_place)
+                        .toList()
+
+                val name =
+                    context.resources.getStringArray(R.array.lost_property_items_4_name)
+                        .toList()
+
+                listOf(
+                    Pair(day[0], staff[0]),
+                    Pair(day[0], place[2]),
+                    Pair(day[0], name[0]),
+                    Pair(day[1], staff[2]),
+                    Pair(day[1], place[4]),
+                    Pair(day[1], name[2]),
+                    Pair(day[2], staff[3]),
+                    Pair(day[2], place[1]),
+                    Pair(day[2], name[1]),
+                    Pair(day[3], staff[4]),
+                    Pair(day[3], place[0]),
+                    Pair(day[3], name[4]),
+                    Pair(day[4], staff[1]),
+                    Pair(day[4], place[3]),
+                    Pair(day[4], name[3]),
+                )
+            }
         }
     }
 }
