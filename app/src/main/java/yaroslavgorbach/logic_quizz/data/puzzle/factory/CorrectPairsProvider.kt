@@ -838,6 +838,40 @@ class CorrectPairsProvider(private val context: Context) {
                     Pair(name[4], food[3]),
                 )
             }
+            PuzzleName.BALLROOM_DANCING -> {
+                val husbands =
+                    context.resources.getStringArray(R.array.ballroom_dancing_items_1_Husbands).toList()
+
+                val wives =
+                    context.resources.getStringArray(R.array.ballroom_dancing_items_2_Wives)
+                        .toList()
+
+                val surname =
+                    context.resources.getStringArray(R.array.ballroom_dancing_items_3_Surname)
+                        .toList()
+
+                val dance =
+                    context.resources.getStringArray(R.array.ballroom_dancing_items_4_Dance)
+                        .toList()
+
+                listOf(
+                    Pair(husbands[0], wives[0]),
+                    Pair(husbands[0], surname[0]),
+                    Pair(husbands[0], dance[2]),
+                    Pair(husbands[1], wives[3]),
+                    Pair(husbands[1], surname[2]),
+                    Pair(husbands[1], dance[3]),
+                    Pair(husbands[2], wives[4]),
+                    Pair(husbands[2], surname[1]),
+                    Pair(husbands[2], dance[1]),
+                    Pair(husbands[3], wives[2]),
+                    Pair(husbands[3], surname[4]),
+                    Pair(husbands[3], dance[0]),
+                    Pair(husbands[4], wives[1]),
+                    Pair(husbands[4], surname[3]),
+                    Pair(husbands[4], dance[4]),
+                )
+            }
         }
     }
 }

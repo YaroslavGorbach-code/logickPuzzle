@@ -25,6 +25,50 @@
 
 
 <!--    Answer-->
+<!--    Andrew & Audrey Kavanaugh; mambo-->
+<!--    Bradley & Phyllis Moylan; tango-->
+<!--    Logan & Vanessa Levy; jitterbug-->
+<!--    Nathan & Margaret Powell; fox trot-->
+<!--    Stewart & Lorraine Northrop; waltz-->
+
+    <string name="ballroom_dancing_items_1_name">Husbands</string>
+    <string-array name="ballroom_dancing_items_1_Husbands">
+        <item>Andrew</item>
+        <item>Bradley</item>
+        <item>Logan</item>
+        <item>Nathan</item>
+        <item>Stewart</item>
+    </string-array>
+
+    <string name="ballroom_dancing_items_2_name">Wives</string>
+    <string-array name="ballroom_dancing_items_2_Wives">
+        <item>Audrey</item>
+        <item>Lorraine</item>
+        <item>Margaret</item>
+        <item>Phyllis</item>
+        <item>Vanessa</item>
+    </string-array>
+
+    <string name="ballroom_dancing_items_3_name">Surname</string>
+    <string-array name="ballroom_dancing_items_3_Surname">
+        <item>Kavanaugh</item>
+        <item>Levy</item>
+        <item>Moylan</item>
+        <item>Northrop</item>
+        <item>Powell</item>
+    </string-array>
+
+    <string name="ballroom_dancing_items_4_name">Dance</string>
+    <string-array name="ballroom_dancing_items_4_Dance">
+        <item>Fox Trot</item>
+        <item>Jitterbug</item>
+        <item>Mambo</item>
+        <item>Tango</item>
+        <item>Waltz</item>
+    </string-array>
+
+
+    <!--    Answer-->
 <!--    Becky arrived at 4:13 with ham and crackers.-->
 <!--    Don arrived at 3:45 with turkey and doughnuts.-->
 <!--    Gary arrived at 4:06 with tomatoes and cake.-->

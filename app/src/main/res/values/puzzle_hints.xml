@@ -6,6 +6,11 @@
         <item>Sophie likes bananas</item>
     </string-array>
 
+    <string-array name="ballroom_dancing_hints">
+        <item>The statement "Neither Audrey nor the woman who danced a
+            stunning waltz is married to Mr. Powell…" means more than just that.</item>
+    </string-array>
+
     <string-array name="mates_plus_dates_hints">
         <item>I wouldn\'t want to go to the park on a date, it\'d be cold and it might be wet</item>
     </string-array>

@@ -7,6 +7,25 @@
         <item>4. Belle likes apples.</item>
     </string-array>
 
+    <string-array name="ballroom_dancing_clues">
+       <item>1. Bradley (who didn\'t do the jitterbug) isn\'t Mr. Northrop.
+</item>
+       <item>2. Phyllis\'s surname is Moylan
+</item>
+       <item>3. Neither Margaret (who isn\'t Ms. Northrop) nor Audrey is either the woman who danced the jitterbug with Mr. Levy (who isn\'t Nathan) or the one who danced the tango with her companion.
+</item>
+       <item>4. Stewart (who isn\'t surnamed Levy) isn\'t the man who danced the fox trot and Vanessa wasn\'t his partner.
+</item>
+       <item>5. Neither Audrey nor the woman who danced a stunning waltz is married to Mr. Powell (who isn\'t Bradley).
+</item>
+       <item>6. Lorraine didn\'t dance the tango.
+</item>
+       <item>7. Audrey isn\'t Ms. Northrop and Margaret isn\'t the woman who danced the mambo with her husband.
+</item>
+       <item>8. Andrew\'s last name is Kavanaugh.
+</item>
+    </string-array>
+
     <string-array name="late_at_the_lake_clues">
        <item>1. The friend who brought cake arrived at the lake seven minutes
            after the health-conscious girl who brought apples.</item>

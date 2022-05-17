@@ -2,6 +2,17 @@
 <resources>
     <string name="training_puzzle_story">Follow the clues to determine which fruit does the oldest girl like.</string>
 
+    <string name="ballroom_dancing_story">
+        Once a year, a ballroom dancing extravaganza at the local country
+        club is the social event of the season. Each of five distinguished
+        pairs stole the spotlight in a different dance, earning them not
+        only the admiration of all those present but also a romantic
+        dinner for two at the club on an evening of their choice. From the
+        information provided, determine the husband and wife who comprise
+        each couple and their shared surname, as well as the type
+        of dance in which each couple excelled.
+    </string>
+
     <string name="late_at_the_lake_story">
         One spring day five friends decided to go to Bear Lake after school.
         There were two girls named Becky and Kay, and three boys named Don,

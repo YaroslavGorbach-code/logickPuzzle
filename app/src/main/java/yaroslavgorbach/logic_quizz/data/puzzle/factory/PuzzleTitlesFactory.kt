@@ -1251,6 +1251,52 @@ class PuzzleTitlesFactory(private val context: Context) {
                     )
                 )
             }
+            PuzzleName.BALLROOM_DANCING -> {
+                return listOf(
+                    TableTitle(
+                        name = context.getString(R.string.ballroom_dancing_items_1_name),
+                        items = context.resources.getStringArray(R.array.ballroom_dancing_items_1_Husbands)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.ballroom_dancing_items_4_name),
+                        items = context.resources.getStringArray(R.array.ballroom_dancing_items_4_Dance)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.ballroom_dancing_items_3_name),
+                        items = context.resources.getStringArray(R.array.ballroom_dancing_items_3_Surname)
+                            .toList(),
+                        orderNumber = 3,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.ballroom_dancing_items_2_name),
+                        items = context.resources.getStringArray(R.array.ballroom_dancing_items_2_Wives)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.ballroom_dancing_items_3_name),
+                        items = context.resources.getStringArray(R.array.ballroom_dancing_items_3_Surname)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.ballroom_dancing_items_4_name),
+                        items = context.resources.getStringArray(R.array.ballroom_dancing_items_4_Dance)
+                            .toList(),
+                        orderNumber = 3,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    )
+                )
+            }
         }
         }
     }

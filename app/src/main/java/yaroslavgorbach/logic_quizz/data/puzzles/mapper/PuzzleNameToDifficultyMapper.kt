@@ -41,6 +41,7 @@ class PuzzleNameToDifficultyMapper() {
             PuzzleName.VANISHING_ACTORS -> DifficultLevel.FIVE
             PuzzleName.APPLE_PICKERS -> DifficultLevel.FIVE
             PuzzleName.LATE_AT_THE_LAKE -> DifficultLevel.FIVE
+            PuzzleName.BALLROOM_DANCING -> DifficultLevel.FIVE
         }
     }
 }
