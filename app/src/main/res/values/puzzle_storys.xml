@@ -2,6 +2,14 @@
 <resources>
     <string name="training_puzzle_story">Follow the clues to determine which fruit does the oldest girl like.</string>
 
+    <string name="bat_attack_story">
+        Vampire bats have been attacking a different person in the village of Batsrus on different days
+        of the week and they all managed to succeed in sucking a little blood from their victim.
+        The victim fought off the attacking bat by using any weapon to hand.
+        Can you determine the amount of blood sucked from which person,
+        on what day and what they defended themselves with?
+    </string>
+
     <string name="night_light_story">
         The Language of Light represents concepts that are all helpful in personal growth.
         Each concept a.k.a. vibration or tone, is the middle path between two polarities.

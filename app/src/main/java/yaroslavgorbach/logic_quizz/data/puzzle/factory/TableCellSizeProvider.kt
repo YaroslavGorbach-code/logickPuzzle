@@ -44,6 +44,7 @@ class TableCellSizeProvider() {
             PuzzleName.SNAIL_RACES -> 30
             PuzzleName.LOST_PROPERTY -> 30
             PuzzleName.NIGHT_LIGHT -> 30
+            PuzzleName.BAT_ATTACK -> 30
         }
     }
 }

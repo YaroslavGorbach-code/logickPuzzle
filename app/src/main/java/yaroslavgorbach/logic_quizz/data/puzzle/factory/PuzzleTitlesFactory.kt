@@ -1435,6 +1435,52 @@ class PuzzleTitlesFactory(private val context: Context) {
                     )
                 )
             }
+            PuzzleName.BAT_ATTACK -> {
+                return listOf(
+                    TableTitle(
+                        name = context.getString(R.string.bat_attack_items_1_name),
+                        items = context.resources.getStringArray(R.array.bat_attack_items_1_Victim)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.bat_attack_items_4_name),
+                        items = context.resources.getStringArray(R.array.bat_attack_items_4_Blood_Sucked)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.bat_attack_items_3_name),
+                        items = context.resources.getStringArray(R.array.bat_attack_items_3_Weapon)
+                            .toList(),
+                        orderNumber = 3,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.bat_attack_items_2_name),
+                        items = context.resources.getStringArray(R.array.bat_attack_items_2_Day)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.bat_attack_items_3_name),
+                        items = context.resources.getStringArray(R.array.bat_attack_items_3_Weapon)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.bat_attack_items_4_name),
+                        items = context.resources.getStringArray(R.array.bat_attack_items_4_Blood_Sucked)
+                            .toList(),
+                        orderNumber = 3,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    )
+                )
+            }
         }
         }
     }

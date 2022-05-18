@@ -46,6 +46,7 @@ enum class PuzzleName(val resId: Int) {
     SNAIL_RACES(R.string.snail_races_name),
     LOST_PROPERTY(R.string.lost_property_name),
     NIGHT_LIGHT(R.string.night_light_name),
+    BAT_ATTACK(R.string.bat_attack_name),
 }
 
 fun PuzzleName.findNext(): PuzzleName? {

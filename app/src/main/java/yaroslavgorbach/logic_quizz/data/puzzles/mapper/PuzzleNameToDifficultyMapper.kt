@@ -45,6 +45,7 @@ class PuzzleNameToDifficultyMapper() {
             PuzzleName.SNAIL_RACES -> DifficultLevel.SIX
             PuzzleName.LOST_PROPERTY -> DifficultLevel.SIX
             PuzzleName.NIGHT_LIGHT -> DifficultLevel.SIX
+            PuzzleName.BAT_ATTACK -> DifficultLevel.SIX
         }
     }
 }

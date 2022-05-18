@@ -7,6 +7,26 @@
         <item>4. Belle likes apples.</item>
     </string-array>
 
+    <string-array name="bat_attack_clues">
+        <item>1) Miss Fitch had 4ml of blood sucked from her neck before managing to
+            fight the bat off, but not with her Handbag or Fist and this wasn\'t on a Saturday.
+</item>
+        <item>2) The bat that was fought off with a Walking
+            Stick managed to suck 1.5ml more than the bat that attacked
+            2 days before the victim that used a Slipper to defend themselves, which was not Mr. Sachs.
+</item>
+        <item>3) Mr. Sachs had more blood sucked from him than the Saturday victim.
+</item>
+        <item>4) A bat was hit with a Fist 2 days after a bat was hit with a Handbag.
+</item>
+        <item>5) The victim that had 7ml of blood sucked was attacked the day before the
+            victim having the least amount of blood sucked, which was not on a Wednesday.
+</item>
+        <item>6) Monday\'s bat attack was on Mrs Melbury who didn\'t fight the bat off with a Slipper.
+</item>
+        <item>7) Ms Trews did not use an Umbrella as her weapon.</item>
+    </string-array>
+
     <string-array name="night_light_clues">
         <item>1. Either Donald or Stephanie admitted with some embarrassment that he or she always checks under the bed before getting in it.
 </item>

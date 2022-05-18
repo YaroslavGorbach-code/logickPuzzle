@@ -122,6 +122,9 @@ class PuzzleCluesProvider(private val context: Context) {
             PuzzleName.NIGHT_LIGHT -> {
                 context.resources.getStringArray(R.array.nighty_night_clues).toList()
             }
+            PuzzleName.BAT_ATTACK -> {
+                context.resources.getStringArray(R.array.bat_attack_clues).toList()
+            }
         }
     }
 }

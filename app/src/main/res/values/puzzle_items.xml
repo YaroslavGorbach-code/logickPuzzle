@@ -23,6 +23,49 @@
         <item>Grape</item>
     </string-array>
 
+
+    <!--    Answer-->
+    <!--    Donald Weatherton, hall light, phone-->
+    <!--    Gretchen Young, overhead light, shades-->
+    <!--    John Upgraff, computer screen, closet-->
+    <!--    Dawn Foster, night-light, locks-->
+    <!--    Stephanie Buchanan, desk lamp, checks under bed-->
+    <string name="bat_attack_items_1_name">Victim</string>
+    <string-array name="bat_attack_items_1_Victim">
+        <item>Miss Fitch</item>
+        <item>Mrs Melbury</item>
+        <item>Mr. Sachs</item>
+        <item>Ms Trews</item>
+        <item>Mr Twiddle</item>
+    </string-array>
+
+    <string name="bat_attack_items_2_name">Day</string>
+    <string-array name="bat_attack_items_2_Day">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+    </string-array>
+
+    <string name="bat_attack_items_3_name">Weapon</string>
+    <string-array name="bat_attack_items_3_Weapon">
+        <item>Handbag</item>
+        <item>Fist</item>
+        <item>Walking Stick</item>
+        <item>Umbrella</item>
+        <item>Slipper</item>
+    </string-array>
+
+    <string name="bat_attack_items_4_name">Blood Sucked</string>
+    <string-array name="bat_attack_items_4_Blood_Sucked">
+        <item>1ml</item>
+        <item>2.5ml</item>
+        <item>4ml</item>
+        <item>6ml</item>
+        <item>7ml</item>
+    </string-array>
+
 <!--    Answer-->
 <!--    Donald Weatherton, hall light, phone-->
 <!--    Gretchen Young, overhead light, shades-->
@@ -56,7 +99,6 @@
         <item>Screen</item>
     </string-array>
 
-
     <string name="night_light_items_4_name">Routines</string>
     <string-array name="night_light_items_4_Routines">
         <item>Closet</item>
@@ -65,7 +107,6 @@
         <item>Shades</item>
         <item>Under Bed</item>
     </string-array>
-
 
 
     <!--    Answer-->

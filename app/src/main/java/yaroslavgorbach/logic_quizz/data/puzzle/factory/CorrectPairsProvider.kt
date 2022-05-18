@@ -974,6 +974,40 @@ class CorrectPairsProvider(private val context: Context) {
                     Pair(friends[4], routines[4]),
                 )
             }
+            PuzzleName.BAT_ATTACK -> {
+                val victim =
+                    context.resources.getStringArray(R.array.bat_attack_items_1_Victim).toList()
+
+                val day =
+                    context.resources.getStringArray(R.array.bat_attack_items_2_Day)
+                        .toList()
+
+                val weapon =
+                    context.resources.getStringArray(R.array.bat_attack_items_3_Weapon)
+                        .toList()
+
+                val blood =
+                    context.resources.getStringArray(R.array.bat_attack_items_4_Blood_Sucked)
+                        .toList()
+
+                listOf(
+                    Pair(victim[0], day[1]),
+                    Pair(victim[0], weapon[2]),
+                    Pair(victim[0], blood[2]),
+                    Pair(victim[1], day[0]),
+                    Pair(victim[1], weapon[0]),
+                    Pair(victim[1], blood[3]),
+                    Pair(victim[2], day[2]),
+                    Pair(victim[2], weapon[1]),
+                    Pair(victim[2], blood[1]),
+                    Pair(victim[3], day[3]),
+                    Pair(victim[3], weapon[4]),
+                    Pair(victim[3], blood[4]),
+                    Pair(victim[4], day[4]),
+                    Pair(victim[4], weapon[3]),
+                    Pair(victim[4], blood[0]),
+                )
+            }
         }
     }
 }
