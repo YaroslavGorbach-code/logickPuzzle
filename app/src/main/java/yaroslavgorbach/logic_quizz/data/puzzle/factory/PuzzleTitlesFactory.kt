@@ -1389,6 +1389,52 @@ class PuzzleTitlesFactory(private val context: Context) {
                     )
                 )
             }
+            PuzzleName.NIGHT_LIGHT -> {
+                return listOf(
+                    TableTitle(
+                        name = context.getString(R.string.night_light_items_1_name),
+                        items = context.resources.getStringArray(R.array.night_light_items_1_Friends)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.night_light_items_4_name),
+                        items = context.resources.getStringArray(R.array.night_light_items_4_Routines)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.night_light_items_3_name),
+                        items = context.resources.getStringArray(R.array.night_light_items_3_Lights)
+                            .toList(),
+                        orderNumber = 3,
+                        orientation = TableTitle.Orientation.VERTICAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.night_light_items_2_name),
+                        items = context.resources.getStringArray(R.array.night_light_items_2_Last_names)
+                            .toList(),
+                        orderNumber = 1,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.night_light_items_3_name),
+                        items = context.resources.getStringArray(R.array.night_light_items_3_Lights)
+                            .toList(),
+                        orderNumber = 2,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    ),
+                    TableTitle(
+                        name = context.getString(R.string.night_light_items_4_name),
+                        items = context.resources.getStringArray(R.array.night_light_items_4_Routines)
+                            .toList(),
+                        orderNumber = 3,
+                        orientation = TableTitle.Orientation.HORIZONTAL
+                    )
+                )
+            }
         }
         }
     }

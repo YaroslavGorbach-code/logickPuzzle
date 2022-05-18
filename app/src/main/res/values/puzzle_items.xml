@@ -23,6 +23,51 @@
         <item>Grape</item>
     </string-array>
 
+<!--    Answer-->
+<!--    Donald Weatherton, hall light, phone-->
+<!--    Gretchen Young, overhead light, shades-->
+<!--    John Upgraff, computer screen, closet-->
+<!--    Dawn Foster, night-light, locks-->
+<!--    Stephanie Buchanan, desk lamp, checks under bed-->
+    <string name="night_light_items_1_name">Friends</string>
+    <string-array name="night_light_items_1_Friends">
+        <item>Donald</item>
+        <item>Gretchen</item>
+        <item>John</item>
+        <item>Dawn</item>
+        <item>Stephanie</item>
+    </string-array>
+
+    <string name="night_light_items_2_name">Last names</string>
+    <string-array name="night_light_items_2_Last_names">
+        <item>Upgraff</item>
+        <item>Foster</item>
+        <item>Weatherton</item>
+        <item>Buchanan</item>
+        <item>Young</item>
+    </string-array>
+
+    <string name="night_light_items_3_name">Lights</string>
+    <string-array name="night_light_items_3_Lights">
+        <item>Desk</item>
+        <item>Hall</item>
+        <item>Night-Light</item>
+        <item>Overhead</item>
+        <item>Screen</item>
+    </string-array>
+
+
+    <string name="night_light_items_4_name">Routines</string>
+    <string-array name="night_light_items_4_Routines">
+        <item>Closet</item>
+        <item>Locks</item>
+        <item>Phone</item>
+        <item>Shades</item>
+        <item>Under Bed</item>
+    </string-array>
+
+
+
     <!--    Answer-->
     <!--    Hank, 26, Spain, violet-->
     <!--    Mike, 23, China, silver-->
@@ -64,8 +109,6 @@
     <item>Pete</item>
     <item>Sandra</item>
     </string-array>
-
-
 
     <!--    Answer-->
 <!--    Hank, 26, Spain, violet-->

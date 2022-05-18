@@ -119,6 +119,9 @@ class PuzzleCluesProvider(private val context: Context) {
             PuzzleName.LOST_PROPERTY -> {
                 context.resources.getStringArray(R.array.lost_property_clues).toList()
             }
+            PuzzleName.NIGHT_LIGHT -> {
+                context.resources.getStringArray(R.array.nighty_night_clues).toList()
+            }
         }
     }
 }

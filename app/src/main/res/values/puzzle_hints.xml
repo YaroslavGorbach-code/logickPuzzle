@@ -6,6 +6,11 @@
         <item>Sophie likes bananas</item>
     </string-array>
 
+    <string-array name="night_light_hints">
+        <item>John and Donald are male</item>
+        <item>Gretchen, Dawn and Stepanie are female</item>
+    </string-array>
+
     <string-array name="ballroom_dancing_hints">
         <item>The statement "Neither Audrey nor the woman who danced a
             stunning waltz is married to Mr. Powell…" means more than just that.</item>

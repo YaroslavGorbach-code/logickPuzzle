@@ -119,6 +119,9 @@ class PuzzleStoryProvider(private val context: Context) {
             PuzzleName.LOST_PROPERTY -> {
                 context.resources.getString(R.string.lost_property_story)
             }
+            PuzzleName.NIGHT_LIGHT -> {
+                context.resources.getString(R.string.night_light_story)
+            }
         }
     }
 }

@@ -65,6 +65,12 @@ class PuzzleHintsProvider(private val context: Context) {
                 context.resources.getStringArray(R.array.ballroom_dancing_hints).toList()
                     .mapIndexed(::Hint)
             }
+
+            PuzzleName.NIGHT_LIGHT -> {
+                context.resources.getStringArray(R.array.night_light_hints).toList()
+                    .mapIndexed(::Hint)
+            }
+
             PuzzleName.NIGHTY_NIGHT,
             PuzzleName.MORE_PAINTERS,
             PuzzleName.TRAINING_PUZZLE,

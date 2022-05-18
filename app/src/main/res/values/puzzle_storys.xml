@@ -2,14 +2,23 @@
 <resources>
     <string name="training_puzzle_story">Follow the clues to determine which fruit does the oldest girl like.</string>
 
-    <string name="snail_races_story">
+    <string name="night_light_story">
+        The Language of Light represents concepts that are all helpful in personal growth.
+        Each concept a.k.a. vibration or tone, is the middle path between two polarities.
+        (Ex. Polarities Greed and Poverty combine to make Language of Light tone Abundance)
+        There are many life forms in the natural world that hold vibrations of specific tones.
+        Determine which flower, herb, and mineral holds the vibration of the first five tones
+        (Forgiveness, Structure, Power, Compassion, Breath of Life), as well as which color
+        is used to paint each tone.
+    </string>
+
+        <string name="snail_races_story">
         People have gathered from around the world to witness the 2015 snail races.
         Each snail was handpicked by its country to race its way across the brutal
         10cm track. Try to figure out the finishing time, country of origin,
         and shell color for each of the five snails. Don\'t be discouraged
         if it takes a while to solve, this is a snail race after all.
     </string>
-
 
     <string name="lost_property_story">
         Ivor Scruluce often mislays things and last week was no exception.

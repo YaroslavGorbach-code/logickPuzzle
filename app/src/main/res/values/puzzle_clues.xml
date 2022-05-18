@@ -7,6 +7,29 @@
         <item>4. Belle likes apples.</item>
     </string-array>
 
+    <string-array name="night_light_clues">
+        <item>1. Either Donald or Stephanie admitted with some embarrassment that he or she always checks under the bed before getting in it.
+</item>
+        <item>2. The person who double checks all the house locks sleeps with either the Winnie-the-Pooh night-light or a desk lamp on.
+</item>
+        <item>3. The five people are: Gretchen, Dawn, Buchanan, the person who sleeps with his or her computer screen lit, and the person who always keeps a phone near the bed for security.
+</item>
+        <item>4. Weatherton (who isn\'t Dawn) and the person who sleeps with a night-light are members of the opposite sex.
+</item>
+        <item>5. Neither John nor Stephanie sleeps with the hall light on.
+</item>
+        <item>6. Dawn isn\'t the person who pulls down the shades at night.
+</item>
+        <item>7. The person who sleeps with the overhead light on (who is surnamed either Foster or Young) doesn\'t find it necessary to keep a phone by the bed.
+</item>
+        <item>8. Mr. Upgraff routinely closes the door to his closet, lest the creepy things that lurk within emerge while he sleeps.
+</item>
+        <item>9. Buchanan doesn\'t sleep with the Winnie-the-Pooh night-light.
+</item>
+        <item>10. Young sleeps with either a desk light or the overhead light lit.
+</item>
+    </string-array>
+
     <string-array name="lost_property_clues">
         <item>1. Pete left the train two stations earlier than he had intended, chasing Mr. Scruluce along the platform to return an item.
 </item>
