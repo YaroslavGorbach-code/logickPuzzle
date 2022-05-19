@@ -31,7 +31,7 @@ fun PuzzleItemUi(item: PuzzleItem, onPuzzle: () -> Unit, showUnavailableDialog: 
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .height(110.dp)
+            .height(120.dp)
             .clickable {
                 if (item.isAvailable) {
                     onPuzzle()
@@ -52,7 +52,9 @@ fun PuzzleItemUi(item: PuzzleItem, onPuzzle: () -> Unit, showUnavailableDialog: 
                         .weight(1f)
                         .padding(top = 16.dp),
                     text = stringResource(id = item.name.resId),
-                    style = MaterialTheme.typography.caption
+                    style = MaterialTheme.typography.caption,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
                 )
 
                 Row(modifier = Modifier
