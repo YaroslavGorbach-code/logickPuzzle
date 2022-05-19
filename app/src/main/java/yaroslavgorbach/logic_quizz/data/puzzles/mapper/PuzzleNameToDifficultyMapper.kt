@@ -14,7 +14,7 @@ class PuzzleNameToDifficultyMapper() {
             PuzzleName.MORE_PAINTERS -> DifficultLevel.THREE
             PuzzleName.KITTENS_AND_KIDS -> DifficultLevel.THREE
             PuzzleName.JAZZ_BANDS_SOLOS -> DifficultLevel.FIVE
-            PuzzleName.TRAINING_PUZZLE -> DifficultLevel.ONE
+            PuzzleName.TRAINING_PUZZLE -> DifficultLevel.TRAIN
             PuzzleName.DRACONIA_TRAINERS ->  DifficultLevel.ONE
             PuzzleName.JUST_A_THOUGHT -> DifficultLevel.TWO
             PuzzleName.FAMILY_TRIPS ->  DifficultLevel.TWO

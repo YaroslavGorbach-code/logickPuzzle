@@ -286,7 +286,7 @@ private fun ShowMiddleAchievement(state: PuzzlesViewState) {
         .fillMaxWidth()
         .padding(vertical = 40.dp)) {
 
-        if (state.allEasyPuzzlesDone.not()) {
+        if (state.allMiddlePuzzlesDone.not()) {
             Image(
                 modifier = Modifier
                     .size(100.dp)
@@ -349,7 +349,7 @@ private fun ShowHardAchievement(state: PuzzlesViewState) {
             .padding(vertical = 40.dp)
     ) {
 
-        if (state.allEasyPuzzlesDone.not()) {
+        if (state.allHardPuzzlesDone.not()) {
             Image(
                 modifier = Modifier
                     .size(100.dp)

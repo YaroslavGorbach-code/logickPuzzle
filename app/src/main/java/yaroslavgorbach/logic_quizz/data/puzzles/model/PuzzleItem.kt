@@ -13,7 +13,4 @@ data class PuzzleItem(
     val isMiddleTittleVisible: Boolean = name == PuzzleName.MORE_PAINTERS
     val isHardTittleVisible: Boolean = name == PuzzleName.JAZZ_BANDS_SOLOS
 
-    val isEasyBudgetVisible: Boolean = name == PuzzleName.MATES_PLUS_DATES
-    val isMiddleBudgetVisible: Boolean = false
-    val isHardBudgetVisible: Boolean = false
 }

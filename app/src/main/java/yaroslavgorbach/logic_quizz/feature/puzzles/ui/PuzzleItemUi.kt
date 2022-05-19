@@ -57,7 +57,7 @@ fun PuzzleItemUi(item: PuzzleItem, onPuzzle: () -> Unit, showUnavailableDialog: 
 
                 Row(modifier = Modifier
                     .padding(top = 8.dp, end = 16.dp)) {
-                    DifficultLevel.values().forEach { difficultLevel ->
+                    DifficultLevel.values().filterNot { it == DifficultLevel.TRAIN }.forEach { difficultLevel ->
                         Icon(
                             Icons.Default.Psychology,
                             contentDescription = "",
