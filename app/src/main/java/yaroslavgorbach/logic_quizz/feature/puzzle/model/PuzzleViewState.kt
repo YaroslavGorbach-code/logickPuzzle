@@ -10,7 +10,9 @@ data class PuzzleViewState(
     val isHintByAdAvailable: Boolean = false,
     val message: UiMessage<PuzzleUiMessage>?,
     val hintedTitles: Pair<String, String>? = null,
-    val isCheckAnswerVisible: Boolean = false,
+    val isCheckAnswersButtonVisible: Boolean = false,
+    val isGetAnswersButtonVisible: Boolean = false,
+    val isCorrectAnswersButtonVisible: Boolean = false,
 ) {
     companion object {
         val Test = PuzzleViewState(

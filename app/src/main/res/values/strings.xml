@@ -10,6 +10,9 @@
     <string name="middle">MIDDLE</string>
     <string name="hard">HARD</string>
     <string name="check_answer">CHECK ANSWER</string>
+    <string name="get_answers">GET ANSWERS BY VIEWING ADS</string>
+    <string name="show_answers">SHOW ANSWERS</string>
+    <string name="correct_answers">CORRECT ANSWERS</string>
     <string name="congratulations">CONGRATULATIONS</string>
     <string name="you_completed_puzzle">YOU WIN!</string>
     <string name="oops">Oops</string>
@@ -24,6 +27,7 @@
     <string name="view_ads">VIEW ADS</string>
     <string name="puzzle_is_unavailable">Puzzle is not available</string>
     <string name="hints">HINTS</string>
+    <string name="answers">ANSWERS</string>
     <string name="puzzle_is_unavailable_explanation">Get access by viewing ads or complete the previous puzzle successfully</string>
     <string name="get_hint_by_viewing_ads">Get one more hint by viewing ads</string>
     <string name="how_to_play">How to play</string>

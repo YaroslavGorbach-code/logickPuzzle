@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
@@ -29,9 +30,11 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import yaroslavgorbach.logic_quizz.R
 import yaroslavgorbach.logic_quizz.feature.common.ui.theme.getOnBackgroundColor
+import yaroslavgorbach.logic_quizz.feature.common.ui.theme.getOnBackgroundHinted
 import yaroslavgorbach.logic_quizz.feature.puzzle.model.PuzzleAction
 import yaroslavgorbach.logic_quizz.feature.puzzle.model.PuzzleUiMessage
 import yaroslavgorbach.logic_quizz.feature.puzzle.model.PuzzleViewState
+import yaroslavgorbach.logic_quizz.feature.puzzle.model.RewordResultAction
 import yaroslavgorbach.logic_quizz.feature.puzzle.presentation.PuzzleViewModel
 import yaroslavgorbach.logic_quizz.utills.UiMessage
 import yaroslavgorbach.logic_quizz.utills.findActivity
@@ -74,7 +77,7 @@ internal fun PuzzleUi(
 ) {
 
     state.message?.let { message ->
-        when (message.message) {
+        when (val m = message.message) {
             PuzzleUiMessage.ShowPuzzleErrorDialog -> {
                 ShowFailDialog(clearMessage, message)
             }
@@ -92,9 +95,21 @@ internal fun PuzzleUi(
                     message = message
                 )
             }
-            PuzzleUiMessage.ShowRewardAd -> {
-                actioner(PuzzleAction.ShowRewordAd(requireNotNull(LocalContext.current.findActivity())))
+            is PuzzleUiMessage.ShowRewardAd -> {
+                actioner(
+                    PuzzleAction.ShowRewordAd(
+                        requireNotNull(LocalContext.current.findActivity()),
+                        m.resultAction
+                    )
+                )
                 clearMessage(message.id)
+            }
+            PuzzleUiMessage.ShowAnswersDialog -> {
+                ShowAnswersDialog(
+                    state = state,
+                    clearMessage = clearMessage,
+                    message = message
+                )
             }
         }
     }
@@ -186,19 +201,40 @@ internal fun PuzzleUi(
                     .weight(0.30f)
             ) {
 
-                if (state.isCheckAnswerVisible) {
-                    OutlinedButton(
+                if (state.isCheckAnswersButtonVisible) {
+                    Button(
                         onClick = { actioner(PuzzleAction.CheckAnswer) },
-                        modifier = Modifier
-                            .align(CenterHorizontally)
-                            .padding(bottom = 8.dp),
+                        modifier = Modifier.align(CenterHorizontally),
                         shape = RoundedCornerShape(20),
-                        border = BorderStroke(1.dp, color = Color.Green)
+                        colors = ButtonDefaults.buttonColors(backgroundColor = getOnBackgroundHinted())
                     ) {
-                        Text(text = stringResource(id = R.string.check_answer), color = Color.Green)
+                        Text(text = stringResource(id = R.string.check_answer))
                     }
                 }
 
+                if (state.isGetAnswersButtonVisible) {
+                    Button(
+                        onClick = {
+                            actioner(PuzzleAction.RequestShowRewordAd(RewordResultAction.ANSWERS))
+                        },
+                        modifier = Modifier.align(CenterHorizontally),
+                        shape = RoundedCornerShape(20),
+                        colors = ButtonDefaults.buttonColors(backgroundColor = getOnBackgroundHinted())
+                    ) {
+                        Text(text = stringResource(id = R.string.get_answers))
+                    }
+                }
+
+                if (state.isCorrectAnswersButtonVisible) {
+                    Button(
+                        onClick = { actioner(PuzzleAction.ShowAnswersDialog) },
+                        modifier = Modifier.align(CenterHorizontally),
+                        shape = RoundedCornerShape(20),
+                        colors = ButtonDefaults.buttonColors(backgroundColor = getOnBackgroundHinted())
+                    ) {
+                        Text(text = stringResource(id = R.string.show_answers))
+                    }
+                }
                 Spacer(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -355,6 +391,40 @@ private fun ShowStoryDialog(
 }
 
 @Composable
+private fun ShowAnswersDialog(
+    state: PuzzleViewState,
+    clearMessage: (id: Long) -> Unit,
+    message: UiMessage<PuzzleUiMessage>
+) {
+
+    AlertDialog(onDismissRequest = {
+        clearMessage(message.id)
+    }, buttons = {}, title = {
+        Column(modifier = Modifier.fillMaxWidth()) {
+            Text(
+                modifier = Modifier.align(Start),
+                text = stringResource(id = R.string.answers),
+                fontSize = 18.sp,
+                style = MaterialTheme.typography.caption,
+                textAlign = TextAlign.Center
+            )
+        }
+    }, text = {
+        LazyColumn {
+            itemsIndexed(state.puzzle!!.correctPairs) { index, answer ->
+                Text(
+                    modifier = Modifier.padding(4.dp),
+                    style = MaterialTheme.typography.caption,
+                    text = index.inc().toString() + "." + " " + answer.toString() + "\n",
+                    fontSize = 16.sp,
+                )
+            }
+        }
+    })
+}
+
+
+@Composable
 private fun ShowHintsDialog(
     state: PuzzleViewState,
     actioner: (PuzzleAction) -> Unit,
@@ -369,7 +439,7 @@ private fun ShowHintsDialog(
                 Button(
                     onClick = {
                         clearMessage(message.id)
-                        actioner(PuzzleAction.RequestShowRewordAd)
+                        actioner(PuzzleAction.RequestShowRewordAd(RewordResultAction.HINT))
                     },
                     modifier = Modifier
                         .fillMaxWidth()
@@ -390,21 +460,12 @@ private fun ShowHintsDialog(
                 style = MaterialTheme.typography.caption,
                 textAlign = TextAlign.Center
             )
-
-            if (state.isHintByAdAvailable) {
-                Text(
-                    modifier = Modifier.align(Start),
-                    text = stringResource(id = R.string.get_hint_by_viewing_ads),
-                    fontSize = 12.sp,
-                    textAlign = TextAlign.Center
-                )
-            }
         }
     }, text = {
         LazyColumn {
             items(state.puzzleHints) { hint ->
                 Text(
-                    modifier = Modifier.padding(4.dp),
+                    modifier = Modifier.padding(2.dp),
                     style = MaterialTheme.typography.caption,
                     text = hint.index.inc().toString() + "." + " " + hint.text,
                     fontSize = 16.sp,

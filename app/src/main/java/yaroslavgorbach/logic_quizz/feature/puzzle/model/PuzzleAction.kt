@@ -8,6 +8,11 @@ sealed class PuzzleAction {
     object CheckAnswer : PuzzleAction()
     object TableUpdated : PuzzleAction()
     object ShowHintsDialog : PuzzleAction()
-    object RequestShowRewordAd : PuzzleAction()
-    class ShowRewordAd(val activity: Activity) : PuzzleAction()
+    object ShowAnswersDialog : PuzzleAction()
+    class RequestShowRewordAd(val resultAction: RewordResultAction) : PuzzleAction()
+    class ShowRewordAd(
+        val activity: Activity,
+        val resultAction: RewordResultAction
+    ) : PuzzleAction()
 }
+

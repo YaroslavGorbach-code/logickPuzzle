@@ -5,5 +5,6 @@ sealed class PuzzleUiMessage {
     object ShowPuzzleErrorDialog: PuzzleUiMessage()
     object ShowStoryDialog: PuzzleUiMessage()
     object ShowHintsDialog: PuzzleUiMessage()
-    object ShowRewardAd: PuzzleUiMessage()
+    object ShowAnswersDialog: PuzzleUiMessage()
+    class ShowRewardAd(val resultAction: RewordResultAction): PuzzleUiMessage()
 }

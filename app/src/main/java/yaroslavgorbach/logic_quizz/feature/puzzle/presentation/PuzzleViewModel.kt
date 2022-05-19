@@ -1,6 +1,5 @@
 package yaroslavgorbach.logic_quizz.feature.puzzle.presentation
 
-import android.util.Log
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -19,10 +18,8 @@ import yaroslavgorbach.logic_quizz.data.puzzle.model.table.Table
 import yaroslavgorbach.logic_quizz.feature.puzzle.model.PuzzleAction
 import yaroslavgorbach.logic_quizz.feature.puzzle.model.PuzzleUiMessage
 import yaroslavgorbach.logic_quizz.feature.puzzle.model.PuzzleViewState
-import yaroslavgorbach.logic_quizz.utills.AdManager
-import yaroslavgorbach.logic_quizz.utills.UiMessage
-import yaroslavgorbach.logic_quizz.utills.UiMessageManager
-import yaroslavgorbach.logic_quizz.utills.compare
+import yaroslavgorbach.logic_quizz.feature.puzzle.model.RewordResultAction
+import yaroslavgorbach.logic_quizz.utills.*
 import javax.inject.Inject
 
 @HiltViewModel
@@ -43,6 +40,10 @@ class PuzzleViewModel @Inject constructor(
 
     private var isCheckAnswerVisible: MutableStateFlow<Boolean> = MutableStateFlow(false)
 
+    private var isGetAnswersButtonVisible: MutableStateFlow<Boolean> = MutableStateFlow(false)
+
+    private var isCorrectAnswersButtonVisible: MutableStateFlow<Boolean> = MutableStateFlow(false)
+
     private val uiMessageManager: UiMessageManager<PuzzleUiMessage> = UiMessageManager()
 
     val state: StateFlow<PuzzleViewState> = combine(
@@ -51,7 +52,9 @@ class PuzzleViewModel @Inject constructor(
         hintedTitles,
         puzzleHints,
         uiMessageManager.message,
-    ) { isCheckAnswerVisible, puzzle, hintedTitles, hints, message ->
+        isGetAnswersButtonVisible,
+        isCorrectAnswersButtonVisible,
+    ) { isCheckAnswerVisible, puzzle, hintedTitles, hints, message, isGetAnswersButtonVisible, isCorrectAnswersButtonVisible ->
         initHints(puzzle)
 
         PuzzleViewState(
@@ -61,7 +64,9 @@ class PuzzleViewModel @Inject constructor(
             }),
             message = message,
             hintedTitles = hintedTitles,
-            isCheckAnswerVisible = isCheckAnswerVisible,
+            isCheckAnswersButtonVisible = isCheckAnswerVisible,
+            isGetAnswersButtonVisible = isGetAnswersButtonVisible,
+            isCorrectAnswersButtonVisible = isCorrectAnswersButtonVisible,
             puzzleHints = hints.filter { it.isVisible },
         )
     }.stateIn(
@@ -95,36 +100,56 @@ class PuzzleViewModel @Inject constructor(
                     PuzzleAction.CheckAnswer -> {
                         checkAnswers()
                     }
+
                     PuzzleAction.TableUpdated -> {
                         handleCheckAnswerButtonVisibility()
                     }
+
                     PuzzleAction.ShowHintsDialog -> {
                         uiMessageManager.emitMessage(UiMessage(PuzzleUiMessage.ShowHintsDialog))
                     }
-                    PuzzleAction.RequestShowRewordAd -> {
+
+                    is PuzzleAction.RequestShowRewordAd -> {
                         uiMessageManager.emitMessage(
-                            UiMessage(PuzzleUiMessage.ShowRewardAd)
+                            UiMessage(PuzzleUiMessage.ShowRewardAd(action.resultAction))
                         )
                     }
+
                     is PuzzleAction.ShowRewordAd -> {
                         adManager.showRewardAd(
                             activity = action.activity,
                         ) {
                             viewModelScope.launch {
-                                puzzleHints.update { it ->
-                                    it.apply {
-                                        val indexOfFirstInvisible =
-                                            indexOfFirst { it.isVisible.not() }
-                                        set(
-                                            indexOfFirstInvisible,
-                                            get(indexOfFirstInvisible).copy(isVisible = true)
-                                        )
+                                when (action.resultAction) {
+                                    RewordResultAction.HINT -> {
+                                        showNextInvisibleHint()
+                                    }
+                                    RewordResultAction.ANSWERS -> {
+                                        uiMessageManager.emitMessage(UiMessage(PuzzleUiMessage.ShowAnswersDialog))
+                                        isGetAnswersButtonVisible.emit(false)
+                                        isCorrectAnswersButtonVisible.emit(true)
                                     }
                                 }
                             }
                         }
                     }
+                    PuzzleAction.ShowAnswersDialog -> {
+                        uiMessageManager.emitMessage(UiMessage(PuzzleUiMessage.ShowAnswersDialog))
+                    }
                 }
+            }
+        }
+    }
+
+    private fun showNextInvisibleHint() {
+        puzzleHints.update { it ->
+            it.apply {
+                val indexOfFirstInvisible =
+                    indexOfFirst { it.isVisible.not() }
+                set(
+                    indexOfFirstInvisible,
+                    get(indexOfFirstInvisible).copy(isVisible = true)
+                )
             }
         }
     }
@@ -155,10 +180,15 @@ class PuzzleViewModel @Inject constructor(
 
             if (answers!!.any { it.not() }) {
                 uiMessageManager.emitMessage(UiMessage(PuzzleUiMessage.ShowPuzzleErrorDialog))
+
+                if (isCorrectAnswersButtonVisible.value.not()){
+                    isGetAnswersButtonVisible.emit(true)
+                }
             } else {
                 puzzleName.findNext()?.let {
                     puzzleRepo.makeAvailable(it)
                 }
+
                 puzzleRepo.finishPuzzle(puzzleName)
                 uiMessageManager.emitMessage(UiMessage(PuzzleUiMessage.ShowWinDialog))
             }
