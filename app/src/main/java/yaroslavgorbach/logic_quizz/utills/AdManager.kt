@@ -26,7 +26,7 @@ class AdManager @Inject constructor(private val app: Application) {
     fun loadRewordAd() {
         val adRequest: AdRequest = AdManagerAdRequest.Builder().build()
 
-        RewardedAd.load(app, REWARD_AD_ID,
+        RewardedAd.load(app, TEST_REWARD_AD_ID,
             adRequest, object : RewardedAdLoadCallback() {
                 override fun onAdFailedToLoad(loadAdError: LoadAdError) {
                     rewordAd = null
